@@ -63,8 +63,9 @@
     <script type="text/javascript" src="./src/vertical-navigation.js"></script>
     <script type="text/javascript" src="./src/wizard.js"></script>
 
-    <link href="https://www.unpkg.com/fundamental-styles@0.38.0/dist/fundamental-styles.css" rel='stylesheet'>
-    <link href="./css/blimpkit.css" rel='stylesheet'>
+    <link href="https://www.unpkg.com/fundamental-styles@0.38.0/dist/fundamental-styles.css" rel="stylesheet">
+    <link href="./css/blimpkit.css" rel="stylesheet">
+    <link href="./docs/documentation.css" rel="stylesheet">
 
     <script src="https://www.unpkg.com/@highlightjs/cdn-assets@11.10.0/highlight.min.js"></script>
     <script src="https://www.unpkg.com/js-beautify@1.15.1/js/lib/beautify-css.js"></script>
@@ -72,82 +73,6 @@
     <script src="https://www.unpkg.com/js-beautify@1.15.1/js/lib/beautify.js"></script>
 
     <script type="text/javascript" src="docs/documentation.js"></script>
-    <style>
-        :root {
-            --bkFontRegular: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Regular-full.woff2") format("woff2");
-            --bkFontSemibold: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Semibold-full.woff2") format("woff2");
-            --bkFontBold: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Bold-full.woff2") format("woff2");
-            --bkFontLight: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Light-full.woff2") format("woff2");
-            --bkFontMonoRegular: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72Mono-Regular-full.woff2") format("woff2");
-            --bkFontMonoBold: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72Mono-Bold-full.woff2") format("woff2");
-            --bkFontItalic: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Italic-full.woff2") format("woff2");
-            --bkFontIcons: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/fonts/SAP-icons.woff2") format("woff2");
-            --bkFontIconsTnt: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/fonts/SAP-icons-TNT.woff2") format("woff2");
-            --bkFontIconsBusiness: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/fonts/BusinessSuiteInAppSymbols.woff2") format("woff2");
-        }
-
-        body {
-            background-color: var(--sapGroup_ContentBackground, #fff);
-        }
-
-        code.hljs {
-            margin-top: 1rem;
-            padding: 1rem !important;
-            display: block;
-            border-radius: var(--sapElement_BorderCornerRadius);
-        }
-
-        code-block+code-block {
-            margin-top: 1rem;
-        }
-
-        code-block>code-block {
-            margin-top: 1rem;
-            margin-bottom: 0;
-            padding: 0;
-            background-color: transparent;
-        }
-
-        code-block>pre {
-            margin-bottom: 0;
-            margin-top: 1rem;
-        }
-
-        code-block[type=text-html]>pre:only-child,
-        code-block[type=css]>pre:only-child,
-        code-block[type=js]>pre:only-child {
-            margin: 0;
-        }
-
-        code-block[type=text-html]>pre:only-child>code.hljs,
-        code-block[type=css]>pre:only-child>code.hljs,
-        code-block[type=js]>pre:only-child>code.hljs {
-            margin: 0;
-        }
-
-        code-block {
-            font-family: var(--sapContent_MonospaceFontFamily);
-            display: block;
-            border-radius: var(--sapElement_BorderCornerRadius);
-            background-color: var(--sapBackgroundColor, #f7f7f7);
-            padding: 1rem;
-        }
-
-        code-block>.fd-link {
-            display: block;
-            width: 100%;
-        }
-
-        div.doc-icon-container {
-            border-radius: var(--sapElement_BorderCornerRadius);
-            background-color: var(--sapBackgroundColor, #f7f7f7);
-            padding: 2rem;
-        }
-
-        div.doc-icon-container span.sap-icon {
-            font-size: 3rem;
-        }
-    </style>
 </head>
 
 <body class="bk-vbox">
@@ -668,19 +593,19 @@
 
     <!-- For light theme -->
     <link ng-if="isLightTheme()"
-        href='https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/css_variables.css'
-        rel='stylesheet'>
-    <link ng-if="isLightTheme()" href='https://www.unpkg.com/fundamental-styles@0.38.0/dist/theming/sap_horizon.css'
-        rel='stylesheet'>
+        href="https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/css_variables.css"
+        rel="stylesheet">
+    <link ng-if="isLightTheme()" href="https://www.unpkg.com/fundamental-styles@0.38.0/dist/theming/sap_horizon.css"
+        rel="stylesheet">
     <link ng-if="isLightTheme()" rel="stylesheet"
         href="https://www.unpkg.com/@highlightjs/cdn-assets@11.10.0/styles/github-dark.min.css" />
 
     <!-- For dark theme -->
     <link ng-if="!isLightTheme()"
-        href='https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon_dark/css_variables.css'
-        rel='stylesheet'>
+        href="https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon_dark/css_variables.css"
+        rel="stylesheet">
     <link ng-if="!isLightTheme()"
-        href='https://www.unpkg.com/fundamental-styles@0.38.0/dist/theming/sap_horizon_dark.css' rel='stylesheet'>
+        href="https://www.unpkg.com/fundamental-styles@0.38.0/dist/theming/sap_horizon_dark.css" rel="stylesheet">
     <link ng-if="!isLightTheme()" rel="stylesheet"
         href="https://www.unpkg.com/@highlightjs/cdn-assets@11.10.0/styles/github-dark-dimmed.min.css" />
 </body>
