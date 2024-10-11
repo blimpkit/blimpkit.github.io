@@ -10,11 +10,12 @@
  * SPDX-License-Identifier: EPL-2.0
  */
 const blimpkit = angular.module('blimpKit', ['ngAria'])
+    .info({ version: '1.0.0' })
     .constant('ScreenEdgeMargin', {
         FULL: 16,
         DOUBLE: 32,
         QUADRUPLE: 64
-    }).config(function config($compileProvider) {
+    }).config(($compileProvider) => {
         if ($compileProvider.debugInfoEnabled()) {
             $compileProvider.debugInfoEnabled(false);
             $compileProvider.commentDirectivesEnabled(false);
@@ -87,39 +88,28 @@ const blimpkit = angular.module('blimpKit', ['ngAria'])
                 if (newValue === 'true') element.trigger('focus');
             });
         }
-    })).directive('inputRules', ($parse) => {
-        /**
-         * How to use:
-         * <input ng-model="inputModel" ng-required input-rules="inputRules">
-         * Example object (inputRules):
-         * {
-         *    excluded: ['this', 'that'],
-         *    patterns: ['^[^/]*$'],
-         * }
-         */
-        return {
-            restrict: 'A',
-            require: 'ngModel',
-            link: function (scope, _element, attr, controller) {
-                const parseFn = $parse(attr.inputRules);
-                scope.inputRules = parseFn(scope);
+    })).directive('inputRules', ($parse) => ({
+        restrict: 'A',
+        require: 'ngModel',
+        link: (scope, _element, attr, controller) => {
+            const parseFn = $parse(attr.inputRules);
+            scope.inputRules = parseFn(scope);
 
-                function validation(_modelValue, viewValue) {
-                    if (!attr.required && (viewValue === undefined || viewValue === null || viewValue === '')) return true;
-                    else if (viewValue !== undefined || viewValue !== null || viewValue !== '') {
-                        let isValid = true;
-                        if (scope.inputRules.excluded) isValid = !scope.inputRules.excluded.includes(viewValue);
-                        if (isValid && scope.inputRules.patterns) {
-                            for (let i = 0; i < scope.inputRules.patterns.length; i++) {
-                                isValid = RegExp(scope.inputRules.patterns[i]).test(viewValue);
-                                if (!isValid) break;
-                            }
+            function validation(_modelValue, viewValue) {
+                if (!attr.required && (viewValue === undefined || viewValue === null || viewValue === '')) return true;
+                else if (viewValue !== undefined || viewValue !== null || viewValue !== '') {
+                    let isValid = true;
+                    if (scope.inputRules.excluded) isValid = !scope.inputRules.excluded.includes(viewValue);
+                    if (isValid && scope.inputRules.patterns) {
+                        for (let i = 0; i < scope.inputRules.patterns.length; i++) {
+                            isValid = RegExp(scope.inputRules.patterns[i]).test(viewValue);
+                            if (!isValid) break;
                         }
-                        return isValid;
-                    } else if (attr.required) return false;
-                    return true;
-                }
-                controller.$validators.pattern = validation;
+                    }
+                    return isValid;
+                } else if (attr.required) return false;
+                return true;
             }
-        };
-    });
+            controller.$validators.pattern = validation;
+        }
+    }));

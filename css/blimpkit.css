@@ -1,3 +1,14 @@
+/*
+ * Copyright (c) 2024 Eclipse Dirigible contributors
+ *
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
+ *
+ * SPDX-FileCopyrightText: Eclipse Dirigible contributors
+ * SPDX-License-Identifier: EPL-2.0
+ */
 :root {
   --bkFontRegular: url("node_modules/@sap-theming/theming-base-content/content/Base/baseLib/baseTheme/fonts/72-Regular-full.woff2") format("woff2");
   --bkFontSemibold: url("node_modules/@sap-theming/theming-base-content/content/Base/baseLib/baseTheme/fonts/72-Semibold-full.woff2") format("woff2");
@@ -188,26 +199,18 @@ ng-transclude:empty {
 /* SVG icon support */
 i.bk-icon--svg {
   display: inline-block;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 i[class~="sap-icon"] ng-include {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
   height: 100%;
 }
 
 i.bk-icon--svg svg {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   color: var(--sapContent_NonInteractiveIconColor, #758ca4);
   fill: var(--sapContent_NonInteractiveIconColor, #758ca4);
@@ -243,7 +246,6 @@ i.bk-icon--svg.bk-icon--svg-lg svg {
 
 /* General helper classes */
 .bk-border-box {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -305,25 +307,14 @@ i.fd-list__icon[rotate="270"]::before {
 }
 
 .bk-vbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
   justify-content: flex-start;
 }
 
 .bk-vbox>.fd-container {
-  -webkit-box-flex: 0;
-  -ms-flex-positive: 0;
   flex-grow: 0;
-  -ms-flex-negative: 1;
   flex-shrink: 1;
-  -ms-flex-preferred-size: auto;
   flex-basis: auto;
 }
 
@@ -332,23 +323,15 @@ i.fd-list__icon[rotate="270"]::before {
 }
 
 .bk-vbox>.fd-toolbar {
-  -ms-flex-negative: 0;
   flex-shrink: 0;
 }
 
 .bk-hbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
 }
 
 .bk-hbox>.fd-container {
-  -webkit-box-flex: 0;
-  -ms-flex: 0;
   flex: 0;
 }
 
@@ -357,25 +340,18 @@ i.fd-list__icon[rotate="270"]::before {
 }
 
 .bk-hbox>.fd-toolbar {
-  -ms-flex-negative: 0;
   flex-shrink: 0;
 }
 
 .bk-flex-end {
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
   justify-content: flex-end;
 }
 
 .bk-flex-between {
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
   justify-content: space-between;
 }
 
 .bk-flex-content-center {
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
   align-content: center;
 }
 
@@ -489,32 +465,18 @@ i.fd-list__icon[rotate="270"]::before {
 }
 
 .bk-center {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 
 .bk-center--horizontal {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 
 .bk-center--vertical {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -526,16 +488,12 @@ i.fd-list__icon[rotate="270"]::before {
 }
 
 .bk-stretch {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
-  -ms-flex-preferred-size: 0;
   flex-basis: 0;
   min-height: 0;
 }
 
 .bk-flex--nowrap {
-  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
 }
 
@@ -563,11 +521,11 @@ i.fd-list__icon[rotate="270"]::before {
   align-items: center;
 }
 
-/* .bk-box--stretch-items { // May not need it.
+.bk-box--items-stretch {
   justify-content: stretch;
-} */
+}
 
-.bk-box--stretch-items>* {
+.bk-box--items-stretch>* {
   width: 100%;
 }
 
@@ -669,9 +627,6 @@ i.fd-list__icon[rotate="270"]::before {
 
 .bk-checkered-bg {
   background-image:
-    -o-linear-gradient(45deg, #949494 25%, transparent 25%, transparent 75%, #949494 75%),
-    -o-linear-gradient(45deg, #949494 25%, #c1c1c1 25%, #c1c1c1 75%, #949494 75%);
-  background-image:
     linear-gradient(45deg, #949494 25%, transparent 25%, transparent 75%, #949494 75%),
     linear-gradient(45deg, #949494 25%, #c1c1c1 25%, #c1c1c1 75%, #949494 75%);
   background-size: 16px 16px;
@@ -724,12 +679,7 @@ i.fd-list__icon[rotate="270"]::before {
 
 /* fd-wizard helper classes */
 .bk-flex--wizard {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -747,12 +697,7 @@ i.fd-list__icon[rotate="270"]::before {
 }
 
 .bk-icon-tab-bar {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   height: 100%;
 }
@@ -835,7 +780,6 @@ i.fd-list__icon[rotate="270"]::before {
 .bk-menu__sublist--overflow {
   overflow-y: auto;
   max-height: 264px;
-  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: var(--sapList_Background, #fff);
 }
@@ -922,9 +866,9 @@ i.fd-list__icon[rotate="270"]::before {
 }
 
 .bk-table__header-sticky th.fd-table__cell {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
-  -webkit-box-shadow: inset 0 1px 0 var(--sapList_BorderColor), inset 0 -1px 0 var(--sapList_BorderColor);
   box-shadow: inset 0 1px 0 var(--sapList_BorderColor), inset 0 -1px 0 var(--sapList_BorderColor);
   border-bottom: hidden;
   border-top: hidden;
@@ -933,7 +877,6 @@ i.fd-list__icon[rotate="270"]::before {
 
 .bk-table--no-outer-horizontal-borders .bk-table__header-sticky th.fd-table__cell,
 .fd-table--no-outer-border .bk-table__header-sticky th.fd-table__cell {
-  -webkit-box-shadow: inset 0 1px 0 var(--sapList_HeaderBackground), inset 0 -1px 0 var(--sapList_BorderColor);
   box-shadow: inset 0 1px 0 var(--sapList_HeaderBackground), inset 0 -1px 0 var(--sapList_BorderColor);
 }
 
