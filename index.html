@@ -1,0 +1,674 @@
+<!--
+
+    Copyright (c) 2010-2024 Eclipse Dirigible contributors
+
+    All rights reserved. This program and the accompanying materials
+    are made available under the terms of the Eclipse Public License v2.0
+    which accompanies this distribution, and is available at
+    http://www.eclipse.org/legal/epl-v20.html
+
+    SPDX-FileCopyrightText: Eclipse Dirigible contributors
+    SPDX-License-Identifier: EPL-2.0
+
+-->
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="widgets" ng-controller="WidgetsViewController">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" sizes="any" href="data:;base64,iVBORw0KGgo=">
+    <title>BlimpKit Documentation</title>
+
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/angular/angular.min.js"></script>
+    <script src="/node_modules/angular-aria/angular-aria.min.js"></script>
+
+    <script type="text/javascript" src="/src/blimpkit.js"></script>
+    <script type="text/javascript" src="/src/avatar.js"></script>
+    <script type="text/javascript" src="/src/badge.js"></script>
+    <script type="text/javascript" src="/src/bar.js"></script>
+    <script type="text/javascript" src="/src/busy-indicator.js"></script>
+    <script type="text/javascript" src="/src/button.js"></script>
+    <script type="text/javascript" src="/src/card.js"></script>
+    <script type="text/javascript" src="/src/checkbox.js"></script>
+    <script type="text/javascript" src="/src/combobox.js"></script>
+    <script type="text/javascript" src="/src/dialog.js"></script>
+    <script type="text/javascript" src="/src/forms.js"></script>
+    <script type="text/javascript" src="/src/input.js"></script>
+    <script type="text/javascript" src="/src/link.js"></script>
+    <script type="text/javascript" src="/src/radio.js"></script>
+    <script type="text/javascript" src="/src/icon-tab-bar.js"></script>
+    <script type="text/javascript" src="/src/list.js"></script>
+    <script type="text/javascript" src="/src/menu.js"></script>
+    <script type="text/javascript" src="/src/message-box.js"></script>
+    <script type="text/javascript" src="/src/message-page.js"></script>
+    <script type="text/javascript" src="/src/object-status.js"></script>
+    <script type="text/javascript" src="/src/pagination.js"></script>
+    <script type="text/javascript" src="/src/panel.js"></script>
+    <script type="text/javascript" src="/src/popover.js"></script>
+    <script type="text/javascript" src="/src/product-switch.js"></script>
+    <script type="text/javascript" src="/src/scrollbar.js"></script>
+    <script type="text/javascript" src="/src/select.js"></script>
+    <script type="text/javascript" src="/src/shellbar.js"></script>
+    <script type="text/javascript" src="/src/step-input.js"></script>
+    <script type="text/javascript" src="/src/table.js"></script>
+    <script type="text/javascript" src="/src/textarea.js"></script>
+    <script type="text/javascript" src="/src/tile.js"></script>
+    <script type="text/javascript" src="/src/token.js"></script>
+    <script type="text/javascript" src="/src/tokenizer.js"></script>
+    <script type="text/javascript" src="/src/tool-header.js"></script>
+    <script type="text/javascript" src="/src/toolbar.js"></script>
+    <script type="text/javascript" src="/src/upload-collection.js"></script>
+    <script type="text/javascript" src="/src/vertical-navigation.js"></script>
+    <script type="text/javascript" src="/src/wizard.js"></script>
+
+    <link href='/node_modules/fundamental-styles/dist/fundamental-styles.css' rel='stylesheet'>
+    <link href='/css/blimpkit.css' rel='stylesheet'>
+
+    <script src="node_modules/@highlightjs/cdn-assets/highlight.min.js"></script>
+    <script src="node_modules/js-beautify/js/lib/beautify-css.js"></script>
+    <script src="node_modules/js-beautify/js/lib/beautify-html.js"></script>
+    <script src="node_modules/js-beautify/js/lib/beautify.js"></script>
+
+    <script type="text/javascript" src="docs/documentation.js"></script>
+    <style>
+        body {
+            background-color: var(--sapGroup_ContentBackground, #fff);
+        }
+
+        code.hljs {
+            margin-top: 1rem;
+            padding: 1rem !important;
+            display: block;
+            border-radius: var(--sapElement_BorderCornerRadius);
+        }
+
+        code-block+code-block {
+            margin-top: 1rem;
+        }
+
+        code-block>code-block {
+            margin-top: 1rem;
+            margin-bottom: 0;
+            padding: 0;
+            background-color: transparent;
+        }
+
+        code-block>pre {
+            margin-bottom: 0;
+            margin-top: 1rem;
+        }
+
+        code-block[type=text-html]>pre:only-child,
+        code-block[type=css]>pre:only-child,
+        code-block[type=js]>pre:only-child {
+            margin: 0;
+        }
+
+        code-block[type=text-html]>pre:only-child>code.hljs,
+        code-block[type=css]>pre:only-child>code.hljs,
+        code-block[type=js]>pre:only-child>code.hljs {
+            margin: 0;
+        }
+
+        code-block {
+            font-family: var(--sapContent_MonospaceFontFamily);
+            display: block;
+            border-radius: var(--sapElement_BorderCornerRadius);
+            background-color: var(--sapBackgroundColor, #f7f7f7);
+            padding: 1rem;
+        }
+
+        code-block>.fd-link {
+            display: block;
+            width: 100%;
+        }
+
+        div.doc-icon-container {
+            border-radius: var(--sapElement_BorderCornerRadius);
+            background-color: var(--sapBackgroundColor, #f7f7f7);
+            padding: 2rem;
+        }
+
+        div.doc-icon-container span.sap-icon {
+            font-size: 3rem;
+        }
+    </style>
+</head>
+
+<body class="bk-vbox">
+    <bk-shellbar class="bk-list-border-bottom">
+        <bk-shellbar-group position="left">
+            <span bk-shellbar-logo><img src="/logo/blimpkit.svg" width="32" height="32" alt="BlimpKit"></span>
+            <span bk-shellbar--title>BlimpKit</span>
+        </bk-shellbar-group>
+        <bk-shellbar-group position="right">
+            <bk-shellbar-action>
+                <bk-popover>
+                    <bk-popover-control>
+                        <bk-button bk-shellbar-button label="Theme" is-menu="true">
+                        </bk-button>
+                    </bk-popover-control>
+                    <bk-popover-body align="bottom-right">
+                        <bk-menu aria-label="popover items">
+                            <bk-menu-item title="Morning Horizon" ng-click="setTheme('morning-horizon')"></bk-menu-item>
+                            <bk-menu-item title="Evening Horizon" ng-click="setTheme('evening-horizon')"></bk-menu-item>
+                        </bk-menu>
+                    </bk-popover-body>
+                </bk-popover>
+            </bk-shellbar-action>
+        </bk-shellbar-group>
+    </bk-shellbar>
+    <div class="bk-hbox" style="height: calc(100% - var(--fdShellbar_Height));">
+        <bk-vertical-nav can-scroll="true">
+            <bk-vertical-nav-main-section aria-label="main navigation">
+                <bk-list>
+                    <bk-list-navigation-item ng-click="switchPage('introduction')"
+                        indicated="selectedPage === 'introduction'">
+                        <bk-list-navigation-item-text>Introduction</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'introduction'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-group-header>Common</bk-list-navigation-group-header>
+                    <bk-list-navigation-item ng-click="switchPage('icons')" indicated="selectedPage === 'icons'">
+                        <bk-list-navigation-item-text>Icons</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'icons'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('focus')" indicated="selectedPage === 'focus'">
+                        <bk-list-navigation-item-text>Focus</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'focus'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('input-rules')"
+                        indicated="selectedPage === 'input-rules'">
+                        <bk-list-navigation-item-text>Form Input Rules</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'input-rules'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-group-header>Components</bk-list-navigation-group-header>
+                    <bk-list-navigation-item ng-click="switchPage('avatar')" indicated="selectedPage === 'avatar'">
+                        <bk-list-navigation-item-text>Avatar</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'avatar'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('bar')" indicated="selectedPage === 'bar'">
+                        <bk-list-navigation-item-text>Bar</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'bar'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('busy')" indicated="selectedPage === 'busy'">
+                        <bk-list-navigation-item-text>Busy Indicator</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'busy'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('button')" indicated="selectedPage === 'button'">
+                        <bk-list-navigation-item-text>Button</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'button'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('badge')" indicated="selectedPage === 'badge'">
+                        <bk-list-navigation-item-text>Badge</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'badge'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('card')" indicated="selectedPage === 'card'">
+                        <bk-list-navigation-item-text>Card</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'card'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('dialog')" indicated="selectedPage === 'dialog'">
+                        <bk-list-navigation-item-text>Dialog</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'dialog'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('checkbox')" indicated="selectedPage === 'checkbox'">
+                        <bk-list-navigation-item-text>Checkbox</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'checkbox'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('combobox')" indicated="selectedPage === 'combobox'">
+                        <bk-list-navigation-item-text>ComboBox</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'combobox'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('fieldset')" indicated="selectedPage === 'fieldset'">
+                        <bk-list-navigation-item-text>Field Set</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'fieldset'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('input')" indicated="selectedPage === 'input'">
+                        <bk-list-navigation-item-text>Inputs</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'input'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('input-group')"
+                        indicated="selectedPage === 'input-group'">
+                        <bk-list-navigation-item-text>Input Group</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'input-group'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('radio')" indicated="selectedPage === 'radio'">
+                        <bk-list-navigation-item-text>Radio</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'radio'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('icon-tab-bar')"
+                        indicated="selectedPage === 'icon-tab-bar'">
+                        <bk-list-navigation-item-text>Icon Tab Bar</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'icon-tab-bar'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('link')" indicated="selectedPage === 'link'">
+                        <bk-list-navigation-item-text>Link</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'link'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('list')" indicated="selectedPage === 'list'">
+                        <bk-list-navigation-item-text>List</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'list'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('menu')" indicated="selectedPage === 'menu'">
+                        <bk-list-navigation-item-text>Menu</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'menu'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('message-box')"
+                        indicated="selectedPage === 'message-box'">
+                        <bk-list-navigation-item-text>Message Box</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'message-box'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('message-page')"
+                        indicated="selectedPage === 'message-page'">
+                        <bk-list-navigation-item-text>Message Page</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'message-page'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('object-status')"
+                        indicated="selectedPage === 'object-status'">
+                        <bk-list-navigation-item-text>Object Status</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'object-status'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('pagination')"
+                        indicated="selectedPage === 'pagination'">
+                        <bk-list-navigation-item-text>Pagination</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'pagination'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('panel')" indicated="selectedPage === 'panel'">
+                        <bk-list-navigation-item-text>Panel</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'panel'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('popover')" indicated="selectedPage === 'popover'">
+                        <bk-list-navigation-item-text>Popover</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'popover'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('product-switch')"
+                        indicated="selectedPage === 'product-switch'">
+                        <bk-list-navigation-item-text>Product Switch</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'product-switch'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('scrollbar')"
+                        indicated="selectedPage === 'scrollbar'">
+                        <bk-list-navigation-item-text>Scrollbar</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'scrollbar'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('select')" indicated="selectedPage === 'select'">
+                        <bk-list-navigation-item-text>Select</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'select'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('table')" indicated="selectedPage === 'table'">
+                        <bk-list-navigation-item-text>Table</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'table'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('tile')" indicated="selectedPage === 'tile'">
+                        <bk-list-navigation-item-text>Tile</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'tile'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('token')" indicated="selectedPage === 'token'">
+                        <bk-list-navigation-item-text>Token</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'token'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('tool-header')"
+                        indicated="selectedPage === 'tool-header'">
+                        <bk-list-navigation-item-text>Tool header</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'tool-header'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('toolbar')" indicated="selectedPage === 'toolbar'">
+                        <bk-list-navigation-item-text>Toolbar</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'toolbar'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('upload-collection')"
+                        indicated="selectedPage === 'upload-collection'">
+                        <bk-list-navigation-item-text>Upload collection</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'upload-collection'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('vertical-navigation')"
+                        indicated="selectedPage === 'vertical-navigation'">
+                        <bk-list-navigation-item-text>Vertical Navigation</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'vertical-navigation'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('wizard')" indicated="selectedPage === 'wizard'">
+                        <bk-list-navigation-item-text>Wizard</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'wizard'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-group-header>Common CSS</bk-list-navigation-group-header>
+                </bk-list>
+            </bk-vertical-nav-main-section>
+        </bk-vertical-nav>
+        <div class="bk-vbox bk-fill-parent" bk-scrollbar style="padding: 2rem">
+            <!-- Introduction -->
+            <div ng-show="selectedPage === 'introduction'">
+                <img src="/logo/blimpkit-full.svg" height="240">
+                <h1>What is BlimpKit?</h1>
+                <p>BlimpKit is an AngularJS directive/component UI library based on the <a
+                        href="https://sap.github.io/fundamental-styles/">fundamental-styles</a> CSS library.
+                <p>While it mostly follows the fundamental-styles style guides, it deviates in some places and some of
+                    the
+                    widgets are modified and/or removed, therefore it should not be viewed as an official
+                    implementation.</p>
+                <p>BlimpKit is its own library and contains some extra components that are unique to it.</p>
+
+                <h2>Getting Started</h2>
+                <p>The library is modular, so you can use as little or as much as you need.</p>
+
+                <h3>Initialization</h3>
+                <p>Besides BlimpKit, you will aslo need AngularJS, jQuery, fundamental-styles and SAP Theming:
+                </p>
+                <code-block type="text-html">
+                    &lt;script
+                    src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+                    &lt;script
+                    src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js&quot;&gt;&lt;/script&gt;
+                    &lt;script
+                    src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular-aria.js&quot;&gt;&lt;/script&gt;
+
+                    &lt;link href=&#39;https://unpkg.com/fundamental-styles@0.38.0/dist/fundamental-styles.css&#39;
+                    rel=&#39;stylesheet&#39;&gt;
+                    &lt;link href=&#39;https://unpkg.com/fundamental-styles@0.38.0/dist/theming/{themeName}.css&#39;
+                    rel=&#39;stylesheet&#39;&gt;
+                    &lt;link
+                    href=&#39;https://unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/{themeName}/css_variables.css&#39;
+                    rel=&#39;stylesheet&#39;&gt;
+
+                    &lt;link href=&#39;/css/blimpkit.css&#39; rel=&#39;stylesheet&#39;&gt;
+                </code-block>
+                <p>Themes are supported. You can replace 'themeName' with the name of the theme that you want. The
+                    available options are <b>sap_horizon</b>, <b>sap_horizon_dark</b>, <b>sap_horizon_hcb</b>,
+                    <b>sap_horizon_hcw</b>,
+                    <b>sap_fiori_3</b>, <b>sap_fiori_3_dark</b>, <b>sap_fiori_3_hcb</b>, <b>sap_fiori_3_hcw</b> and
+                    <b>sap_fiori_3_light_dark</b>.
+                </p>
+
+                <p>Then you will need to override the font urls, in your own CSS file:</p>
+
+                <code-block type="css">
+                    :root {
+                    --bkFontRegular:
+                    url("https://unpkg.com/@sap-theming/theming-base-content/content/Base/baseLib/baseTheme/fonts/72-Regular-full.woff2")
+                    format("woff2");
+                    --bkFontSemibold:
+                    url("https://unpkg.com/@sap-theming/theming-base-content/content/Base/baseLib/baseTheme/fonts/72-Semibold-full.woff2")
+                    format("woff2");
+                    --bkFontBold:
+                    url("https://unpkg.com/@sap-theming/theming-base-content/content/Base/baseLib/baseTheme/fonts/72-Bold-full.woff2")
+                    format("woff2");
+                    --bkFontLight:
+                    url("https://unpkg.com/@sap-theming/theming-base-content/content/Base/baseLib/baseTheme/fonts/72-Light-full.woff2")
+                    format("woff2");
+                    --bkFontMonoRegular:
+                    url("https://unpkg.com/@sap-theming/theming-base-content/content/Base/baseLib/baseTheme/fonts/72Mono-Regular-full.woff2")
+                    format("woff2");
+                    --bkFontMonoBold:
+                    url("https://unpkg.com/@sap-theming/theming-base-content/content/Base/baseLib/baseTheme/fonts/72Mono-Bold-full.woff2")
+                    format("woff2");
+                    --bkFontItalic:
+                    url("https://unpkg.com/@sap-theming/theming-base-content/content/Base/baseLib/baseTheme/fonts/72-Italic-full.woff2")
+                    format("woff2");
+                    --bkFontIcons:
+                    url("https://unpkg.com/@sap-theming/theming-base-content/content/Base/baseLib/sap_horizon/fonts/SAP-icons.woff2")
+                    format("woff2");
+                    --bkFontIconsTnt:
+                    url("https://unpkg.com/@sap-theming/theming-base-content/content/Base/baseLib/sap_horizon/fonts/SAP-icons-TNT.woff2")
+                    format("woff2");
+                    --bkFontIconsBusiness:
+                    url("https://unpkg.com/@sap-theming/theming-base-content/content/Base/baseLib/sap_horizon/fonts/BusinessSuiteInAppSymbols.woff2")
+                    format("woff2");
+                    }
+                </code-block>
+
+                <p>Finally, include the BlimpKit module:</p>
+
+                <code-block type="js">
+                    angular.module('yourModuleName', ['blimpKit']);
+                </code-block>
+
+                <p>In order to use a component, you will need to include it. You can include only the components that
+                    you need or you can include everything:</p>
+
+                <code-block type="text-html">
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/avatar.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/badge.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/bar.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/busy-indicator.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/button.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/card.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/checkbox.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/combobox.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/dialog.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/forms.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/input.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/link.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/radio.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/icon-tab-bar.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/list.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/menu.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/message-box.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/message-page.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/object-status.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/pagination.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/panel.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/popover.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/product-switch.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/scrollbar.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/select.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/shellbar.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/step-input.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/table.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/textarea.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/tile.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/token.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/tokenizer.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/tool-header.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/toolbar.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/upload-collection.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/vertical-navigation.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/wizard.js&quot;&gt;&lt;/script&gt;
+                </code-block>
+            </div>
+
+            <!-- Icons -->
+            <div ng-show="selectedPage === 'icons'" ng-include="'docs/icons.html'"></div>
+
+            <!-- Focus -->
+            <div ng-show="selectedPage === 'focus'" ng-include="'docs/focus.html'"></div>
+
+            <!-- Input Rules -->
+            <div ng-show="selectedPage === 'input-rules'" ng-include="'docs/input-rules.html'"></div>
+
+            <!-- Avatar -->
+            <div ng-show="selectedPage === 'avatar'" ng-include="'docs/avatar.html'"></div>
+            <!-- Bar -->
+            <div ng-show="selectedPage === 'bar'" ng-include="'docs/bar.html'"></div>
+
+            <!-- Busy indicator -->
+            <div ng-show="selectedPage === 'busy'" ng-include="'docs/busy-indicator.html'"></div>
+
+            <!-- Button -->
+            <div ng-show="selectedPage === 'button'" ng-include="'docs/button.html'"></div>
+
+            <!-- Badge -->
+            <div ng-show="selectedPage === 'badge'" ng-include="'docs/badge.html'"></div>
+
+            <!-- Card -->
+            <div ng-show="selectedPage === 'card'" ng-include="'docs/card.html'"></div>
+
+            <!-- Dialog -->
+            <div ng-show="selectedPage === 'dialog'" ng-include="'docs/dialog.html'"></div>
+
+            <!-- Checkbox -->
+            <div ng-show="selectedPage === 'checkbox'" ng-include="'docs/checkbox.html'"></div>
+
+            <!-- ComboBox -->
+            <div ng-show="selectedPage === 'combobox'" ng-include="'docs/combobox.html'"></div>
+
+            <!-- Field Set -->
+            <div ng-show="selectedPage === 'fieldset'" ng-include="'docs/fieldset.html'"></div>
+
+            <!-- Inputs -->
+            <div ng-show="selectedPage === 'input'" ng-include="'docs/input.html'"></div>
+
+            <!-- Input Group -->
+            <div ng-show="selectedPage === 'input-group'" ng-include="'docs/input-group.html'"></div>
+
+            <!-- Radio -->
+            <div ng-show="selectedPage === 'radio'" ng-include="'docs/radio.html'"></div>
+
+            <!-- Icon Tab Bar -->
+            <div ng-show="selectedPage === 'icon-tab-bar'" ng-include="'docs/icon-tab-bar.html'"></div>
+
+            <!-- Link -->
+            <div ng-show="selectedPage === 'link'" ng-include="'docs/link.html'"></div>
+
+            <!-- List -->
+            <div ng-show="selectedPage === 'list'" ng-include="'docs/list.html'"></div>
+
+            <!-- Menu -->
+            <div ng-show="selectedPage === 'menu'" ng-include="'docs/menu.html'"></div>
+
+            <!-- Message Box -->
+            <div ng-show="selectedPage === 'message-box'" ng-include="'docs/message-box.html'"></div>
+
+            <!-- Message Page -->
+            <div ng-show="selectedPage === 'message-page'" ng-include="'docs/message-page.html'"></div>
+
+            <!-- Object Status -->
+            <div ng-show="selectedPage === 'object-status'" ng-include="'docs/object-status.html'"></div>
+
+            <!-- Pagination -->
+            <div ng-show="selectedPage === 'pagination'" ng-include="'docs/pagination.html'"></div>
+
+            <!-- Panel -->
+            <div ng-show="selectedPage === 'panel'" ng-include="'docs/panel.html'"></div>
+
+            <!-- Popover -->
+            <div ng-show="selectedPage === 'popover'" ng-include="'docs/popover.html'"></div>
+
+            <!-- Product Switch -->
+            <div ng-show="selectedPage === 'product-switch'" ng-include="'docs/product-switch.html'"></div>
+
+            <!-- Scrollbar -->
+            <div ng-show="selectedPage === 'scrollbar'" ng-include="'docs/scrollbar.html'"></div>
+
+            <!-- Select -->
+            <div ng-show="selectedPage === 'select'" ng-include="'docs/select.html'"></div>
+
+            <!-- Table -->
+            <div ng-show="selectedPage === 'table'" ng-include="'docs/table.html'"></div>
+
+            <!-- Tile -->
+            <div ng-show="selectedPage === 'tile'" ng-include="'docs/tile.html'"></div>
+
+            <!-- Token -->
+            <div ng-show="selectedPage === 'token'" ng-include="'docs/token.html'"></div>
+
+            <!-- Tool header -->
+            <div ng-show="selectedPage === 'tool-header'" ng-include="'docs/tool-header.html'"></div>
+
+            <!-- Toolbar -->
+            <div ng-show="selectedPage === 'toolbar'" ng-include="'docs/toolbar.html'"></div>
+
+            <!-- Upload collection -->
+            <div ng-show="selectedPage === 'upload-collection'" ng-include="'docs/upload-collection.html'"></div>
+
+            <!-- Vertical Navigation -->
+            <div ng-show="selectedPage === 'vertical-navigation'" ng-include="'docs/vertical-navigation.html'"></div>
+
+            <!-- Wizard -->
+            <div ng-show="selectedPage === 'wizard'" ng-include="'docs/wizard.html'"></div>
+        </div>
+    </div>
+
+    <!-- For light theme -->
+    <link ng-if="isLightTheme()"
+        href='node_modules/@sap-theming/theming-base-content/content/Base/baseLib/sap_horizon/css_variables.css'
+        rel='stylesheet'>
+    <link ng-if="isLightTheme()" href='/node_modules/fundamental-styles/dist/theming/sap_horizon.css' rel='stylesheet'>
+    <link ng-if="isLightTheme()" rel="stylesheet"
+        href="node_modules/@highlightjs/cdn-assets/styles/github-dark.min.css" />
+
+    <!-- For dark theme -->
+    <link ng-if="!isLightTheme()"
+        href='node_modules/@sap-theming/theming-base-content/content/Base/baseLib/sap_horizon_dark/css_variables.css'
+        rel='stylesheet'>
+    <link ng-if="!isLightTheme()" href='/node_modules/fundamental-styles/dist/theming/sap_horizon_dark.css'
+        rel='stylesheet'>
+    <link ng-if="!isLightTheme()" rel="stylesheet"
+        href="node_modules/@highlightjs/cdn-assets/styles/github-dark-dimmed.min.css" />
+</body>
+
+</html>

@@ -1,0 +1,201 @@
+<h2>ComboBox</h2>
+<p>ComboBox allows users to select an item from a predefined list. It provides an editable input
+    field
+    for filtering the list, and a dropdown menu with a list of the available options. If the entries
+    are
+    not validated by the application, users can also enter custom values.</p>
+
+<h2>Attributes</h2>
+<table bk-table>
+    <thead bk-table-header>
+        <tr bk-table-row>
+            <th bk-table-header-cell>Name</th>
+            <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Description</th>
+        </tr>
+    </thead>
+    <tbody bk-table-body>
+        <tr bk-table-row>
+            <td bk-table-cell>dropdown-items</td>
+            <td bk-table-cell>array[{ text: string, secondarytext: string, value: any }]</td>
+            <td bk-table-cell>Items to be filtered in the search input.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>ng-model</td>
+            <td bk-table-cell>any|array[any]</td>
+            <td bk-table-cell>The value of the selected item. If multiSelect is set to true this
+                must be
+                an array</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>placeholder</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>Placeholder of the search input</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>compact</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>Whether the search input should be displayed in compact mode</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>is-disabled</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>Whether the search input is disabled</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>state</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>Optional semantic state. Could be one of 'success', 'error', 'warning'
+                or
+                'information'</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>message</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>Optional text displayed within the dropdown list</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>input-id</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>Id attribute for input element inside Combobox component</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>btn-aria-label</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>Aria-label for the combobox button</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>list-aria-label</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>Aria-label for the combobox popover list</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>multi-select</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>When true the combobox allows selecting multiple items,</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>max-body-height</td>
+            <td bk-table-cell>number</td>
+            <td bk-table-cell>Maximum body height in pixels before it starts scrolling. Default is
+                the
+                height of the window.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Examples</h2>
+
+<h3>ComboBox Input</h3>
+<code-block>
+    <div style="display:flex; justify-content: space-around;align-items: center;">
+        <bk-combobox-input compact="true" dropdown-items="comboboxItems" placeholder="Search fruit ..."
+            btn-aria-label="show/hide fruit options" list-aria-label="fruit options">
+        </bk-combobox-input>
+
+        <bk-combobox-input dropdown-items="comboboxItems" is-disabled="true" selected-value="1"
+            placeholder="Search fruit ..." btn-aria-label="show/hide fruit options" list-aria-label="fruit options">
+        </bk-combobox-input>
+
+        <bk-combobox-input dropdown-items="comboboxItems2" ng-model="combobox.selectedModelValue"
+            ng-change="combobox.onCBChange()" is-required="true" placeholder="Search product ..."
+            btn-aria-label="show/hide product options" list-aria-label="product options">
+        </bk-combobox-input>
+
+        <bk-combobox-input input-id="test" dropdown-items="comboboxItems" placeholder="Search fruit ..." state="success"
+            message="Success message" btn-aria-label="show/hide product options"
+            list-aria-label="product options"></bk-combobox-input>
+    </div>
+    <code-block type="js">
+        $scope.comboboxItems = [
+        { value: 1, text: 'Apple' },
+        { value: 2, text: 'Pineapple' },
+        { value: 3, text: 'Banana' },
+        { value: 4, text: 'Kiwi' },
+        { value: 5, text: 'Strawberry' }];
+
+        $scope.comboboxItems2 = [
+        { value: 1, svg: '/logo/blimpkit-symbolic.svg', text: 'Product 1', secondaryText:
+        '1000
+        EUR'
+        },
+        { value: 2, glyph: 'sap-icon--picture', text: 'Product 2', secondaryText: '750 EUR' },
+        { value: 3, glyph: 'sap-icon--laptop', text: 'Product 3', secondaryText: '780 EUR' },
+        { value: 4, glyph: 'sap-icon--fridge', text: 'Product 4', secondaryText: '40 EUR' }
+        ];
+
+        $scope.combobox = {
+        selectedModelValue: null,
+        selectedModelValues: [],
+        onCBChange: function () {
+        console.log($scope.combobox.selectedModelValue);
+        },
+        onMCBChange: function () {
+        console.log($scope.combobox.selectedModelValues);
+        }
+        };
+    </code-block>
+</code-block>
+
+<h3>ComboBox Input Dynamic</h3>
+<code-block>
+    <bk-combobox-input input-id="dynamic" dropdown-items="dynamicItems" ng-keyup="onComboInputChange($event)"
+        placeholder="Start typing" btn-aria-label="show/hide product options" list-aria-label="product options">
+    </bk-combobox-input>
+    <code-block type="js">
+        let lastInputValue = &quot;&quot;;
+        function isText(keycode) {
+        if (keycode &gt;= 48 &amp;&amp; keycode &lt;= 90 || keycode&gt;= 96 &amp;&amp; keycode &lt;=
+        111
+        || keycode&gt;= 186 &amp;&amp; keycode
+        &lt;= 222 || [8, 46, 173].includes(keycode)) return true; return false; }
+        $scope.onComboInputChange=function (event) { if (isText(event.which)) { if
+        (event.originalEvent.target.value===&quot;&quot; ) { $scope.dynamicItems=[ { value: 0,
+        text: &#39;Default value 0&#39; }, { value: 1, text: &#39;Default value 1&#39; }, { value:
+        2,
+        text: &#39;Default value 2&#39; }, { value: 3, text: &#39;Default value 3&#39; }, { value:
+        4,
+        text: &#39;Default value 4&#39; }, { value: 5, text: &#39;Default value 5&#39; }, ]; } else
+        if
+        (lastInputValue !==event.originalEvent.target.value) { // Back-end stuff
+        $scope.dynamicItems.length=0; for (let i=0; i &lt;
+        event.originalEvent.target.value.length; i++) { $scope.dynamicItems.push({ value: i,
+        text: `Dynamic value ${event.originalEvent.target.value} ${i + 1}` }); } }
+        lastInputValue=event.originalEvent.target.value; } }; $scope.dynamicItems=[ { value:
+        0, text: &#39;Default value 0&#39; }, { value: 1, text: &#39;Default value 1&#39; }, {
+        value: 2,
+        text: &#39;Default value 2&#39; }, { value: 3, text: &#39;Default value 3&#39; }, { value:
+        4,
+        text: &#39;Default value 4&#39; }, { value: 5, text: &#39;Default value 5&#39; } ];
+    </code-block>
+</code-block>
+
+<h3>Multi Combobox</h3>
+<bk-form-item>
+    <code-block>
+        <bk-combobox-input multi-select="true" ng-model="combobox.selectedModelValues"
+            ng-change="combobox.onMCBChange()" dropdown-items="multiComboboxItems" placeholder="Search fruit ..."
+            btn-aria-label="show/hide product options" list-aria-label="product options">
+        </bk-combobox-input>
+        <code-block type="js">
+            $scope.multiComboboxItems = [
+            { value: 1, text: 'Apple' },
+            { value: 2, text: 'Pineapple' },
+            { value: 3, text: 'Banana' },
+            { value: 4, text: 'Kiwi' },
+            { value: 5, text: 'Strawberry' }
+            ];
+
+            $scope.combobox = {
+            selectedModelValue: null,
+            selectedModelValues: [],
+            onCBChange: function () {
+            console.log($scope.combobox.selectedModelValue);
+            },
+            onMCBChange: function () {
+            console.log($scope.combobox.selectedModelValues);
+            }
+            };
+        </code-block>
+    </code-block>
+</bk-form-item>

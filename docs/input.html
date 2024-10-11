@@ -1,0 +1,151 @@
+<h2>Inputs</h2>
+<p>Inputs are used to collect data from the user and should always be paired with a label.</p>
+
+<h2>Attributes</h2>
+<table bk-table>
+    <thead bk-table-header>
+        <tr bk-table-row>
+            <th bk-table-header-cell>Name</th>
+            <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Description</th>
+        </tr>
+    </thead>
+    <tbody bk-table-body>
+        <tr bk-table-row>
+            <td bk-table-cell>compact</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>Input size.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>is-hover</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>If the checkbox is in hover state.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>state</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>You have four options - 'error', 'success', 'warning' and
+                'information'.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Examples</h2>
+<bk-fieldset>
+    <bk-form-group>
+        <bk-form-item horizontal="false">
+            <code-block>
+                <bk-form-label for="iid1" colon="true">Default input (regular)</bk-form-label>
+                <bk-input id="iid1" type="text" placeholder="Placeholder text"></bk-input>
+            </code-block>
+        </bk-form-item>
+        <bk-form-item horizontal="false">
+            <code-block>
+                <bk-form-label for="iid1-hover" colon="true">Default input (hover)</bk-form-label>
+                <bk-input id="iid1-hover" type="text" is-hover="true" placeholder="Placeholder text"></bk-input>
+            </code-block>
+        </bk-form-item>
+        <bk-form-item horizontal="false">
+            <code-block>
+                <bk-form-label for="iid2" colon="true" required>Required input</bk-form-label>
+                <bk-input id="iid2" type="text" ng-required="true" placeholder="Placeholder text"></bk-input>
+            </code-block>
+        </bk-form-item>
+        <bk-form-item horizontal="false">
+            <code-block>
+                <bk-form-label for="iidd" colon="true">Disabled input</bk-form-label>
+                <bk-input id="iidd" type="text" placeholder="Placeholder text" ng-disabled="true"></bk-input>
+            </code-block>
+        </bk-form-item>
+        <code-block style="margin-block-start: .625rem;margin-block-end: .625rem;">
+            <bk-form-item horizontal="true">
+                <bk-form-label for="iid3" colon="true">Horizontal text</bk-form-label>
+                <bk-input id="iid3" type="text" placeholder="Placeholder text"></bk-input>
+            </bk-form-item>
+        </code-block>
+        <bk-form-item horizontal="false">
+            <code-block>
+                <bk-form-label for="iid4" colon="true">Passowrd</bk-form-label>
+                <bk-input id="iid4" type="password"></bk-input>
+            </code-block>
+        </bk-form-item>
+        <bk-form-item horizontal="false">
+            <code-block>
+                <bk-form-label for="iid6" colon="true">Error input</bk-form-label>
+                <bk-input id="iid6" type="text" placeholder="Placeholder text" state="error"></bk-input>
+            </code-block>
+        </bk-form-item>
+        <bk-form-item horizontal="false">
+            <code-block>
+                <bk-form-label for="iid7" colon="true">Success input</bk-form-label>
+                <bk-input id="iid7" type="text" placeholder="Placeholder text" state="success"></bk-input>
+            </code-block>
+        </bk-form-item>
+        <bk-form-item horizontal="false">
+            <code-block>
+                <bk-form-label for="iid8" colon="true">Warning input</bk-form-label>
+                <bk-input id="iid8" type="text" placeholder="Placeholder text" state="warning"></bk-input>
+            </code-block>
+        </bk-form-item>
+        <bk-form-item horizontal="false">
+            <code-block>
+                <bk-form-label for="iid9" colon="true">Information input</bk-form-label>
+                <bk-input id="iid9" type="text" placeholder="Placeholder text" state="information"></bk-input>
+            </code-block>
+        </bk-form-item>
+        <bk-form-item>
+            <code-block>
+                <bk-form-label for="iid5">Date</bk-form-label>
+                <bk-input id="iid5" type="date"></bk-input>
+            </code-block>
+        </bk-form-item>
+        <bk-form-item>
+            <code-block>
+                <bk-form-label for="iis1">Number</bk-form-label>
+                <bk-step-input id="iis1" name="iisname" ng-model="stepInputValue" ng-required="true" min="0" max="10"
+                    step="2">
+                </bk-step-input>
+                <code-block type="js">
+                    $scope.stepInputValue = 4;
+                </code-block>
+            </code-block>
+        </bk-form-item>
+        <bk-form-item>
+            <code-block>
+                <bk-form-label for="iic1">Color</bk-form-label>
+                <bk-input id="iic1" type="color" value="#e66465"></bk-input>
+            </code-block>
+        </bk-form-item>
+        <bk-form-item>
+            <code-block>
+                <bk-form-label for="taid1" colon="true">Textarea</bk-form-label>
+                <bk-textarea id="taid1">Some text</bk-textarea>
+            </code-block>
+        </bk-form-item>
+        <bk-form-item>
+            <code-block>
+                <bk-form-label for="taid2">Textarea error</bk-form-label>
+                <bk-textarea id="taid2" state="error">Some text</bk-textarea>
+            </code-block>
+        </bk-form-item>
+        <bk-form-item>
+            <code-block>
+                <bk-form-label for="taid3">Textarea success</bk-form-label>
+                <bk-textarea id="taid3" state="success">Some text</bk-textarea>
+            </code-block>
+        </bk-form-item>
+        <bk-form-item>
+            <code-block>
+                <bk-form-label for="taid4">Textarea warning</bk-form-label>
+                <bk-textarea id="taid4" state="warning">Some text</bk-textarea>
+            </code-block>
+        </bk-form-item>
+        <bk-form-item>
+            <code-block>
+                <bk-form-label for="taid5">Textarea information</bk-form-label>
+                <bk-textarea id="taid5" state="information">Some text</bk-textarea>
+            </code-block>
+        </bk-form-item>
+    </bk-form-group>
+</bk-fieldset>

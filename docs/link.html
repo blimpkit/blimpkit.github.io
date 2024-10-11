@@ -1,0 +1,54 @@
+<h2>Link</h2>
+<p>A link (also known as hyperlink) is an interactive text element that allows users to navigate to
+    another page or trigger a certain event..</p>
+
+<h2>Attributes</h2>
+<table bk-table>
+    <thead bk-table-header>
+        <tr bk-table-row>
+            <th bk-table-header-cell>Name</th>
+            <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Description</th>
+        </tr>
+    </thead>
+    <tbody bk-table-body>
+        <tr bk-table-row>
+            <td bk-table-cell>is-active</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>Link is in active mode.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>is-focus</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>Link is in focused mode.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>state</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>You have five options - 'emphasized', 'subtle' and 'inverted'.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>left-glyph</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>Icon class for the left link icon.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>right-glyph</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>Icon class for the right link icon.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Examples</h2>
+<code-block>
+    <bk-link href="#link">Link</bk-link>
+    <bk-link href="#active-link" is-active="true">Active link</bk-link>
+    <bk-link href="#focus-link" is-focus="true">Focus link</bk-link>
+    <bk-link href="#disabled-link" ng-disabled="true">Disabled link</bk-link>
+    <bk-link href="#emphasized-link" state="emphasized">Emphasized link</bk-link>
+    <bk-link href="#subtle-link" state="subtle">Subtle link</bk-link>
+    <bk-link href="#inverted-link" state="inverted">Inverted link</bk-link>
+    <bk-link href="#left-icon-link" left-glyph="sap-icon--delete">Left icon</bk-link>
+    <bk-link href="#right-icon-link" right-glyph="sap-icon--delete">Right icon</bk-link>
+</code-block>

@@ -1,0 +1,299 @@
+<h2>Button</h2>
+<p>The button component is used to trigger an action.</p>
+
+<h2>Attributes - Button</h2>
+<table bk-table>
+    <thead bk-table-header>
+        <tr bk-table-row>
+            <th bk-table-header-cell>Name</th>
+            <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Description</th>
+        </tr>
+    </thead>
+    <tbody bk-table-body>
+        <tr bk-table-row>
+            <td bk-table-cell>label</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>Button text.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>compact</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>Button size.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>badge</td>
+            <td bk-table-cell>string/number</td>
+            <td bk-table-cell>Used for showing a badge inside the button.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>glyph</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>Icon class/classes.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>glyph-rotate</td>
+            <td bk-table-cell>number</td>
+            <td bk-table-cell>Rotate glyph X degrees, where X can be 90, 180, and 270.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>disabled-focusable</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>Set the disabled but focusable state. This must always be used with
+                the
+                'instructions' attribute.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>toggled</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>Set the toggle state.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>type</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>'emphasized', 'transparent', 'ghost', 'positive', 'negative' and
+                'attention'.
+                If not specified, normal state is assumed.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>instructions</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>Short description when the button is disabled. It should contain the
+                reason
+                and what needs to be done to enable it. This is for screen readers.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>is-menu</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>Adds an arrow to the button.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>arrow-direction</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>Direction of the menu arrow. Possible options are "up", "left",
+                "right"
+                and
+                "down" (default).</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>is-overflow</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>Used when the button is in a toolbar overflow popover.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>is-split</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>(Internal use) If the button is part of a split button.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>in-group</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>If the button is inside an bk-input-group-addon element.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>in-msg-strip</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>If the button is inside a message strip (see bk-message-strip).</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>nested</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>Nested button mode.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>decisive</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>Indicates that the button is decisive. Used for dialog actions.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>round</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>Make the button round. Works only for icon buttons with no label.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Attributes - Split Button</h2>
+<table bk-table>
+    <thead bk-table-header>
+        <tr bk-table-row>
+            <th bk-table-header-cell>Name</th>
+            <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Description</th>
+        </tr>
+    </thead>
+    <tbody bk-table-body>
+        <tr bk-table-row>
+            <td bk-table-cell>main-action</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>Main button text</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>main-glyph</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>Icon class for the button.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>compact</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>Button size.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>glyph</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>Icon class for the dropdown button.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>is-disabled</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>If the buttons are disabled.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>disabled-focusable</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>Set the disabled but focusable state. This must always be used with
+                the
+                'instructions' attribute.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>instructions</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>Short description when the button is disabled. It should contain the
+                reason
+                and what needs to be done to enable it. This is for screen readers.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>type</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>'emphasized', 'transparent', 'ghost', 'positive', 'negative' and
+                'attention'.
+                If not specified, normal state is assumed.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>callback</td>
+            <td bk-table-cell>function</td>
+            <td bk-table-cell>The passed function will be called when the main action button is
+                clicked.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Examples</h2>
+
+<h3>Button style states</h3>
+<code-block>
+    <bk-button label="Default"></bk-button>
+    <bk-button label="Emphasized" state="emphasized"></bk-button>
+    <bk-button label="Ghost" state="ghost"></bk-button>
+    <bk-button label="Positive" state="positive"></bk-button>
+    <bk-button label="Negative" state="negative"></bk-button>
+    <bk-button label="Attention" state="attention"></bk-button>
+    <bk-button label="Transparent" state="transparent"></bk-button>
+</code-block>
+<h3>Button states</h3>
+<code-block>
+    <bk-button label="Normal"></bk-button>
+    <bk-button label="Disabled" ng-disabled="true"></bk-button>
+    <bk-button label="Disabled focusable" disabled-focusable="true" instructions="disabled focusable button">
+    </bk-button>
+</code-block>
+<h3>Compact button</h3>
+<code-block>
+    <bk-button label="Default" compact="true"></bk-button>
+</code-block>
+<h3>Round button</h3>
+<code-block>
+    <bk-button glyph="sap-icon--decline" aria-label="Close" compact="true" round="true"></bk-button>
+    <bk-button glyph="sap-icon--decline" aria-label="Close" round="true"></bk-button>
+</code-block>
+<h3>Toggle button</h3>
+<code-block>
+    <bk-button label="Toggle" ng-click="toggle()" toggled="btnToggleState"></bk-button>
+    <code-block type="js">
+        $scope.btnToggleState = true;
+        $scope.toggle = function () {
+        $scope.btnToggled = !$scope.btnToggled;
+        };
+    </code-block>
+</code-block>
+<h3>Segmented button</h3>
+<code-block>
+    <bk-segmented-button aria-label="Segmented group">
+        <bk-button label="Left" toggled="segmentedModel === 'left' ? true : false" ng-click="segmentedClick('left')">
+        </bk-button>
+        <bk-button label="Middle" toggled="segmentedModel === 'middle' ? true : false"
+            ng-click="segmentedClick('middle')">
+        </bk-button>
+        <bk-button label="Right" toggled="segmentedModel === 'right' ? true : false" ng-click="segmentedClick('right')">
+        </bk-button>
+    </bk-segmented-button>
+    <code-block type="js">
+        $scope.segmentedModel = "middle";
+        $scope.segmentedClick = function (item) {
+        $scope.segmentedModel = item;
+        };
+    </code-block>
+</code-block>
+<h3>Menu button</h3>
+<code-block>
+    <bk-button label="Selection menu" is-menu="true" aria-desc="menu button">
+    </bk-button>
+</code-block>
+<h3>Menu button with icon</h3>
+<code-block>
+    <bk-button label="Power options" glyph="sap-icon--log" is-menu="true" aria-desc="menu button icon">
+    </bk-button>
+</code-block>
+<h3>Split menu button</h3>
+<code-block>
+    <bk-split-button main-action="{{ splitButtonAction }}" align="right" aria-label="button-split"
+        callback="splitButtonClick">
+        <bk-menu aria-label="split button items">
+            <bk-menu-item title="Item" ng-click="splitItemClick('Item')"></bk-menu-item>
+            <bk-menu-item title="Item 2" ng-click="splitItemClick('Item 2')"></bk-menu-item>
+            <bk-menu-item title="Item 3" ng-click="splitItemClick('Item 3')"></bk-menu-item>
+        </bk-menu>
+    </bk-split-button>
+    <code-block type="js">
+        $scope.splitButtonAction = "Action";
+        $scope.splitButtonClick = function () {
+        console.log('split action');
+        };
+        $scope.splitItemClick = function (selected) {
+        $scope.splitButtonAction = selected;
+        };
+    </code-block>
+</code-block>
+<h3>Split menu button disabled</h3>
+<code-block>
+    <bk-split-button aria-label="button-split" is-disabled="true"></bk-split-button>
+</code-block>
+<h3>Split menu button disabled focusable</h3>
+<code-block>
+    <bk-split-button aria-label="button-split" disabled-focusable="true"
+        instructions="disabled focusable split button"></bk-split-button>
+</code-block>
+<h3>Icon button</h3>
+<code-block>
+    <bk-button glyph="sap-icon--cart" aria-label="Add to cart">
+    </bk-button>
+    <bk-button label="Add to cart" glyph="sap-icon--cart" aria-label="Add to cart">
+    </bk-button>
+</code-block>
+<h3>Button with badge</h3>
+<code-block>
+    <bk-button label="Cart" glyph="sap-icon--cart" aria-label="Cart" badge="121">
+    </bk-button>
+    <bk-button label="Cart" glyph="sap-icon--cart" aria-label="Cart" badge="121" compact="true">
+    </bk-button>
+</code-block>
+<h3>Button as link</h3>
+<code-block>
+    <a bk-button label="Default" href="#"></a>
+</code-block>
+<h3>Nested button</h3>
+<code-block>
+    <bk-button glyph="sap-icon--decline" nested="true" aria-label="Close">
+    </bk-button>
+</code-block>

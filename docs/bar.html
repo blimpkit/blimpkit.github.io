@@ -1,0 +1,244 @@
+<h2>Bar</h2>
+<p>The bar component is a container that holds titles, buttons and input controls. Its contents are
+    distributed into three areas: left, middle and right. This component`s primary function is to
+    display
+    page headers and footers. It is mainly used to construct a Page, and acts as a building block
+    for
+    other
+    components like Dialog, Popover etc. A bar can be designed as an Header, Subheader, Fixed Footer
+    or
+    Floating Footer.</p>
+
+<h2>Attributes - Bar</h2>
+<table bk-table>
+    <thead bk-table-header>
+        <tr bk-table-row>
+            <th bk-table-header-cell>Name</th>
+            <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Description</th>
+        </tr>
+    </thead>
+    <tbody bk-table-body>
+        <tr bk-table-row>
+            <td bk-table-cell>bar-design</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>Whether the Bar component is used as a header, subheader,
+                header-with-subheader, footer or floating-footer. Types available:
+                'header','subheader','header-with-subheader','footer','floating-footer'</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>compact</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>Applies compact style to the bar and all elements inside the bar.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>in-page</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>Whether the Bar component is used in Page Layout.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>padding</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>The size of the side paddings. Available sizes: 's', 'm_l', 'xl' and
+                'responsive'. This is incompatible with compact mode.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Attributes - Bar Element</h2>
+<table bk-table>
+    <thead bk-table-header>
+        <tr bk-table-row>
+            <th bk-table-header-cell>Name</th>
+            <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Description</th>
+        </tr>
+    </thead>
+    <tbody bk-table-body>
+        <tr bk-table-row>
+            <td bk-table-cell>full-width</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>Whether the element should take the whole width of the container.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>is-title</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>Whether the element is title.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Examples</h2>
+
+<h3>Bar</h3>
+<code-block>
+    <bk-bar>
+        <bk-bar-left>
+            <bk-bar-element>
+                <bk-button glyph="sap-icon--navigation-left-arrow" aria-label="button" state="transparent">
+                </bk-button>
+            </bk-bar-element>
+            <bk-bar-element>
+                <bk-button glyph="sap-icon--home" aria-label="button" state="transparent"></bk-button>
+            </bk-bar-element>
+            <bk-bar-element>
+                <bk-button glyph="sap-icon--account" aria-label="button" state="transparent"></bk-button>
+            </bk-bar-element>
+        </bk-bar-left>
+        <bk-bar-middle>
+            <bk-bar-element>
+                <bk-segmented-button aria-label="Test group">
+                    <bk-button glyph="sap-icon--email" aria-label="button" toggled="true"></bk-button>
+                    <bk-button glyph="sap-icon--iphone" aria-label="button"></bk-button>
+                    <bk-button glyph="sap-icon--notification-2" aria-label="button"></bk-button>
+                </bk-segmented-button>
+            </bk-bar-element>
+        </bk-bar-middle>
+        <bk-bar-right>
+            <bk-bar-element>
+                <bk-button glyph="sap-icon--grid" aria-label="button" state="transparent">
+                </bk-button>
+            </bk-bar-element>
+        </bk-bar-right>
+    </bk-bar>
+</code-block>
+
+<h3>Bar (compact)</h3>
+<code-block>
+    <bk-bar compact="true">
+        <bk-bar-left>
+            <bk-bar-element>
+                <bk-button glyph="sap-icon--navigation-left-arrow" compact="true" aria-label="button"
+                    state="transparent">
+                </bk-button>
+            </bk-bar-element>
+            <bk-bar-element>
+                <bk-button glyph="sap-icon--home" aria-label="button" compact="true" state="transparent">
+                </bk-button>
+            </bk-bar-element>
+            <bk-bar-element>
+                <bk-button glyph="sap-icon--account" aria-label="button" compact="true" state="transparent">
+                </bk-button>
+            </bk-bar-element>
+        </bk-bar-left>
+        <bk-bar-middle>
+            <bk-bar-element>
+                <bk-segmented-button aria-label="Test group">
+                    <bk-button glyph="sap-icon--email" compact="true" aria-label="button" toggled="true">
+                    </bk-button>
+                    <bk-button glyph="sap-icon--iphone" compact="true" aria-label="button"></bk-button>
+                    <bk-button glyph="sap-icon--notification-2" compact="true" aria-label="button">
+                    </bk-button>
+                </bk-segmented-button>
+            </bk-bar-element>
+        </bk-bar-middle>
+        <bk-bar-right>
+            <bk-bar-element>
+                <bk-button glyph="sap-icon--grid" compact="true" aria-label="button" state="transparent">
+                </bk-button>
+            </bk-bar-element>
+        </bk-bar-right>
+    </bk-bar>
+</code-block>
+
+<h3>Bar side paddings</h3>
+<code-block>
+    <bk-bar padding="s">
+        <bk-bar-left>
+            <bk-bar-element>
+                <span>Size "s"</span>
+            </bk-bar-element>
+        </bk-bar-left>
+        <bk-bar-right>
+            <bk-bar-element>
+                <span>Size "s"</span>
+            </bk-bar-element>
+        </bk-bar-right>
+    </bk-bar>
+    <bk-bar padding="m_l">
+        <bk-bar-left>
+            <bk-bar-element>
+                <span>Size "m_l"</span>
+            </bk-bar-element>
+        </bk-bar-left>
+        <bk-bar-right>
+            <bk-bar-element>
+                <span>Size "m_l"</span>
+            </bk-bar-element>
+        </bk-bar-right>
+    </bk-bar>
+    <bk-bar padding="xl">
+        <bk-bar-left>
+            <bk-bar-element>
+                <span>Size "xl"</span>
+            </bk-bar-element>
+        </bk-bar-left>
+        <bk-bar-right>
+            <bk-bar-element>
+                <span>Size "xl"</span>
+            </bk-bar-element>
+        </bk-bar-right>
+    </bk-bar>
+    <bk-bar padding="responsive">
+        <bk-bar-left>
+            <bk-bar-element>
+                <span>Responsive</span>
+            </bk-bar-element>
+        </bk-bar-left>
+        <bk-bar-right>
+            <bk-bar-element>
+                <span>Responsive</span>
+            </bk-bar-element>
+        </bk-bar-right>
+    </bk-bar>
+</code-block>
+
+<h3>Bar header with subheader and title</h3>
+<code-block>
+    <bk-bar bar-design="header-with-subheader">
+        <bk-bar-left>
+            <bk-bar-element is-title="true">
+                <h6 bk-title wrap="true" header-size="6" aria-label="title">TEXT</h6>
+            </bk-bar-element>
+        </bk-bar-left>
+        <bk-bar-middle>
+            <bk-bar-element>
+                <bk-segmented-button aria-label="Test group">
+                    <bk-button glyph="sap-icon--email" aria-label="button" toggled="true" compact="true">
+                    </bk-button>
+                    <bk-button glyph="sap-icon--iphone" aria-label="button" compact="true"></bk-button>
+                    <bk-button glyph="sap-icon--notification-2" aria-label="button" compact="true">
+                    </bk-button>
+                </bk-segmented-button>
+            </bk-bar-element>
+        </bk-bar-middle>
+        <bk-bar-right>
+            <bk-bar-element>
+                <bk-button glyph="sap-icon--grid" aria-label="button" state="transparent" compact="true">
+                </bk-button>
+            </bk-bar-element>
+        </bk-bar-right>
+    </bk-bar>
+    <bk-bar bar-design="subheader">
+        <bk-bar-middle>
+            <bk-bar-element full-width="true">
+                <bk-input type="text" compact="true" in-group="true" value="1234568910" aria-label="input">
+                </bk-input>
+            </bk-bar-element>
+        </bk-bar-middle>
+    </bk-bar>
+</code-block>
+
+<h3>Bar footer</h3>
+<code-block>
+    <bk-bar bar-design="footer">
+        <bk-bar-right>
+            <bk-bar-element>
+                <bk-button label="Save" state="emphasized" compact="true"></bk-button>
+            </bk-bar-element>
+            <bk-bar-element>
+                <bk-button label="Cancel" state="transparent" compact="true"></bk-button>
+            </bk-bar-element>
+        </bk-bar-right>
+    </bk-bar>
+</code-block>

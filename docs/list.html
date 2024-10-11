@@ -1,0 +1,498 @@
+<h2>List</h2>
+<p>Lists are rows of information, such as groups of text, buttons, images, etc.</p>
+
+<h2>Attributes - List</h2>
+<table bk-table>
+    <thead bk-table-header>
+        <tr bk-table-row>
+            <th bk-table-header-cell>Name</th>
+            <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Description</th>
+        </tr>
+    </thead>
+    <tbody bk-table-body>
+        <tr bk-table-row>
+            <td bk-table-cell>compact</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>Display the list in compact size mode</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>no-border</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>Removes the list borders</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>list-type</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>One of 'selection', 'navigation' or 'navigation-indication'</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>fixed-height</td>
+            <td bk-table-cell>string|number|boolean</td>
+            <td bk-table-cell>If true it expects the height to be specified explicitly (by css class
+                or
+                style). If number it will be treated as pixels otherwise it must be a valid css
+                height
+                value.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>byline</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>Whether the list is byline or standard</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Attributes - List Item</h2>
+<table bk-table>
+    <thead bk-table-header>
+        <tr bk-table-row>
+            <th bk-table-header-cell>Name</th>
+            <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Description</th>
+        </tr>
+    </thead>
+    <tbody bk-table-body>
+        <tr bk-table-row>
+            <td bk-table-cell>interactive</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>Makes the list item look interactive (clickable)</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>inactive</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>Makes the list item look inactive (non-clickable)</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>selected</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>Selects the list item. Should be used with 'selection' lists</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Attributes - List Secondary</h2>
+<table bk-table>
+    <thead bk-table-header>
+        <tr bk-table-row>
+            <th bk-table-header-cell>Name</th>
+            <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Description</th>
+        </tr>
+    </thead>
+    <tbody bk-table-body>
+        <tr bk-table-row>
+            <td bk-table-cell>type</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>The type of secondary information - 'positive', 'critical', 'negative'
+                or
+                'informative'.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Attributes - List Message</h2>
+<table bk-table>
+    <thead bk-table-header>
+        <tr bk-table-row>
+            <th bk-table-header-cell>Name</th>
+            <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Description</th>
+        </tr>
+    </thead>
+    <tbody bk-table-body>
+        <tr bk-table-row>
+            <td bk-table-cell>type</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>The type of message - 'success', 'error', 'warning', 'information'.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Attributes - List Link</h2>
+<table bk-table>
+    <thead bk-table-header>
+        <tr bk-table-row>
+            <th bk-table-header-cell>Name</th>
+            <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Description</th>
+        </tr>
+    </thead>
+    <tbody bk-table-body>
+        <tr bk-table-row>
+            <td bk-table-cell>navigation-indicator</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>Displays an arrow to indicate that the item is navigable (Should be
+                used
+                with 'navigation-indication' lists)</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>navigated</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>Displays the list item as navigated</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>selected</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>Selects the list item. Should be used with 'navigation' and
+                'navigation-indication' lists</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Attributes - List Icon</h2>
+<table bk-table>
+    <thead bk-table-header>
+        <tr bk-table-row>
+            <th bk-table-header-cell>Name</th>
+            <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Description</th>
+        </tr>
+    </thead>
+    <tbody bk-table-body>
+        <tr bk-table-row>
+            <td bk-table-cell>glyph</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>Icon class.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Attributes - List Content</h2>
+<table bk-table>
+    <thead bk-table-header>
+        <tr bk-table-row>
+            <th bk-table-header-cell>Name</th>
+            <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Description</th>
+        </tr>
+    </thead>
+    <tbody bk-table-body>
+        <tr bk-table-row>
+            <td bk-table-cell>item-title</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>list item title</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>item-title-id</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>list item title id</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>content-wrap</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>Allows the byline text to wrap</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>title-wrap</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>Allows the title text to wrap</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Attributes - List Byline</h2>
+<table bk-table>
+    <thead bk-table-header>
+        <tr bk-table-row>
+            <th bk-table-header-cell>Name</th>
+            <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Description</th>
+        </tr>
+    </thead>
+    <tbody bk-table-body>
+        <tr bk-table-row>
+            <td bk-table-cell>align</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>One of 'left' or 'right'</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>content-wrap</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>Allows the byline text to wrap. Relevant to left aligned content only
+            </td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>semantic-status</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>One of 'neutral', 'positive', 'negative', 'critical' or 'informative'.
+                Relevant to right aligned content only</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Attributes - List Thumbnail</h2>
+<table bk-table>
+    <thead bk-table-header>
+        <tr bk-table-row>
+            <th bk-table-header-cell>Name</th>
+            <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Description</th>
+        </tr>
+    </thead>
+    <tbody bk-table-body>
+        <tr bk-table-row>
+            <td bk-table-cell>glyph</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>Icon class.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>image-url</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>Path to the thumbnail image</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Examples</h2>
+<h3>Default List</h3>
+<code-block>
+    <bk-list>
+        <bk-list-item>
+            <bk-list-title>List Item 1</bk-list-title>
+            <bk-list-secondary>Secondary info</bk-list-secondary>
+        </bk-list-item>
+        <bk-list-item>
+            <bk-list-title>List Item 2</bk-list-title>
+            <bk-list-secondary type="positive">Secondary info</bk-list-secondary>
+        </bk-list-item>
+        <bk-list-item>
+            <bk-list-title>List Item 3</bk-list-title>
+            <bk-list-secondary type="critical">Secondary info</bk-list-secondary>
+        </bk-list-item>
+        <bk-list-item>
+            <bk-list-title>List Item 4</bk-list-title>
+            <bk-list-secondary type="negative">Secondary info</bk-list-secondary>
+        </bk-list-item>
+        <bk-list-item>
+            <bk-list-title>List Item 5</bk-list-title>
+            <bk-list-secondary type="informative">Secondary info</bk-list-secondary>
+        </bk-list-item>
+        <bk-list-action-item>More Options</bk-list-action-item>
+    </bk-list>
+</code-block>
+
+<h3>List with icons and buttons</h3>
+<code-block>
+    <bk-list>
+        <bk-list-item>
+            <bk-list-icon glyph="sap-icon--cart"></bk-list-icon>
+            <bk-list-title>List Item 1</bk-list-title>
+            <bk-button bk-list-button state="transparent" glyph="sap-icon--edit" aria-label="edit">
+            </bk-button>
+            <bk-button bk-list-button state="transparent" glyph="sap-icon--edit" aria-label="edit">
+            </bk-button>
+        </bk-list-item>
+        <bk-list-item>
+            <bk-list-icon svg-path="/logo/blimpkit-symbolic.svg"></bk-list-icon>
+            <bk-list-title>List Item 2</bk-list-title>
+            <bk-button bk-list-button state="transparent" glyph="sap-icon--edit" aria-label="edit">
+            </bk-button>
+        </bk-list-item>
+        <bk-list-item>
+            <bk-list-title>List Item 3</bk-list-title>
+            <bk-list-icon glyph="sap-icon--history"></bk-list-icon>
+        </bk-list-item>
+    </bk-list>
+</code-block>
+
+<h3>Interactive List</h3>
+<code-block>
+    <bk-list>
+        <bk-list-item interactive="true">
+            <bk-list-title>List Item 1</bk-list-title>
+        </bk-list-item>
+        <bk-list-item interactive="true">
+            <bk-list-title>List Item 2</bk-list-title>
+        </bk-list-item>
+        <bk-list-item interactive="true" selected="true">
+            <bk-list-title>List Item 3</bk-list-title>
+        </bk-list-item>
+    </bk-list>
+</code-block>
+
+<h3>Navigation List</h3>
+<code-block>
+    <bk-list list-type="navigation-indication">
+        <bk-list-item inactive="true">
+            <bk-list-link>
+                <bk-list-title>List Item 1 (inactive)</bk-list-title>
+            </bk-list-link>
+        </bk-list-item>
+        <bk-list-item>
+            <bk-list-title>List Item 1</bk-list-title>
+        </bk-list-item>
+        <bk-list-item>
+            <bk-list-link navigation-indicator="true" selected="true">
+                <bk-list-icon glyph="sap-icon--history"></bk-list-icon>
+                <bk-list-title>List Item 2</bk-list-title>
+            </bk-list-link>
+        </bk-list-item>
+        <bk-list-item>
+            <bk-list-link navigation-indicator="true" navigated="true">
+                <bk-list-title>List Item 3</bk-list-title>
+                <bk-list-icon glyph="sap-icon--map"></bk-list-icon>
+            </bk-list-link>
+        </bk-list-item>
+    </bk-list>
+</code-block>
+
+<h3>Scrollable list</h3>
+<code-block>
+    <bk-list fixed-height="150">
+        <bk-list-item>
+            <bk-list-title>List Item 1</bk-list-title>
+        </bk-list-item>
+        <bk-list-item>
+            <bk-list-title>List Item 2</bk-list-title>
+        </bk-list-item>
+        <bk-list-item>
+            <bk-list-title>List Item 3</bk-list-title>
+        </bk-list-item>
+        <bk-list-item>
+            <bk-list-title>List Item 4</bk-list-title>
+        </bk-list-item>
+        <bk-list-item>
+            <bk-list-title>List Item 5</bk-list-title>
+        </bk-list-item>
+        <bk-list-item>
+            <bk-list-title>List Item 6</bk-list-title>
+        </bk-list-item>
+        <bk-list-item>
+            <bk-list-title>List Item 7</bk-list-title>
+        </bk-list-item>
+        <bk-list-item>
+            <bk-list-title>List Item 8</bk-list-title>
+        </bk-list-item>
+        <bk-list-item>
+            <bk-list-title>List Item 9</bk-list-title>
+        </bk-list-item>
+    </bk-list>
+</code-block>
+
+<h3>Selection List (compact)</h3>
+<code-block>
+    <bk-list list-type="selection" compact="true">
+        <bk-list-item>
+            <bk-list-form-item>
+                <bk-checkbox id="cbid6" compact="true" aria-labelledby="XezW12"></bk-checkbox>
+                <bk-checkbox-label empty="true" compact="true" for="cbid6"></bk-checkbox-label>
+            </bk-list-form-item>
+            <bk-list-title id="XezW12">List Item 1</bk-list-title>
+        </bk-list-item>
+        <bk-list-item selected="true">
+            <bk-list-form-item>
+                <bk-checkbox id="cbid7" compact="true" ng-model="fdListItem.checkboxModel" aria-labelledby="Az0bg1">
+                </bk-checkbox>
+                <bk-checkbox-label empty="true" compact="true" for="cbid7"></bk-checkbox-label>
+            </bk-list-form-item>
+            <bk-list-title id="Az0bg1">List Item 2</bk-list-title>
+        </bk-list-item>
+        <bk-list-item>
+            <bk-list-form-item>
+                <bk-checkbox id="cbid8" compact="true" aria-labelledby="Az0bg6"></bk-checkbox>
+                <bk-checkbox-label empty="true" compact="true" for="cbid8"></bk-checkbox-label>
+            </bk-list-form-item>
+            <bk-list-title id="Az0bg6">List Item 3</bk-list-title>
+        </bk-list-item>
+    </bk-list>
+    <code-block type="js">
+        $scope.fdListItem = { checkboxModel: true };
+    </code-block>
+</code-block>
+
+<h3>Byline List</h3>
+<code-block>
+    <bk-list byline="true">
+        <bk-list-item>
+            <bk-list-thumbnail glyph="sap-icon--activate"></bk-list-thumbnail>
+            <bk-list-content item-title="List Item Title">Byline (description)</bk-list-content>
+        </bk-list-item>
+        <bk-list-item>
+            <bk-list-thumbnail glyph="sap-icon--employee"></bk-list-thumbnail>
+            <bk-list-content item-title="List item with no byline"></bk-list-content>
+            <bk-button bk-list-button state="transparent" glyph="sap-icon--edit" aria-label="edit">
+            </bk-button>
+        </bk-list-item>
+        <bk-list-item>
+            <bk-list-thumbnail image-url="/logo/blimpkit.svg">
+            </bk-list-thumbnail>
+            <bk-list-content item-title="List item with 2-column byline">
+                <bk-list-byline align="left">First text item in byline (standard
+                    text)</bk-list-byline>
+                <bk-list-byline align="right" semantic-status="positive">Second text item in byline
+                    (can
+                    be
+                    semantic)</bk-list-byline>
+            </bk-list-content>
+        </bk-list-item>
+    </bk-list>
+</code-block>
+
+<h3>Byline Navigation List</h3>
+<code-block>
+    <bk-list list-type="navigation-indication" byline="true">
+        <bk-list-item>
+            <bk-list-thumbnail glyph="sap-icon--activate"></bk-list-thumbnail>
+            <bk-list-content item-title="Title">Byline (description)</bk-list-content>
+        </bk-list-item>
+        <bk-list-item>
+            <bk-list-link navigation-indicator="true" selected="true">
+                <bk-list-thumbnail glyph="sap-icon--employee"></bk-list-thumbnail>
+                <bk-list-content item-title="List item with no byline"></bk-list-content>
+            </bk-list-link>
+        </bk-list-item>
+        <bk-list-item>
+            <bk-list-link navigation-indicator="true" navigated="true">
+                <bk-list-thumbnail image-url="/logo/blimpkit.svg">
+                </bk-list-thumbnail>
+                <bk-list-content item-title="List item with 2-column byline">
+                    <bk-list-byline align="left">First text item in byline (standard text)
+                    </bk-list-byline>
+                    <bk-list-byline align="right" semantic-status="positive">Second text item in
+                        byline
+                        (can be semantic)</bk-list-byline>
+                </bk-list-content>
+            </bk-list-link>
+        </bk-list-item>
+    </bk-list>
+</code-block>
+
+<h3>Byline Selection List</h3>
+<code-block>
+    <bk-list list-type="selection" byline="true">
+        <bk-list-item>
+            <bk-list-form-item>
+                <bk-checkbox id="cbid9" aria-labelledby="XezW12"></bk-checkbox>
+                <bk-checkbox-label empty="true" for="cbid9"></bk-checkbox-label>
+            </bk-list-form-item>
+            <bk-list-thumbnail glyph="sap-icon--activate"></bk-list-thumbnail>
+            <bk-list-content item-title-id="XezW12" item-title="Title">Byline (description)
+            </bk-list-content>
+        </bk-list-item>
+        <bk-list-item selected="true">
+            <bk-list-form-item>
+                <bk-checkbox id="cbid10" aria-labelledby="Az0bg1">
+                </bk-checkbox>
+                <bk-checkbox-label empty="true" for="cbid10"></bk-checkbox-label>
+            </bk-list-form-item>
+            <bk-list-thumbnail image-url="/logo/blimpkit.svg"></bk-list-thumbnail>
+            <bk-list-content item-title-id="Az0bg1" item-title="List item with 2-column byline">
+                <bk-list-byline align="left">First text item in byline (standard
+                    text)</bk-list-byline>
+                <bk-list-byline align="right">Second text item in byline (can besemantic)
+                </bk-list-byline>
+            </bk-list-content>
+        </bk-list-item>
+        <bk-list-item>
+            <bk-list-form-item>
+                <bk-checkbox id="cbid11" aria-labelledby="Az0bg6"></bk-checkbox>
+                <bk-checkbox-label empty="true" for="cbid11"></bk-checkbox-label>
+            </bk-list-form-item>
+            <bk-list-content item-title-id="Az0bg6" item-title="Text-only list item">Byline
+                (description)
+            </bk-list-content>
+        </bk-list-item>
+    </bk-list>
+</code-block>

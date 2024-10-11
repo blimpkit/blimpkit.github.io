@@ -1,0 +1,49 @@
+<h2>Message Page</h2>
+<p>Message page displays a message to the user when an app or list is empty or if an error has
+    occurred.
+    The text and icon on the message page changes depending on the use case, however, the layout
+    stays
+    the same. It is responsive and adjusts to fit the available screen space.</p>
+
+<h2>Attributes</h2>
+<table bk-table>
+    <thead bk-table-header>
+        <tr bk-table-row>
+            <th bk-table-header-cell>Name</th>
+            <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Description</th>
+        </tr>
+    </thead>
+    <tbody bk-table-body>
+        <tr bk-table-row>
+            <td bk-table-cell>glyph</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>Icon class</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Examples</h2>
+<code-block>
+    <bk-message-page glyph="sap-icon--documents">
+        <bk-message-page-title>Sorry, we can't find this page.</bk-message-page-title>
+        <bk-message-page-subtitle>
+            <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit</b>,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+            in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur.
+            <i>Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.</i>
+        </bk-message-page-subtitle>
+        <bk-message-page-actions>
+            <bk-button compact="true" label="Contact Support" state="emphasized">
+            </bk-button>
+            <bk-button compact="true" label="Reload Page"></bk-button>
+        </bk-message-page-actions>
+        <bk-message-page-more>
+            <bk-button compact="true" label="Show Details" state="transparent"></bk-button>
+        </bk-message-page-more>
+    </bk-message-page>
+</code-block>

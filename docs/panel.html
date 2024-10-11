@@ -1,0 +1,100 @@
+<h2>Panel</h2>
+<p>The panel is a container for grouping and displaying information. Panels are responsive and can
+    be
+    collapsed to save additional screen space.</p>
+
+<h2>Attributes - Panel</h2>
+<table bk-table>
+    <thead bk-table-header>
+        <tr bk-table-row>
+            <th bk-table-header-cell>Name</th>
+            <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Description</th>
+        </tr>
+    </thead>
+    <tbody bk-table-body>
+        <tr bk-table-row>
+            <td bk-table-cell>expanded</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>Whether the panel is expanded or not</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>fixed</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>Whether the panel is expandable or not. Defaults to false.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>compact</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>Panel size</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>expanded-change</td>
+            <td bk-table-cell>function</td>
+            <td bk-table-cell>A callback called when the Expand button is clicked</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Attributes - Panel Expand</h2>
+<table bk-table>
+    <thead bk-table-header>
+        <tr bk-table-row>
+            <th bk-table-header-cell>Name</th>
+            <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Description</th>
+        </tr>
+    </thead>
+    <tbody bk-table-body>
+        <tr bk-table-row>
+            <td bk-table-cell>hint</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>Description that will be used for the aria label and tooltip hint.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Examples</h2>
+<code-block>
+    <bk-panel expanded="true">
+        <bk-panel-header>
+            <bk-panel-expand hint="expand panel content"></bk-panel-expand>
+            <h3 bk-panel-title>Panel Header 1</h3>
+        </bk-panel-header>
+        <bk-panel-content aria-label="Panel Content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut laoreet lorem.
+            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+            Aenean sagittis aliquam justo et suscipit. Nam molestie, magna at elementum pulvinar,
+            nisi enim venenatis ante, id convallis mi neque nec risus. Cras blandit sagittis augue
+            at facilisis. Mauris egestas nunc nec diam mollis auctor. Vestibulum sed euismod elit,
+            eget accumsan quam. Donec eleifend porttitor viverra. Nunc porttitor dictum erat at
+            molestie.
+            Sed quis velit dolor. Vestibulum et turpis eget enim gravida gravida vitae at massa.
+            Suspendisse facilisis elit ut dolor posuere consectetur.
+            Morbi ac nibh sit amet dolor lobortis tincidunt in ornare erat. Vestibulum tristique
+            euismod enim, ac volutpat odio cursus sit amet.
+        </bk-panel-content>
+    </bk-panel>
+</code-block>
+<code-block>
+    <bk-panel expanded="false" compact="true">
+        <bk-panel-header>
+            <bk-panel-expand hint="expand panel content"></bk-panel-expand>
+            <h3 bk-panel-title>Panel Header 2 (Compact)</h3>
+        </bk-panel-header>
+        <bk-panel-content aria-label="Panel Content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut laoreet lorem.
+            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+            Aenean sagittis aliquam justo et suscipit. Nam molestie, magna at elementum pulvinar,
+            nisi enim venenatis ante, id convallis mi neque nec risus. Cras blandit sagittis augue
+            at facilisis. Mauris egestas nunc nec diam mollis auctor. Vestibulum sed euismod elit,
+            eget accumsan quam. Donec eleifend porttitor viverra. Nunc porttitor dictum erat at
+            molestie.
+            Sed quis velit dolor. Vestibulum et turpis eget enim gravida gravida vitae at massa.
+            Suspendisse facilisis elit ut dolor posuere consectetur.
+            Morbi ac nibh sit amet dolor lobortis tincidunt in ornare erat. Vestibulum tristique
+            euismod enim, ac volutpat odio cursus sit amet.
+        </bk-panel-content>
+    </bk-panel>
+</code-block>

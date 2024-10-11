@@ -1,0 +1,131 @@
+<h2>Token</h2>
+<p>Tokens are small items of information (similar to tags) that mainly serve to visualize previously
+    selected items. The tokenizer is the container that handles the tokens. Tokens can be added,
+    removed, selected, or deselected.</p>
+<p>Tokenizer is a container that wraps multiple tokens.</p>
+
+<h2>Attributes - Token</h2>
+<table bk-table>
+    <thead bk-table-header>
+        <tr bk-table-row>
+            <th bk-table-header-cell>Name</th>
+            <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Description</th>
+        </tr>
+    </thead>
+    <tbody bk-table-body>
+        <tr bk-table-row>
+            <td bk-table-cell>title</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>Tile header title.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>subtitle</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>Tile header subtitle.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>two-columns</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>Two column mode.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Attributes - Token indicator</h2>
+<table bk-table>
+    <thead bk-table-header>
+        <tr bk-table-row>
+            <th bk-table-header-cell>Name</th>
+            <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Description</th>
+        </tr>
+    </thead>
+    <tbody bk-table-body>
+        <tr bk-table-row>
+            <td bk-table-cell>suffix</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>The text after the number of hidden tokens.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Attributes - Tokenizer</h2>
+<table bk-table>
+    <thead bk-table-header>
+        <tr bk-table-row>
+            <th bk-table-header-cell>Name</th>
+            <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Description</th>
+        </tr>
+    </thead>
+    <tbody bk-table-body>
+        <tr bk-table-row>
+            <td bk-table-cell>compact</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>Whether the tokenizer is compact</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>is-focus</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>Enable the focus indicator.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>scrollable</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>Whether tokenizer is scrollable. When false displays 'more' indicator
+                with
+                the number of the hidden tokens</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Examples</h2>
+<h3>Token Default</h3>
+<code-block>
+    <div class="bk-hbox bk-box--gap">
+        <bk-token label="Bibendum" close-aria-label="Bibendum token close"></bk-token>
+        <bk-token label="Selected" close-aria-label="Selected token close" is-selected="true"></bk-token>
+        <bk-token label="Hover mode" is-hover="true" close-aria-label="Hover token close"></bk-token>
+        <bk-token label="Focus mode" is-focus="true" close-aria-label="Focus token close"></bk-token>
+        <bk-token label="Disabled" ng-disabled="true"></bk-token>
+        <bk-token label="Filter (readonly)" is-readonly="true"></bk-token>
+    </div>
+</code-block>
+
+<h3>Tokenizer</h3>
+<code-block>
+    <bk-tokenizer>
+        <bk-token label="Long Token Option 1" close-aria-label="Token close"></bk-token>
+        <bk-token label="Long Token Option 2" close-aria-label="Token close"></bk-token>
+        <bk-token label="Long Token Option 3" close-aria-label="Token close"></bk-token>
+        <bk-token label="Long Token Option 4" close-aria-label="Token close"></bk-token>
+        <bk-token label="Long Token Option 5" close-aria-label="Token close"></bk-token>
+        <bk-token label="Long Token Option 6" close-aria-label="Token close"></bk-token>
+        <bk-token label="Long Token Option 7" close-aria-label="Token close"></bk-token>
+        <bk-token label="Long Token Option 8" close-aria-label="Token close"></bk-token>
+        <bk-token label="Long Token Option 9" close-aria-label="Token close"></bk-token>
+        <bk-token label="Long Token Option 10" close-aria-label="Token close"></bk-token>
+        <bk-token label="Long Token Option 11" close-aria-label="Token close"></bk-token>
+        <bk-token-indicator suffix="more"></bk-token-indicator>
+        <bk-input type="text" class="fsd" autocomplete="off" placeholder="Find option"></bk-input>
+    </bk-tokenizer>
+</code-block>
+
+<h3>Tokenizer scrollable</h3>
+<code-block>
+    <bk-tokenizer scrollable="true">
+        <bk-token label="Long Token Option 1" close-aria-label="Token close"></bk-token>
+        <bk-token label="Long Token Option 2" close-aria-label="Token close"></bk-token>
+        <bk-token label="Long Token Option 3" close-aria-label="Token close"></bk-token>
+        <bk-token label="Long Token Option 4" close-aria-label="Token close"></bk-token>
+        <bk-token label="Long Token Option 5" close-aria-label="Token close"></bk-token>
+        <bk-token label="Long Token Option 6" close-aria-label="Token close"></bk-token>
+        <bk-token label="Long Token Option 7" close-aria-label="Token close"></bk-token>
+        <bk-token label="Long Token Option 8" close-aria-label="Token close"></bk-token>
+        <bk-token label="Long Token Option 9" close-aria-label="Token close"></bk-token>
+        <bk-token label="Long Token Option 10" close-aria-label="Token close"></bk-token>
+        <bk-token label="Long Token Option 11" close-aria-label="Token close"></bk-token>
+        <bk-input type="text" autocomplete="off" placeholder="Find option"></bk-input>
+    </bk-tokenizer>
+</code-block>
