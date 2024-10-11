@@ -1,0 +1,50 @@
+{
+  "name": "blimpkit",
+  "version": "1.0.0",
+  "description": "BlimpKit is a UI component library",
+  "main": "dist/js/blimpkit.js",
+  "scripts": {
+    "start": "npx http-server",
+    "build": "node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dirigiblelabs/BlimpKit.git"
+  },
+  "keywords": [
+    "blimpkit",
+    "ui",
+    "widget",
+    "components"
+  ],
+  "contributors": [
+    {
+      "name": "Stan Genchev",
+      "email": "stan.genchev@codbex.com",
+      "url": "https://github.com/StanZGenchev"
+    },
+    {
+      "name": "Atanas Himchev",
+      "email": "atanas.himchev@codbex.com",
+      "url": "https://github.com/himchev"
+    }
+  ],
+  "license": "EPL-2.0",
+  "bugs": {
+    "url": "https://github.com/dirigiblelabs/BlimpKit/issues"
+  },
+  "homepage": "https://github.com/dirigiblelabs/BlimpKit#readme",
+  "files": [
+    "/dist/*"
+  ],
+  "devDependencies": {
+    "terser": "^5.34.1"
+  },
+  "dependencies": {
+    "@sap-theming/theming-base-content": "11.18.2",
+    "angular": "1.8.3",
+    "angular-aria": "1.8.3",
+    "fundamental-styles": "0.38.0",
+    "jquery": "3.7.1"
+  }
+}
