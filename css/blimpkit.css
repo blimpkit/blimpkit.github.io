@@ -10,77 +10,7 @@
  * SPDX-License-Identifier: EPL-2.0
  */
 :root {
-  --bkFontRegular: url("node_modules/@sap-theming/theming-base-content/content/Base/baseLib/baseTheme/fonts/72-Regular-full.woff2") format("woff2");
-  --bkFontSemibold: url("node_modules/@sap-theming/theming-base-content/content/Base/baseLib/baseTheme/fonts/72-Semibold-full.woff2") format("woff2");
-  --bkFontBold: url("node_modules/@sap-theming/theming-base-content/content/Base/baseLib/baseTheme/fonts/72-Bold-full.woff2") format("woff2");
-  --bkFontLight: url("node_modules/@sap-theming/theming-base-content/content/Base/baseLib/baseTheme/fonts/72-Light-full.woff2") format("woff2");
-  --bkFontMonoRegular: url("node_modules/@sap-theming/theming-base-content/content/Base/baseLib/baseTheme/fonts/72Mono-Regular-full.woff2") format("woff2");
-  --bkFontMonoBold: url("node_modules/@sap-theming/theming-base-content/content/Base/baseLib/baseTheme/fonts/72Mono-Bold-full.woff2") format("woff2");
-  --bkFontItalic: url("node_modules/@sap-theming/theming-base-content/content/Base/baseLib/baseTheme/fonts/72-Italic-full.woff2") format("woff2");
-  --bkFontIcons: url("node_modules/@sap-theming/theming-base-content/content/Base/baseLib/sap_horizon/fonts/SAP-icons.woff2") format("woff2");
-  --bkFontIconsTnt: url("node_modules/@sap-theming/theming-base-content/content/Base/baseLib/sap_horizon/fonts/SAP-icons-TNT.woff2") format("woff2");
-  --bkFontIconsBusiness: url("node_modules/@sap-theming/theming-base-content/content/Base/baseLib/sap_horizon/fonts/BusinessSuiteInAppSymbols.woff2") format("woff2");
   --bkIconTabBarCompactHeight: 2.375rem;
-}
-
-@font-face {
-  font-family: "72";
-  src: var(--bkFontRegular);
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "72-Semibold";
-  src: var(--bkFontSemibold);
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "72-Bold";
-  src: var(--bkFontBold);
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "72-Light";
-  src: var(--bkFontLight);
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "72Mono-Regular";
-  src: var(--bkFontMonoRegular);
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "72Mono-Bold";
-  src: var(--bkFontMonoBold);
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "SAP-icons";
-  src: var(--bkFontIcons);
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "BusinessSuiteInAppSymbols";
-  src: var(--bkFontIconsBusiness);
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "SAP-icons-TNT";
-  src: var(--bkFontIconsTnt);
-  font-weight: normal;
-  font-style: normal;
 }
 
 html,
@@ -98,7 +28,7 @@ html {
 }
 
 body {
-  background: transparent;
+  background-color: var(--sapBackgroundColor, #f7f7f7);
   font-size: var(--sapFontSize, .875rem);
   line-height: var(--sapContent_LineHeight, 1.4);
   color: var(--sapTextColor, #32363a);

@@ -23,7 +23,7 @@ const licenseHeader = fs.readFileSync('license-header.txt', 'utf8');
 const jsFiles = globSync('./src/*.js');
 jsFiles.map(file => {
     minify(fs.readFileSync(file, 'utf8'), options).then((result) => {
-        fs.writeFileSync(file.replace('src/', 'dist/js/'), licenseHeader + result.code, 'utf8');
+        fs.writeFileSync(file.replace('src/', 'dist/js/').replace('.js', '.min.js'), licenseHeader + result.code, 'utf8');
     }, (error) => {
         console.error(`Error minifying ${file}`, error);
     });
@@ -32,7 +32,7 @@ jsFiles.map(file => {
 const cssFiles = globSync('./css/*.css');
 cssFiles.map(file => {
     const result = cssMinify.minify(fs.readFileSync(file, 'utf8'));
-    fs.writeFileSync(file.replace('css/', 'dist/css/'), licenseHeader + result.styles, 'utf8');
+    fs.writeFileSync(file.replace('css/', 'dist/css/').replace('.css', '.min.css'), licenseHeader + result.styles, 'utf8');
 });
 
 fs.cp('./logo', './dist/logo', { recursive: true }, (error) => {

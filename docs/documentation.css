@@ -1,17 +1,65 @@
-:root {
-    --bkFontRegular: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Regular-full.woff2") format("woff2");
-    --bkFontSemibold: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Semibold-full.woff2") format("woff2");
-    --bkFontBold: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Bold-full.woff2") format("woff2");
-    --bkFontLight: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Light-full.woff2") format("woff2");
-    --bkFontMonoRegular: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72Mono-Regular-full.woff2") format("woff2");
-    --bkFontMonoBold: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72Mono-Bold-full.woff2") format("woff2");
-    --bkFontItalic: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Italic-full.woff2") format("woff2");
-    --bkFontIcons: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/fonts/SAP-icons.woff2") format("woff2");
-    --bkFontIconsTnt: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/fonts/SAP-icons-TNT.woff2") format("woff2");
-    --bkFontIconsBusiness: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/fonts/BusinessSuiteInAppSymbols.woff2") format("woff2");
+@font-face {
+    font-family: "72";
+    src: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Regular-full.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
 }
 
-body {
+@font-face {
+    font-family: "72-Semibold";
+    src: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Semibold-full.woff2") format("woff2");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "72-Bold";
+    src: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Bold-full.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "72-Light";
+    src: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Light-full.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "72Mono-Regular";
+    src: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72Mono-Regular-full.woff2") format("woff2");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "72Mono-Bold";
+    src: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72Mono-Bold-full.woff2") format("woff2");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SAP-icons";
+    src: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/fonts/SAP-icons.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "BusinessSuiteInAppSymbols";
+    src: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/fonts/BusinessSuiteInAppSymbols.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SAP-icons-TNT";
+    src: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/fonts/SAP-icons-TNT.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+div.doc-main-container {
+    height: calc(100% - var(--fdShellbar_Height));
     background-color: var(--sapGroup_ContentBackground, #fff);
 }
 

@@ -98,7 +98,7 @@
             </bk-shellbar-action>
         </bk-shellbar-group>
     </bk-shellbar>
-    <div class="bk-hbox" style="height: calc(100% - var(--fdShellbar_Height));">
+    <div class="doc-main-container bk-hbox">
         <bk-vertical-nav can-scroll="true">
             <bk-vertical-nav-main-section aria-label="main navigation">
                 <bk-list>
@@ -311,7 +311,7 @@
                 </bk-list>
             </bk-vertical-nav-main-section>
         </bk-vertical-nav>
-        <div class="bk-vbox bk-fill-parent" bk-scrollbar style="padding: 2rem">
+        <div class="bk-vbox bk-fill-parent" bk-scrollbar style="padding: 2rem;">
             <!-- Introduction -->
             <div ng-show="selectedPage === 'introduction'">
                 <img src="./logo/blimpkit-full.svg" height="240">
@@ -327,8 +327,8 @@
                 <h2>Getting Started</h2>
                 <p>The library is modular, so you can use as little or as much as you need.</p>
 
-                <h3>Initialization</h3>
-                <p>Besides BlimpKit, you will aslo need AngularJS, jQuery, fundamental-styles and SAP Theming:
+                <h3>Dependencies</h3>
+                <p>Besides BlimpKit, you will also need AngularJS, jQuery, fundamental-styles and SAP Theming:
                 </p>
                 <code-block type="text-html">
                     &lt;script
@@ -337,62 +337,113 @@
                     src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js&quot;&gt;&lt;/script&gt;
                     &lt;script
                     src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular-aria.js&quot;&gt;&lt;/script&gt;
-
-                    &lt;link href=&#39;https://unpkg.com/fundamental-styles@0.38.0/dist/fundamental-styles.css&#39;
-                    rel=&#39;stylesheet&#39;&gt;
-                    &lt;link href=&#39;https://unpkg.com/fundamental-styles@0.38.0/dist/theming/{themeName}.css&#39;
-                    rel=&#39;stylesheet&#39;&gt;
-                    &lt;link
-                    href=&#39;https://unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/{themeName}/css_variables.css&#39;
-                    rel=&#39;stylesheet&#39;&gt;
-
-                    &lt;link href=&#39;/css/blimpkit.css&#39; rel=&#39;stylesheet&#39;&gt;
                 </code-block>
+
+                <h3>Base styles and themes</h3>
                 <p>Themes are supported. You can replace 'themeName' with the name of the theme that you want. The
                     available options are <b>sap_horizon</b>, <b>sap_horizon_dark</b>, <b>sap_horizon_hcb</b>,
                     <b>sap_horizon_hcw</b>,
                     <b>sap_fiori_3</b>, <b>sap_fiori_3_dark</b>, <b>sap_fiori_3_hcb</b>, <b>sap_fiori_3_hcw</b> and
                     <b>sap_fiori_3_light_dark</b>.
                 </p>
+                <code-block type="text-html">
+                    &lt;link href=&quot;https://unpkg.com/fundamental-styles@0.38.0/dist/fundamental-styles.css&quot;
+                    rel=&quot;stylesheet&quot;&gt;
+                    &lt;link href=&quot;https://unpkg.com/fundamental-styles@0.38.0/dist/theming/{themeName}.css&quot;
+                    rel=&quot;stylesheet&quot;&gt;
+                    &lt;link
+                    href=&quot;https://unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/{themeName}/css_variables.css&quot;
+                    rel=&quot;stylesheet&quot;&gt;
 
-                <p>Then you will need to override the font urls, in your own CSS file:</p>
+                    &lt;link href=&quot;/css/blimpkit.css&quot; rel=&quot;stylesheet&quot;&gt;
+                </code-block>
+
+                <h3>Fonts and icons</h3>
+
+                <p>Fonts and icons are not included or configured by default. You must create you own CSS file and
+                    configure the fonts from the <b>@sap-theming</b> package.</p>
 
                 <code-block type="css">
-                    :root {
-                    --bkFontRegular:
-                    url("https://unpkg.com/@sap-theming/theming-base-content/content/Base/baseLib/baseTheme/fonts/72-Regular-full.woff2")
-                    format("woff2");
-                    --bkFontSemibold:
-                    url("https://unpkg.com/@sap-theming/theming-base-content/content/Base/baseLib/baseTheme/fonts/72-Semibold-full.woff2")
-                    format("woff2");
-                    --bkFontBold:
-                    url("https://unpkg.com/@sap-theming/theming-base-content/content/Base/baseLib/baseTheme/fonts/72-Bold-full.woff2")
-                    format("woff2");
-                    --bkFontLight:
-                    url("https://unpkg.com/@sap-theming/theming-base-content/content/Base/baseLib/baseTheme/fonts/72-Light-full.woff2")
-                    format("woff2");
-                    --bkFontMonoRegular:
-                    url("https://unpkg.com/@sap-theming/theming-base-content/content/Base/baseLib/baseTheme/fonts/72Mono-Regular-full.woff2")
-                    format("woff2");
-                    --bkFontMonoBold:
-                    url("https://unpkg.com/@sap-theming/theming-base-content/content/Base/baseLib/baseTheme/fonts/72Mono-Bold-full.woff2")
-                    format("woff2");
-                    --bkFontItalic:
-                    url("https://unpkg.com/@sap-theming/theming-base-content/content/Base/baseLib/baseTheme/fonts/72-Italic-full.woff2")
-                    format("woff2");
-                    --bkFontIcons:
-                    url("https://unpkg.com/@sap-theming/theming-base-content/content/Base/baseLib/sap_horizon/fonts/SAP-icons.woff2")
-                    format("woff2");
-                    --bkFontIconsTnt:
-                    url("https://unpkg.com/@sap-theming/theming-base-content/content/Base/baseLib/sap_horizon/fonts/SAP-icons-TNT.woff2")
-                    format("woff2");
-                    --bkFontIconsBusiness:
-                    url("https://unpkg.com/@sap-theming/theming-base-content/content/Base/baseLib/sap_horizon/fonts/BusinessSuiteInAppSymbols.woff2")
-                    format("woff2");
+                    @font-face {
+                    font-family: &quot;72&quot;;
+                    src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Regular-full.woff2&quot;)
+                    format(&quot;woff2&quot;);
+                    font-weight: normal;
+                    font-style: normal;
+                    }
+
+                    @font-face {
+                    font-family: &quot;72-Semibold&quot;;
+                    src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Semibold-full.woff2&quot;)
+                    format(&quot;woff2&quot;);
+                    font-style: normal;
+                    }
+
+                    @font-face {
+                    font-family: &quot;72-Bold&quot;;
+                    src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Bold-full.woff2&quot;)
+                    format(&quot;woff2&quot;);
+                    font-weight: 700;
+                    font-style: normal;
+                    }
+
+                    @font-face {
+                    font-family: &quot;72-Light&quot;;
+                    src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Light-full.woff2&quot;)
+                    format(&quot;woff2&quot;);
+                    font-weight: 300;
+                    font-style: normal;
+                    }
+
+                    @font-face {
+                    font-family: &quot;72Mono-Regular&quot;;
+                    src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72Mono-Regular-full.woff2&quot;)
+                    format(&quot;woff2&quot;);
+                    font-style: normal;
+                    }
+
+                    @font-face {
+                    font-family: &quot;72Mono-Bold&quot;;
+                    src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72Mono-Bold-full.woff2&quot;)
+                    format(&quot;woff2&quot;);
+                    font-style: normal;
+                    }
+
+                    @font-face {
+                    font-family: &quot;SAP-icons&quot;;
+                    src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/fonts/SAP-icons.woff2&quot;)
+                    format(&quot;woff2&quot;);
+                    font-weight: normal;
+                    font-style: normal;
+                    }
+
+                    @font-face {
+                    font-family: &quot;BusinessSuiteInAppSymbols&quot;;
+                    src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/fonts/BusinessSuiteInAppSymbols.woff2&quot;)
+                    format(&quot;woff2&quot;);
+                    font-weight: normal;
+                    font-style: normal;
+                    }
+
+                    @font-face {
+                    font-family: &quot;SAP-icons-TNT&quot;;
+                    src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/fonts/SAP-icons-TNT.woff2&quot;)
+                    format(&quot;woff2&quot;);
+                    font-weight: normal;
+                    font-style: normal;
                     }
                 </code-block>
 
-                <p>Finally, include the BlimpKit module:</p>
+                <h3>Initialization and use</h3>
+
+                <p>Include the base BlimpKit module:</p>
+
+                <code-block type="text-html">
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/blimpkit.js&quot;&gt;&lt;/script&gt;
+                </code-block>
+
+                <p>Add the BlimpKit module to your module as a dependency:</p>
 
                 <code-block type="js">
                     angular.module('yourModuleName', ['blimpKit']);
@@ -477,6 +528,9 @@
                     &lt;script type=&quot;text/javascript&quot;
                     src=&quot;/src/wizard.js&quot;&gt;&lt;/script&gt;
                 </code-block>
+
+                <p>That's it! You can now use BlimpKit components. For examples on how to use them, look under the
+                    "Components" section in the sidebar.</p>
             </div>
 
             <!-- Icons -->
