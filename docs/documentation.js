@@ -103,7 +103,7 @@ widgetsView.controller('WidgetsViewController', function ($scope) {
     ];
 
     $scope.comboboxItems2 = [
-        { value: 1, svg: '/logo/blimpkit-symbolic.svg', text: 'Product 1', secondaryText: '1000 EUR' },
+        { value: 1, svg: './logo/blimpkit-symbolic.svg', text: 'Product 1', secondaryText: '1000 EUR' },
         { value: 2, glyph: 'sap-icon--picture', text: 'Product 2', secondaryText: '750 EUR' },
         { value: 3, glyph: 'sap-icon--laptop', text: 'Product 3', secondaryText: '780 EUR' },
         { value: 4, glyph: 'sap-icon--fridge', text: 'Product 4', secondaryText: '40 EUR' }
