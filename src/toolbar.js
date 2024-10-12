@@ -42,7 +42,7 @@ blimpkit.directive('bkToolbar', (classNames) => ({
     transclude: true,
     replace: true,
     scope: {
-        fixedWidth: '@'
+        fixedWidth: '@?'
     },
     link: (scope) => {
         scope.getClasses = () => classNames('fd-toolbar__spacer', {

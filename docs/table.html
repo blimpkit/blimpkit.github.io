@@ -13,6 +13,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -20,18 +21,21 @@
         <tr bk-table-row>
             <td bk-table-cell>inner-borders</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Table inner borders. One of 'horizontal', 'vertical', 'top', 'none' or
                 'all' (default value)</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>outer-borders</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Table outer borders. One of 'horizontal', 'vertical', 'top', 'bottom',
                 'none' or 'all' (default value)</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>display-mode</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>The size of the table. Could be one of 'compact', 'condensed' or
                 'standard' (default value)</td>
         </tr>
@@ -44,6 +48,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -51,6 +56,7 @@
         <tr bk-table-row>
             <td bk-table-cell>sticky</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Makes header sticky when scrolling the table</td>
         </tr>
     </tbody>
@@ -62,6 +68,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -69,6 +76,7 @@
         <tr bk-table-row>
             <td bk-table-cell>inner-borders</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Table inner borders. One of 'horizontal', 'vertical', 'none' or 'all'
                 (default value)</td>
         </tr>
@@ -81,6 +89,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -88,6 +97,7 @@
         <tr bk-table-row>
             <td bk-table-cell>sticky</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Makes footer sticky when scrolling the table</td>
         </tr>
     </tbody>
@@ -99,6 +109,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -106,16 +117,19 @@
         <tr bk-table-row>
             <td bk-table-cell>selected</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Whether or not the table row is selected. Defaults to 'false'</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>activable</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Displays the row as active when clicked. Defaults to 'false'</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>hoverable</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Highlights the row on hover. Defaults to 'false'</td>
         </tr>
     </tbody>
@@ -127,6 +141,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -134,24 +149,27 @@
         <tr bk-table-row>
             <td bk-table-cell>content-type</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>The type of the inner element. Could be one of 'checkbox',
                 'statusIndicator' or 'any' (default value)</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>fixed</td>
             <td bk-table-cell>boolean|string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Renders the cell as fixed. Could be one of 'true', 'false' or 'last'
-                (if
-                that's the last fixed cell). Defaults to 'false'</td>
+                (if that's the last fixed cell). Defaults to 'false'</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>activable</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Displays the cell as active when clicked. Defaults to 'false'</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>hoverable</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Highlights the cell on hover. Defaults to 'false'</td>
         </tr>
     </tbody>
@@ -163,6 +181,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -170,43 +189,51 @@
         <tr bk-table-row>
             <td bk-table-cell>content-type</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>The type of the inner element. Could be one of 'checkbox',
                 'statusIndicator' or 'any' (default value)</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>fit-content</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Sets width to fit the cell content</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>activable</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Displays the cell as active when clicked. Defaults to 'false'</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>hoverable</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Highlights the cell on hover. Defaults to 'false'</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>navigated</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Displays the cell as navigated. Defaults to 'false'</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>no-data</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Displays empty row</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>status-indicator</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>the type of the status indicator. Could be one of 'valid', 'warning',
                 'error', 'information' or 'default' (default value)</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>nesting-level</td>
             <td bk-table-cell>number</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>The row nesting level (starting from 1) for tables with row groups
             </td>
         </tr>
@@ -219,6 +246,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -226,12 +254,14 @@
         <tr bk-table-row>
             <td bk-table-cell>nesting-level</td>
             <td bk-table-cell>number</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>The row nesting level (starting from 1) for tables with row groups
             </td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>expanded</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Whether the row group is expanded or not</td>
         </tr>
     </tbody>
@@ -243,6 +273,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -250,11 +281,13 @@
         <tr bk-table-row>
             <td bk-table-cell>navigation</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Whether or not this icon is for a list navigation item.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>glyph</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>True</td>
             <td bk-table-cell>Icon class.</td>
         </tr>
     </tbody>

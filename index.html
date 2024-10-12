@@ -17,7 +17,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" sizes="any" href="data:;base64,iVBORw0KGgo=">
+    <link rel="icon" type="image/x-icon" sizes="any" href="./logo/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="./logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./logo/favicon-16x16.png">
     <title>BlimpKit Documentation</title>
 
     <script src="https://www.unpkg.com/jquery@3.7.1/dist/jquery.min.js"></script>
@@ -52,6 +54,7 @@
     <script type="text/javascript" src="./src/select.js"></script>
     <script type="text/javascript" src="./src/shellbar.js"></script>
     <script type="text/javascript" src="./src/step-input.js"></script>
+    <script type="text/javascript" src="./src/switch.js"></script>
     <script type="text/javascript" src="./src/table.js"></script>
     <script type="text/javascript" src="./src/textarea.js"></script>
     <script type="text/javascript" src="./src/tile.js"></script>
@@ -76,10 +79,10 @@
 </head>
 
 <body class="bk-vbox">
-    <bk-shellbar class="bk-list-border-bottom">
+    <bk-shellbar class="bk-border--bottom">
         <bk-shellbar-group position="left">
             <span bk-shellbar-logo><img src="./logo/blimpkit.svg" width="32" height="32" alt="BlimpKit"></span>
-            <span bk-shellbar--title>BlimpKit</span>
+            <span bk-shellbar-title>BlimpKit</span>
         </bk-shellbar-group>
         <bk-shellbar-group position="right">
             <bk-shellbar-action>
@@ -89,7 +92,7 @@
                         </bk-button>
                     </bk-popover-control>
                     <bk-popover-body align="bottom-right">
-                        <bk-menu aria-label="popover items">
+                        <bk-menu aria-label="theme popover items">
                             <bk-menu-item title="Morning Horizon" ng-click="setTheme('morning-horizon')"></bk-menu-item>
                             <bk-menu-item title="Evening Horizon" ng-click="setTheme('evening-horizon')"></bk-menu-item>
                         </bk-menu>
@@ -259,6 +262,16 @@
                         <bk-list-navigation-item-indicator ng-if="selectedPage === 'scrollbar'">
                         </bk-list-navigation-item-indicator>
                     </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('shellbar')" indicated="selectedPage === 'shellbar'">
+                        <bk-list-navigation-item-text>Shellbar</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'shellbar'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('switch')" indicated="selectedPage === 'switch'">
+                        <bk-list-navigation-item-text>Switch</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'switch'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
                     <bk-list-navigation-item ng-click="switchPage('select')" indicated="selectedPage === 'select'">
                         <bk-list-navigation-item-text>Select</bk-list-navigation-item-text>
                         <bk-list-navigation-item-indicator ng-if="selectedPage === 'select'">
@@ -308,12 +321,39 @@
                         </bk-list-navigation-item-indicator>
                     </bk-list-navigation-item>
                     <bk-list-navigation-group-header>Common CSS</bk-list-navigation-group-header>
+                    <bk-list-navigation-item ng-click="switchPage('css-box')" indicated="selectedPage === 'css-box'">
+                        <bk-list-navigation-item-text>Box</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'css-box'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('css-grid')" indicated="selectedPage === 'css-grid'">
+                        <bk-list-navigation-item-text>Grid</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'css-grid'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('css-borders')"
+                        indicated="selectedPage === 'css-borders'">
+                        <bk-list-navigation-item-text>Borders</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'css-borders'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('css-pad-mar')"
+                        indicated="selectedPage === 'css-pad-mar'">
+                        <bk-list-navigation-item-text>Paddings & Margins</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'css-pad-mar'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('css-size')" indicated="selectedPage === 'css-size'">
+                        <bk-list-navigation-item-text>Width & Height</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'css-size'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
                 </bk-list>
             </bk-vertical-nav-main-section>
         </bk-vertical-nav>
         <div class="bk-vbox bk-fill-parent" bk-scrollbar style="padding: 2rem;">
             <!-- Introduction -->
-            <div ng-show="selectedPage === 'introduction'">
+            <div ng-if="selectedPage === 'introduction'">
                 <img src="./logo/blimpkit-full.svg" height="240">
                 <h1>What is BlimpKit?</h1>
                 <p>BlimpKit is an AngularJS directive/component UI library based on the <a
@@ -534,114 +574,136 @@
             </div>
 
             <!-- Icons -->
-            <div ng-show="selectedPage === 'icons'" ng-include="'docs/icons.html'"></div>
+            <div ng-if="selectedPage === 'icons'" ng-include="'docs/icons.html'"></div>
 
             <!-- Focus -->
-            <div ng-show="selectedPage === 'focus'" ng-include="'docs/focus.html'"></div>
+            <div ng-if="selectedPage === 'focus'" ng-include="'docs/focus.html'"></div>
 
             <!-- Input Rules -->
-            <div ng-show="selectedPage === 'input-rules'" ng-include="'docs/input-rules.html'"></div>
+            <div ng-if="selectedPage === 'input-rules'" ng-include="'docs/input-rules.html'"></div>
 
             <!-- Avatar -->
-            <div ng-show="selectedPage === 'avatar'" ng-include="'docs/avatar.html'"></div>
+            <div ng-if="selectedPage === 'avatar'" ng-include="'docs/avatar.html'"></div>
+
             <!-- Bar -->
-            <div ng-show="selectedPage === 'bar'" ng-include="'docs/bar.html'"></div>
+            <div ng-if="selectedPage === 'bar'" ng-include="'docs/bar.html'"></div>
 
             <!-- Busy indicator -->
-            <div ng-show="selectedPage === 'busy'" ng-include="'docs/busy-indicator.html'"></div>
+            <div ng-if="selectedPage === 'busy'" ng-include="'docs/busy-indicator.html'"></div>
 
             <!-- Button -->
             <div ng-show="selectedPage === 'button'" ng-include="'docs/button.html'"></div>
 
             <!-- Badge -->
-            <div ng-show="selectedPage === 'badge'" ng-include="'docs/badge.html'"></div>
+            <div ng-if="selectedPage === 'badge'" ng-include="'docs/badge.html'"></div>
 
             <!-- Card -->
-            <div ng-show="selectedPage === 'card'" ng-include="'docs/card.html'"></div>
+            <div ng-if="selectedPage === 'card'" ng-include="'docs/card.html'"></div>
 
             <!-- Dialog -->
-            <div ng-show="selectedPage === 'dialog'" ng-include="'docs/dialog.html'"></div>
+            <div ng-if="selectedPage === 'dialog'" ng-include="'docs/dialog.html'"></div>
 
             <!-- Checkbox -->
-            <div ng-show="selectedPage === 'checkbox'" ng-include="'docs/checkbox.html'"></div>
+            <div ng-if="selectedPage === 'checkbox'" ng-include="'docs/checkbox.html'"></div>
 
             <!-- ComboBox -->
-            <div ng-show="selectedPage === 'combobox'" ng-include="'docs/combobox.html'"></div>
+            <div ng-if="selectedPage === 'combobox'" ng-include="'docs/combobox.html'"></div>
 
             <!-- Field Set -->
-            <div ng-show="selectedPage === 'fieldset'" ng-include="'docs/fieldset.html'"></div>
+            <div ng-if="selectedPage === 'fieldset'" ng-include="'docs/fieldset.html'"></div>
 
             <!-- Inputs -->
-            <div ng-show="selectedPage === 'input'" ng-include="'docs/input.html'"></div>
+            <div ng-if="selectedPage === 'input'" ng-include="'docs/input.html'"></div>
 
             <!-- Input Group -->
-            <div ng-show="selectedPage === 'input-group'" ng-include="'docs/input-group.html'"></div>
+            <div ng-if="selectedPage === 'input-group'" ng-include="'docs/input-group.html'"></div>
 
             <!-- Radio -->
-            <div ng-show="selectedPage === 'radio'" ng-include="'docs/radio.html'"></div>
+            <div ng-if="selectedPage === 'radio'" ng-include="'docs/radio.html'"></div>
 
             <!-- Icon Tab Bar -->
-            <div ng-show="selectedPage === 'icon-tab-bar'" ng-include="'docs/icon-tab-bar.html'"></div>
+            <div ng-if="selectedPage === 'icon-tab-bar'" ng-include="'docs/icon-tab-bar.html'"></div>
 
             <!-- Link -->
-            <div ng-show="selectedPage === 'link'" ng-include="'docs/link.html'"></div>
+            <div ng-if="selectedPage === 'link'" ng-include="'docs/link.html'"></div>
 
             <!-- List -->
-            <div ng-show="selectedPage === 'list'" ng-include="'docs/list.html'"></div>
+            <div ng-if="selectedPage === 'list'" ng-include="'docs/list.html'"></div>
 
             <!-- Menu -->
-            <div ng-show="selectedPage === 'menu'" ng-include="'docs/menu.html'"></div>
+            <div ng-if="selectedPage === 'menu'" ng-include="'docs/menu.html'"></div>
 
             <!-- Message Box -->
-            <div ng-show="selectedPage === 'message-box'" ng-include="'docs/message-box.html'"></div>
+            <div ng-if="selectedPage === 'message-box'" ng-include="'docs/message-box.html'"></div>
 
             <!-- Message Page -->
-            <div ng-show="selectedPage === 'message-page'" ng-include="'docs/message-page.html'"></div>
+            <div ng-if="selectedPage === 'message-page'" ng-include="'docs/message-page.html'"></div>
 
             <!-- Object Status -->
-            <div ng-show="selectedPage === 'object-status'" ng-include="'docs/object-status.html'"></div>
+            <div ng-if="selectedPage === 'object-status'" ng-include="'docs/object-status.html'"></div>
 
             <!-- Pagination -->
-            <div ng-show="selectedPage === 'pagination'" ng-include="'docs/pagination.html'"></div>
+            <div ng-if="selectedPage === 'pagination'" ng-include="'docs/pagination.html'"></div>
 
             <!-- Panel -->
-            <div ng-show="selectedPage === 'panel'" ng-include="'docs/panel.html'"></div>
+            <div ng-if="selectedPage === 'panel'" ng-include="'docs/panel.html'"></div>
 
             <!-- Popover -->
             <div ng-show="selectedPage === 'popover'" ng-include="'docs/popover.html'"></div>
 
             <!-- Product Switch -->
-            <div ng-show="selectedPage === 'product-switch'" ng-include="'docs/product-switch.html'"></div>
+            <div ng-if="selectedPage === 'product-switch'" ng-include="'docs/product-switch.html'"></div>
 
             <!-- Scrollbar -->
-            <div ng-show="selectedPage === 'scrollbar'" ng-include="'docs/scrollbar.html'"></div>
+            <div ng-if="selectedPage === 'scrollbar'" ng-include="'docs/scrollbar.html'"></div>
+
+            <!-- Shellbar -->
+            <div ng-if="selectedPage === 'shellbar'" ng-include="'docs/shellbar.html'"></div>
+
+            <!-- Switch -->
+            <div ng-if="selectedPage === 'switch'" ng-include="'docs/switch.html'"></div>
 
             <!-- Select -->
-            <div ng-show="selectedPage === 'select'" ng-include="'docs/select.html'"></div>
+            <div ng-if="selectedPage === 'select'" ng-include="'docs/select.html'"></div>
 
             <!-- Table -->
-            <div ng-show="selectedPage === 'table'" ng-include="'docs/table.html'"></div>
+            <div ng-if="selectedPage === 'table'" ng-include="'docs/table.html'"></div>
 
             <!-- Tile -->
-            <div ng-show="selectedPage === 'tile'" ng-include="'docs/tile.html'"></div>
+            <div ng-if="selectedPage === 'tile'" ng-include="'docs/tile.html'"></div>
 
             <!-- Token -->
-            <div ng-show="selectedPage === 'token'" ng-include="'docs/token.html'"></div>
+            <div ng-if="selectedPage === 'token'" ng-include="'docs/token.html'"></div>
 
             <!-- Tool header -->
-            <div ng-show="selectedPage === 'tool-header'" ng-include="'docs/tool-header.html'"></div>
+            <div ng-if="selectedPage === 'tool-header'" ng-include="'docs/tool-header.html'"></div>
 
             <!-- Toolbar -->
-            <div ng-show="selectedPage === 'toolbar'" ng-include="'docs/toolbar.html'"></div>
+            <div ng-if="selectedPage === 'toolbar'" ng-include="'docs/toolbar.html'"></div>
 
             <!-- Upload collection -->
-            <div ng-show="selectedPage === 'upload-collection'" ng-include="'docs/upload-collection.html'"></div>
+            <div ng-if="selectedPage === 'upload-collection'" ng-include="'docs/upload-collection.html'"></div>
 
             <!-- Vertical Navigation -->
-            <div ng-show="selectedPage === 'vertical-navigation'" ng-include="'docs/vertical-navigation.html'"></div>
+            <div ng-if="selectedPage === 'vertical-navigation'" ng-include="'docs/vertical-navigation.html'"></div>
 
             <!-- Wizard -->
-            <div ng-show="selectedPage === 'wizard'" ng-include="'docs/wizard.html'"></div>
+            <div ng-if="selectedPage === 'wizard'" ng-include="'docs/wizard.html'"></div>
+
+            <!-- CSS Layout -->
+            <div ng-if="selectedPage === 'css-pad-mar'" ng-include="'docs/css-pad-mar.html'"></div>
+
+            <!-- CSS Grid -->
+            <div ng-if="selectedPage === 'css-grid'" ng-include="'docs/css-grid.html'"></div>
+
+            <!-- CSS Box -->
+            <div ng-if="selectedPage === 'css-box'" ng-include="'docs/css-box.html'"></div>
+
+            <!-- CSS Size -->
+            <div ng-if="selectedPage === 'css-size'" ng-include="'docs/css-size.html'"></div>
+
+            <!-- CSS Borders -->
+            <div ng-if="selectedPage === 'css-borders'" ng-include="'docs/css-borders.html'"></div>
         </div>
     </div>
 

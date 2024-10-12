@@ -1,0 +1,90 @@
+<h2>Switch</h2>
+<p>The switch mimics a physical switch, allowing users to set individual features (such as personalization or display
+    settings) to either active or inactive. What the switch controls should be clarified with an inline label, while the
+    state it's currently in should be displayed on the switch itself.</p>
+
+<h2>Attributes</h2>
+<table bk-table>
+    <thead bk-table-header>
+        <tr bk-table-row>
+            <th bk-table-header-cell>Name</th>
+            <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
+            <th bk-table-header-cell>Description</th>
+        </tr>
+    </thead>
+    <tbody bk-table-body>
+        <tr bk-table-row>
+            <td bk-table-cell>switch-id</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
+            <td bk-table-cell>ID of the input.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>name</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
+            <td bk-table-cell>Name of the input (used for form validation).</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>value</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
+            <td bk-table-cell>Value of the input. Use this only when you do not use ng-model.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>semantic</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
+            <td bk-table-cell>Show the switch with semantic colors.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>with-text</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
+            <td bk-table-cell>Show "On" and "Off" labels in the switch, instead of icons.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>switch-labelledby</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>True</td>
+            <td bk-table-cell>Internally, it maps to "aria-labelledby".</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Examples</h2>
+
+<bk-fieldset>
+    <bk-form-group>
+        <bk-form-item>
+            <code-block>
+                <bk-form-label for="swl1" colon="true">Switch label</bk-form-label>
+                <bk-switch name="switch" ng-model="switch.value" ng-click="switchModel = !switchModel"
+                    switch-labelledby="swl1" switch-id="swid1">
+                </bk-switch>
+                <code-block type="js">
+                    $scope.switch = {
+                    value: true
+                    };
+                </code-block>
+            </code-block>
+        </bk-form-item>
+    </bk-form-group>
+</bk-fieldset>
+
+<h3>Semantic</h3>
+<bk-form-item>
+    <code-block>
+        <bk-form-label for="swl2" colon="true">Switch label</bk-form-label>
+        <bk-switch semantic="true" switch-labelledby="swl2"></bk-switch>
+    </code-block>
+</bk-form-item>
+
+<h3>Text</h3>
+<bk-form-item>
+    <code-block>
+        <bk-form-label for="swl3" colon="true">Switch label</bk-form-label>
+        <bk-switch with-text="true" value="true" switch-labelledby="swl3"></bk-switch>
+    </code-block>
+</bk-form-item>

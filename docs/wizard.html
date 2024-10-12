@@ -15,6 +15,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -22,19 +23,21 @@
         <tr bk-table-row>
             <td bk-table-cell>current-step</td>
             <td bk-table-cell>number</td>
+            <td bk-table-cell>True</td>
             <td bk-table-cell>Wizard current step starting from 1</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>completed-steps</td>
             <td bk-table-cell>number</td>
+            <td bk-table-cell>True</td>
             <td bk-table-cell>The number of the completed steps</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>size</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>When specified adds horizontal paddings to the content. Could be one
-                of:
-                'sm', 'md', 'lg', 'xl'</td>
+                of: 'sm', 'md', 'lg', 'xl'</td>
         </tr>
     </tbody>
 </table>
@@ -45,6 +48,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -52,15 +56,16 @@
         <tr bk-table-row>
             <td bk-table-cell>background</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>When specified applies specific background. Could be one of: 'solid',
                 'list', 'transparent'</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>size</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>True</td>
             <td bk-table-cell>When specified adds horizontal paddings to the content. Could be one
-                of:
-                'sm', 'md', 'lg', 'xl'</td>
+                of: 'sm', 'md', 'lg', 'xl'</td>
         </tr>
     </tbody>
 </table>
@@ -71,6 +76,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -78,11 +84,13 @@
         <tr bk-table-row>
             <td bk-table-cell>label</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>True</td>
             <td bk-table-cell>The step label</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>size</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>When specified adds horizontal paddings to the content. Could be one
                 of:
                 'sm', 'md', 'lg', 'xl'</td>
@@ -90,27 +98,32 @@
         <tr bk-table-row>
             <td bk-table-cell>optional-label</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>An optional text displayed below the label</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>indicator-glyph</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>True</td>
             <td bk-table-cell>Indicator icon class/classes. When specified overrides the
                 'indicatorLabel' attribute</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>indicator-label</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>True</td>
             <td bk-table-cell>Indicator label</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>no-label</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>When true hides the step label</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>step-click</td>
             <td bk-table-cell>function</td>
+            <td bk-table-cell>True</td>
             <td bk-table-cell>Callback called when the step (indicator + label) has been clicked
             </td>
         </tr>
@@ -123,6 +136,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -130,9 +144,9 @@
         <tr bk-table-row>
             <td bk-table-cell>size</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>When specified adds horizontal paddings to the content. Could be one
-                of:
-                'sm', 'md', 'lg', 'xl'</td>
+                of: 'sm', 'md', 'lg', 'xl'</td>
         </tr>
     </tbody>
 </table>

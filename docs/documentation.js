@@ -164,6 +164,20 @@ widgetsView.controller('WidgetsViewController', function ($scope) {
     // Inputs
     $scope.stepInputValue = 4;
 
+    // Shellbar
+    $scope.isSearchFocused = false;
+    $scope.focusSearch = () => {
+        $scope.isSearchFocused = true;
+    };
+    $scope.blurSearch = () => {
+        $scope.isSearchFocused = false;
+    };
+
+    // Switch Input
+    $scope.switch = {
+        value: true
+    };
+
     // Icon Tab Bar
     $scope.tabs = [...Array(10).keys()].map(i => ({ label: `Tab label ${i + 1}`, id: `tab_${i + 1}` }));
     $scope.isMoreTabsButtonVisible = (tabs) => tabs.some(x => x.isHidden);

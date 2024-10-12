@@ -9,6 +9,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -16,44 +17,51 @@
         <tr bk-table-row>
             <td bk-table-cell>total-items</td>
             <td bk-table-cell>number</td>
+            <td bk-table-cell>True</td>
             <td bk-table-cell>The total number of the items</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>items-per-page</td>
             <td bk-table-cell>number</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>The number of the items per page</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>current-page</td>
             <td bk-table-cell>number</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>The number of the current page (starting from 1).</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>compact</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Pagination buttons size</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>display-total-items</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>True</td>
             <td bk-table-cell>Whether to display the total number of items</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>items-per-page-options</td>
-            <td bk-table-cell>array<number>
-            </td>
+            <td bk-table-cell>array&lt;number&gt;</td>
+            <td bk-table-cell>True</td>
             <td bk-table-cell>The options for items per page dropdown. If not specified the dropdown
                 will not be displayed</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>page-change</td>
             <td bk-table-cell>function</td>
+            <td bk-table-cell>True</td>
             <td bk-table-cell>Callback called when the page has changed. Args: (pageNumber : Number)
             </td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>items-per-page-change</td>
             <td bk-table-cell>function</td>
+            <td bk-table-cell>True</td>
             <td bk-table-cell>Callback called when the 'itemsPerPage' dropdown selection has
                 changed:
                 Args: (itemsPerPage : Number)</td>
@@ -61,6 +69,7 @@
         <tr bk-table-row>
             <td bk-table-cell>items-per-page-placement</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>True</td>
             <td bk-table-cell>Placement of the dropdown for items per page. See 'placement' on
                 fdSelect.
             </td>

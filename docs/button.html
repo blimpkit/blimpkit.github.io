@@ -7,6 +7,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -14,31 +15,37 @@
         <tr bk-table-row>
             <td bk-table-cell>label</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>True</td>
             <td bk-table-cell>Button text.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>compact</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Button size.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>badge</td>
             <td bk-table-cell>string/number</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Used for showing a badge inside the button.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>glyph</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Icon class/classes.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>glyph-rotate</td>
             <td bk-table-cell>number</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Rotate glyph X degrees, where X can be 90, 180, and 270.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>disabled-focusable</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Set the disabled but focusable state. This must always be used with
                 the
                 'instructions' attribute.</td>
@@ -46,11 +53,13 @@
         <tr bk-table-row>
             <td bk-table-cell>toggled</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Set the toggle state.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>type</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>'emphasized', 'transparent', 'ghost', 'positive', 'negative' and
                 'attention'.
                 If not specified, normal state is assumed.</td>
@@ -58,6 +67,7 @@
         <tr bk-table-row>
             <td bk-table-cell>instructions</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Short description when the button is disabled. It should contain the
                 reason
                 and what needs to be done to enable it. This is for screen readers.</td>
@@ -65,11 +75,13 @@
         <tr bk-table-row>
             <td bk-table-cell>is-menu</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Adds an arrow to the button.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>arrow-direction</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Direction of the menu arrow. Possible options are "up", "left",
                 "right"
                 and
@@ -78,36 +90,43 @@
         <tr bk-table-row>
             <td bk-table-cell>is-overflow</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Used when the button is in a toolbar overflow popover.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>is-split</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>(Internal use) If the button is part of a split button.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>in-group</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>If the button is inside an bk-input-group-addon element.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>in-msg-strip</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>If the button is inside a message strip (see bk-message-strip).</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>nested</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Nested button mode.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>decisive</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Indicates that the button is decisive. Used for dialog actions.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>round</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Make the button round. Works only for icon buttons with no label.</td>
         </tr>
     </tbody>
@@ -119,6 +138,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -126,31 +146,37 @@
         <tr bk-table-row>
             <td bk-table-cell>main-action</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Main button text</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>main-glyph</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Icon class for the button.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>compact</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Button size.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>glyph</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Icon class for the dropdown button.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>is-disabled</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>If the buttons are disabled.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>disabled-focusable</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Set the disabled but focusable state. This must always be used with
                 the
                 'instructions' attribute.</td>
@@ -158,6 +184,7 @@
         <tr bk-table-row>
             <td bk-table-cell>instructions</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Short description when the button is disabled. It should contain the
                 reason
                 and what needs to be done to enable it. This is for screen readers.</td>
@@ -165,6 +192,7 @@
         <tr bk-table-row>
             <td bk-table-cell>type</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>'emphasized', 'transparent', 'ghost', 'positive', 'negative' and
                 'attention'.
                 If not specified, normal state is assumed.</td>
@@ -172,6 +200,7 @@
         <tr bk-table-row>
             <td bk-table-cell>callback</td>
             <td bk-table-cell>function</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>The passed function will be called when the main action button is
                 clicked.
             </td>

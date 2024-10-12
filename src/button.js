@@ -78,7 +78,7 @@ blimpkit.constant('ButtonStates', {
                                 'fd-button--positive': scope.state === ButtonStates.Positive,
                                 'fd-button--negative': scope.state === ButtonStates.Negative,
                                 'fd-button--attention': scope.state === ButtonStates.Attention,
-                                'fd-input-group__button': ctrl,
+                                'fd-input-group__button': ctrl && !attrs.hasOwnProperty('bkShellbarButton'),
                                 'fd-message-strip__close': scope.inMsgStrip === true,
                                 'fd-button--toggled': scope.toggled === true,
                                 'is-disabled': scope.disabledFocusable === true,
@@ -139,7 +139,7 @@ blimpkit.constant('ButtonStates', {
             disabledFocusable: '<?',
             instructions: '@?',
             type: '@?',
-            callback: '&',
+            callback: '&?',
         },
         controller: ['$scope', '$element', '$attrs', function ($scope, $element, $attrs) {
             if ($scope.callback) $scope.callback = $scope.callback();
@@ -184,7 +184,7 @@ blimpkit.constant('ButtonStates', {
             $element.on('pointerup', pointerupEvent);
 
             $scope.mainActionClicked = function () {
-                if (!$scope.disabledFocusable)
+                if (!$scope.disabledFocusable && $scope.callback)
                     $scope.callback();
             };
 

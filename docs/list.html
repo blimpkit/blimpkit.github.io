@@ -7,6 +7,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -14,21 +15,25 @@
         <tr bk-table-row>
             <td bk-table-cell>compact</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Display the list in compact size mode</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>no-border</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Removes the list borders</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>list-type</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>One of 'selection', 'navigation' or 'navigation-indication'</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>fixed-height</td>
             <td bk-table-cell>string|number|boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>If true it expects the height to be specified explicitly (by css class
                 or
                 style). If number it will be treated as pixels otherwise it must be a valid css
@@ -38,6 +43,7 @@
         <tr bk-table-row>
             <td bk-table-cell>byline</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Whether the list is byline or standard</td>
         </tr>
     </tbody>
@@ -49,6 +55,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -56,16 +63,19 @@
         <tr bk-table-row>
             <td bk-table-cell>interactive</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Makes the list item look interactive (clickable)</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>inactive</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Makes the list item look inactive (non-clickable)</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>selected</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Selects the list item. Should be used with 'selection' lists</td>
         </tr>
     </tbody>
@@ -77,6 +87,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -84,6 +95,7 @@
         <tr bk-table-row>
             <td bk-table-cell>type</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>The type of secondary information - 'positive', 'critical', 'negative'
                 or
                 'informative'.</td>
@@ -97,6 +109,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -104,6 +117,7 @@
         <tr bk-table-row>
             <td bk-table-cell>type</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>True</td>
             <td bk-table-cell>The type of message - 'success', 'error', 'warning', 'information'.
             </td>
         </tr>
@@ -116,6 +130,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -123,6 +138,7 @@
         <tr bk-table-row>
             <td bk-table-cell>navigation-indicator</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>True</td>
             <td bk-table-cell>Displays an arrow to indicate that the item is navigable (Should be
                 used
                 with 'navigation-indication' lists)</td>
@@ -130,11 +146,13 @@
         <tr bk-table-row>
             <td bk-table-cell>navigated</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>True</td>
             <td bk-table-cell>Displays the list item as navigated</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>selected</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>True</td>
             <td bk-table-cell>Selects the list item. Should be used with 'navigation' and
                 'navigation-indication' lists</td>
         </tr>
@@ -147,6 +165,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -154,6 +173,7 @@
         <tr bk-table-row>
             <td bk-table-cell>glyph</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Icon class.</td>
         </tr>
     </tbody>
@@ -165,6 +185,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -172,21 +193,25 @@
         <tr bk-table-row>
             <td bk-table-cell>item-title</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>True</td>
             <td bk-table-cell>list item title</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>item-title-id</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>list item title id</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>content-wrap</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Allows the byline text to wrap</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>title-wrap</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Allows the title text to wrap</td>
         </tr>
     </tbody>
@@ -198,6 +223,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -205,17 +231,20 @@
         <tr bk-table-row>
             <td bk-table-cell>align</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>True</td>
             <td bk-table-cell>One of 'left' or 'right'</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>content-wrap</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Allows the byline text to wrap. Relevant to left aligned content only
             </td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>semantic-status</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>One of 'neutral', 'positive', 'negative', 'critical' or 'informative'.
                 Relevant to right aligned content only</td>
         </tr>
@@ -228,6 +257,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -235,11 +265,13 @@
         <tr bk-table-row>
             <td bk-table-cell>glyph</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Icon class.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>image-url</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Path to the thumbnail image</td>
         </tr>
     </tbody>

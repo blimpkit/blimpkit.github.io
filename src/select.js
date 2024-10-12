@@ -31,18 +31,19 @@ blimpkit.directive('bkSelect', (uuid, $window, $timeout, ScreenEdgeMargin, class
     link: function (scope, _element, _attrs, ngModel) {
         let selectedValWatch;
         if (ngModel) {
-            selectedValWatch = scope.$watch('selectedValue', function (value) {
+            selectedValWatch = scope.$watch('selectedValue', (value) => {
                 ngModel.$setViewValue(value);
                 ngModel.$validate();
             });
 
-            ngModel.$render = function () {
+            ngModel.$render = () => {
                 scope.selectedValue = ngModel.$viewValue;
             };
+
+            scope.$on('$destroy', () => {
+                selectedValWatch();
+            });
         }
-        scope.$on('$destroy', function () {
-            selectedValWatch();
-        });
     },
     controller: ['$scope', '$element', function ($scope, $element) {
         let control = $element[0].querySelector(`.fd-popover__control`);
@@ -274,9 +275,7 @@ blimpkit.directive('bkSelect', (uuid, $window, $timeout, ScreenEdgeMargin, class
     link: (scope, _element, _attrs, selectCtrl) => {
         scope.optionId = `select-option-${uuid.generate()}`;
 
-        scope.isSelected = () => {
-            return selectCtrl.getSelectedValue() === scope.value;
-        };
+        scope.isSelected = () => selectCtrl.getSelectedValue() === scope.value;
 
         scope.selectItem = () => {
             selectCtrl.selectItem(scope);

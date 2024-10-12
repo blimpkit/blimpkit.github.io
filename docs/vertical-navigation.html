@@ -7,6 +7,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -14,11 +15,13 @@
         <tr bk-table-row>
             <td bk-table-cell>condensed</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Condensed navigation mode.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>can-scroll</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Enable/disable scroll navigation support. Default is false.</td>
         </tr>
     </tbody>
@@ -30,6 +33,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -37,16 +41,19 @@
         <tr bk-table-row>
             <td bk-table-cell>indicated</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Navigation item is indicated.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>expandable</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>The item can expand.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>is-expanded</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>If the item is expanded or not.</td>
         </tr>
     </tbody>
@@ -58,14 +65,16 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
     <tbody bk-table-body>
         <tr bk-table-row>
-            <td bk-table-cell>is-expanded</td>
-            <td bk-table-cell>boolean</td>
-            <td bk-table-cell>If the popover is expanded or not.</td>
+            <td bk-table-cell>level</td>
+            <td bk-table-cell>number</td>
+            <td bk-table-cell>True</td>
+            <td bk-table-cell>Navigation item level. There only two levels - 1 and 2</td>
         </tr>
     </tbody>
 </table>
@@ -76,6 +85,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -83,6 +93,7 @@
         <tr bk-table-row>
             <td bk-table-cell>is-expanded</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>If the popover is expanded or not.</td>
         </tr>
     </tbody>
@@ -94,6 +105,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -101,16 +113,19 @@
         <tr bk-table-row>
             <td bk-table-cell>glyph</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Icon class. For example 'sap-icon--home'.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>svg-path</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>The src path to your svg image.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>icon-size</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>The size of the item icon. Possible options are include 'lg' and none.
             </td>
         </tr>
@@ -201,7 +216,7 @@
                     <bk-list-navigation-item-icon glyph="sap-icon--folder">
                     </bk-list-navigation-item-icon>
                     <span bk-list-navigation-item-text>Folder</span>
-                    <bk-list-navigation-item-arrow aria-label="expand submenu" is-expanded="expanded">
+                    <bk-list-navigation-item-arrow aria-label="expand submenu" ng-show="expanded">
                     </bk-list-navigation-item-arrow>
                     <bk-list>
                         <bk-list-navigation-item>
@@ -235,7 +250,7 @@
                     ng-click="expanded = !expanded" is-expanded="expanded">
                     <bk-list-navigation-item-icon glyph="sap-icon--folder">
                     </bk-list-navigation-item-icon>
-                    <bk-list-navigation-item-arrow aria-label="expand submenu" is-expanded="expanded">
+                    <bk-list-navigation-item-arrow aria-label="expand submenu" ng-show="expanded">
                     </bk-list-navigation-item-arrow>
                     <bk-list-navigation-item-popover level="1" is-expanded="expanded">
                         <bk-list>
@@ -338,7 +353,7 @@
                     <bk-list-navigation-item-icon glyph="sap-icon--folder">
                     </bk-list-navigation-item-icon>
                     <span bk-list-navigation-item-text>Folder</span>
-                    <bk-list-navigation-item-arrow aria-label="expand submenu" is-expanded="expanded">
+                    <bk-list-navigation-item-arrow aria-label="expand submenu" ng-show="expanded">
                     </bk-list-navigation-item-arrow>
                     <bk-list>
                         <bk-list-navigation-item>
@@ -377,7 +392,7 @@
                     ng-click="expanded = !expanded" is-expanded="expanded">
                     <bk-list-navigation-item-icon glyph="sap-icon--folder">
                     </bk-list-navigation-item-icon>
-                    <bk-list-navigation-item-arrow aria-label="expand submenu" is-expanded="expanded">
+                    <bk-list-navigation-item-arrow aria-label="expand submenu" ng-show="expanded">
                     </bk-list-navigation-item-arrow>
                     <bk-list-navigation-item-popover level="1" is-expanded="expanded">
                         <bk-list>

@@ -95,7 +95,7 @@ blimpkit.directive('bkPopover', (uuid, $window, $injector, backdrop) => {
     transclude: true,
     require: '?^^bkPopover',
     replace: true,
-    link: function (scope, element, _attrs, popoverCtrl) {
+    link: (scope, element, _attrs, popoverCtrl) => {
         function clickEvent() {
             popoverCtrl.togglePopover();
         }

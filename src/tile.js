@@ -51,7 +51,7 @@ blimpkit.directive('bkTileContainer', (classNames) => ({
     restrict: 'E',
     replace: true,
     scope: {
-        link: '@?',
+        link: '@',
     },
     template: `<div class="fd-tile__background-img" ng-style="{'background-image':'url(' + link + ')','background-size':'cover'}"></div>`
 })).directive('bkTileSlide', () => ({

@@ -16,7 +16,7 @@ blimpkit.directive('bkWizard', () => ({
     scope: {
         currentStep: '<',
         completedSteps: '<',
-        size: '@',
+        size: '@?',
     },
     controller: ['$scope', function ($scope) {
         $scope.steps = [];
@@ -93,9 +93,7 @@ blimpkit.directive('bkWizard', () => ({
         scope.onStepClick = function (step) {
             wizCtrl.onStepClick(step);
         };
-        scope.getSteps = function () {
-            return wizCtrl.getSteps();
-        };
+        scope.getSteps = () => wizCtrl.getSteps();
         scope.getProgressBarClasses = () => classNames('fd-wizard__progress-bar', {
             [`fd-wizard__progress-bar--${wizCtrl.getSize()}`]: wizCtrl.isValidSize(wizCtrl.getSize())
         });
@@ -109,7 +107,7 @@ blimpkit.directive('bkWizard', () => ({
             'fd-wizard__step--upcoming': wizCtrl.isStepUpcoming(step),
             'fd-wizard__step--current': wizCtrl.isStepCurrent(step),
             'fd-wizard__step--completed': wizCtrl.isStepCompleted(step),
-            'fd-wizard__step--no-label': step.noLabel
+            'fd-wizard__step--no-label': step.noLabel === true
         });
         scope.getAriaDisabled = (step) => wizCtrl.isStepUpcomingIncompleted(step) ? 'true' : undefined;
         scope.getAriaCurrent = (step) => wizCtrl.isStepCurrent(step) ? 'step' : undefined;
@@ -139,7 +137,7 @@ blimpkit.directive('bkWizard', () => ({
     replace: true,
     require: '^^bkWizard',
     scope: {
-        background: '@',
+        background: '@?',
         size: '@',
     },
     link: (scope, _element, _attrs, wizCtrl) => {
@@ -163,11 +161,11 @@ blimpkit.directive('bkWizard', () => ({
     require: '^^bkWizard',
     scope: {
         label: '@',
-        size: '@',
-        optionalLabel: '@',
+        size: '@?',
+        optionalLabel: '@?',
         indicatorGlyph: '@',
         indicatorLabel: '@',
-        noLabel: '<',
+        noLabel: '<?',
         stepClick: '&',
     },
     link: (scope, _element, _attrs, wizCtrl) => {
@@ -175,9 +173,7 @@ blimpkit.directive('bkWizard', () => ({
             console.error(`bk-wizard-content error: 'size' must be one of: ${wizCtrl.getValidSizes().join(', ')}`);
         }
         wizCtrl.addStep(scope);
-        scope.isStepCurrent = () => {
-            return wizCtrl.isStepCurrent(scope);
-        };
+        scope.isStepCurrent = () => wizCtrl.isStepCurrent(scope);
         scope.onNextClick = () => {
             wizCtrl.gotoNextStep();
         };
@@ -195,15 +191,13 @@ blimpkit.directive('bkWizard', () => ({
     replace: true,
     require: '^^bkWizard',
     scope: {
-        size: '@',
+        size: '@?',
     },
     link: (scope, _element, _attrs, wizCtrl) => {
         if (scope.size && !wizCtrl.isValidSize(scope.size)) {
             console.error(`bk-wizard-content error: 'size' must be one of: ${wizCtrl.getValidSizes().join(', ')}`);
         }
-        scope.allStepsCompleted = () => {
-            return wizCtrl.allStepsCompleted() && !wizCtrl.hasCurrentStep();
-        };
+        scope.allStepsCompleted = () => wizCtrl.allStepsCompleted() && !wizCtrl.hasCurrentStep();
         scope.getClasses = () => classNames('fd-wizard__step-content-container', {
             [`fd-wizard__step-content-container--${scope.size}`]: wizCtrl.isValidSize(scope.size),
         });

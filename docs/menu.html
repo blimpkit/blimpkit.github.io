@@ -10,6 +10,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -18,35 +19,38 @@
             <td bk-table-cell>max-height</td>
             <td bk-table-cell>number</td>
             <td bk-table-cell>Maximum height in pixels before it starts scrolling. Default is the
-                height
-                of the window.</td>
+                height of the window.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>can-scroll</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Enable/disable scroll menu support. Default is false.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>show</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Use this instead of the CSS 'display' property. Otherwise, the menu
-                will
-                not work properly. Default is true.</td>
+                will not work properly. Default is true.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>no-backdrop</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Disables the backdrop. This may break the menu if not used properly.
                 Default is false.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>no-shadow</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Removes the shadow effect. Default is false.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>close-on-outer-click</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Hide the menu when a user clicks outside it Default is true.</td>
         </tr>
     </tbody>
@@ -58,6 +62,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -65,41 +70,49 @@
         <tr bk-table-row>
             <td bk-table-cell>title</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>True</td>
             <td bk-table-cell>Menu item label.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>shortcut</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Secondary text. Most often used as a shotcut hint.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>has-separator</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>The menu item will have a separating line on the bottom side.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>is-active</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Set the menu item as active.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>is-selected</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Set the menu item as selected.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>is-disabled</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Set the menu item as disabled.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>left-icon-class</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Icon class. Displays the icon before the title.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>left-icon-path</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Icon url path. Preferably an svg. Shown before the title. Alternative
                 to
                 leftIconClass.</td>
@@ -107,17 +120,20 @@
         <tr bk-table-row>
             <td bk-table-cell>right-icon-class</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Icon class. Displays the icon at the end of the menu item.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>right-icon-path</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Icon url path. Shown after the title. Alternative to rightIconClass.
             </td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>link</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>URL string. Maps to href.</td>
         </tr>
     </tbody>
@@ -129,6 +145,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -136,38 +153,44 @@
         <tr bk-table-row>
             <td bk-table-cell>title</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>True</td>
             <td bk-table-cell>Title/label of the menu item.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>has-separator</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>The menu item will have a separating line on the bottom side.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>max-height</td>
             <td bk-table-cell>number</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Maximum height in pixels before it starts scrolling. Default is the
-                height
-                of the window.</td>
+                height of the window.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>can-scroll</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Enable/disable scroll menu support. Default is false.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>is-disabled</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Set the menu sublist as disabled.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>icon-class</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Icon class. Displays the icon before the title.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>icon-path</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Path to an icon. Alternative to iconClass.</td>
         </tr>
     </tbody>

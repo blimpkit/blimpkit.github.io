@@ -71,7 +71,6 @@ blimpkit.directive('bkVerticalNav', (classNames) => ({
     transclude: true,
     scope: {
         level: '<',
-        isExpanded: '<',
     },
     link: (scope) => {
         scope.getClasses = () => classNames('fd-popover__body', 'fd-popover__body--no-arrow', {
@@ -79,7 +78,7 @@ blimpkit.directive('bkVerticalNav', (classNames) => ({
             'fd-list__navigation-item-popover--second-level': scope.level === 2,
         });
     },
-    template: '<div ng-class="getClasses()" ng-show="isExpanded" ng-transclude></div>'
+    template: '<div ng-class="getClasses()" ng-transclude></div>'
 })).directive('bkListNavigationItemText', () => ({
     restrict: 'A',
     link: (_scope, element) => {
@@ -100,18 +99,14 @@ blimpkit.directive('bkVerticalNav', (classNames) => ({
     scope: {
         isExpanded: '<?',
     },
-    link: {
-        pre: (_scope, _element, attrs) => {
-            if (!attrs.hasOwnProperty('ariaLabel'))
-                console.error('bk-list-navigation-item-arrow error: You must set the "aria-label" attribute');
-        },
-        post: (scope) => {
-            scope.getClasses = () => classNames('fd-list__navigation-item-arrow', {
-                'is-expanded': scope.isExpanded === true,
-                'sap-icon--navigation-down-arrow': scope.isExpanded === true,
-                'sap-icon--navigation-right-arrow': scope.isExpanded !== true,
-            });
-        },
+    link: (scope, _element, attrs) => {
+        if (!attrs.hasOwnProperty('ariaLabel'))
+            console.error('bk-list-navigation-item-arrow error: You must set the "aria-label" attribute');
+        scope.getClasses = () => classNames('fd-list__navigation-item-arrow', {
+            'is-expanded': scope.isExpanded === true,
+            'sap-icon--navigation-down-arrow': scope.isExpanded === true,
+            'sap-icon--navigation-right-arrow': scope.isExpanded !== true,
+        });
     },
     template: '<button ng-class="getClasses()"></button>'
 })).directive('bkListNavigationItemIcon', (classNames) => ({

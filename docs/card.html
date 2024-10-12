@@ -10,6 +10,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -17,6 +18,7 @@
         <tr bk-table-row>
             <td bk-table-cell>card-type</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>This can be 'object' | 'standard' | 'list' | 'table' to indicate the
                 card
                 type</td>
@@ -24,11 +26,13 @@
         <tr bk-table-row>
             <td bk-table-cell>compact</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Whether to apply compact mode</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>in-list</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>When the card in inside a list</td>
         </tr>
     </tbody>
@@ -40,6 +44,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -47,11 +52,13 @@
         <tr bk-table-row>
             <td bk-table-cell>with-padding</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Adds padding around the image.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>link</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>True</td>
             <td bk-table-cell>Link to the image.</td>
         </tr>
     </tbody>
@@ -63,6 +70,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -70,46 +78,55 @@
         <tr bk-table-row>
             <td bk-table-cell>title</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>True</td>
             <td bk-table-cell>Card header title.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>subtitle</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Card header subtitle.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>interactive</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Whether the card header is interactive. Defaults to false.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>status</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Status text.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>status-type</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>One of 'negative', 'critical', 'positive' or 'informative'.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>is-counter</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>When the card status is of the 'counter' type.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>state</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>State of the header - 'hover', 'active' and 'focus'.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>role-description</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>ARIA role description for the header.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>description</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>ARIA description for the interactive header.</td>
         </tr>
     </tbody>

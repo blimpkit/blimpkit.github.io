@@ -11,6 +11,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -18,68 +19,77 @@
         <tr bk-table-row>
             <td bk-table-cell>dropdown-items</td>
             <td bk-table-cell>array[{ text: string, secondarytext: string, value: any }]</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Items to be filtered in the search input.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>ng-model</td>
             <td bk-table-cell>any|array[any]</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>The value of the selected item. If multiSelect is set to true this
-                must be
-                an array</td>
+                must be an array</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>placeholder</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Placeholder of the search input</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>compact</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Whether the search input should be displayed in compact mode</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>is-disabled</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Whether the search input is disabled</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>state</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Optional semantic state. Could be one of 'success', 'error', 'warning'
-                or
-                'information'</td>
+                or 'information'</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>message</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Optional text displayed within the dropdown list</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>input-id</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Id attribute for input element inside Combobox component</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>btn-aria-label</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Aria-label for the combobox button</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>list-aria-label</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Aria-label for the combobox popover list</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>multi-select</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>When true the combobox allows selecting multiple items,</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>max-body-height</td>
             <td bk-table-cell>number</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Maximum body height in pixels before it starts scrolling. Default is
-                the
-                height of the window.</td>
+                the height of the window.</td>
         </tr>
     </tbody>
 </table>

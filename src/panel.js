@@ -72,9 +72,8 @@ blimpkit.directive('bkPanel', () => ({
         scope: {
             hint: '@',
         },
-        link: function (scope, _element, _attrs, panelCtrl) {
-            if (!scope.hint)
-                console.error('bk-panel-expand: You must provide a value for the "hint" attribute');
+        link: (scope, _element, _attrs, panelCtrl) => {
+            if (!scope.hint) console.error('bk-panel-expand: You must provide a value for the "hint" attribute');
             scope.isFixed = () => panelCtrl.isFixed();
             scope.isCompact = () => panelCtrl.isCompact();
             scope.isExpanded = () => panelCtrl.isExpanded();
@@ -83,9 +82,7 @@ blimpkit.directive('bkPanel', () => ({
             scope.toggleExpanded = function () {
                 panelCtrl.toggleExpanded();
             };
-            scope.getExpandButtonIcon = function () {
-                return panelCtrl.isExpanded() ? 'sap-icon--slim-arrow-down' : 'sap-icon--slim-arrow-right';
-            };
+            scope.getExpandButtonIcon = () => panelCtrl.isExpanded() ? 'sap-icon--slim-arrow-down' : 'sap-icon--slim-arrow-right';
         },
         template: `<div ng-show="!isFixed()" class="fd-panel__expand">
         <bk-button ng-click="toggleExpanded()" glyph="{{ getExpandButtonIcon() }}" state="${ButtonStates.Transparent}" compact="isCompact() || false" class="fd-panel__button"
@@ -96,7 +93,7 @@ blimpkit.directive('bkPanel', () => ({
 }).directive('bkPanelTitle', (uuid) => ({
     restrict: 'A',
     require: '^^bkPanel',
-    link: function (_scope, element, attrs, panelCtrl) {
+    link: (_scope, element, attrs, panelCtrl) => {
         element.addClass('fd-panel__title');
 
         let id = attrs.id;
@@ -112,10 +109,8 @@ blimpkit.directive('bkPanel', () => ({
     transclude: true,
     replace: true,
     require: '^bkPanel',
-    link: function (scope, element, attrs, panelCtrl) {
-        scope.isHidden = function () {
-            return !panelCtrl.isFixed() && !panelCtrl.isExpanded();
-        };
+    link: (scope, element, attrs, panelCtrl) => {
+        scope.isHidden = () => !panelCtrl.isFixed() && !panelCtrl.isExpanded();
 
         let id = attrs.id;
         if (!id) {
@@ -129,7 +124,7 @@ blimpkit.directive('bkPanel', () => ({
 })).directive('bkPanelContent', (uuid) => ({
     restrict: 'A',
     require: '^bkPanel',
-    link: function (_scope, element, attrs, panelCtrl) {
+    link: (_scope, element, attrs, panelCtrl) => {
         element[0].setAttribute('role', 'region');
         element[0].setAttribute('aria-hidden', !panelCtrl.isFixed() && !panelCtrl.isExpanded());
         element[0].classList.add('fd-panel__content');

@@ -10,6 +10,8 @@ const options = {
     mangle: false
 };
 
+fs.rmSync('./dist/', { recursive: true, force: true });
+
 fs.mkdirSync('./dist/js', { recursive: true }, (error) => {
     if (error) throw error;
 });
@@ -20,13 +22,27 @@ fs.mkdirSync('./dist/css', { recursive: true }, (error) => {
 
 const licenseHeader = fs.readFileSync('license-header.txt', 'utf8');
 
-const jsFiles = globSync('./src/*.js');
+let bundle = '';
+
+const jsFiles = globSync('./src/*.js').reverse();
 jsFiles.map(file => {
-    minify(fs.readFileSync(file, 'utf8'), options).then((result) => {
+    const content = fs.readFileSync(file, 'utf8');
+
+    if (file === 'src/blimpkit.js') {
+        bundle = content + bundle;
+    } else bundle += content;
+
+    minify(content, options).then((result) => {
         fs.writeFileSync(file.replace('src/', 'dist/js/').replace('.js', '.min.js'), licenseHeader + result.code, 'utf8');
     }, (error) => {
         console.error(`Error minifying ${file}`, error);
     });
+});
+
+minify(bundle, options).then((result) => {
+    fs.writeFileSync('dist/js/blimpkit.bundle.min.js', licenseHeader + result.code, 'utf8');
+}, (error) => {
+    console.error(`Error minifying bundle`, error);
 });
 
 const cssFiles = globSync('./css/*.css');

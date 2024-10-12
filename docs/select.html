@@ -9,6 +9,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -16,43 +17,50 @@
         <tr bk-table-row>
             <td bk-table-cell>size</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>The size of the select dropdown. The only option is 'large'.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>compact</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Select size.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>is-disabled</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Disable the select</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>ng-model</td>
             <td bk-table-cell>any</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>The value of the currently selected item</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>state</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Optional semantic state. Could be one of 'success', 'error', 'warning'
-                or
-                'information'</td>
+                or 'information'</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>message</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Optional text displayed within the dropdown list.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>placeholder</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Short hint displayed when no item is selected yet.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>dropdown-fill</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Adjusts the popover body that wraps the dropdown to match the text
                 length
             </td>
@@ -60,19 +68,21 @@
         <tr bk-table-row>
             <td bk-table-cell>label-id</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>True</td>
             <td bk-table-cell>The id of the label element if present (Necessary for aria-labelledby)
             </td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>dropdown-fixed</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Dropdown css position will be fixed, allowing for use in dialogs.
-                Works
-                for the message popup as well.</td>
+                Works for the message popup as well.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>placement</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Placement of the dropdown. Incompatible with dropdownFixed. Possible
                 options:
                 <ul>
@@ -111,6 +121,7 @@
         <tr bk-table-row>
             <td bk-table-cell>is-readonly</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>If the select must be readonly.</td>
         </tr>
     </tbody>
@@ -122,6 +133,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -129,26 +141,31 @@
         <tr bk-table-row>
             <td bk-table-cell>text</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>True</td>
             <td bk-table-cell>Primary text of the select option</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>secondary-text</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Right alligned secondary text</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>value</td>
             <td bk-table-cell>any</td>
+            <td bk-table-cell>True</td>
             <td bk-table-cell>Option value</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>glyph</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Option icon class</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>no-wrap</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Prevents primary text wrapping</td>
         </tr>
     </tbody>

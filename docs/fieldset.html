@@ -9,6 +9,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -16,6 +17,7 @@
         <tr bk-table-row>
             <td bk-table-cell>label</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Title for the legend.</td>
         </tr>
     </tbody>
@@ -27,6 +29,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -34,21 +37,25 @@
         <tr bk-table-row>
             <td bk-table-cell>inline</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Form items are displayed horizontally.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>label</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Text for the group header.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>compact</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Header size.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>transclude-classes</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>CSS classes for the inner 'ng-transclude' container.</td>
         </tr>
     </tbody>
@@ -60,6 +67,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -67,12 +75,14 @@
         <tr bk-table-row>
             <td bk-table-cell>compact</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Header size.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>header-id</td>
             <td bk-table-cell>string</td>
-            <td bk-table-cell>Id for the header element. Used mostly because of 'aria-labelledby'.
+            <td bk-table-cell>True</td>
+            <td bk-table-cell>Id for the header element. Maps internally to 'aria-labelledby'.
             </td>
         </tr>
     </tbody>
@@ -84,6 +94,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -91,11 +102,13 @@
         <tr bk-table-row>
             <td bk-table-cell>horizontal</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>If true, items will be displayed horizontally.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>in-list</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Set to true if the form item is in an fd-list-item element.</td>
         </tr>
     </tbody>
@@ -107,6 +120,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -114,6 +128,7 @@
         <tr bk-table-row>
             <td bk-table-cell>colon</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Puts a colon at the end of the label.</td>
         </tr>
     </tbody>
@@ -125,6 +140,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -132,6 +148,7 @@
         <tr bk-table-row>
             <td bk-table-cell>state</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>The type of message. Possible values are 'error', 'information',
                 'success'
                 and 'warning'. Omit or set to undefined/empty if you want the message to not be
@@ -141,11 +158,13 @@
         <tr bk-table-row>
             <td bk-table-cell>message</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>The message text that will be shown.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>message-fixed</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Message css position will be fixed, allowing for use in dialogs.</td>
         </tr>
     </tbody>

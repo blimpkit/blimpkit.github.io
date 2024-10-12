@@ -21,7 +21,7 @@ blimpkit.directive('bkToken', (classNames) => ({
         isFocus: '<?',
         isReadonly: '<?',
         closeAriaLabel: '@?',
-        closeClicked: '&'
+        closeClicked: '&?'
     },
     link: (scope, element, attrs, tokenizerCtrl) => {
         if (tokenizerCtrl) {

@@ -8,6 +8,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -15,21 +16,25 @@
         <tr bk-table-row>
             <td bk-table-cell>icon-only</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>When true, tabs can have icons but no text.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>has-icons</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>When true, tabs can have both icons and text.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>is-process</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>When the tabs are used as steps for a wizard, set this to true.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>is-nav</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>When the tabs are used as a main navigation, inside a Shell
                 Navigation.
             </td>
@@ -37,49 +42,57 @@
         <tr bk-table-row>
             <td bk-table-cell>has-filter</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>The tab bar has a filter tab.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>has-counters</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>The tabs inside the bar will have counters.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>flat-nav</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Use with flat navigation.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>side-padding</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Size of the side padding. Supported options are 'sm', 'md', 'lg',
-                'xl',
-                'xxl' and 'responsive'.</td>
+                'xl', 'xxl' and 'responsive'.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>transparent</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Transparent background.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>translucent</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>In translucent mode the header gets "--sapObjectHeader_Background"
                 background color and the panel "--sapGroup_ContentBackground" background color.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>unfocused</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Tabs will be in an unfocused state.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>selected-tab-id</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>True</td>
             <td bk-table-cell>Set selected tab.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>compact</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Compact mode. Does not work when there are icon tabs.</td>
         </tr>
     </tbody>
@@ -91,6 +104,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -98,66 +112,76 @@
         <tr bk-table-row>
             <td bk-table-cell>label</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Tab label.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>description</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Description label next to the icon.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>counter</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Counter label shown next to or above the label.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>has-badge</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>If the tab has a badge indicator.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>icon</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Icon class.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>link</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Link.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>tab-id</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>True</td>
             <td bk-table-cell>The id of the tab.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>tab-hint</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Show a small text hint next to the label. This is ignored in icon and
                 process mode.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>state</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>State of the tab. Possible options are 'positive', 'negative',
-                'critical'
-                and 'informative'.</td>
+                'critical' and 'informative'.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>is-last-step</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>If the tabs is the last step of a process.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>on-close</td>
             <td bk-table-cell>function</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Function that will be called when the tab close button is clicked. The
-                tab
-                ID will be passed as a parameter.</td>
+                tab ID will be passed as a parameter.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>closable</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Enables the close button next to the tab label, regardless if an
                 onClose
                 function has been provided.</td>
@@ -165,6 +189,7 @@
         <tr bk-table-row>
             <td bk-table-cell>is-hidden</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Whether the tab should be visible or not.</td>
         </tr>
     </tbody>
@@ -176,6 +201,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -183,26 +209,31 @@
         <tr bk-table-row>
             <td bk-table-cell>label</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Filter tab label.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>counter</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Counter label shown next to or above the label.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>link</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Link.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>tab-id</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>True</td>
             <td bk-table-cell>The id of the tab.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>is-selected</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>If the tab is selected.</td>
         </tr>
     </tbody>
@@ -214,6 +245,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -221,16 +253,19 @@
         <tr bk-table-row>
             <td bk-table-cell>label</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>True</td>
             <td bk-table-cell>Button label.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>state</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>State of the button. Options - 'hover', 'active' and 'focus'.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>align</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Relative position of the popover. For possible options, look at
                 "fd-popover-body".</td>
         </tr>
@@ -243,6 +278,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -250,52 +286,59 @@
         <tr bk-table-row>
             <td bk-table-cell>label</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>True</td>
             <td bk-table-cell>Tab label.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>counter</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Counter label shown next to the label.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>has-badge</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>If the tab has a badge indicator.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>icon</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Icon class.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>link</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Link.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>tab-id</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>True</td>
             <td bk-table-cell>The id of the tab.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>tab-hint</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Show a small text hint next to the label. This is ignored in icon and
                 process mode.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>state</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>State of the tab. Possible options are 'positive', 'negative',
-                'critical'
-                and 'informative'.</td>
+                'critical' and 'informative'.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>on-close</td>
             <td bk-table-cell>function</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Function that will be called when the tab close button is clicked. The
-                tab
-                will have an "X" button and on click, the tab ID will be passed as a parameter.</td>
+                tab will have an "X" button and on click, the tab ID will be passed as a parameter.</td>
         </tr>
     </tbody>
 </table>
@@ -306,6 +349,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -313,6 +357,7 @@
         <tr bk-table-row>
             <td bk-table-cell>align-right</td>
             <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
             <td bk-table-cell>Align the buttons to the right of the tab panel.</td>
         </tr>
     </tbody>
@@ -324,6 +369,7 @@
         <tr bk-table-row>
             <th bk-table-header-cell>Name</th>
             <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
             <th bk-table-header-cell>Description</th>
         </tr>
     </thead>
@@ -331,6 +377,7 @@
         <tr bk-table-row>
             <td bk-table-cell>tab-id</td>
             <td bk-table-cell>string</td>
+            <td bk-table-cell>True</td>
             <td bk-table-cell>The id of the tab this panel belongs to.</td>
         </tr>
     </tbody>
