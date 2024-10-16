@@ -21,7 +21,7 @@ blimpkit.directive('bkBusyIndicator', (classNames) => ({
         scope.getClasses = () => classNames({
             'fd-busy-indicator--m': scope.size === 'm',
             'fd-busy-indicator--l': scope.size === 'l',
-            'contrast': scope.contrast === true,
+            'fd-busy-indicator--contrast': scope.contrast === true,
         });
     },
     template: `<div class="fd-busy-indicator" ng-class="getClasses()" aria-label="Loading">

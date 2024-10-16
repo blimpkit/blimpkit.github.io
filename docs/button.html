@@ -238,11 +238,17 @@
 </code-block>
 <h3>Toggle button</h3>
 <code-block>
-    <bk-button label="Toggle" ng-click="toggle()" toggled="btnToggleState"></bk-button>
+    <bk-button label="Default" toggled="btnToggleState" ng-click="toggle()"></bk-button>
+    <bk-button label="Emphasized" state="emphasized" toggled="true"></bk-button>
+    <bk-button label="Ghost" state="ghost" toggled="true"></bk-button>
+    <bk-button label="Positive" state="positive" toggled="true"></bk-button>
+    <bk-button label="Negative" state="negative" toggled="true"></bk-button>
+    <bk-button label="Attention" state="attention" toggled="true"></bk-button>
+    <bk-button label="Transparent" state="transparent" toggled="true"></bk-button>
     <code-block type="js">
         $scope.btnToggleState = true;
-        $scope.toggle = function () {
-        $scope.btnToggled = !$scope.btnToggled;
+        $scope.toggle = () => {
+        $scope.btnToggleState = !$scope.btnToggleState;
         };
     </code-block>
 </code-block>

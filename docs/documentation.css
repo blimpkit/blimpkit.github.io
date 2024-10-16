@@ -103,6 +103,7 @@ code-block {
     display: block;
     border-radius: var(--sapElement_BorderCornerRadius);
     background-color: var(--sapBackgroundColor, #f7f7f7);
+    border: solid var(--sapList_BorderWidth, 0.0625rem) var(--sapList_BorderColor, #e5e5e5);
     padding: 1rem;
 }
 

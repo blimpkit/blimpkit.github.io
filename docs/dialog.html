@@ -131,12 +131,14 @@
     <bk-button label="Show dialog" ng-click="toggleDialog()"></bk-button>
 
     <bk-dialog visible="dialogVisible" window-width="90%" window-height="90%" window-max-width="640px"
-        window-max-height="768px">
+        window-max-height="640px">
         <bk-dialog-header header="Header" title="Title" subheader="Subheader">
-            <bk-button glyph="sap-icon--decline" aria-label="Close dialog" compact="true"
+            <bk-button glyph="sap-icon--decline" aria-label="Close dialog" compact="true" round="true"
                 ng-click="toggleDialog()"></bk-button>
         </bk-dialog-header>
-        <bk-dialog-body bk-scrollbar class="bk-preformatted">{{dialogText}}</bk-dialog-body>
+        <bk-dialog-body bk-scrollbar>
+            <div class="bk-preformatted fd-padding">{{dialogText}}</div>
+        </bk-dialog-body>
         <bk-dialog-footer compact="true">
             <bk-bar-element>
                 <bk-button label="Close" decisive="true" ng-click="toggleDialog()">

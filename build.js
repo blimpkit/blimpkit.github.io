@@ -20,6 +20,10 @@ fs.mkdirSync('./dist/css', { recursive: true }, (error) => {
     if (error) throw error;
 });
 
+fs.mkdirSync('./dist/css/themes', { recursive: true }, (error) => {
+    if (error) throw error;
+});
+
 const licenseHeader = fs.readFileSync('license-header.txt', 'utf8');
 
 let bundle = '';
@@ -45,7 +49,7 @@ minify(bundle, options).then((result) => {
     console.error(`Error minifying bundle`, error);
 });
 
-const cssFiles = globSync('./css/*.css');
+const cssFiles = [...globSync('./css/*.css'), ...globSync('./css/themes/*.css')];
 cssFiles.map(file => {
     const result = cssMinify.minify(fs.readFileSync(file, 'utf8'));
     fs.writeFileSync(file.replace('css/', 'dist/css/').replace('.css', '.min.css'), licenseHeader + result.styles, 'utf8');

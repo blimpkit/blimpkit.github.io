@@ -770,12 +770,6 @@ i.fd-list__icon[rotate="270"]::before {
   width: 100%;
 }
 
-/* Dialog padding fixes */
-.fd-dialog__body.fd-scrollbar:not(.fd-dialog__body--no-vertical-padding) {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
 .fd-container.fd-form-layout-grid-container .fd-row .fd-col .fd-select__control {
   margin: 0;
 }

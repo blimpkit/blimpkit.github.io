@@ -46,9 +46,9 @@ widgetsView.directive('codeBlock', () => ({
 // Initialize controller
 widgetsView.controller('WidgetsViewController', function ($scope) {
     // Documentation specific stuff
-    $scope.theme = 'morning-horizon';
-    $scope.isLightTheme = () => {
-        return $scope.theme === 'morning-horizon';
+    $scope.theme = 'blimpkit-light';
+    $scope.isTheme = (name) => {
+        return $scope.theme === name;
     };
     $scope.setTheme = (theme) => {
         $scope.theme = theme;
@@ -73,20 +73,20 @@ widgetsView.controller('WidgetsViewController', function ($scope) {
 
     // Button
     $scope.btnToggleState = true;
-    $scope.toggle = function () {
-        $scope.btnToggled = !$scope.btnToggled;
+    $scope.toggle = () => {
+        $scope.btnToggleState = !$scope.btnToggleState;
     };
 
     $scope.segmentedModel = "middle";
-    $scope.segmentedClick = function (item) {
+    $scope.segmentedClick = (item) => {
         $scope.segmentedModel = item;
     };
 
     $scope.splitButtonAction = "Action";
-    $scope.splitButtonClick = function () {
+    $scope.splitButtonClick = () => {
         console.log('split action');
     };
-    $scope.splitItemClick = function (selected) {
+    $scope.splitItemClick = (selected) => {
         $scope.splitButtonAction = selected;
     };
 

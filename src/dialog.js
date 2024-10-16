@@ -88,7 +88,7 @@ blimpkit.directive('bkDialog', (classNames, uuid) => ({
     restrict: 'E',
     replace: true,
     transclude: true,
-    template: '<div class="fd-dialog__body fd-padding" ng-transclude></div>'
+    template: '<div class="fd-dialog__body" ng-transclude></div>'
 })).directive('bkDialogFooter', () => ({
     restrict: 'E',
     replace: true,

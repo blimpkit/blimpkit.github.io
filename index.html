@@ -79,7 +79,7 @@
 </head>
 
 <body class="bk-vbox">
-    <bk-shellbar class="bk-border--bottom">
+    <bk-shellbar>
         <bk-shellbar-group position="left">
             <span bk-shellbar-logo><img src="./logo/blimpkit.svg" width="32" height="32" alt="BlimpKit"></span>
             <span bk-shellbar-title>BlimpKit</span>
@@ -93,8 +93,9 @@
                     </bk-popover-control>
                     <bk-popover-body align="bottom-right">
                         <bk-menu aria-label="theme popover items">
-                            <bk-menu-item title="Morning Horizon" ng-click="setTheme('morning-horizon')"></bk-menu-item>
-                            <bk-menu-item title="Evening Horizon" ng-click="setTheme('evening-horizon')"></bk-menu-item>
+                            <bk-menu-item title="BlimpKit (Light)" ng-click="setTheme('blimpkit-light')"></bk-menu-item>
+                            <bk-menu-item title="Morning Horizon" ng-click="setTheme('horizon-light')"></bk-menu-item>
+                            <bk-menu-item title="Evening Horizon" ng-click="setTheme('horizon-dark')"></bk-menu-item>
                         </bk-menu>
                     </bk-popover-body>
                 </bk-popover>
@@ -707,22 +708,28 @@
         </div>
     </div>
 
-    <!-- For light theme -->
-    <link ng-if="isLightTheme()"
-        href="https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/css_variables.css"
-        rel="stylesheet">
-    <link ng-if="isLightTheme()" href="https://www.unpkg.com/fundamental-styles@0.38.0/dist/theming/sap_horizon.css"
-        rel="stylesheet">
-    <link ng-if="isLightTheme()" rel="stylesheet"
+    <!-- BlimpKit light theme -->
+    <link ng-if="isTheme('blimpkit-light')" href="./css/themes/blimpkit-light-variables.css" rel="stylesheet">
+    <link ng-if="isTheme('blimpkit-light')" href="./css/themes/blimpkit-light.css" rel="stylesheet">
+    <link ng-if="isTheme('blimpkit-light')" rel="stylesheet"
         href="https://www.unpkg.com/@highlightjs/cdn-assets@11.10.0/styles/github-dark.min.css" />
 
-    <!-- For dark theme -->
-    <link ng-if="!isLightTheme()"
+    <!-- Horizon light theme -->
+    <link ng-if="isTheme('horizon-light')"
+        href="https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/css_variables.css"
+        rel="stylesheet">
+    <link ng-if="isTheme('horizon-light')"
+        href="https://www.unpkg.com/fundamental-styles@0.38.0/dist/theming/sap_horizon.css" rel="stylesheet">
+    <link ng-if="isTheme('horizon-light')" rel="stylesheet"
+        href="https://www.unpkg.com/@highlightjs/cdn-assets@11.10.0/styles/github-dark.min.css" />
+
+    <!-- Horizon dark theme -->
+    <link ng-if="isTheme('horizon-dark')"
         href="https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon_dark/css_variables.css"
         rel="stylesheet">
-    <link ng-if="!isLightTheme()"
+    <link ng-if="isTheme('horizon-dark')"
         href="https://www.unpkg.com/fundamental-styles@0.38.0/dist/theming/sap_horizon_dark.css" rel="stylesheet">
-    <link ng-if="!isLightTheme()" rel="stylesheet"
+    <link ng-if="isTheme('horizon-dark')" rel="stylesheet"
         href="https://www.unpkg.com/@highlightjs/cdn-assets@11.10.0/styles/github-dark-dimmed.min.css" />
 </body>
 
