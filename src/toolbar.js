@@ -69,7 +69,7 @@ blimpkit.directive('bkToolbar', (classNames) => ({
         <bk-popover-control>
             <bk-button glyph="sap-icon--overflow" state="${ButtonStates.Transparent}" aria-label="Toolbar overflow"></bk-button>
         </bk-popover-control>
-        <bk-popover-body align="bottom-right">
+        <bk-popover-body align="bottom-right" no-arrow="true">
             <div class="fd-toolbar__overflow" ng-transclude></div>
         </bk-popover-body>
     </bk-popover>`

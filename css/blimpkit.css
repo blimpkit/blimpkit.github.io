@@ -46,6 +46,22 @@ body.bk-light {
   color: var(--sapTextColor, #32363a);
 }
 
+a:link:not([class]) {
+  color: var(--sapLinkColor, #c88800);
+}
+
+a:visited:not([class]) {
+  color: var(--sapLink_Visited_Color, #a06d00);
+}
+
+a:hover:not([class]) {
+  color: var(--sapLink_Hover_Color, #c88800);
+}
+
+a:active:not([class]) {
+  color: var(--sapLink_Active_Color, #b47a00);
+}
+
 .bk-hidden {
   display: none;
 }

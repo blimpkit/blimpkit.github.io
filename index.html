@@ -94,6 +94,7 @@
                     <bk-popover-body align="bottom-right">
                         <bk-menu aria-label="theme popover items">
                             <bk-menu-item title="BlimpKit (Light)" ng-click="setTheme('blimpkit-light')"></bk-menu-item>
+                            <bk-menu-item title="BlimpKit (Dark)" ng-click="setTheme('blimpkit-dark')"></bk-menu-item>
                             <bk-menu-item title="Morning Horizon" ng-click="setTheme('horizon-light')"></bk-menu-item>
                             <bk-menu-item title="Evening Horizon" ng-click="setTheme('horizon-dark')"></bk-menu-item>
                         </bk-menu>
@@ -713,6 +714,12 @@
     <link ng-if="isTheme('blimpkit-light')" href="./css/themes/blimpkit-light.css" rel="stylesheet">
     <link ng-if="isTheme('blimpkit-light')" rel="stylesheet"
         href="https://www.unpkg.com/@highlightjs/cdn-assets@11.10.0/styles/github-dark.min.css" />
+
+    <!-- BlimpKit dark theme -->
+    <link ng-if="isTheme('blimpkit-dark')" href="./css/themes/blimpkit-dark-variables.css" rel="stylesheet">
+    <link ng-if="isTheme('blimpkit-dark')" href="./css/themes/blimpkit-dark.css" rel="stylesheet">
+    <link ng-if="isTheme('blimpkit-dark')" rel="stylesheet"
+        href="https://www.unpkg.com/@highlightjs/cdn-assets@11.10.0/styles/github-dark-dimmed.min.css" />
 
     <!-- Horizon light theme -->
     <link ng-if="isTheme('horizon-light')"

@@ -12,127 +12,127 @@
  * SPDX-License-Identifier: EPL-2.0
  */
 :root {
-    --btp-Blue1: #ebf8ff;
-    --btp-Blue2: #d1efff;
-    --btp-Blue3: #a6e0ff;
-    --btp-Blue4: #89d1ff;
-    --btp-Blue5: #4db1ff;
-    --btp-Blue6: #1b90ff;
-    --btp-Blue7: #0070f2;
-    --btp-Blue8: #0057d2;
-    --btp-Blue9: #0040b0;
-    --btp-Blue10: #002a86;
-    --btp-Blue11: #00144a;
-    --btp-Grey1: #f5f6f7;
-    --btp-Grey2: #eaecee;
-    --btp-Grey3: #d5dadd;
-    --btp-Grey4: #a9b4be;
-    --btp-Grey5: #8396a8;
-    --btp-Grey6: #5b738b;
-    --btp-Grey7: #475e75;
-    --btp-Grey8: #354a5f;
-    --btp-Grey9: #223548;
-    --btp-Grey10: #1a2733;
-    --btp-Grey11: #12171c;
-    --btp-Green1: #f5fae5;
-    --btp-Green2: #e5f2bd;
-    --btp-Green3: #bae881;
-    --btp-Green4: #97dd40;
-    --btp-Green5: #5dc122;
-    --btp-Green6: #36a41d;
-    --btp-Green7: #188918;
-    --btp-Green8: #256f3a;
-    --btp-Green9: #1e592f;
-    --btp-Green10: #164323;
-    --btp-Green11: #0e2b16;
-    --btp-Mango1: #fff8d6;
-    --btp-Mango2: #fff3b8;
-    --btp-Mango3: #ffdf72;
-    --btp-Mango4: #ffc933;
-    --btp-Mango5: #ffb300;
-    --btp-Mango6: #f58b00;
-    --btp-Mango7: #c35500;
-    --btp-Mango8: #a93e00;
-    --btp-Mango9: #8d2a00;
-    --btp-Mango10: #6d1900;
-    --btp-Mango11: #450b00;
-    --btp-Red1: #ffeaf4;
-    --btp-Red2: #ffd5ea;
-    --btp-Red3: #ffb2d2;
-    --btp-Red4: #ff8cb2;
-    --btp-Red5: #ff5c77;
-    --btp-Red6: #ee3939;
-    --btp-Red7: #d20a0a;
-    --btp-Red8: #aa0808;
-    --btp-Red9: #840606;
-    --btp-Red10: #5a0404;
-    --btp-Red11: #350000;
-    --btp-Teal1: #dafdf5;
-    --btp-Teal2: #c2fcee;
-    --btp-Teal3: #85f1dc;
-    --btp-Teal4: #2ce0bf;
-    --btp-Teal5: #00ceac;
-    --btp-Teal6: #04a6a1;
-    --btp-Teal7: #07838f;
-    --btp-Teal8: #046c7a;
-    --btp-Teal9: #035663;
-    --btp-Teal10: #02414c;
-    --btp-Teal11: #012931;
-    --btp-Indigo1: #f1ecff;
-    --btp-Indigo2: #e2d8ff;
-    --btp-Indigo3: #d3b6ff;
-    --btp-Indigo4: #b894ff;
-    --btp-Indigo5: #9b76ff;
-    --btp-Indigo6: #7858ff;
-    --btp-Indigo7: #5d36ff;
-    --btp-Indigo8: #470ced;
-    --btp-Indigo9: #2c13ad;
-    --btp-Indigo10: #1c0c6e;
-    --btp-Indigo11: #0e0637;
-    --btp-Pink1: #fff0fa;
-    --btp-Pink2: #ffdcf3;
-    --btp-Pink3: #ffafed;
-    --btp-Pink4: #ff8af0;
-    --btp-Pink5: #f65af2;
-    --btp-Pink6: #f31ded;
-    --btp-Pink7: #cc00dc;
-    --btp-Pink8: #a100c2;
-    --btp-Pink9: #7800a4;
-    --btp-Pink10: #510080;
-    --btp-Pink11: #28004a;
-    --btp-Raspberry1: #fff0f5;
-    --btp-Raspberry2: #ffdce8;
-    --btp-Raspberry3: #fecbda;
-    --btp-Raspberry4: #feadc8;
-    --btp-Raspberry5: #fe83ae;
-    --btp-Raspberry6: #fa4f96;
-    --btp-Raspberry7: #df1278;
-    --btp-Raspberry8: #ba066c;
-    --btp-Raspberry9: #9b015d;
-    --btp-Raspberry10: #71014b;
-    --btp-Raspberry11: #510136;
-    --btp-Cyan1: #dbf9ff;
-    --btp-Cyan2: #b8f3ff;
-    --btp-Cyan3: #7aeaf8;
-    --btp-Cyan4: #2dd6ef;
-    --btp-Cyan5: #0fb9dc;
-    --btp-Cyan6: #09a0bf;
-    --btp-Cyan7: #007fa9;
-    --btp-Cyan8: #00709f;
-    --btp-Cyan9: #025484;
-    --btp-Cyan10: #013b64;
-    --btp-Cyan11: #00274e;
-    --btp-Hazelnut1: #fdf5c9;
-    --btp-Hazelnut2: #fce8a9;
-    --btp-Hazelnut3: #ffc654;
-    --btp-Hazelnut4: #ffb727;
-    --btp-Hazelnut5: #e79a00;
-    --btp-Hazelnut6: #c88500;
-    --btp-Hazelnut7: #a16b00;
-    --btp-Hazelnut8: #915e00;
-    --btp-Hazelnut9: #714700;
-    --btp-Hazelnut10: #523100;
-    --btp-Hazelnut11: #3d1f00;
+    --btp-Blue1: #0c225f;
+    --btp-Blue2: #0e3382;
+    --btp-Blue3: #003ca8;
+    --btp-Blue4: #0052c4;
+    --btp-Blue5: #0070f2;
+    --btp-Blue6: #118cff;
+    --btp-Blue7: #33a6ff;
+    --btp-Blue8: #5cc0ff;
+    --btp-Blue9: #8dd8ff;
+    --btp-Blue10: #bbe7ff;
+    --btp-Blue11: #e5f6ff;
+    --btp-Grey1: #1e2833;
+    --btp-Grey2: #29394b;
+    --btp-Grey3: #2f4763;
+    --btp-Grey4: #415c76;
+    --btp-Grey5: #5b7996;
+    --btp-Grey6: #778ea6;
+    --btp-Grey7: #92a2b1;
+    --btp-Grey8: #b3bdc6;
+    --btp-Grey9: #c9cfd4;
+    --btp-Grey10: #dee1e4;
+    --btp-Grey11: #f3f3f5;
+    --btp-Green1: #0c2d16;
+    --btp-Green2: #164120;
+    --btp-Green3: #194f2a;
+    --btp-Green4: #226635;
+    --btp-Green5: #188818;
+    --btp-Green6: #35a01c;
+    --btp-Green7: #57b520;
+    --btp-Green8: #81cb24;
+    --btp-Green9: #a4e058;
+    --btp-Green10: #d5ea91;
+    --btp-Green11: #e8f3c3;
+    --btp-Mango1: #2e2703;
+    --btp-Mango2: #4a3502;
+    --btp-Mango3: #5d4002;
+    --btp-Mango4: #7a5102;
+    --btp-Mango5: #a36a01;
+    --btp-Mango6: #c77b00;
+    --btp-Mango7: #d89101;
+    --btp-Mango8: #efab01;
+    --btp-Mango9: #f4ca55;
+    --btp-Mango10: #f9df8c;
+    --btp-Mango11: #fdeeb0;
+    --btp-Red1: #570000;
+    --btp-Red2: #770606;
+    --btp-Red3: #8f0707;
+    --btp-Red4: #b50808;
+    --btp-Red5: #ec0707;
+    --btp-Red6: #fd4848;
+    --btp-Red7: #ff758c;
+    --btp-Red8: #ffa0bf;
+    --btp-Red9: #ffbcd8;
+    --btp-Red10: #ffd5ea;
+    --btp-Red11: #fff0f7;
+    --btp-Teal1: #042c2b;
+    --btp-Teal2: #054039;
+    --btp-Teal3: #034f48;
+    --btp-Teal4: #036559;
+    --btp-Teal5: #048570;
+    --btp-Teal6: #029e84;
+    --btp-Teal7: #0ab592;
+    --btp-Teal8: #1ecdaf;
+    --btp-Teal9: #6de3c2;
+    --btp-Teal10: #8cf4d6;
+    --btp-Teal11: #bbfaed;
+    --btp-Indigo1: #231570;
+    --btp-Indigo2: #331c9f;
+    --btp-Indigo3: #4316ca;
+    --btp-Indigo4: #591ffa;
+    --btp-Indigo5: #7757ff;
+    --btp-Indigo6: #9075ff;
+    --btp-Indigo7: #ac8dff;
+    --btp-Indigo8: #c6a8ff;
+    --btp-Indigo9: #dcc4ff;
+    --btp-Indigo10: #e5dcff;
+    --btp-Indigo11: #f0ebff;
+    --btp-Pink1: #3a0962;
+    --btp-Pink2: #580787;
+    --btp-Pink3: #72009c;
+    --btp-Pink4: #9700b7;
+    --btp-Pink5: #c0d;
+    --btp-Pink6: #f028ea;
+    --btp-Pink7: #f764f3;
+    --btp-Pink8: #ff8ff1;
+    --btp-Pink9: #ffb9ef;
+    --btp-Pink10: #ffd5f1;
+    --btp-Pink11: #ffe6fa;
+    --btp-Raspberry1: #4e0536;
+    --btp-Raspberry2: #6e064b;
+    --btp-Raspberry3: #8a0152;
+    --btp-Raspberry4: #ae0565;
+    --btp-Raspberry5: #e21279;
+    --btp-Raspberry6: #fa418e;
+    --btp-Raspberry7: #ff6fa0;
+    --btp-Raspberry8: #ff98b6;
+    --btp-Raspberry9: #ffbec9;
+    --btp-Raspberry10: #ffd7dd;
+    --btp-Raspberry11: #ffe8ec;
+    --btp-Cyan1: #062845;
+    --btp-Cyan2: #063d5b;
+    --btp-Cyan3: #074b66;
+    --btp-Cyan4: #06617d;
+    --btp-Cyan5: #09819e;
+    --btp-Cyan6: #0599b8;
+    --btp-Cyan7: #00afcf;
+    --btp-Cyan8: #08c8e4;
+    --btp-Cyan9: #61e6f6;
+    --btp-Cyan10: #a6ecf8;
+    --btp-Cyan11: #caf5fc;
+    --btp-Hazelnut1: #362317;
+    --btp-Hazelnut2: #552f10;
+    --btp-Hazelnut3: #673a17;
+    --btp-Hazelnut4: #854a20;
+    --btp-Hazelnut5: #b26026;
+    --btp-Hazelnut6: #cd7537;
+    --btp-Hazelnut7: #d5915a;
+    --btp-Hazelnut8: #daad73;
+    --btp-Hazelnut9: #e3cca0;
+    --btp-Hazelnut10: #efe0be;
+    --btp-Hazelnut11: #f7edd0;
 
     --fdSwitch_Compact_Width: 2rem;
     --fdSwitch_Compact_Height: 1.25rem;
@@ -321,7 +321,7 @@
     --fdIconTabBar_Selection_Bar_Color: var(--fdIcon_Tab_Bar_Selection_Bar_Color);
     --fdIconTabBar_Badge_Background: var(--fdIcon_Tab_Bar_Badge_Color);
     --fdIconTabBar_Badge_Background_After: var(--sapContent_BadgeBackground);
-    --fdIconTabBar_Arrow_Color: var(--sapTextColor);
+    --fdIconTabBar_Arrow_Color: var(--sapObjectHeader_Subtitle_TextColor);
     --fdIconTabBar_Multi_Click_Separator_Background: var(--sapTextColor);
     --fdIconTabBar_Overflow_Button_Shell_Background: var(--sapButton_Background);
     --fdIconTabBar_Overflow_Button_Shell_Border_Color: var(--sapButton_BorderColor);
@@ -347,9 +347,9 @@
     --fdIconTabBar_Button_Active_Color: var(--sapContent_Selected_ForegroundColor);
     --fdIconTabBar_Button_Active_Focus_Color: var(--sapContent_FocusColor);
     --fdIcon_Tab_Bar_Selection_Bar_Height: 0.188rem;
-    --fdIcon_Tab_Bar_Selection_Color: var(--sapContent_Selected_ForegroundColor);
+    --fdIcon_Tab_Bar_Selection_Color: var(--sapTextColor);
     --fdIcon_Tab_Bar_Selection_Bar_Color: var(--sapSelectedColor);
-    --fdIcon_Tab_Bar_Icon_Border_Color: var(--sapContent_Selected_ForegroundColor);
+    --fdIcon_Tab_Bar_Icon_Border_Color: var(--sapTextColor);
     --fdIcon_Tab_Bar_Semantic_Icon_Display: none;
     --fdIcon_Tab_Bar_Semantic_Color_Positive: var(--sapPositiveElementColor);
     --fdIcon_Tab_Bar_Semantic_Color_Negative: var(--sapNegativeElementColor);
@@ -373,8 +373,8 @@
     --fdIcon_Tab_Bar_Overflow_Button_Text_Color_Hover: var(--sapTextColor);
     --fdIcon_Tab_Bar_Overflow_Button_Icon_Color_Hover: var(--sapTextColor);
     --fdIcon_Tab_Bar_Inactive_Tab_Icon_Color: var(--sapContent_Selected_ForegroundColor);
-    --fdIcon_Tab_Bar_Label_Color: var(--sapTextColor);
-    --fdIcon_Tab_Bar_Label_Hover_Color: var(--sapContent_Selected_ForegroundColor);
+    --fdIcon_Tab_Bar_Label_Color: var(--sapObjectHeader_Subtitle_TextColor);
+    --fdIcon_Tab_Bar_Label_Hover_Color: var(--sapTextColor);
     --fdIcon_Tab_Bar_Label_Font_Family: var(--sapFontFamily);
     --fdIcon_Tab_Bar_Text_Focus_Radius: 0.375rem;
     --fdIcon_Tab_Bar_Icon_Focus_Radius: 50%;
@@ -487,16 +487,16 @@
 
     --fdInput_Box_Shadow_Hover: var(--sapField_Hover_Shadow);
     --fdInput_Outline_Color: var(--sapField_Active_BorderColor);
-    --fdInput_Error_Background_Color_Hover: var(--sapField_Hover_Background);
+    --fdInput_Error_Background_Color_Hover: var(--sapButton_Reject_Selected_Hover_Background);
     --fdInput_Error_Box_Shadow_Hover: var(--sapField_InvalidShadow);
     --fdInput_Error_Outline_Color: var(--sapField_InvalidColor);
-    --fdInput_Warning_Background_Color_Hover: var(--sapField_Hover_Background);
+    --fdInput_Warning_Background_Color_Hover: var(--sapButton_Attention_Selected_Hover_Background);
     --fdInput_Warning_Box_Shadow_Hover: var(--sapContent_Critical_Shadow);
     --fdInput_Warning_Outline_Color: var(--sapField_WarningColor);
-    --fdInput_Success_Background_Color_Hover: var(--sapField_Hover_Background);
+    --fdInput_Success_Background_Color_Hover: var(--sapButton_Accept_Selected_Hover_Background);
     --fdInput_Success_Box_Shadow_Hover: var(--sapContent_Positive_Shadow);
     --fdInput_Success_Outline_Color: var(--sapField_SuccessColor);
-    --fdInput_Information_Background_Color_Hover: var(--sapField_Hover_Background);
+    --fdInput_Information_Background_Color_Hover: var(--sapButton_Neutral_Hover_Background);
     --fdInput_Information_Box_Shadow_Hover: var(--sapContent_Informative_Shadow);
     --fdInput_Information_Outline_Color: var(--sapField_InformationColor);
     --fdInput_Non_Interactive_State_Placeholder_Color: var(--sapField_PlaceholderTextColor);
@@ -504,7 +504,7 @@
     --fdInput_Group_Button_Background: transparent;
     --fdInput_Group_Button_Text_Color: var(--sapField_TextColor);
     --fdInput_Group_Button_Box_Shadow: var(--sapField_Hover_Shadow);
-    --fdInput_Group_Button_Hover_Background: var(--sapButton_Hover_Background);
+    --fdInput_Group_Button_Hover_Background: var(--sapButton_Selected_Hover_Background);
     --fdInput_Group_Button_Hover_Text_Color: var(--sapField_TextColor);
     --fdInput_Group_Button_Active_Background: var(--sapButton_Active_Background);
     --fdInput_Group_Button_Active_Text_Color: var(--sapButton_Selected_TextColor);
@@ -537,8 +537,8 @@
     --fdWizard_Completed_Step_Border: 0.0625rem solid var(--sapContent_Selected_ForegroundColor);
     --fdWizard_Completed_Step_Icon_Color: var(--sapContent_Selected_ForegroundColor);
     --fdWizard_Current_Step_Color: var(--sapContent_ContrastTextColor);
-    --fdWizard_Current_Step_Label_Color: var(--sapContent_Selected_ForegroundColor);
-    --fdWizard_Current_Step_Icon_Color: var(--sapTextColor);
+    --fdWizard_Current_Step_Label_Color: var(--sapTextColor);
+    --fdWizard_Current_Step_Icon_Color: var(--sapContent_ContrastTextColor);
     --fdWizard_Current_Step_Background_Color: var(--sapContent_Selected_Background);
     --fdWizard_Current_Step_Border: none;
     --fdWizard_Upcoming_Step_Color: var(--sapContent_LabelColor);
@@ -607,7 +607,7 @@
     --fdCheckbox_Inner_Border_Width: var(--sapField_BorderWidth);
     --fdCheckbox_Inner_Border_Style: solid;
     --fdCheckbox_Inner_Border_Color: var(--sapField_BorderColor);
-    --fdCheckbox_Check_Mark_Color: var(--sapContent_Selected_ForegroundColor);
+    --fdCheckbox_Check_Mark_Color: var(--sapTextColor);
     --fdCheckbox_Focus_Outline_Offset: 0.25rem;
     --fdCheckbox_Outline_Border_Radius: 0.8rem;
     --fdCheckbox_Compact_Outline_Border_Radius: 0.5rem;
@@ -615,17 +615,17 @@
     --fdCheckbox_Inner_Border_Width_Default: var(--sapField_BorderWidth);
     --fdCheckbox_Inner_Border_Style_Default: solid;
     --fdCheckbox_Inner_Border_Color_Default: var(--sapField_BorderColor);
-    --fdCheckbox_Check_Mark_Color_Default: var(--sapContent_Selected_ForegroundColor);
+    --fdCheckbox_Check_Mark_Color_Default: var(--sapTextColor);
     --fdCheckbox_Background_Color_Default_Hover: var(--sapHoverColor);
     --fdCheckbox_Inner_Border_Width_Default_Hover: var(--sapField_BorderWidth);
     --fdCheckbox_Inner_Border_Style_Default_Hover: solid;
     --fdCheckbox_Inner_Border_Color_Default_Hover: var(--sapField_Hover_BorderColor);
-    --fdCheckbox_Check_Mark_Color_Default_Hover: var(--sapContent_Selected_ForegroundColor);
+    --fdCheckbox_Check_Mark_Color_Default_Hover: var(--sapTextColor);
     --fdCheckbox_Background_Color_ReadOnly: var(--sapField_ReadOnly_Background);
     --fdCheckbox_Inner_Border_Width_ReadOnly: var(--sapElement_BorderWidth);
     --fdCheckbox_Inner_Border_Style_ReadOnly: dashed;
     --fdCheckbox_Inner_Border_Color_ReadOnly: var(--sapField_ReadOnly_BorderColor);
-    --fdCheckbox_Check_Mark_Color_ReadOnly: var(--sapField_TextColor);
+    --fdCheckbox_Check_Mark_Color_ReadOnly: var(--sapField_ReadOnly_BorderColor);
     --fdCheckbox_Background_Color_Error: var(--sapField_InvalidBackground);
     --fdCheckbox_Inner_Border_Width_Error: var(--sapField_InvalidBorderWidth);
     --fdCheckbox_Inner_Border_Style_Error: solid;
@@ -659,7 +659,7 @@
     --fdRadio_Inner_Border_Width: var(--sapField_BorderWidth);
     --fdRadio_Inner_Border_Style: solid;
     --fdRadio_Inner_Border_Color: var(--sapField_BorderColor);
-    --fdRadio_Active_Dot_Color: var(--sapContent_Selected_ForegroundColor);
+    --fdRadio_Active_Dot_Color: var(--sapTextColor);
     --fdRadio_Hover_Background_Color: var(--sapContent_Selected_Hover_Background);
     --fdRadio_Inner_Content_Size: 0.75rem;
     --fdRadio_Inner_Content_Size_Compact: 0.5rem;
@@ -915,7 +915,7 @@
     --fdShellbar_Search_Active_Button_Hover_Background: var(--fdShellbar_Input_Hover_Background);
     --fdShellbar_Search_Active_Button_Color: var(--sapButton_TextColor);
     --fdShellbar_Active_Background: var(--sapShell_Active_Background);
-    --fdShellbar_Active_Shadow: 0 0 0.125rem 0.125rem var(--sapHoverColor);
+    --fdShellbar_Active_Shadow: 0 0 0.125rem 0.125rem var(--sapShell_Hover_Background);
     --fdShellbar_Search_Active_Outline: none;
     --fdShellbar_Input_Border: none;
     --fdShellbar_Input_Focus_Color: var(--sapShell_InteractiveTextColor);
@@ -961,7 +961,7 @@
 
     --sapAvatar_Default_Background: var(--sapBrandColor);
     --sapAvatar_Default_BorderColor: var(--sapBrandColor);
-    --sapAvatar_Default_TextColor: var(--sapTextColor);
+    --sapAvatar_Default_TextColor: var(--sapBackgroundColor);
     --sapAvatar_Default_HoverColor: var(--sapContent_Selected_Hover_Background);
 
     --fdAvatarRatio: 2rem;
@@ -976,8 +976,8 @@
     --fdAvatarBorderRadius: var(--sapElement_BorderCornerRadius);
     --fdAvatarBoxShadow: none;
     --fdAvatarHoverBorderColor: var(--sapAvatar_Default_TextColor);
-    --fdAvatarHoverBackgroundColor: var(--sapAvatar_Default_HoverColor);
-    --fdAvatarHoverBorder: 0.0625rem solid var(--fdAvatarHoverBorderColor);
+    --fdAvatarHoverBackgroundColor: var(--sapShell_Category_3_Background);
+    --fdAvatarHoverBorder: 0.0625rem solid var(--sapShell_Category_3_BorderColor);
     --fdAvatarZoomIconFontSize: 0.75rem;
     --fdAvatarZoomIconDimensions: 1.125rem;
     --fdAvatar_BackgroundColor: var(--sapAvatar_Default_Background);
@@ -1344,8 +1344,8 @@
     --fdNavigationMenu_Item_Border_Color_Active: transparent;
     --fdNavigationMenu_Item_Border_Color_Selected: transparent;
     --fdNavigationMenu_Item_Border_Color_Focus: transparent;
-    --sapNavigation_Shadow1: 0 0 0.125rem 0 rgba(34, 53, 72, .16), 0 0.5rem 1rem 0 rgba(34, 53, 72, .16);
-    --sapNavigation_Shadow2: 0 0 0.125rem 0 rgba(34, 53, 72, .48), 0 1rem 2rem 0 rgba(34, 53, 72, .16);
+    --sapNavigation_Shadow1: 0 0 0.125rem 0 rgba(0, 0, 0, .16), 0 0.5rem 1rem 0 rgba(0, 0, 0, .32);
+    --sapNavigation_Shadow2: 0 0 0.125rem 0 rgba(0, 0, 0, .48), 0 1rem 2rem 0 rgba(0, 0, 0, .64);
     --sapNavigation_Background: var(--sapList_Background);
     --sapNavigation_Hover_Background: var(--sapList_Hover_Background);
     --sapNavigation_Active_Background: var(--sapList_Active_Background);
@@ -1361,16 +1361,16 @@
     --sapToolHeader_Min_Height_Cozy: 3.75rem;
     --sapToolHeader_Border_Radius: 0;
     --sapToolHeader_Paddings_Y: 0.5625rem;
-    --sapToolHeader_Shadow1: 0 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.1);
+    --sapToolHeader_Shadow1: 0 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.16);
 
     --fdTextarea_Line_Height: 1.5;
 
-    --sapMenu_Shadow1: 0 0 0.125rem 0 rgba(34, 53, 72, .16), 0 0.5rem 1rem 0 rgba(34, 53, 72, .16);
-    --sapMenu_Shadow2: 0 0 0.125rem 0 rgba(34, 53, 72, .48), 0 1rem 2rem 0 rgba(34, 53, 72, .16);
+    --sapMenu_Shadow1: 0 0 0.125rem 0 rgba(0, 0, 0, .16), 0 0.5rem 1rem 0 rgba(0, 0, 0, .32);
+    --sapMenu_Shadow2: 0 0 0.125rem 0 rgba(0, 0, 0, .48), 0 1rem 2rem 0 rgba(0, 0, 0, .64);
 
-    --sapNotifications_Shadow2: 0 0 0.125rem 0 rgba(34, 53, 72, .48), 0 1rem 2rem 0 rgba(34, 53, 72, .16);
+    --sapNotifications_Shadow2: 0 0 0.125rem 0 rgba(0, 0, 0, .48), 0 1rem 2rem 0 rgba(0, 0, 0, .64);
 
-    --sapSearchHover_Shadow: 0 0 0.125rem 0 rgba(34, 53, 72, .16), 0 0.5rem 1rem 0 rgba(34, 53, 72, .16);
+    --sapSearchHover_Shadow: 0 0 0.125rem 0 rgba(0, 0, 0, .16), 0 0.5rem 1rem 0 rgba(0, 0, 0, .32), 0 0 0 0.0625rem rgba(169, 180, 190, .16);
 
     --sapMenu_Background: var(--sapList_Background);
     --sapMenu_Hover_Background: var(--sapList_Hover_Background);
@@ -1466,7 +1466,7 @@
 
     --fdToolLayout_Background: var(--sapBackgroundColor);
 
-    --sapSplitPane_Shadow1: 0 0 0.125rem 0 rgba(34, 53, 72, .16), 0 0.5rem 1rem 0 rgba(34, 53, 72, .16);
+    --sapSplitPane_Shadow1: 0 0 0.125rem 0 rgba(0, 0, 0, .16), 0 0.5rem 1rem 0 rgba(0, 0, 0, .32);
 
     --fdModal_BackgroundColor: rgba(0, 0, 0, .2);
 }
@@ -1563,6 +1563,11 @@
     margin-inline-end: 1rem;
 }
 
+.fd-icon-tab-bar__tab.is-hover,
+.fd-icon-tab-bar__tab:hover {
+    --fdIconTabBar_Arrow_Color: var(--sapTextColor);
+}
+
 .fd-switch__input:checked+.fd-switch__slider {
     --fdSwitch_Track_Background: var(--sapButton_Track_Selected_Background);
     --fdSwitch_Shadow: var(--fdSwitch_Active_Shadow);
@@ -1588,4 +1593,30 @@
 .fd-tokenizer .fd-token:hover {
     --fdToken_Background_Color: var(--sapField_Background);
     --fdToken_Border: var(--sapButton_BorderWidth) solid var(--sapLinkColor);
+}
+
+.fd-popover__body {
+    background-color: var(--sapTile_Background);
+}
+
+.fd-popover__body::before {
+    border-bottom-color: var(--sapTile_Background);
+}
+
+.fd-popover__body--arrow-left::before {
+    border-right-color: var(--sapTile_Background);
+    border-bottom-color: transparent;
+    border-top-color: transparent;
+}
+
+.fd-popover__body--arrow-right::before {
+    border-left-color: var(--sapTile_Background);
+    border-bottom-color: transparent;
+    border-top-color: transparent;
+}
+
+.fd-popover__body--arrow-bottom::before {
+    border-top-color: var(--sapTile_Background);
+    border-left-color: transparent;
+    border-right-color: transparent;
 }
