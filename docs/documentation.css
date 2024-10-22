@@ -1,6 +1,6 @@
 @font-face {
     font-family: "72";
-    src: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Regular-full.woff2") format("woff2");
+    src: url("https://cdn.jsdelivr.net/npm/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Regular-full.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -8,14 +8,14 @@
 
 @font-face {
     font-family: "72-Semibold";
-    src: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Semibold-full.woff2") format("woff2");
+    src: url("https://cdn.jsdelivr.net/npm/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Semibold-full.woff2") format("woff2");
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
     font-family: "72-Bold";
-    src: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Bold-full.woff2") format("woff2");
+    src: url("https://cdn.jsdelivr.net/npm/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Bold-full.woff2") format("woff2");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -23,7 +23,7 @@
 
 @font-face {
     font-family: "72-Light";
-    src: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Light-full.woff2") format("woff2");
+    src: url("https://cdn.jsdelivr.net/npm/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Light-full.woff2") format("woff2");
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -31,21 +31,21 @@
 
 @font-face {
     font-family: "72Mono-Regular";
-    src: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72Mono-Regular-full.woff2") format("woff2");
+    src: url("https://cdn.jsdelivr.net/npm/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72Mono-Regular-full.woff2") format("woff2");
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
     font-family: "72Mono-Bold";
-    src: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72Mono-Bold-full.woff2") format("woff2");
+    src: url("https://cdn.jsdelivr.net/npm/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72Mono-Bold-full.woff2") format("woff2");
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
     font-family: "SAP-icons";
-    src: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/fonts/SAP-icons.woff2") format("woff2");
+    src: url("https://cdn.jsdelivr.net/npm/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/fonts/SAP-icons.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -53,7 +53,7 @@
 
 @font-face {
     font-family: "BusinessSuiteInAppSymbols";
-    src: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/fonts/BusinessSuiteInAppSymbols.woff2") format("woff2");
+    src: url("https://cdn.jsdelivr.net/npm/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/fonts/BusinessSuiteInAppSymbols.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -61,7 +61,7 @@
 
 @font-face {
     font-family: "SAP-icons-TNT";
-    src: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/fonts/SAP-icons-TNT.woff2") format("woff2");
+    src: url("https://cdn.jsdelivr.net/npm/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/fonts/SAP-icons-TNT.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
