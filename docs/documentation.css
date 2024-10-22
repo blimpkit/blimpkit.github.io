@@ -3,12 +3,14 @@
     src: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Regular-full.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "72-Semibold";
     src: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Semibold-full.woff2") format("woff2");
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -16,6 +18,7 @@
     src: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Bold-full.woff2") format("woff2");
     font-weight: 700;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -23,18 +26,21 @@
     src: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Light-full.woff2") format("woff2");
     font-weight: 300;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "72Mono-Regular";
     src: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72Mono-Regular-full.woff2") format("woff2");
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "72Mono-Bold";
     src: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72Mono-Bold-full.woff2") format("woff2");
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -42,6 +48,7 @@
     src: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/fonts/SAP-icons.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -49,6 +56,7 @@
     src: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/fonts/BusinessSuiteInAppSymbols.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -56,6 +64,7 @@
     src: url("https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/fonts/SAP-icons-TNT.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 div.doc-main-container {
@@ -114,6 +123,7 @@ code-block>.fd-link {
 
 div.doc-icon-container {
     border-radius: var(--sapElement_BorderCornerRadius);
+    border: solid var(--sapList_BorderWidth, 0.0625rem) var(--sapList_BorderColor, #e5e5e5);
     background-color: var(--sapBackgroundColor, #f7f7f7);
     padding: 2rem;
 }

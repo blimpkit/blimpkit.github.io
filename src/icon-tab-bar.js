@@ -49,9 +49,6 @@ blimpkit.directive('bkIconTabBar', function (classNames, $injector) {
             this.getIsFilter = function () {
                 return $scope.hasFilter;
             };
-            this.getIsUnfocused = function () {
-                return $scope.unfocused;
-            };
             $scope.getClasses = () => classNames('fd-icon-tab-bar', 'bk-icon-tab-bar', {
                 'fd-icon-tab-bar--icon-only': $scope.iconOnly && !$scope.hasIcons,
                 'fd-icon-tab-bar--icon': $scope.hasIcons && !$scope.iconOnly,
@@ -68,6 +65,7 @@ blimpkit.directive('bkIconTabBar', function (classNames, $injector) {
                 'fd-icon-tab-bar--responsive-paddings': $scope.sidePadding === 'responsive',
                 'fd-icon-tab-bar--transparent': $scope.transparent,
                 'fd-icon-tab-bar--translucent': $scope.translucent,
+                'bk-icon-tab-bar--unfocused': $scope.unfocused,
                 'is-compact': $scope.compact && !$scope.iconOnly && !$scope.hasIcons,
             });
 
@@ -282,7 +280,6 @@ blimpkit.directive('bkIconTabBar', function (classNames, $injector) {
                 'fd-icon-tab-bar__item--critical': scope.state === 'critical',
                 'fd-icon-tab-bar__item--informative': scope.state === 'informative',
                 'fd-icon-tab-bar__item--closable': scope.isClosable(),
-                'bk-opacity-7': tabBarCtrl.getIsUnfocused(),
                 'bk-icon-tab-bar-tab-hidden': scope.isHidden
             });
             scope.close = function (event) {

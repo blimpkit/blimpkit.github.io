@@ -33,7 +33,7 @@ blimpkit.directive('bkVerticalNav', (classNames) => ({
     replace: true,
     transclude: true,
     link: (_scope, _element, attrs) => {
-        if (!attrs.hasOwnProperty('ariaLabel'))
+        if (!Object.prototype.hasOwnProperty.call(attrs, 'ariaLabel'))
             console.error('bk-vertical-nav-main-section error: You must set the "aria-label" attribute');
     },
     template: '<nav class="fd-vertical-nav__main-navigation" ng-transclude></nav>'
@@ -42,7 +42,7 @@ blimpkit.directive('bkVerticalNav', (classNames) => ({
     replace: true,
     transclude: true,
     link: (_scope, _element, attrs) => {
-        if (!attrs.hasOwnProperty('ariaLabel'))
+        if (!Object.prototype.hasOwnProperty.call(attrs, 'ariaLabel'))
             console.error('bk-vertical-nav-utility-section error: You must set the "aria-label" attribute');
     },
     template: '<nav class="fd-vertical-nav__utility-section" ng-transclude></nav>'
@@ -100,7 +100,7 @@ blimpkit.directive('bkVerticalNav', (classNames) => ({
         isExpanded: '<?',
     },
     link: (scope, _element, attrs) => {
-        if (!attrs.hasOwnProperty('ariaLabel'))
+        if (!Object.prototype.hasOwnProperty.call(attrs, 'ariaLabel'))
             console.error('bk-list-navigation-item-arrow error: You must set the "aria-label" attribute');
         scope.getClasses = () => classNames('fd-list__navigation-item-arrow', {
             'is-expanded': scope.isExpanded === true,

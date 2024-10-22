@@ -58,7 +58,6 @@
 
 <h2>Examples</h2>
 <code-block>
-    <bk-button label="Show Message Box" ng-click="toggleMessageBox()"></bk-button>
     <bk-select placeholder="Select semantic type" dropdown-fill="true" dropdown-fixed="true" ng-model="messageBoxType">
         <bk-option text="Confirmation" value="'confirmation'"></bk-option>
         <bk-option text="Error" value="'error'"></bk-option>
@@ -66,6 +65,8 @@
         <bk-option text="Warning" value="'warning'"></bk-option>
         <bk-option text="Information" value="'information'"></bk-option>
     </bk-select>
+    <br />
+    <bk-button label="Show Message Box" ng-click="toggleMessageBox()"></bk-button>
 
     <bk-message-box visible="messageBoxVisible" title="Message box" type="{{messageBoxType}}">
         This is a message box {{messageBoxType ? "of type '" + messageBoxType + "'" : ''}}

@@ -32,7 +32,7 @@ blimpkit.directive('bkAvatar', (classNames) => ({
         image: '@?',
     },
     link: (scope, element, attrs, cardCtrl) => {
-        if (!attrs.hasOwnProperty('ariaLabel'))
+        if (!Object.prototype.hasOwnProperty.call(attrs, 'ariaLabel'))
             console.error('bk-avatar error: You should provide a description using the "aria-label" attribute');
         if (scope.zoomIcon && !scope.zoomLabel)
             console.error('bk-avatar error: You should provide a description of the zoom button using the "zoom-label" attribute');

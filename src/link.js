@@ -27,5 +27,5 @@ blimpkit.directive('bkLink', (classNames) => ({
             [`fd-link--${scope.state}`]: scope.state,
         });
     },
-    template: '<a ng-class="getClasses()" tabindex="0"><span ng-if="leftGlyph" class="{{leftGlyph}} sap-icon--s"></span><span class="fd-link__content" ng-transclude></span><span ng-if="rightGlyph" class="{{rightGlyph}} sap-icon--s"></span></a>',
+    template: '<a ng-class="getClasses()" tabindex="0"><span ng-if="leftGlyph" class="{{leftGlyph}}"></span><span class="fd-link__content" ng-transclude></span><span ng-if="rightGlyph" class="{{rightGlyph}}"></span></a>',
 }));

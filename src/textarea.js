@@ -25,7 +25,7 @@ blimpkit.directive('bkTextarea', function (classNames) {
         link: function (scope, _element, attrs) {
             scope.getClasses = () => classNames({
                 'fd-textarea--compact': scope.compact === true,
-                'is-disabled': attrs.hasOwnProperty('disabled') && attrs.disabled === true,
+                'is-disabled': Object.prototype.hasOwnProperty.call(attrs, 'disabled') && attrs.disabled === true,
                 [`is-${scope.state}`]: scope.state,
             });
         },

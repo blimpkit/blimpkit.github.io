@@ -83,7 +83,7 @@ blimpkit.directive('bkShellbar', (classNames) => ({
     restrict: 'A',
     link: (_scope, element, attrs) => {
         element.addClass('fd-shellbar__button');
-        if (attrs.hasOwnProperty('isMenu') && attrs.isMenu === 'true')
+        if (Object.prototype.hasOwnProperty.call(attrs, 'isMenu') && attrs.isMenu === 'true')
             element.addClass('fd-shellbar__button--menu')
     },
 })).directive('bkShellbarSearchField', () => ({

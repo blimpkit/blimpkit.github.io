@@ -18,7 +18,7 @@
     --sapFontFamily: "72", "72full", Arial, Helvetica, sans-serif;
     --sapFontSize: .875rem;
     --sapTextColor: #303030;
-    --sapLinkColor: #c88800;
+    --sapLinkColor: #996f09;
     --sapCompanyLogo: none;
     --sapBackgroundImage: none;
     --sapBackgroundImageOpacity: 1.0;
@@ -31,22 +31,22 @@
     --sapNegativeColor: #e01b24;
     --sapCriticalColor: #e66000;
     --sapPositiveColor: #26a264;
-    --sapInformativeColor: #3584e4;
-    --sapNeutralColor: #e6e6e6;
+    --sapInformativeColor: #3478ca;
+    --sapNeutralColor: #d4d4d4;
     --sapNegativeElementColor: #e01b24;
     --sapCriticalElementColor: #e66000;
     --sapPositiveElementColor: #26a264;
-    --sapInformativeElementColor: #3584e4;
-    --sapNeutralElementColor: #e6e6e6;
+    --sapInformativeElementColor: #3478ca;
+    --sapNeutralElementColor: #d4d4d4;
     --sapNegativeTextColor: #e01b24;
     --sapCriticalTextColor: #b44f00;
     --sapPositiveTextColor: #26a264;
-    --sapInformativeTextColor: #3584e4;
+    --sapInformativeTextColor: #3478ca;
     --sapNeutralTextColor: #303030;
     --sapErrorColor: #e01b24;
     --sapWarningColor: #e66000;
     --sapSuccessColor: #26a264;
-    --sapInformationColor: #3584e4;
+    --sapInformationColor: #3478ca;
     --sapErrorBackground: #f4e4e5;
     --sapWarningBackground: #f1ece1;
     --sapSuccessBackground: #e4eee9;
@@ -55,8 +55,8 @@
     --sapErrorBorderColor: #e01b24;
     --sapWarningBorderColor: #e66000;
     --sapSuccessBorderColor: #26a264;
-    --sapInformationBorderColor: #3584e4;
-    --sapNeutralBorderColor: #e6e6e6;
+    --sapInformationBorderColor: #3478ca;
+    --sapNeutralBorderColor: #d4d4d4;
 
     --sapElement_LineHeight: 2.75rem;
     --sapElement_Height: 2.25rem;
@@ -78,8 +78,8 @@
     --sapContent_Selected_MeasureIndicatorColor: #fecc04;
     --sapContent_Placeholderloading_Background: #ccc;
     --sapContent_Placeholderloading_Gradient: linear-gradient(to right, #ccc 0%, #ccc 20%, #999 50%, #ccc 80%, #ccc 100%);
-    --sapContent_ImagePlaceholderBackground: #ebebeb;
-    --sapContent_ImagePlaceholderForegroundColor: #656565;
+    --sapContent_ImagePlaceholderBackground: #dee0e2;
+    --sapContent_ImagePlaceholderForegroundColor: #606060;
     --sapContent_RatedColor: #d27700;
     --sapContent_UnratedColor: #758ca4;
     --sapContent_BusyColor: #fecc04;
@@ -125,7 +125,7 @@
     --sapContent_Selected_ForegroundColor: #303030;
     --sapContent_ForcedColorAdjust: none;
     --sapContent_Illustrative_Color1: #5d36ff;
-    --sapContent_Illustrative_Color2: #3584e4;
+    --sapContent_Illustrative_Color2: #3478ca;
     --sapContent_Illustrative_Color3: #f58b00;
     --sapContent_Illustrative_Color4: #00144a;
     --sapContent_Illustrative_Color5: #a9b4be;
@@ -161,13 +161,13 @@
     --sapFontHeader6Size: .875rem;
 
     --sapLink_TextDecoration: none;
-    --sapLink_Hover_Color: #c88800;
+    --sapLink_Hover_Color: #996f09;
     --sapLink_Hover_TextDecoration: underline;
-    --sapLink_Active_Color: #b47a00;
+    --sapLink_Active_Color: #996f09;
     --sapLink_Active_TextDecoration: none;
-    --sapLink_Visited_Color: #a06d00;
-    --sapLink_InvertedColor: #c88800;
-    --sapLink_SubtleColor: #c88800;
+    --sapLink_Visited_Color: #996f09;
+    --sapLink_InvertedColor: #996f09;
+    --sapLink_SubtleColor: #634806;
 
     --sapShell_Background: #fff;
     --sapShell_BackgroundImage: linear-gradient(to bottom, #fff, #fff);
@@ -182,9 +182,9 @@
     --sapShell_GroupTitleTextShadow: 0 0 0.125rem #fff;
     --sapShell_Hover_Background: #fff;
     --sapShell_Active_Background: #fff;
-    --sapShell_Active_TextColor: #3584e4;
+    --sapShell_Active_TextColor: #3478ca;
     --sapShell_Selected_Background: #fff;
-    --sapShell_Selected_TextColor: #3584e4;
+    --sapShell_Selected_TextColor: #3478ca;
     --sapShell_Selected_Hover_Background: #fff;
     --sapShell_Favicon: none;
     --sapShell_Navigation_Background: #fff;
@@ -285,12 +285,12 @@
     --sapAssistant_Answer_BorderColor: #eff1f2;
     --sapAssistant_Answer_TextColor: #303030;
 
-    --sapAvatar_1_Background: #fff3b8;
-    --sapAvatar_1_BorderColor: #fff3b8;
-    --sapAvatar_1_TextColor: #a45d00;
+    --sapAvatar_1_Background: #ffeb9b;
+    --sapAvatar_1_BorderColor: #ffeb9b;
+    --sapAvatar_1_TextColor: #9d5900;
     --sapAvatar_2_Background: #ffd0e7;
     --sapAvatar_2_BorderColor: #ffd0e7;
-    --sapAvatar_2_TextColor: #e01b24;
+    --sapAvatar_2_TextColor: #c1171f;
     --sapAvatar_3_Background: #ffdbe7;
     --sapAvatar_3_BorderColor: #ffdbe7;
     --sapAvatar_3_TextColor: #ba066c;
@@ -308,13 +308,13 @@
     --sapAvatar_7_TextColor: #046c7a;
     --sapAvatar_8_Background: #dde7e2;
     --sapAvatar_8_BorderColor: #dde7e2;
-    --sapAvatar_8_TextColor: #1f8154;
+    --sapAvatar_8_TextColor: #1c744c;
     --sapAvatar_9_Background: #ddccf0;
     --sapAvatar_9_BorderColor: #ddccf0;
     --sapAvatar_9_TextColor: #6c32a9;
-    --sapAvatar_10_Background: #eaecee;
-    --sapAvatar_10_BorderColor: #eaecee;
-    --sapAvatar_10_TextColor: #556b82;
+    --sapAvatar_10_Background: #d3d4d6;
+    --sapAvatar_10_BorderColor: #d3d4d6;
+    --sapAvatar_10_TextColor: #4b5e72;
 
     --sapButton_Background: #e6e6e6;
     --sapButton_BorderColor: #d4d4d4;
@@ -513,11 +513,11 @@
     --sapField_Focus_Background: #fff;
     --sapField_Focus_BorderColor: #303030;
     --sapField_Focus_HelpBackground: #fff;
-    --sapField_ReadOnly_Background: #eaecee;
+    --sapField_ReadOnly_Background: #dee0e2;
     --sapField_ReadOnly_BackgroundStyle: none;
     --sapField_ReadOnly_BorderColor: #d2d2d2;
     --sapField_ReadOnly_BorderStyle: none;
-    --sapField_ReadOnly_HelpBackground: #eaecee;
+    --sapField_ReadOnly_HelpBackground: #dee0e2;
     --sapField_RequiredColor: #ba066c;
     --sapField_InvalidColor: #e01b24;
     --sapField_InvalidBackground: #f4e4e5;
@@ -537,7 +537,7 @@
     --sapField_SuccessBorderWidth: .0625rem;
     --sapField_SuccessBorderStyle: solid;
     --sapField_SuccessShadow: none;
-    --sapField_InformationColor: #3584e4;
+    --sapField_InformationColor: #3478ca;
     --sapField_InformationBackground: #cce2fc;
     --sapField_InformationBackgroundStyle: none;
     --sapField_InformationBorderWidth: .0625rem;
@@ -589,25 +589,25 @@
 
     --sapPopover_BorderCornerRadius: .5rem;
 
-    --sapProgress_Background: #d5dadd;
-    --sapProgress_BorderColor: #d5dadd;
+    --sapProgress_Background: #fff;
+    --sapProgress_BorderColor: #dedede;
     --sapProgress_TextColor: #303030;
     --sapProgress_FontSize: .875rem;
-    --sapProgress_NegativeBackground: #ffdbec;
-    --sapProgress_NegativeBorderColor: #ffdbec;
+    --sapProgress_NegativeBackground: #fff;
+    --sapProgress_NegativeBorderColor: #dedede;
     --sapProgress_NegativeTextColor: #303030;
-    --sapProgress_CriticalBackground: #fff4bd;
-    --sapProgress_CriticalBorderColor: #fff4bd;
+    --sapProgress_CriticalBackground: #fff;
+    --sapProgress_CriticalBorderColor: #dedede;
     --sapProgress_CriticalTextColor: #303030;
-    --sapProgress_PositiveBackground: #e5f2ba;
-    --sapProgress_PositiveBorderColor: #e5f2ba;
+    --sapProgress_PositiveBackground: #fff;
+    --sapProgress_PositiveBorderColor: #dedede;
     --sapProgress_PositiveTextColor: #303030;
-    --sapProgress_InformationBackground: #cdedff;
-    --sapProgress_InformationBorderColor: #cdedff;
+    --sapProgress_InformationBackground: #fff;
+    --sapProgress_InformationBorderColor: #dedede;
     --sapProgress_InformationTextColor: #303030;
-    --sapProgress_Value_Background: #617b94;
-    --sapProgress_Value_BorderColor: #617b94;
-    --sapProgress_Value_TextColor: #e6e6e6;
+    --sapProgress_Value_Background: #646464;
+    --sapProgress_Value_BorderColor: #646464;
+    --sapProgress_Value_TextColor: #fff;
     --sapProgress_Value_NegativeBackground: #e01b24;
     --sapProgress_Value_NegativeBorderColor: #e01b24;
     --sapProgress_Value_NegativeTextColor: #e01b24;
@@ -617,9 +617,9 @@
     --sapProgress_Value_PositiveBackground: #26a264;
     --sapProgress_Value_PositiveBorderColor: #26a264;
     --sapProgress_Value_PositiveTextColor: #26a264;
-    --sapProgress_Value_InformationBackground: #3584e4;
-    --sapProgress_Value_InformationBorderColor: #3584e4;
-    --sapProgress_Value_InformationTextColor: #3584e4;
+    --sapProgress_Value_InformationBackground: #3478ca;
+    --sapProgress_Value_InformationBorderColor: #3478ca;
+    --sapProgress_Value_InformationTextColor: #3478ca;
 
     --sapScrollBar_FaceColor: #c1c1c1;
     --sapScrollBar_TrackColor: transparent;
@@ -662,7 +662,7 @@
     --sapObjectHeader_Title_FontSize: 1.5rem;
     --sapObjectHeader_Title_SnappedFontSize: 1.25rem;
     --sapObjectHeader_Title_FontFamily: "72Black", "72Blackfull", "72", "72full", Arial, Helvetica, sans-serif;
-    --sapObjectHeader_Subtitle_TextColor: #777777;
+    --sapObjectHeader_Subtitle_TextColor: #646464;
 
     --sapBlockLayer_Background: #000;
 
@@ -672,8 +672,8 @@
     --sapTile_BorderColor: transparent;
     --sapTile_BorderCornerRadius: .75rem;
     --sapTile_TitleTextColor: #303030;
-    --sapTile_TextColor: #777777;
-    --sapTile_IconColor: #777777;
+    --sapTile_TextColor: #656565;
+    --sapTile_IconColor: #656565;
     --sapTile_SeparatorColor: #ccc;
     --sapTile_Interactive_BorderColor: #b3b3b3;
     --sapTile_OverlayBackground: #fff;
@@ -699,7 +699,7 @@
     --sapAccentBackgroundColor7: #c2fcee;
     --sapAccentBackgroundColor8: #26a264;
     --sapAccentBackgroundColor9: #ddccf0;
-    --sapAccentBackgroundColor10: #eaecee;
+    --sapAccentBackgroundColor10: #d3d4d6;
 
     --sapIndicationColor_1: #840606;
     --sapIndicationColor_1_Background: #840606;
@@ -757,17 +757,17 @@
     --sapIndicationColor_4b: #bae8bc;
     --sapIndicationColor_4b_BorderColor: #bae8bc;
     --sapIndicationColor_4b_Hover_Background: #a7e2a9;
-    --sapIndicationColor_5: #3584e4;
-    --sapIndicationColor_5_Background: #3584e4;
-    --sapIndicationColor_5_BorderColor: #3584e4;
+    --sapIndicationColor_5: #3478ca;
+    --sapIndicationColor_5_Background: #3478ca;
+    --sapIndicationColor_5_BorderColor: #3478ca;
     --sapIndicationColor_5_TextColor: #fff;
     --sapIndicationColor_5_Hover_Background: #fecc04;
     --sapIndicationColor_5_Active_Background: #fff;
     --sapIndicationColor_5_Active_BorderColor: #d3effd;
-    --sapIndicationColor_5_Active_TextColor: #3584e4;
+    --sapIndicationColor_5_Active_TextColor: #3478ca;
     --sapIndicationColor_5_Selected_Background: #fff;
     --sapIndicationColor_5_Selected_BorderColor: #d3effd;
-    --sapIndicationColor_5_Selected_TextColor: #3584e4;
+    --sapIndicationColor_5_Selected_TextColor: #3478ca;
     --sapIndicationColor_5b: #d3effd;
     --sapIndicationColor_5b_BorderColor: #d3effd;
     --sapIndicationColor_5b_Hover_Background: #bbe6fc;
@@ -833,13 +833,13 @@
     --sapIndicationColor_10_TextColor: #fff;
     --sapIndicationColor_10_Hover_Background: #767b7e;
     --sapIndicationColor_10_Active_Background: #fff;
-    --sapIndicationColor_10_Active_BorderColor: #eaecee;
+    --sapIndicationColor_10_Active_BorderColor: #d3d4d6;
     --sapIndicationColor_10_Active_TextColor: #45484a;
     --sapIndicationColor_10_Selected_Background: #fff;
-    --sapIndicationColor_10_Selected_BorderColor: #eaecee;
+    --sapIndicationColor_10_Selected_BorderColor: #d3d4d6;
     --sapIndicationColor_10_Selected_TextColor: #45484a;
-    --sapIndicationColor_10b: #eaecee;
-    --sapIndicationColor_10b_BorderColor: #eaecee;
+    --sapIndicationColor_10b: #d3d4d6;
+    --sapIndicationColor_10b_BorderColor: #d3d4d6;
     --sapIndicationColor_10b_Hover_Background: #dcdfe3;
 
     --sapLegend_WorkingBackground: #fff;
@@ -906,7 +906,7 @@
     --sapChart_OrderedColor_4: #df1278;
     --sapChart_OrderedColor_5: #8b47d7;
     --sapChart_OrderedColor_6: #049f9a;
-    --sapChart_OrderedColor_7: #3584e4;
+    --sapChart_OrderedColor_7: #3478ca;
     --sapChart_OrderedColor_8: #cc00dc;
     --sapChart_OrderedColor_9: #798c77;
     --sapChart_OrderedColor_10: #da6c6c;
@@ -1093,10 +1093,10 @@
     --sapChart_Sequence_7_Plus1: #1c85ff;
     --sapChart_Sequence_7_Plus1_TextColor: #000;
     --sapChart_Sequence_7_Plus1_TextShadow: 0 0 .125rem #fff;
-    --sapChart_Sequence_7: #3584e4;
+    --sapChart_Sequence_7: #3478ca;
     --sapChart_Sequence_7_TextColor: #fff;
     --sapChart_Sequence_7_TextShadow: 0 0 .125rem #223548;
-    --sapChart_Sequence_7_BorderColor: #3584e4;
+    --sapChart_Sequence_7_BorderColor: #3478ca;
     --sapChart_Sequence_7_Minus1: #0062d3;
     --sapChart_Sequence_7_Minus1_TextColor: #fff;
     --sapChart_Sequence_7_Minus1_TextShadow: 0 0 .125rem #223548;

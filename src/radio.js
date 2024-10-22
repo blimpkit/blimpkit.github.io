@@ -26,8 +26,8 @@ blimpkit.directive('bkRadio', (classNames) => ({
     link: function (scope, _elem, attrs) {
         scope.getClasses = () => classNames({
             'fd-radio--compact': scope.compact === true,
-            'is-disabled': attrs.hasOwnProperty('disabled') && attrs.disabled === true,
-            'is-readonly': attrs.hasOwnProperty('readonly') && attrs.readonly === true,
+            'is-disabled': Object.prototype.hasOwnProperty.call(attrs, 'disabled') && attrs.disabled === true,
+            'is-readonly': Object.prototype.hasOwnProperty.call(attrs, 'readonly') && attrs.readonly === true,
             [`is-${this.states[scope.state]}`]: scope.state && this.states[scope.state],
         });
     },

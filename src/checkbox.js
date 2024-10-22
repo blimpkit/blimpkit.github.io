@@ -45,7 +45,7 @@ blimpkit.directive('bkCheckbox', (classNames) => ({
     link: (scope, _elem, attrs) => {
         scope.getClasses = () => classNames({
             'fd-checkbox__label--compact': scope.compact,
-            'fd-checkbox__label--required': attrs.hasOwnProperty('required') && (attrs.required === 'true' || attrs.required === ''),
+            'fd-checkbox__label--required': Object.prototype.hasOwnProperty.call(attrs, 'required') && (attrs.required === 'true' || attrs.required === ''),
             'is-hover': scope.isHover,
             'fd-checkbox__label--wrap': scope.wrap,
         });

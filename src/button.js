@@ -29,6 +29,7 @@ blimpkit.constant('ButtonStates', {
                     badge: '@?',
                     glyph: '@?',
                     glyphRotate: '<?',
+                    iconPath: '@?',
                     disabledFocusable: '<?',
                     toggled: '<?',
                     state: '@?',
@@ -49,20 +50,18 @@ blimpkit.constant('ButtonStates', {
                             scope.buttonId = `b${uuid.generate()}`;
                     },
                     post: function (scope, _element, attrs, ctrl) {
-                        if (!scope.label && scope.glyph && !attrs.hasOwnProperty('ariaLabel'))
+                        if (!scope.label && (scope.glyph || scope.iconPath) && !Object.prototype.hasOwnProperty.call(attrs, 'ariaLabel'))
                             console.error('bk-button error: Icon-only buttons must have the "aria-label" attribute');
-                        scope.getArrowClass = function () {
-                            switch (scope.arrowDirection) {
-                                case 'up':
-                                    return 'sap-icon--slim-arrow-up';
-                                case 'left':
-                                    return 'sap-icon--slim-arrow-left';
-                                case 'right':
-                                    return 'sap-icon--slim-arrow-right';
-                                default:
-                                    return 'sap-icon--slim-arrow-down';
-                            }
-                        };
+                        scope.getArrowClass = () => classNames({
+                            'sap-icon--slim-arrow-down': !scope.arrowDirection || scope.arrowDirection === 'down',
+                            'sap-icon--slim-arrow-up': scope.arrowDirection === 'up',
+                            'sap-icon--slim-arrow-left': scope.arrowDirection === 'left',
+                            'sap-icon--slim-arrow-right': scope.arrowDirection === 'right',
+                        });
+                        scope.getIconClasses = () => classNames({
+                            [scope.glyph]: scope.glyph && !scope.iconPath,
+                            'bk-icon--svg sap-icon': !scope.glyph && scope.iconPath,
+                        });
                         scope.getClasses = () => {
                             if (scope.disabledFocusable === true && (!scope.instructions || scope.instructions === '')) {
                                 console.error('bk-button error: when using the "focusable disabled" state, you must provide a description using the "instructions" attribute.');
@@ -78,7 +77,7 @@ blimpkit.constant('ButtonStates', {
                                 'fd-button--positive': scope.state === ButtonStates.Positive,
                                 'fd-button--negative': scope.state === ButtonStates.Negative,
                                 'fd-button--attention': scope.state === ButtonStates.Attention,
-                                'fd-input-group__button': ctrl && !attrs.hasOwnProperty('bkShellbarButton'),
+                                'fd-input-group__button': ctrl && !Object.prototype.hasOwnProperty.call(attrs, 'bkShellbarButton'),
                                 'fd-message-strip__close': scope.inMsgStrip === true,
                                 'fd-button--toggled': scope.toggled === true,
                                 'is-disabled': scope.disabledFocusable === true,
@@ -94,7 +93,7 @@ blimpkit.constant('ButtonStates', {
                         });
                     }
                 },
-                innerTemplate: `<i ng-if="glyph" ng-class="glyph" role="presentation" rotate="{{glyphRotate}}"></i>
+                innerTemplate: `<i ng-if="glyph || iconPath" ng-class="getIconClasses()" role="presentation" rotate="{{glyphRotate}}"><ng-include ng-if="iconPath" src="iconPath"></ng-include></i>
                 <span ng-if="label" ng-class="getTextClasses()">{{ label }}</span>
                 <span ng-if="badge" class="fd-button__badge">{{ badge }}</span>
                 <i ng-if="isMenu" ng-class="getArrowClass()"></i>
@@ -117,7 +116,7 @@ blimpkit.constant('ButtonStates', {
     transclude: true,
     replace: true,
     link: function (_scope, _element, attrs) {
-        if (!attrs.hasOwnProperty('ariaLabel'))
+        if (!Object.prototype.hasOwnProperty.call(attrs, 'ariaLabel'))
             console.error('bk-segmented-button error: You should provide a description of the group using the "aria-label" attribute');
     },
     template: '<div class="fd-segmented-button" role="group" ng-transclude></div>'
@@ -153,7 +152,7 @@ blimpkit.constant('ButtonStates', {
             this.toggleBody = function (toggle) {
                 toggleBody = toggle;
             };
-            if (!$attrs.hasOwnProperty('ariaLabel'))
+            if (!Object.prototype.hasOwnProperty.call($attrs, 'ariaLabel'))
                 console.error('bk-split-button error: You should provide a description of the split button using the "aria-label" attribute');
             $scope.getSplitClasses = () => classNames('fd-button-split', {
                 'fd-button--emphasized': $scope.state === ButtonStates.Emphasized,

@@ -30,7 +30,7 @@ blimpkit.directive('bkSwitch', (classNames) => ({
         scope.getClasses = () => classNames('fd-switch', {
             'fd-switch--semantic': scope.semantic,
             'fd-switch--text': scope.withText,
-            'is-disabled': attrs.hasOwnProperty('disabled') && (attrs.disabled === 'true' || attrs.disabled === '')
+            'is-disabled': Object.prototype.hasOwnProperty.call(attrs, 'disabled') && (attrs.disabled === 'true' || attrs.disabled === '')
         });
         scope.valueChange = () => {
             if (ngModel) {

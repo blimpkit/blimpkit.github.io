@@ -38,7 +38,7 @@ blimpkit.directive('bkToken', (classNames) => ({
             'fd-token--selected': scope.isSelected === true,
             'is-focus': scope.isFocus === true,
             'is-hover': scope.isHover === true,
-            'fd-token--disabled': attrs.hasOwnProperty('disabled'),
+            'fd-token--disabled': Object.prototype.hasOwnProperty.call(attrs, 'disabled'),
         });
 
         scope.isVisible = () => tokenizerCtrl ? tokenizerCtrl.isTokenVisible(element) : true;

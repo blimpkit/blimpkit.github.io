@@ -27,7 +27,7 @@ blimpkit.directive('bkInput', (classNames) => ({
     },
     forbiddenTypes: ['checkbox', 'radio', 'file', 'image', 'range'],
     link: function (scope, _element, attrs, ctrl) {
-        if (!attrs.hasOwnProperty('type'))
+        if (!Object.prototype.hasOwnProperty.call(attrs, 'type'))
             console.error('bk-input error: Inputs must have the "type" HTML attribute');
         else {
             if (this.forbiddenTypes.includes(attrs.type))
@@ -35,7 +35,7 @@ blimpkit.directive('bkInput', (classNames) => ({
         }
         scope.getClasses = () => {
             if (ctrl[0]) {
-                if (attrs.hasOwnProperty('disabled') && attrs.disabled === true) ctrl[0].setDisabled(true);
+                if (Object.prototype.hasOwnProperty.call(attrs, 'disabled') && attrs.disabled === true) ctrl[0].setDisabled(true);
                 else ctrl[0].setDisabled(false);
             }
             return classNames({
@@ -72,7 +72,7 @@ blimpkit.directive('bkInput', (classNames) => ({
             'is-hover': $scope.isHover === true,
             'is-focus': $scope.focus === true,
             'is-readonly': $scope.isReadonly === true,
-            'is-disabled': $scope.isDisabled || ($attrs.hasOwnProperty('disabled') && $attrs.disabled === true),
+            'is-disabled': $scope.isDisabled || (Object.prototype.hasOwnProperty.call($attrs, 'disabled') && $attrs.disabled === true),
             [`is-${states[$scope.state]}`]: $scope.state && states[$scope.state]
         });
 

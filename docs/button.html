@@ -43,12 +43,17 @@
             <td bk-table-cell>Rotate glyph X degrees, where X can be 90, 180, and 270.</td>
         </tr>
         <tr bk-table-row>
+            <td bk-table-cell>icon-path</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
+            <td bk-table-cell>URL path to an image, preferably svg.</td>
+        </tr>
+        <tr bk-table-row>
             <td bk-table-cell>disabled-focusable</td>
             <td bk-table-cell>boolean</td>
             <td bk-table-cell>False</td>
             <td bk-table-cell>Set the disabled but focusable state. This must always be used with
-                the
-                'instructions' attribute.</td>
+                the 'instructions' attribute.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>toggled</td>
@@ -57,20 +62,18 @@
             <td bk-table-cell>Set the toggle state.</td>
         </tr>
         <tr bk-table-row>
-            <td bk-table-cell>type</td>
+            <td bk-table-cell>state</td>
             <td bk-table-cell>string</td>
             <td bk-table-cell>False</td>
             <td bk-table-cell>'emphasized', 'transparent', 'ghost', 'positive', 'negative' and
-                'attention'.
-                If not specified, normal state is assumed.</td>
+                'attention'. If not specified, normal state is assumed.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>instructions</td>
             <td bk-table-cell>string</td>
             <td bk-table-cell>False</td>
             <td bk-table-cell>Short description when the button is disabled. It should contain the
-                reason
-                and what needs to be done to enable it. This is for screen readers.</td>
+                reason and what needs to be done to enable it. This is for screen readers.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>is-menu</td>
@@ -83,9 +86,7 @@
             <td bk-table-cell>string</td>
             <td bk-table-cell>False</td>
             <td bk-table-cell>Direction of the menu arrow. Possible options are "up", "left",
-                "right"
-                and
-                "down" (default).</td>
+                "right" and "down" (default).</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>is-overflow</td>
@@ -314,6 +315,8 @@
     <bk-button glyph="sap-icon--cart" aria-label="Add to cart">
     </bk-button>
     <bk-button label="Add to cart" glyph="sap-icon--cart" aria-label="Add to cart">
+    </bk-button>
+    <bk-button label="Custom icon" icon-path="./logo/blimpkit-symbolic.svg" aria-label="Custom icon">
     </bk-button>
 </code-block>
 <h3>Button with badge</h3>

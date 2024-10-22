@@ -15,6 +15,7 @@ widgetsView.directive('codeBlock', () => ({
     compile: function (tElement, tAttrs) {
         const pre = document.createElement("pre");
         const code = document.createElement("code");
+        code.setAttribute('tabindex', 0);
         if (tAttrs.type === 'js') { // the content is JS code
             code.classList.add('language-js');
             code.textContent = js_beautify(tElement.contents()[0].data);
@@ -46,6 +47,7 @@ widgetsView.directive('codeBlock', () => ({
 // Initialize controller
 widgetsView.controller('WidgetsViewController', function ($scope) {
     // Documentation specific stuff
+    $scope.version = angular.module('blimpKit').info().version;
     $scope.theme = 'blimpkit-light';
     $scope.isTheme = (name) => {
         return $scope.theme === name;

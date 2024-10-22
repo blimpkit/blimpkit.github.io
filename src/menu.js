@@ -30,7 +30,7 @@ blimpkit.directive('bkMenu', function ($window, $timeout, $injector, backdrop, c
         },
         link: {
             pre: function (scope, _element, attrs, parentCtrls) {
-                if (!attrs.hasOwnProperty('ariaLabel'))
+                if (!Object.prototype.hasOwnProperty.call(attrs, 'ariaLabel'))
                     console.error('bk-menu error: You must set the "aria-label" attribute');
                 if (!angular.isDefined(scope.show))
                     scope.show = true;
@@ -207,10 +207,9 @@ blimpkit.directive('bkMenu', function ($window, $timeout, $injector, backdrop, c
                 }
             }
             element.on('pointerup', pointerupEvent);
-            scope.getItemClasses = function () {
-                if (scope.hasSeparator) return 'has-separator';
-                return '';
-            };
+            scope.getItemClasses = () => classNames('fd-menu__item', {
+                'has-separator': scope.hasSeparator,
+            });
             scope.getIconClasses = () => classNames({
                 [scope.iconClass]: scope.iconClass && !scope.iconPath,
                 'bk-icon--svg sap-icon': !scope.iconClass && scope.iconPath,
@@ -278,9 +277,9 @@ blimpkit.directive('bkMenu', function ($window, $timeout, $injector, backdrop, c
             scope.$on('$destroy', cleanUp);
         }
     },
-    template: `<li class="fd-menu__item" ng-class="getItemClasses()" role="presentation" ng-mouseenter="show()" ng-mouseleave="hide($event)" tabindex="0" ng-focus="focus()">
+    template: `<li ng-class="getItemClasses()" role="presentation" ng-mouseenter="show()" ng-mouseleave="hide($event)" tabindex="0" ng-focus="focus()">
         <span aria-controls="{{sublistId}}" aria-expanded="{{isExpanded}}" aria-haspopup="true" role="menuitem" ng-class="getClasses()">
-            <span ng-if="iconClass || iconPath" class="fd-menu__addon-before"><i class="{{getIconClasses()}}" role="presentation"><ng-include ng-if="iconPath" src="iconPath"></ng-include></i></span>
+            <span ng-if="iconClass || iconPath" class="fd-menu__addon-before"><i ng-class="getIconClasses()" role="presentation"><ng-include ng-if="iconPath" src="iconPath"></ng-include></i></span>
             <span class="fd-menu__title">{{title}}</span>
             <span class="fd-menu__addon-after fd-menu__addon-after--submenu"></span>
         </span>

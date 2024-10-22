@@ -487,16 +487,16 @@
 
     --fdInput_Box_Shadow_Hover: var(--sapField_Hover_Shadow);
     --fdInput_Outline_Color: var(--sapField_Active_BorderColor);
-    --fdInput_Error_Background_Color_Hover: var(--sapButton_Reject_Selected_Hover_Background);
+    --fdInput_Error_Background_Color_Hover: var(--sapField_Hover_Background);
     --fdInput_Error_Box_Shadow_Hover: var(--sapField_InvalidShadow);
     --fdInput_Error_Outline_Color: var(--sapField_InvalidColor);
-    --fdInput_Warning_Background_Color_Hover: var(--sapButton_Attention_Selected_Hover_Background);
+    --fdInput_Warning_Background_Color_Hover: var(--sapField_Hover_Background);
     --fdInput_Warning_Box_Shadow_Hover: var(--sapContent_Critical_Shadow);
     --fdInput_Warning_Outline_Color: var(--sapField_WarningColor);
-    --fdInput_Success_Background_Color_Hover: var(--sapButton_Accept_Selected_Hover_Background);
+    --fdInput_Success_Background_Color_Hover: var(--sapField_Hover_Background);
     --fdInput_Success_Box_Shadow_Hover: var(--sapContent_Positive_Shadow);
     --fdInput_Success_Outline_Color: var(--sapField_SuccessColor);
-    --fdInput_Information_Background_Color_Hover: var(--sapButton_Neutral_Hover_Background);
+    --fdInput_Information_Background_Color_Hover: var(--sapField_Hover_Background);
     --fdInput_Information_Box_Shadow_Hover: var(--sapContent_Informative_Shadow);
     --fdInput_Information_Outline_Color: var(--sapField_InformationColor);
     --fdInput_Non_Interactive_State_Placeholder_Color: var(--sapField_PlaceholderTextColor);
@@ -726,7 +726,7 @@
     --fdLink_Hover_Outline_Color: unset;
     --fdLink_Hover_Outline_Style: none;
     --fdLink_Display: inline-flex;
-    --fdLink_Icon_Spacing: 0.125rem;
+    --fdLink_Icon_Spacing: 0.313rem;
 
     --fdVerticalNav_Border_Corner_Radius: var(--sapElement_BorderCornerRadius);
     --fdVerticalNav_Text_Shadow: none;
@@ -811,7 +811,7 @@
     --fdProgress_Icon_Color_Critical: var(--sapProgress_Value_CriticalTextColor);
     --fdProgress_Icon_Color_Negative: var(--sapProgress_Value_NegativeTextColor);
     --fdProgress_Indicator_Container_Position: relative;
-    --fdProgress_Indicator_Container_Height: 0.375rem;
+    --fdProgress_Indicator_Container_Height: 0.625rem;
     --fdProgress_Indicator_Container_Margin_Block: 1.25rem 0.375rem;
     --fdProgress_Indicator_Container_Margin_Inline: 0;
     --fdProgress_Indicator_Container_Overflow: visible;
@@ -822,12 +822,12 @@
     --fdProgress_Indicator_Progress_Bar_Border_Color_Negative: var(--sapProgress_Value_NegativeBorderColor);
     --fdProgress_Indicator_Progress_Bar_Border_Color_Critical: var(--sapProgress_Value_CriticalBorderColor);
     --fdProgress_Indicator_Progress_Bar_Height: 0.625rem;
-    --fdProgress_Indicator_Progress_Bar_Margin_Block: -0.1875rem 0;
+    --fdProgress_Indicator_Progress_Bar_Margin_Block: -0.0625rem 0;
     --fdProgress_Indicator_Progress_Bar_Border_Radius: 0.5rem;
     --fdProgress_Indicator_Progress_Bar_Position: absolute;
     --fdProgress_Indicator_Progress_Bar_Position_Left: -0.0625rem;
     --fdProgress_Indicator_Progress_Bar_Position_Bottom: -0.1875rem;
-    --fdProgress_Indicator_Progress_Bar_Boundary_Display: inline-block;
+    --fdProgress_Indicator_Progress_Bar_Boundary_Display: none;
     --fdProgress_Indicator_Progress_Bar_Popover_Control_Border: var(--fdProgress_Indicator_Progress_Bar_Border);
     --fdProgress_Indicator_Label_Color: var(--sapField_TextColor);
     --fdProgress_Indicator_Label_Color_Contrast: var(--sapField_TextColor);
@@ -984,10 +984,10 @@
     --fdAvatar_Border_Color: var(--sapAvatar_Default_BorderColor);
     --fdAvatar_Text_Shadow: none;
     --fdAvatar_Color: var(--sapAvatar_Default_TextColor);
-    --fdAvatar_Tile_BackgroundColor: var(--sapTile_Background);
+    --fdAvatar_Tile_BackgroundColor: var(--sapButton_Background);
     --fdAvatar_Tile_BorderColor: transparent;
-    --fdAvatar_Tile_TextColor: var(--sapTile_IconColor);
-    --fdAvatar_Tile_BackgroundColor_Hover: var(--sapTile_Background);
+    --fdAvatar_Tile_TextColor: var(--sapObjectHeader_Subtitle_TextColor);
+    --fdAvatar_Tile_BackgroundColor_Hover: var(--sapButton_Background);
     --fdAvatar_Placeholder_BorderColor: transparent;
     --fdAvatar_Placeholder_BackgroundColor_Hover: var(--sapContent_ImagePlaceholderBackground);
     --fdAvatar_Transparent_BorderColor: transparent;
@@ -1473,7 +1473,11 @@
 
 /* Fixes */
 
-.fd-avatar:not(.fd-avatar--border):not(.is-active):not(.is-toggled) {
+input {
+    color-scheme: dark;
+}
+
+.fd-avatar:not(.fd-avatar--border):not(.fd-avatar--shell):not(.is-active):not(.is-toggled) {
     border: 0;
 }
 
@@ -1593,6 +1597,18 @@
 .fd-tokenizer .fd-token:hover {
     --fdToken_Background_Color: var(--sapField_Background);
     --fdToken_Border: var(--sapButton_BorderWidth) solid var(--sapLinkColor);
+}
+
+.fd-progress-indicator__icon {
+    bottom: auto;
+}
+
+.fd-shellbar .fd-shellbar__group .fd-shellbar__button:not(.fd-shellbar .fd-shellbar__group .fd-shellbar__button--menu):has(.fd-button__text) {
+    padding-inline: calc(var(--fdButton_Padding_X) - var(--sapButton_BorderWidth));
+}
+
+.fd-link>[class*=sap-icon] {
+    font-size: var(--sapFontSize);
 }
 
 .fd-popover__body {

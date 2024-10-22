@@ -2,17 +2,61 @@
 <p>There are many icons available. To display an icon, add the <b>sap-icon</b> class and the
     <b>sap-icon--{icon-name}</b> modifier class to a <b>span</b> element.
 </p>
-<code-block>
-    <span class="sap-icon sap-icon--search"></span>
-</code-block>
 
-<h2>Sizes</h2>
+<h2>Attributes</h2>
+<table bk-table>
+    <thead bk-table-header>
+        <tr bk-table-row>
+            <th bk-table-header-cell>Name</th>
+            <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
+            <th bk-table-header-cell>Description</th>
+        </tr>
+    </thead>
+    <tbody bk-table-body>
+        <tr bk-table-row>
+            <td bk-table-cell>rotate</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
+            <td bk-table-cell>Rotate the icon. Possible options are '90', '180' or '270'.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Examples</h2>
+
+<h3>Sizes</h3>
 <p>By default, icons will have the same size as the default font size. You can change the icon size by
     changing the <b>font-size</b> CSS property:</p>
 <code-block>
-    <span class="sap-icon sap-icon--search" style="font-size:4rem"></span>
-    <span class="sap-icon sap-icon--search" style="font-size:2rem"></span>
-    <span class="sap-icon sap-icon--search"></span>
+    <span class="sap-icon sap-icon--search" style="font-size:4rem" role="presentation"></span>
+    <span class="sap-icon sap-icon--search" style="font-size:2rem" role="presentation"></span>
+    <span class="sap-icon sap-icon--search" role="presentation"></span>
+</code-block>
+
+<h3>Custom icon</h3>
+<p>If the default icon set does not have the icon you need, you can "create" a custom icon by embedding an svg icon
+    inside an icon container.</p>
+
+<code-block>
+    <span class="bk-icon--svg bk-icon--scale sap-icon" role="presentation" style="width:4rem;height:4rem;">
+        <ng-include src="'./logo/blimpkit-symbolic.svg'"></ng-include>
+    </span>
+    <span class="bk-icon--svg bk-icon--scale sap-icon" role="presentation" style="width:2rem;height:2rem;">
+        <ng-include src="'./logo/blimpkit-symbolic.svg'"></ng-include>
+    </span>
+    <span class="bk-icon--svg sap-icon" role="presentation">
+        <ng-include src="'./logo/blimpkit-symbolic.svg'"></ng-include>
+    </span>
+</code-block>
+
+<h3>Rotate icon</h3>
+
+<code-block>
+    <span class="sap-icon sap-icon--refresh" role="presentation"></span>
+    <span class="sap-icon sap-icon--refresh" role="presentation" rotate="90"></span>
+    <span class="sap-icon sap-icon--refresh" role="presentation" rotate="180"></span>
+    <span class="sap-icon sap-icon--refresh" role="presentation" rotate="270"></span>
 </code-block>
 
 <h2>Icon grid</h2>

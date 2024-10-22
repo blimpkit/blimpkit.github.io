@@ -19,7 +19,7 @@ blimpkit.directive('bkCard', (classNames, uuid) => ({
         inList: '<?'
     },
     controller: ['$scope', '$attrs', function ($scope, $attrs) {
-        if (!$attrs.hasOwnProperty('ariaRoledescription'))
+        if (!Object.prototype.hasOwnProperty.call($attrs, 'ariaRoledescription'))
             console.error('bk-card: You should provide a description of the card using the "aria-roledescription" attribute');
         $scope.cardId = uuid.generate();
         this.getCardId = function () {
@@ -44,7 +44,7 @@ blimpkit.directive('bkCard', (classNames, uuid) => ({
         link: "@",
     },
     link: (scope, _element, attrs) => {
-        if (!attrs.hasOwnProperty('ariaRoledescription'))
+        if (!Object.prototype.hasOwnProperty.call(attrs, 'ariaRoledescription'))
             console.error('bk-card-media: You should provide a description of the media using the "aria-roledescription" attribute');
         scope.getClasses = () => classNames('fd-card__media', {
             'fd-card__media--with-padding': scope.withPadding === true
@@ -122,7 +122,7 @@ blimpkit.directive('bkCard', (classNames, uuid) => ({
     replace: true,
     transclude: true,
     link: (_scope, _element, attrs) => {
-        if (!attrs.hasOwnProperty('ariaRoledescription'))
+        if (!Object.prototype.hasOwnProperty.call(attrs, 'ariaRoledescription'))
             console.error('bk-card-content: You should provide a description of the group using the "aria-roledescription" attribute');
     },
     template: '<div class="fd-card__content" role="group" ng-transclude></div>',

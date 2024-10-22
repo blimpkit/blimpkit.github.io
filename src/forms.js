@@ -70,7 +70,7 @@ blimpkit.directive('bkFieldset', () => ({
     link: (scope, _elem, attrs) => {
         scope.getClasses = () => classNames({
             'fd-form-label--colon': scope.colon === true,
-            'fd-form-label--required': attrs.hasOwnProperty('required') && (attrs.required === 'true' || attrs.required === ''),
+            'fd-form-label--required': Object.prototype.hasOwnProperty.call(attrs, 'required') && (attrs.required === 'true' || attrs.required === ''),
         });
     },
     template: '<label class="fd-form-label" ng-class="getClasses()" ng-transclude></label>',
