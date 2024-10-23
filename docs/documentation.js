@@ -197,6 +197,12 @@ widgetsView.controller('WidgetsViewController', function ($scope) {
     // Menu
     $scope.menusShown = false;
 
+    // Notification
+    $scope.isUnread = true;
+    $scope.setRead = () => {
+        $scope.isUnread = false;
+    };
+
     // Object Status
     $scope.objectStatusIndicator = 8;
 

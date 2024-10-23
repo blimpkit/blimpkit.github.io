@@ -812,6 +812,10 @@ ng-transclude:empty {
 }
 
 /* Table fixes and additions*/
+.bk-table--fixed {
+  table-layout: fixed;
+}
+
 .fd-table .fd-table__cell .fd-select__control {
   margin: 0;
 }

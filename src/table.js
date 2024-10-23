@@ -16,7 +16,8 @@ blimpkit.directive('bkTable', (classNames) => ({
     scope: {
         innerBorders: '@?',
         outerBorders: '@?',
-        displayMode: '@?'
+        displayMode: '@?',
+        fixed: '<?',
     },
     controller: ['$scope', '$element', function ($scope, $element) {
         this.setAriaDescribedBy = function (id) {
@@ -34,6 +35,7 @@ blimpkit.directive('bkTable', (classNames) => ({
             'fd-table--no-outer-border bk-list-border--top': $scope.outerBorders === 'top',
             'fd-table--no-outer-border bk-list-border--bottom': $scope.outerBorders === 'bottom',
             'fd-table--no-outer-border': $scope.outerBorders === 'none',
+            'bk-table--fixed': $scope.fixed,
         });
     }],
     template: '<table ng-class="getClasses()" ng-transclude></table>'
