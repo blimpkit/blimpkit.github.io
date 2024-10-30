@@ -126,6 +126,11 @@
                         <bk-list-navigation-item-indicator ng-if="selectedPage === 'icons'">
                         </bk-list-navigation-item-indicator>
                     </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('code')" indicated="selectedPage === 'code'">
+                        <bk-list-navigation-item-text>Code</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'code'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
                     <bk-list-navigation-item ng-click="switchPage('focus')" indicated="selectedPage === 'focus'">
                         <bk-list-navigation-item-text>Focus</bk-list-navigation-item-text>
                         <bk-list-navigation-item-indicator ng-if="selectedPage === 'focus'">
@@ -352,6 +357,11 @@
                         <bk-list-navigation-item-indicator ng-if="selectedPage === 'css-grid'">
                         </bk-list-navigation-item-indicator>
                     </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('css-text')" indicated="selectedPage === 'css-text'">
+                        <bk-list-navigation-item-text>Text</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'css-text'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
                     <bk-list-navigation-item ng-click="switchPage('css-borders')"
                         indicated="selectedPage === 'css-borders'">
                         <bk-list-navigation-item-text>Borders</bk-list-navigation-item-text>
@@ -427,59 +437,69 @@
                 <code-block type="css">
                     @font-face {
                     font-family: &quot;72&quot;;
-                    src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Regular-full.woff2&quot;)
-                    format(&quot;woff2&quot;);
-                    font-weight: normal;
+                    src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Regular-full.woff&quot;)
+                    format(&quot;woff&quot;);
+                    font-weight: 400;
                     font-style: normal;
                     font-display: swap;
                     }
 
                     @font-face {
-                    font-family: &quot;72-Semibold&quot;;
-                    src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Semibold-full.woff2&quot;)
-                    format(&quot;woff2&quot;);
-                    font-style: normal;
-                    font-display: swap;
-                    }
-
-                    @font-face {
-                    font-family: &quot;72-Bold&quot;;
-                    src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Bold-full.woff2&quot;)
-                    format(&quot;woff2&quot;);
-                    font-weight: 700;
-                    font-style: normal;
-                    font-display: swap;
-                    }
-
-                    @font-face {
-                    font-family: &quot;72-Light&quot;;
-                    src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Light-full.woff2&quot;)
-                    format(&quot;woff2&quot;);
+                    font-family: &quot;72&quot;;
+                    src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Light-full.woff&quot;)
+                    format(&quot;woff&quot;);
                     font-weight: 300;
                     font-style: normal;
                     font-display: swap;
                     }
 
                     @font-face {
+                    font-family: &quot;72-Light&quot;;
+                    src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Light-full.woff&quot;)
+                    format(&quot;woff&quot;);
+                    font-weight: 300;
+                    font-style: normal;
+                    font-display: swap;
+                    }
+
+                    @font-face {
+                    font-family: &quot;72&quot;;
+                    src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Bold-full.woff&quot;)
+                    format(&quot;woff&quot;);
+                    font-weight: 700;
+                    font-style: normal;
+                    font-display: swap;
+                    }
+
+                    @font-face {
+                    font-family: &quot;72-Bold&quot;;
+                    src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Bold-full.woff&quot;)
+                    format(&quot;woff&quot;);
+                    font-weight: 700;
+                    font-style: normal;
+                    font-display: swap;
+                    }
+
+                    @font-face {
                     font-family: &quot;72Mono-Regular&quot;;
-                    src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72Mono-Regular-full.woff2&quot;)
-                    format(&quot;woff2&quot;);
+                    src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72Mono-Regular-full.woff&quot;)
+                    format(&quot;woff&quot;);
                     font-style: normal;
                     font-display: swap;
                     }
 
                     @font-face {
                     font-family: &quot;72Mono-Bold&quot;;
-                    src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72Mono-Bold-full.woff2&quot;)
-                    format(&quot;woff2&quot;);
+                    src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72Mono-Bold-full.woff&quot;)
+                    format(&quot;woff&quot;);
                     font-style: normal;
                     font-display: swap;
                     }
 
                     @font-face {
                     font-family: &quot;SAP-icons&quot;;
-                    src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/fonts/SAP-icons.woff2&quot;)
-                    format(&quot;woff2&quot;);
+                    src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/fonts/SAP-icons.woff&quot;)
+                    format(&quot;woff&quot;);
                     font-weight: normal;
                     font-style: normal;
                     font-display: swap;
@@ -487,8 +507,8 @@
 
                     @font-face {
                     font-family: &quot;BusinessSuiteInAppSymbols&quot;;
-                    src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/fonts/BusinessSuiteInAppSymbols.woff2&quot;)
-                    format(&quot;woff2&quot;);
+                    src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/fonts/BusinessSuiteInAppSymbols.woff&quot;)
+                    format(&quot;woff&quot;);
                     font-weight: normal;
                     font-style: normal;
                     font-display: swap;
@@ -496,8 +516,8 @@
 
                     @font-face {
                     font-family: &quot;SAP-icons-TNT&quot;;
-                    src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/fonts/SAP-icons-TNT.woff2&quot;)
-                    format(&quot;woff2&quot;);
+                    src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/fonts/SAP-icons-TNT.woff&quot;)
+                    format(&quot;woff&quot;);
                     font-weight: normal;
                     font-style: normal;
                     font-display: swap;
@@ -605,6 +625,9 @@
 
             <!-- Icons -->
             <div ng-if="selectedPage === 'icons'" ng-include="'docs/icons.html'"></div>
+
+            <!-- Code -->
+            <div ng-if="selectedPage === 'code'" ng-include="'docs/code.html'"></div>
 
             <!-- Focus -->
             <div ng-if="selectedPage === 'focus'" ng-include="'docs/focus.html'"></div>
@@ -731,6 +754,9 @@
 
             <!-- CSS Grid -->
             <div ng-if="selectedPage === 'css-grid'" ng-include="'docs/css-grid.html'"></div>
+
+            <!-- CSS Text -->
+            <div ng-if="selectedPage === 'css-text'" ng-include="'docs/css-text.html'"></div>
 
             <!-- CSS Box -->
             <div ng-if="selectedPage === 'css-box'" ng-include="'docs/css-box.html'"></div>

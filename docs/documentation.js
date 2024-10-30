@@ -59,6 +59,20 @@ widgetsView.controller('WidgetsViewController', function ($scope) {
     $scope.switchPage = (id) => {
         $scope.selectedPage = id;
     };
+    $scope.blimpkitArt = `
+                     :=.
+               ::.  :==-:::
+               -=---==-----:     .....   .%* .%*                          ..    .. -=
+           .:------------=-     .%#===#* .%*                              *%  :#*. ==  .%-
+        .:-----:::::---====-.   .%*   *# .%* .%+ .%+++*%+=++##: -%=++*%+  *%.+%-   #% =#%*+.
+      .-----:::::::-----.       .%#++*#= .%* .%+ :%*   *%:  :%+ -%=   =%- *%##%:   #%  =%-
+    .----:::..:::----=:         .%*   =%:.%* .%+ :%+   *%.  :%+ -%+   =%- *%- +%-  #%  =%-
+   .---::::::::------:.         .##+++#+ .#* .%+ .%=   +%.  :%+ -%**++#=  *%   =#= *%  :##+:
+   ---::::::------::.                                           -%-
+   :----------==::.                                             -%-
+    .:::::::::..
+      '':::''                                                                                   
+`;
     // End of documentation specific stuff
 
     $scope.forms = {
@@ -84,7 +98,7 @@ widgetsView.controller('WidgetsViewController', function ($scope) {
         $scope.segmentedModel = item;
     };
 
-    $scope.splitButtonAction = "Action";
+    $scope.splitButtonLabel = "Action";
     $scope.splitButtonClick = () => {
         console.log('split action');
     };
@@ -198,10 +212,12 @@ widgetsView.controller('WidgetsViewController', function ($scope) {
     $scope.menusShown = false;
 
     // Notification
+    $scope.warningSelected = false;
     $scope.isUnread = true;
     $scope.setRead = () => {
         $scope.isUnread = false;
     };
+    $scope.notificationClick = () => { $scope.warningSelected = !$scope.warningSelected; };
 
     // Object Status
     $scope.objectStatusIndicator = 8;
