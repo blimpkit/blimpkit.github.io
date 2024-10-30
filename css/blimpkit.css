@@ -917,3 +917,9 @@ ng-transclude:empty {
 .fd-tokenizer .fd-tokenizer__indicator {
   margin-right: .3125rem;
 }
+
+/* Vertical nav fixes */
+.fd-vertical-nav__main-navigation .fd-list__navigation-item--condensed:first-child,
+.fd-vertical-nav__main-navigation .fd-list__navigation-item:first-child {
+  border-top: none;
+}

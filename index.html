@@ -70,14 +70,14 @@
 
     <link href="https://cdn.jsdelivr.net/npm/fundamental-styles@0.38.0/dist/fundamental-styles.css" rel="stylesheet">
     <link href="./css/blimpkit.css" rel="stylesheet">
-    <link href="./docs/documentation.css" rel="stylesheet">
+    <link href="./docs/css/documentation.css" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.10.0/highlight.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-beautify@1.15.1/js/lib/beautify-css.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-beautify@1.15.1/js/lib/beautify-html.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-beautify@1.15.1/js/lib/beautify.min.js"></script>
 
-    <script type="text/javascript" src="docs/documentation.js"></script>
+    <script type="text/javascript" src="./docs/js/documentation.js"></script>
 </head>
 
 <body class="bk-vbox">
@@ -94,11 +94,17 @@
                         </bk-button>
                     </bk-popover-control>
                     <bk-popover-body align="bottom-right">
-                        <bk-menu aria-label="theme popover items">
-                            <bk-menu-item title="BlimpKit (Light)" ng-click="setTheme('blimpkit-light')"></bk-menu-item>
-                            <bk-menu-item title="BlimpKit (Dark)" ng-click="setTheme('blimpkit-dark')"></bk-menu-item>
-                            <bk-menu-item title="Morning Horizon" ng-click="setTheme('horizon-light')"></bk-menu-item>
-                            <bk-menu-item title="Evening Horizon" ng-click="setTheme('horizon-dark')"></bk-menu-item>
+                        <bk-menu aria-label="theme popover items" has-icons="true">
+                            <bk-menu-item title="BlimpKit" ng-click="setTheme('blimpkit-auto')"
+                                left-icon-class="{{isTheme('blimpkit-auto') ? 'sap-icon--accept' : ''}}"></bk-menu-item>
+                            <bk-menu-item title="BlimpKit (Light)" ng-click="setTheme('blimpkit-light')"
+                                left-icon-class="{{isTheme('blimpkit-light') ? 'sap-icon--accept' : ''}}"></bk-menu-item>
+                            <bk-menu-item title="BlimpKit (Dark)" ng-click="setTheme('blimpkit-dark')"
+                                left-icon-class="{{isTheme('blimpkit-dark') ? 'sap-icon--accept' : ''}}"></bk-menu-item>
+                            <bk-menu-item title="Morning Horizon" ng-click="setTheme('horizon-light')"
+                                left-icon-class="{{isTheme('horizon-light') ? 'sap-icon--accept' : ''}}"></bk-menu-item>
+                            <bk-menu-item title="Evening Horizon" ng-click="setTheme('horizon-dark')"
+                                left-icon-class="{{isTheme('horizon-dark') ? 'sap-icon--accept' : ''}}"></bk-menu-item>
                         </bk-menu>
                     </bk-popover-body>
                 </bk-popover>
@@ -768,6 +774,10 @@
             <div ng-if="selectedPage === 'css-borders'" ng-include="'docs/css-borders.html'"></div>
         </div>
     </div>
+
+    <!-- BlimpKit auto theme -->
+    <link ng-if="isTheme('blimpkit-auto')" href="./css/themes/blimpkit-auto.css" rel="stylesheet">
+    <link ng-if="isTheme('blimpkit-auto')" href="./docs/css/highlightjs-auto.css" rel="stylesheet">
 
     <!-- BlimpKit light theme -->
     <link ng-if="isTheme('blimpkit-light')" href="./css/themes/blimpkit-light-variables.css" rel="stylesheet">

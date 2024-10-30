@@ -48,7 +48,7 @@ widgetsView.directive('codeBlock', () => ({
 widgetsView.controller('WidgetsViewController', function ($scope) {
     // Documentation specific stuff
     $scope.version = angular.module('blimpKit').info().version;
-    $scope.theme = 'blimpkit-light';
+    $scope.theme = 'blimpkit-auto';
     $scope.isTheme = (name) => {
         return $scope.theme === name;
     };

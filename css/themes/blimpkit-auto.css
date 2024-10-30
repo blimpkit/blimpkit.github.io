@@ -1,0 +1,5 @@
+@import url("./blimpkit-light-variables.css") only screen and (prefers-color-scheme: light);
+@import url("./blimpkit-light.css") only screen and (prefers-color-scheme: light);
+
+@import url("./blimpkit-dark-variables.css") only screen and (prefers-color-scheme: dark);
+@import url("./blimpkit-dark.css") only screen and (prefers-color-scheme: dark);
