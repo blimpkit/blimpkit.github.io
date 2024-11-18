@@ -36,14 +36,11 @@ body {
   overflow: auto;
 }
 
-body.bk-dark {
-  background: var(--sapBackgroundColor, #1d1d1d);
-  color: var(--sapTextColor, #fff);
-}
-
-body.bk-light {
-  background: var(--sapBackgroundColor, #f7f7f7);
-  color: var(--sapTextColor, #303030);
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--sapBackgroundColor, #1d1d1d);
+    color: var(--sapTextColor, #fff);
+  }
 }
 
 a:link:not([class]) {
@@ -263,6 +260,10 @@ ng-transclude:empty {
 
 .bk-padding-top--lg {
   padding-top: 3rem;
+}
+
+.bk-margin-inline--none {
+  margin-inline: 0;
 }
 
 .bk-border-box {

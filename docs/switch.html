@@ -59,7 +59,7 @@
     <bk-form-group>
         <bk-form-item>
             <code-block>
-                <bk-form-label for="swl1" colon="true">Switch label</bk-form-label>
+                <bk-form-label id="swl1" colon="true">Switch label</bk-form-label>
                 <bk-switch name="switch" ng-model="switch.value" ng-click="switchModel = !switchModel"
                     switch-labelledby="swl1" switch-id="swid1">
                 </bk-switch>
@@ -77,7 +77,7 @@
 <bk-form-item>
     <code-block>
         <div class="is-compact">
-            <bk-form-label for="swlc" colon="true">Switch label</bk-form-label>
+            <bk-form-label id="swlc" colon="true">Switch label</bk-form-label>
             <bk-switch switch-labelledby="swlc"></bk-switch>
         </div>
     </code-block>
@@ -86,7 +86,7 @@
 <h3>Semantic</h3>
 <bk-form-item>
     <code-block>
-        <bk-form-label for="swl2" colon="true">Switch label</bk-form-label>
+        <bk-form-label id="swl2" colon="true">Switch label</bk-form-label>
         <bk-switch semantic="true" switch-labelledby="swl2"></bk-switch>
     </code-block>
 </bk-form-item>
@@ -94,7 +94,7 @@
 <h3>Text</h3>
 <bk-form-item>
     <code-block>
-        <bk-form-label for="swl3" colon="true">Switch label</bk-form-label>
-        <bk-switch with-text="true" value="true" switch-labelledby="swl3"></bk-switch>
+        <bk-form-label id="swl3" colon="true">Switch label</bk-form-label>
+        <bk-switch with-text="true" ng-model="true" switch-labelledby="swl3"></bk-switch>
     </code-block>
 </bk-form-item>
