@@ -101,10 +101,12 @@
                                 left-icon-class="{{isTheme('blimpkit-light') ? 'sap-icon--accept' : ''}}"></bk-menu-item>
                             <bk-menu-item title="BlimpKit (Dark)" ng-click="setTheme('blimpkit-dark')"
                                 left-icon-class="{{isTheme('blimpkit-dark') ? 'sap-icon--accept' : ''}}"></bk-menu-item>
-                            <bk-menu-item title="Morning Horizon" ng-click="setTheme('horizon-light')"
-                                left-icon-class="{{isTheme('horizon-light') ? 'sap-icon--accept' : ''}}"></bk-menu-item>
-                            <bk-menu-item title="Evening Horizon" ng-click="setTheme('horizon-dark')"
-                                left-icon-class="{{isTheme('horizon-dark') ? 'sap-icon--accept' : ''}}"></bk-menu-item>
+                            <bk-menu-item title="Classic" ng-click="setTheme('classic-auto')"
+                                left-icon-class="{{isTheme('classic-auto') ? 'sap-icon--accept' : ''}}"></bk-menu-item>
+                            <bk-menu-item title="Classic (Light)" ng-click="setTheme('classic-light')"
+                                left-icon-class="{{isTheme('classic-light') ? 'sap-icon--accept' : ''}}"></bk-menu-item>
+                            <bk-menu-item title="Classic (Dark)" ng-click="setTheme('classic-dark')"
+                                left-icon-class="{{isTheme('classic-dark') ? 'sap-icon--accept' : ''}}"></bk-menu-item>
                         </bk-menu>
                     </bk-popover-body>
                 </bk-popover>
@@ -417,12 +419,51 @@
                 </code-block>
 
                 <h3>Base styles and themes</h3>
-                <p>Themes are supported. You can replace 'themeName' with the name of the theme that you want. The
-                    available options are <b>sap_horizon</b>, <b>sap_horizon_dark</b>, <b>sap_horizon_hcb</b>,
-                    <b>sap_horizon_hcw</b>,
-                    <b>sap_fiori_3</b>, <b>sap_fiori_3_dark</b>, <b>sap_fiori_3_hcb</b>, <b>sap_fiori_3_hcw</b> and
-                    <b>sap_fiori_3_light_dark</b>.
+                <p>Themes are supported. Officially, there are two themes availabe - <b>BlimpKit</b> and <b>Classic</b>.
+                    Both of those have a light, dark and auto modes. You can replace 'themeName' with the name
+                    of the theme that you want. The available options are:
+                <ul>
+                    <li><b>blimpkit-auto</b></li>
+                    <li><b>blimpkit-light</b></li>
+                    <li><b>blimpkit-dark</b></li>
+                    <li><b>classic-auto</b></li>
+                    <li><b>classic-light</b></li>
+                    <li><b>classic-dark</b></li>
+                </ul>
                 </p>
+
+                <p>For light or dark:</p>
+                <code-block type="text-html">
+                    &lt;link href=&quot;https://unpkg.com/fundamental-styles@0.38.0/dist/fundamental-styles.css&quot;
+                    rel=&quot;stylesheet&quot;&gt;
+                    &lt;link href=&quot;/css/themes/{themeName}.css&quot; rel=&quot;stylesheet&quot;&gt;
+                    &lt;link href=&quot;/css/themes/{themeName}-variables.css&quot; rel=&quot;stylesheet&quot;&gt;
+                    &lt;link href=&quot;/css/blimpkit.css&quot; rel=&quot;stylesheet&quot;&gt;
+                </code-block>
+
+                <p>For auto:</p>
+                <code-block type="text-html">
+                    &lt;link href=&quot;https://unpkg.com/fundamental-styles@0.38.0/dist/fundamental-styles.css&quot;
+                    rel=&quot;stylesheet&quot;&gt;
+                    &lt;link href=&quot;/css/themes/{themeName}.css&quot; rel=&quot;stylesheet&quot;&gt;
+                    &lt;link href=&quot;/css/blimpkit.css&quot; rel=&quot;stylesheet&quot;&gt;
+                </code-block>
+
+                <p>There are other themes available from the base CSS library. You can replace 'themeName' with the name
+                    of the theme that you want. The available options are:
+                <ul>
+                    <li><b>sap_horizon</b></li>
+                    <li><b>sap_horizon_dark</b></li>
+                    <li><b>sap_horizon_hcb</b></li>
+                    <li><b>sap_horizon_hcw</b></li>
+                    <li><b>sap_fiori_3</b></li>
+                    <li><b>sap_fiori_3_dark</b></li>
+                    <li><b>sap_fiori_3_hcb</b></li>
+                    <li><b>sap_fiori_3_hcw</b></li>
+                    <li><b>sap_fiori_3_light_dark</b></li>
+                </ul>
+                </p>
+
                 <code-block type="text-html">
                     &lt;link href=&quot;https://unpkg.com/fundamental-styles@0.38.0/dist/fundamental-styles.css&quot;
                     rel=&quot;stylesheet&quot;&gt;
@@ -431,7 +472,6 @@
                     &lt;link
                     href=&quot;https://unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/{themeName}/css_variables.css&quot;
                     rel=&quot;stylesheet&quot;&gt;
-
                     &lt;link href=&quot;/css/blimpkit.css&quot; rel=&quot;stylesheet&quot;&gt;
                 </code-block>
 
@@ -596,11 +636,15 @@
                     &lt;script type=&quot;text/javascript&quot;
                     src=&quot;/src/product-switch.js&quot;&gt;&lt;/script&gt;
                     &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/progress-indicator.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;
                     src=&quot;/src/scrollbar.js&quot;&gt;&lt;/script&gt;
                     &lt;script type=&quot;text/javascript&quot;
                     src=&quot;/src/select.js&quot;&gt;&lt;/script&gt;
                     &lt;script type=&quot;text/javascript&quot;
                     src=&quot;/src/shellbar.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;
+                    src=&quot;/src/switch.js&quot;&gt;&lt;/script&gt;
                     &lt;script type=&quot;text/javascript&quot;
                     src=&quot;/src/step-input.js&quot;&gt;&lt;/script&gt;
                     &lt;script type=&quot;text/javascript&quot;
@@ -791,24 +835,21 @@
     <link ng-if="isTheme('blimpkit-dark')" rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.10.0/styles/github-dark-dimmed.min.css" />
 
-    <!-- Horizon light theme -->
-    <link ng-if="isTheme('horizon-light')"
-        href="https://cdn.jsdelivr.net/npm/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/css_variables.min.css"
-        rel="stylesheet">
-    <link ng-if="isTheme('horizon-light')"
-        href="https://cdn.jsdelivr.net/npm/fundamental-styles@0.38.0/dist/theming/sap_horizon.css" rel="stylesheet">
-    <link ng-if="isTheme('horizon-light')" rel="stylesheet"
+    <!-- Classic auto theme -->
+    <link ng-if="isTheme('classic-auto')" href="./css/themes/classic-auto.css" rel="stylesheet">
+    <link ng-if="isTheme('classic-auto')" href="./docs/css/highlightjs-auto.css" rel="stylesheet">
+
+    <!-- Classic light theme -->
+    <link ng-if="isTheme('classic-light')" href="./css/themes/classic-light-variables.css" rel="stylesheet">
+    <link ng-if="isTheme('classic-light')" href="./css/themes/classic-light.css" rel="stylesheet">
+    <link ng-if="isTheme('classic-light')" rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.10.0/styles/github-dark.min.css" />
 
-    <!-- Horizon dark theme -->
-    <link ng-if="isTheme('horizon-dark')"
-        href="https://cdn.jsdelivr.net/npm/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon_dark/css_variables.css"
-        rel="stylesheet">
-    <link ng-if="isTheme('horizon-dark')"
-        href="https://cdn.jsdelivr.net/npm/fundamental-styles@0.38.0/dist/theming/sap_horizon_dark.css"
-        rel="stylesheet">
-    <link ng-if="isTheme('horizon-dark')" rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.10.0/styles/github-dark-dimmed.min.css" />
+    <!-- Classic light theme -->
+    <link ng-if="isTheme('classic-dark')" href="./css/themes/classic-dark-variables.css" rel="stylesheet">
+    <link ng-if="isTheme('classic-dark')" href="./css/themes/classic-dark.css" rel="stylesheet">
+    <link ng-if="isTheme('classic-dark')" rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.10.0/styles/github-dark.min.css" />
 </body>
 
 </html>
