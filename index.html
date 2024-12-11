@@ -30,6 +30,7 @@
     <script type="text/javascript" src="./src/avatar.js"></script>
     <script type="text/javascript" src="./src/badge.js"></script>
     <script type="text/javascript" src="./src/bar.js"></script>
+    <script type="text/javascript" src="./src/breadcrumb.js"></script>
     <script type="text/javascript" src="./src/busy-indicator.js"></script>
     <script type="text/javascript" src="./src/button.js"></script>
     <script type="text/javascript" src="./src/card.js"></script>
@@ -159,6 +160,12 @@
                     <bk-list-navigation-item ng-click="switchPage('bar')" indicated="selectedPage === 'bar'">
                         <bk-list-navigation-item-text>Bar</bk-list-navigation-item-text>
                         <bk-list-navigation-item-indicator ng-if="selectedPage === 'bar'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('breadcrumb')"
+                        indicated="selectedPage === 'breadcrumb'">
+                        <bk-list-navigation-item-text>Breadcrumb</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'breadcrumb'">
                         </bk-list-navigation-item-indicator>
                     </bk-list-navigation-item>
                     <bk-list-navigation-item ng-click="switchPage('busy')" indicated="selectedPage === 'busy'">
@@ -690,6 +697,9 @@
 
             <!-- Bar -->
             <div ng-if="selectedPage === 'bar'" ng-include="'docs/bar.html'"></div>
+
+            <!-- Breadcrumb -->
+            <div ng-if="selectedPage === 'breadcrumb'" ng-include="'docs/breadcrumb.html'"></div>
 
             <!-- Busy indicator -->
             <div ng-if="selectedPage === 'busy'" ng-include="'docs/busy-indicator.html'"></div>
