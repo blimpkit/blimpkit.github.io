@@ -43,6 +43,7 @@
     <script type="text/javascript" src="./src/radio.js"></script>
     <script type="text/javascript" src="./src/icon-tab-bar.js"></script>
     <script type="text/javascript" src="./src/list.js"></script>
+    <script type="text/javascript" src="./src/loader.js"></script>
     <script type="text/javascript" src="./src/menu.js"></script>
     <script type="text/javascript" src="./src/message-box.js"></script>
     <script type="text/javascript" src="./src/message-page.js"></script>
@@ -61,6 +62,7 @@
     <script type="text/javascript" src="./src/table.js"></script>
     <script type="text/javascript" src="./src/textarea.js"></script>
     <script type="text/javascript" src="./src/tile.js"></script>
+    <script type="text/javascript" src="./src/title.js"></script>
     <script type="text/javascript" src="./src/token.js"></script>
     <script type="text/javascript" src="./src/tokenizer.js"></script>
     <script type="text/javascript" src="./src/tool-header.js"></script>
@@ -240,6 +242,11 @@
                         <bk-list-navigation-item-indicator ng-if="selectedPage === 'list'">
                         </bk-list-navigation-item-indicator>
                     </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('loader')" indicated="selectedPage === 'loader'">
+                        <bk-list-navigation-item-text>Loader</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'loader'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
                     <bk-list-navigation-item ng-click="switchPage('menu')" indicated="selectedPage === 'menu'">
                         <bk-list-navigation-item-text>Menu</bk-list-navigation-item-text>
                         <bk-list-navigation-item-indicator ng-if="selectedPage === 'menu'">
@@ -328,6 +335,11 @@
                         <bk-list-navigation-item-indicator ng-if="selectedPage === 'tile'">
                         </bk-list-navigation-item-indicator>
                     </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('title')" indicated="selectedPage === 'title'">
+                        <bk-list-navigation-item-text>Title</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'title'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
                     <bk-list-navigation-item ng-click="switchPage('token')" indicated="selectedPage === 'token'">
                         <bk-list-navigation-item-text>Token</bk-list-navigation-item-text>
                         <bk-list-navigation-item-indicator ng-if="selectedPage === 'token'">
@@ -405,8 +417,7 @@
                 <p>BlimpKit is an AngularJS directive/component UI library based on the <a
                         href="https://sap.github.io/fundamental-styles/">fundamental-styles</a> CSS library.
                 <p>While it mostly follows the fundamental-styles style guides, it deviates in some places and some of
-                    the
-                    widgets are modified and/or removed, therefore it should not be viewed as an official
+                    the widgets are modified and/or removed, therefore it should not be viewed as an official
                     implementation.</p>
                 <p>BlimpKit is its own library and contains some extra components that are unique to it.</p>
 
@@ -596,86 +607,54 @@
                     you need or you can include everything:</p>
 
                 <code-block type="text-html">
-                    &lt;script type=&quot;text/javascript&quot;
-                    src=&quot;/src/avatar.js&quot;&gt;&lt;/script&gt;
-                    &lt;script type=&quot;text/javascript&quot;
-                    src=&quot;/src/badge.js&quot;&gt;&lt;/script&gt;
-                    &lt;script type=&quot;text/javascript&quot;
-                    src=&quot;/src/bar.js&quot;&gt;&lt;/script&gt;
-                    &lt;script type=&quot;text/javascript&quot;
-                    src=&quot;/src/breadcrumb.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/avatar.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/badge.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/bar.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/breadcrumb.js&quot;&gt;&lt;/script&gt;
                     &lt;script type=&quot;text/javascript&quot;
                     src=&quot;/src/busy-indicator.js&quot;&gt;&lt;/script&gt;
-                    &lt;script type=&quot;text/javascript&quot;
-                    src=&quot;/src/button.js&quot;&gt;&lt;/script&gt;
-                    &lt;script type=&quot;text/javascript&quot;
-                    src=&quot;/src/card.js&quot;&gt;&lt;/script&gt;
-                    &lt;script type=&quot;text/javascript&quot;
-                    src=&quot;/src/checkbox.js&quot;&gt;&lt;/script&gt;
-                    &lt;script type=&quot;text/javascript&quot;
-                    src=&quot;/src/combobox.js&quot;&gt;&lt;/script&gt;
-                    &lt;script type=&quot;text/javascript&quot;
-                    src=&quot;/src/dialog.js&quot;&gt;&lt;/script&gt;
-                    &lt;script type=&quot;text/javascript&quot;
-                    src=&quot;/src/forms.js&quot;&gt;&lt;/script&gt;
-                    &lt;script type=&quot;text/javascript&quot;
-                    src=&quot;/src/input.js&quot;&gt;&lt;/script&gt;
-                    &lt;script type=&quot;text/javascript&quot;
-                    src=&quot;/src/link.js&quot;&gt;&lt;/script&gt;
-                    &lt;script type=&quot;text/javascript&quot;
-                    src=&quot;/src/radio.js&quot;&gt;&lt;/script&gt;
-                    &lt;script type=&quot;text/javascript&quot;
-                    src=&quot;/src/icon-tab-bar.js&quot;&gt;&lt;/script&gt;
-                    &lt;script type=&quot;text/javascript&quot;
-                    src=&quot;/src/list.js&quot;&gt;&lt;/script&gt;
-                    &lt;script type=&quot;text/javascript&quot;
-                    src=&quot;/src/menu.js&quot;&gt;&lt;/script&gt;
-                    &lt;script type=&quot;text/javascript&quot;
-                    src=&quot;/src/message-box.js&quot;&gt;&lt;/script&gt;
-                    &lt;script type=&quot;text/javascript&quot;
-                    src=&quot;/src/message-page.js&quot;&gt;&lt;/script&gt;
-                    &lt;script type=&quot;text/javascript&quot;
-                    src=&quot;/src/object-status.js&quot;&gt;&lt;/script&gt;
-                    &lt;script type=&quot;text/javascript&quot;
-                    src=&quot;/src/pagination.js&quot;&gt;&lt;/script&gt;
-                    &lt;script type=&quot;text/javascript&quot;
-                    src=&quot;/src/panel.js&quot;&gt;&lt;/script&gt;
-                    &lt;script type=&quot;text/javascript&quot;
-                    src=&quot;/src/popover.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/button.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/card.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/checkbox.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/combobox.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/dialog.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/forms.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/input.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/link.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/radio.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/icon-tab-bar.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/list.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/loader.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/menu.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/message-box.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/message-page.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/notification.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/object-status.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/pagination.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/panel.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/popover.js&quot;&gt;&lt;/script&gt;
                     &lt;script type=&quot;text/javascript&quot;
                     src=&quot;/src/product-switch.js&quot;&gt;&lt;/script&gt;
                     &lt;script type=&quot;text/javascript&quot;
                     src=&quot;/src/progress-indicator.js&quot;&gt;&lt;/script&gt;
-                    &lt;script type=&quot;text/javascript&quot;
-                    src=&quot;/src/scrollbar.js&quot;&gt;&lt;/script&gt;
-                    &lt;script type=&quot;text/javascript&quot;
-                    src=&quot;/src/select.js&quot;&gt;&lt;/script&gt;
-                    &lt;script type=&quot;text/javascript&quot;
-                    src=&quot;/src/shellbar.js&quot;&gt;&lt;/script&gt;
-                    &lt;script type=&quot;text/javascript&quot;
-                    src=&quot;/src/switch.js&quot;&gt;&lt;/script&gt;
-                    &lt;script type=&quot;text/javascript&quot;
-                    src=&quot;/src/step-input.js&quot;&gt;&lt;/script&gt;
-                    &lt;script type=&quot;text/javascript&quot;
-                    src=&quot;/src/table.js&quot;&gt;&lt;/script&gt;
-                    &lt;script type=&quot;text/javascript&quot;
-                    src=&quot;/src/textarea.js&quot;&gt;&lt;/script&gt;
-                    &lt;script type=&quot;text/javascript&quot;
-                    src=&quot;/src/tile.js&quot;&gt;&lt;/script&gt;
-                    &lt;script type=&quot;text/javascript&quot;
-                    src=&quot;/src/token.js&quot;&gt;&lt;/script&gt;
-                    &lt;script type=&quot;text/javascript&quot;
-                    src=&quot;/src/tokenizer.js&quot;&gt;&lt;/script&gt;
-                    &lt;script type=&quot;text/javascript&quot;
-                    src=&quot;/src/tool-header.js&quot;&gt;&lt;/script&gt;
-                    &lt;script type=&quot;text/javascript&quot;
-                    src=&quot;/src/toolbar.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/scrollbar.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/select.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/shellbar.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/switch.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/step-input.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/table.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/textarea.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/tile.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/title.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/token.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/tokenizer.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/tool-header.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/toolbar.js&quot;&gt;&lt;/script&gt;
                     &lt;script type=&quot;text/javascript&quot;
                     src=&quot;/src/upload-collection.js&quot;&gt;&lt;/script&gt;
                     &lt;script type=&quot;text/javascript&quot;
                     src=&quot;/src/vertical-navigation.js&quot;&gt;&lt;/script&gt;
-                    &lt;script type=&quot;text/javascript&quot;
-                    src=&quot;/src/wizard.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/wizard.js&quot;&gt;&lt;/script&gt;
                 </code-block>
 
                 <p>That's it! You can now use BlimpKit components. For examples on how to use them, look under the
@@ -745,6 +724,9 @@
             <!-- List -->
             <div ng-if="selectedPage === 'list'" ng-include="'docs/list.html'"></div>
 
+            <!-- Loader -->
+            <div ng-if="selectedPage === 'loader'" ng-include="'docs/loader.html'"></div>
+
             <!-- Menu -->
             <div ng-if="selectedPage === 'menu'" ng-include="'docs/menu.html'"></div>
 
@@ -792,6 +774,9 @@
 
             <!-- Tile -->
             <div ng-if="selectedPage === 'tile'" ng-include="'docs/tile.html'"></div>
+
+            <!-- Title -->
+            <div ng-if="selectedPage === 'title'" ng-include="'docs/title.html'"></div>
 
             <!-- Token -->
             <div ng-if="selectedPage === 'token'" ng-include="'docs/token.html'"></div>
