@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2024 Eclipse Dirigible contributors
+ * Copyright (c) 2025 Eclipse Dirigible contributors
  *
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
@@ -10,7 +10,7 @@
  * SPDX-License-Identifier: EPL-2.0
  */
 const blimpkit = angular.module('blimpKit', ['ngAria'])
-    .info({ version: '1.1.0' })
+    .info({ version: '1.2.0' })
     .constant('ScreenEdgeMargin', {
         FULL: 16,
         DOUBLE: 32,

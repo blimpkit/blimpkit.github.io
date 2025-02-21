@@ -36,7 +36,7 @@ widgetsView.directive('codeBlock', () => ({
                 }
             }
             code.classList.add('language-html');
-            code.textContent = html_beautify(htmlAsCode);
+            code.textContent = html_beautify(htmlAsCode).replaceAll('=""', '');
         }
         hljs.highlightElement(code);
         pre.appendChild(code);
