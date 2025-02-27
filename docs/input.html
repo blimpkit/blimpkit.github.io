@@ -28,8 +28,34 @@
             <td bk-table-cell>state</td>
             <td bk-table-cell>string</td>
             <td bk-table-cell>False</td>
-            <td bk-table-cell>You have four options - 'error', 'success', 'warning' and
-                'information'.
+            <td bk-table-cell>You have four options - 'error', 'success', 'warning' and 'information'.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Attributes - Textarea</h2>
+<table bk-table>
+    <thead bk-table-header>
+        <tr bk-table-row>
+            <th bk-table-header-cell>Name</th>
+            <th bk-table-header-cell>Type</th>
+            <th bk-table-header-cell>Required</th>
+            <th bk-table-header-cell>Description</th>
+        </tr>
+    </thead>
+    <tbody bk-table-body>
+        <tr bk-table-row>
+            <td bk-table-cell>compact</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
+            <td bk-table-cell>Input size.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>state</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
+            <td bk-table-cell>You have four options - 'error', 'success', 'warning' and 'information'.
             </td>
         </tr>
     </tbody>
@@ -241,6 +267,13 @@
             <code-block>
                 <bk-form-label for="iisd">Disabled</bk-form-label>
                 <bk-step-input input-id="iisd" name="iisdname" ng-model="stepInputValue" ng-disabled="true">
+                </bk-step-input>
+            </code-block>
+        </bk-form-item>
+        <bk-form-item>
+            <code-block>
+                <bk-form-label for="iisd" ng-required="true">Required</bk-form-label>
+                <bk-step-input input-id="iisd" name="iisdname" ng-required="true" ng-model="stepInputValue">
                 </bk-step-input>
             </code-block>
         </bk-form-item>
