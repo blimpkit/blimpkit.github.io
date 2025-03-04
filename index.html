@@ -47,6 +47,7 @@
     <script type="text/javascript" src="./src/menu.js"></script>
     <script type="text/javascript" src="./src/message-box.js"></script>
     <script type="text/javascript" src="./src/message-page.js"></script>
+    <script type="text/javascript" src="./src/message-strip.js"></script>
     <script type="text/javascript" src="./src/notification.js"></script>
     <script type="text/javascript" src="./src/object-status.js"></script>
     <script type="text/javascript" src="./src/pagination.js"></script>
@@ -93,8 +94,7 @@
             <bk-shellbar-action>
                 <bk-popover>
                     <bk-popover-control>
-                        <bk-button bk-shellbar-button label="Theme" is-menu="true">
-                        </bk-button>
+                        <bk-button bk-shellbar-button label="Theme" is-menu="true"></bk-button>
                     </bk-popover-control>
                     <bk-popover-body align="bottom-right">
                         <bk-menu aria-label="theme popover items" has-icons="true">
@@ -262,6 +262,12 @@
                         indicated="selectedPage === 'message-page'">
                         <bk-list-navigation-item-text>Message Page</bk-list-navigation-item-text>
                         <bk-list-navigation-item-indicator ng-if="selectedPage === 'message-page'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('message-strip')"
+                        indicated="selectedPage === 'message-strip'">
+                        <bk-list-navigation-item-text>Message Strip</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'message-strip'">
                         </bk-list-navigation-item-indicator>
                     </bk-list-navigation-item>
                     <bk-list-navigation-item ng-click="switchPage('notification')"
@@ -628,6 +634,7 @@
                     &lt;script type=&quot;text/javascript&quot; src=&quot;/src/menu.js&quot;&gt;&lt;/script&gt;
                     &lt;script type=&quot;text/javascript&quot; src=&quot;/src/message-box.js&quot;&gt;&lt;/script&gt;
                     &lt;script type=&quot;text/javascript&quot; src=&quot;/src/message-page.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;/src/message-strip.js&quot;&gt;&lt;/script&gt;
                     &lt;script type=&quot;text/javascript&quot; src=&quot;/src/notification.js&quot;&gt;&lt;/script&gt;
                     &lt;script type=&quot;text/javascript&quot; src=&quot;/src/object-status.js&quot;&gt;&lt;/script&gt;
                     &lt;script type=&quot;text/javascript&quot; src=&quot;/src/pagination.js&quot;&gt;&lt;/script&gt;
@@ -735,6 +742,9 @@
 
             <!-- Message Page -->
             <div ng-if="selectedPage === 'message-page'" ng-include="'docs/message-page.html'"></div>
+
+            <!-- Message Strip -->
+            <div ng-if="selectedPage === 'message-strip'" ng-include="'docs/message-strip.html'"></div>
 
             <!-- Notification -->
             <div ng-if="selectedPage === 'notification'" ng-include="'docs/notification.html'"></div>

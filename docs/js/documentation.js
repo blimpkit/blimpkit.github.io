@@ -211,6 +211,11 @@ widgetsView.controller('WidgetsViewController', function ($scope) {
     // Menu
     $scope.menusShown = false;
 
+    // Message Strip
+    $scope.dismissStrip = () => {
+        alert("Dismissed");
+    };
+
     // Notification
     $scope.warningSelected = false;
     $scope.isUnread = true;
