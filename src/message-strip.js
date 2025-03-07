@@ -29,6 +29,6 @@ blimpkit.directive('bkMessageStrip', (classNames) => ({
     template: `<div ng-class="getClasses()" role="note" aria-live="assertive" ng-attr-aria-labelledby="{{id}}">
 <div ng-if="glyph" class="fd-message-strip__icon-container" aria-hidden="true"><span class="sap-icon {{glyph}}" focusable="false" role="presentation" aria-hidden="true"></span></div>
 <p class="fd-message-strip__text" ng-transclude></p>
-<bk-button ng-if="onDismiss" class="fd-message-strip__close" state="transparent" glyph="sap-icon--decline" compact="true" ng-attr-aria-controls="{{id}}" aria-label="Close" title="Close" ng-click="onDismiss()"></bk-button>
+<bk-button ng-if="onDismiss" in-msg-strip="true" state="transparent" glyph="sap-icon--decline" compact="true" ng-attr-aria-controls="{{id}}" aria-label="Close" title="Close" ng-click="onDismiss()"></bk-button>
 </div>`,
 }));
