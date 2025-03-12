@@ -220,6 +220,18 @@
         <bk-option text="Option 4" value="4"></bk-option>
     </bk-select>
 </code-block>
+<h3>Readonly select</h3>
+<code-block>
+    <bk-select ng-model="selectReadonlyValue" is-readonly="true">
+        <bk-option text="Option 1" value="1"></bk-option>
+        <bk-option text="Option 2" value="2"></bk-option>
+        <bk-option text="Option 3" value="3"></bk-option>
+        <bk-option text="Option 4" value="4"></bk-option>
+    </bk-select>
+    <code-block type="js">
+        $scope.selectReadonlyValue = 2;
+    </code-block>
+</code-block>
 <h3>Compact select with states and message</h3>
 <p>You can hover over the select input to see the message.</p>
 <code-block>

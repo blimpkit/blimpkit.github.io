@@ -107,7 +107,9 @@ widgetsView.controller('WidgetsViewController', function ($scope) {
     };
 
     // Checkbox
-    $scope.fdCheckboxModel = true;
+    $scope.checkboxes = {
+        model: true
+    };
 
     // ComboBox
     $scope.comboboxItems = [
@@ -118,7 +120,7 @@ widgetsView.controller('WidgetsViewController', function ($scope) {
         { value: 5, text: 'Strawberry' }
     ];
 
-    $scope.comboboxItems2 = [
+    $scope.comboboxItemsIcons = [
         { value: 1, svg: './logo/blimpkit-symbolic.svg', text: 'Product 1', secondaryText: '1000 EUR' },
         { value: 2, glyph: 'sap-icon--picture', text: 'Product 2', secondaryText: '750 EUR' },
         { value: 3, glyph: 'sap-icon--laptop', text: 'Product 3', secondaryText: '780 EUR' },
@@ -133,6 +135,7 @@ widgetsView.controller('WidgetsViewController', function ($scope) {
         { value: 5, text: 'Strawberry' }
     ];
     $scope.combobox = {
+        modelReadonly: 'Pineapple',
         selectedModelValue: null,
         selectedModelValues: [],
         onCBChange: function () {
@@ -242,6 +245,7 @@ widgetsView.controller('WidgetsViewController', function ($scope) {
 
     // Select
     $scope.selectSelectedValue = 2;
+    $scope.selectReadonlyValue = 2;
     $scope.select = {
         s1: 1,
         s2: 2,

@@ -48,6 +48,12 @@
             <td bk-table-cell>Whether the search input is disabled</td>
         </tr>
         <tr bk-table-row>
+            <td bk-table-cell>is-readonly</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
+            <td bk-table-cell>Whether the search input is readonly</td>
+        </tr>
+        <tr bk-table-row>
             <td bk-table-cell>state</td>
             <td bk-table-cell>string</td>
             <td bk-table-cell>False</td>
@@ -96,26 +102,11 @@
 
 <h2>Examples</h2>
 
-<h3>ComboBox Input</h3>
+<h3>Compact</h3>
 <code-block>
-    <div style="display:flex; justify-content: space-around;align-items: center;">
-        <bk-combobox-input compact="true" dropdown-items="comboboxItems" placeholder="Search fruit ..."
-            btn-aria-label="show/hide fruit options" list-aria-label="fruit options">
-        </bk-combobox-input>
-
-        <bk-combobox-input dropdown-items="comboboxItems" is-disabled="true" selected-value="1"
-            placeholder="Search fruit ..." btn-aria-label="show/hide fruit options" list-aria-label="fruit options">
-        </bk-combobox-input>
-
-        <bk-combobox-input dropdown-items="comboboxItems2" ng-model="combobox.selectedModelValue"
-            ng-change="combobox.onCBChange()" is-required="true" placeholder="Search product ..."
-            btn-aria-label="show/hide product options" list-aria-label="product options">
-        </bk-combobox-input>
-
-        <bk-combobox-input input-id="test" dropdown-items="comboboxItems" placeholder="Search fruit ..." state="success"
-            message="Success message" btn-aria-label="show/hide product options"
-            list-aria-label="product options"></bk-combobox-input>
-    </div>
+    <bk-combobox-input compact="true" dropdown-items="comboboxItems" placeholder="Search fruit ..."
+        btn-aria-label="show/hide fruit options" list-aria-label="fruit options">
+    </bk-combobox-input>
     <code-block type="js">
         $scope.comboboxItems = [
         { value: 1, text: 'Apple' },
@@ -123,8 +114,44 @@
         { value: 3, text: 'Banana' },
         { value: 4, text: 'Kiwi' },
         { value: 5, text: 'Strawberry' }];
+    </code-block>
+</code-block>
 
-        $scope.comboboxItems2 = [
+<h3>Disabled</h3>
+<code-block>
+    <bk-combobox-input dropdown-items="comboboxItems" is-disabled="true" selected-value="1"
+        placeholder="Search fruit ..." btn-aria-label="show/hide fruit options" list-aria-label="fruit options">
+    </bk-combobox-input>
+    <code-block type="js">
+        $scope.comboboxItems = [
+        { value: 1, text: 'Apple' },
+        { value: 2, text: 'Pineapple' },
+        { value: 3, text: 'Banana' },
+        { value: 4, text: 'Kiwi' },
+        { value: 5, text: 'Strawberry' }];
+    </code-block>
+</code-block>
+
+<h3>Readonly</h3>
+<code-block>
+    <bk-combobox-input is-readonly="true" ng-model="combobox.modelReadonly"
+        btn-aria-label="show/hide fruit options" list-aria-label="fruit options">
+    </bk-combobox-input>
+    <code-block type="js">
+        $scope.combobox = {
+            modelReadonly: 'Pineapple',
+        };
+    </code-block>
+</code-block>
+
+<h3>Model Bind</h3>
+<code-block>
+    <bk-combobox-input dropdown-items="comboboxItemsIcons" ng-model="combobox.selectedModelValue"
+        ng-change="combobox.onCBChange()" placeholder="Search product ..."
+        btn-aria-label="show/hide product options" list-aria-label="product options">
+    </bk-combobox-input>
+    <code-block type="js">
+        $scope.comboboxItemsIcons = [
         { value: 1, svg: './logo/blimpkit-symbolic.svg', text: 'Product 1', secondaryText:
         '1000
         EUR'
@@ -133,21 +160,40 @@
         { value: 3, glyph: 'sap-icon--laptop', text: 'Product 3', secondaryText: '780 EUR' },
         { value: 4, glyph: 'sap-icon--fridge', text: 'Product 4', secondaryText: '40 EUR' }
         ];
-
         $scope.combobox = {
-        selectedModelValue: null,
-        selectedModelValues: [],
-        onCBChange: function () {
-        console.log($scope.combobox.selectedModelValue);
-        },
-        onMCBChange: function () {
-        console.log($scope.combobox.selectedModelValues);
-        }
+            selectedModelValue: null,
+            onCBChange: function () {
+            console.log($scope.combobox.selectedModelValue);
+            },
         };
     </code-block>
 </code-block>
 
-<h3>ComboBox Input Dynamic</h3>
+<h3>State</h3>
+<code-block>
+    <bk-combobox-input dropdown-items="comboboxItems" placeholder="Search fruit ..." state="success"
+        message="Success message" btn-aria-label="show/hide product options" list-aria-label="product options">
+    </bk-combobox-input>
+    <bk-combobox-input dropdown-items="comboboxItems" placeholder="Search fruit ..." state="error"
+        message="Error message" btn-aria-label="show/hide product options" list-aria-label="product options">
+    </bk-combobox-input>
+    <bk-combobox-input dropdown-items="comboboxItems" placeholder="Search fruit ..." state="warning"
+        message="Warning message" btn-aria-label="show/hide product options" list-aria-label="product options">
+    </bk-combobox-input>
+    <bk-combobox-input dropdown-items="comboboxItems" placeholder="Search fruit ..." state="information"
+        message="Information message" btn-aria-label="show/hide product options" list-aria-label="product options">
+    </bk-combobox-input>
+    <code-block type="js">
+        $scope.comboboxItems = [
+        { value: 1, text: 'Apple' },
+        { value: 2, text: 'Pineapple' },
+        { value: 3, text: 'Banana' },
+        { value: 4, text: 'Kiwi' },
+        { value: 5, text: 'Strawberry' }];
+    </code-block>
+</code-block>
+
+<h3>Dynamic Input</h3>
 <code-block>
     <bk-combobox-input input-id="dynamic" dropdown-items="dynamicItems" ng-keyup="onComboInputChange($event)"
         placeholder="Start typing" btn-aria-label="show/hide product options" list-aria-label="product options">
@@ -197,11 +243,7 @@
             ];
 
             $scope.combobox = {
-            selectedModelValue: null,
             selectedModelValues: [],
-            onCBChange: function () {
-            console.log($scope.combobox.selectedModelValue);
-            },
             onMCBChange: function () {
             console.log($scope.combobox.selectedModelValues);
             }
