@@ -65,6 +65,12 @@
             <td bk-table-cell>False</td>
             <td bk-table-cell>Makes header sticky when scrolling the table</td>
         </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>interactive</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
+            <td bk-table-cell>Interactive state. Defaults to 'true'</td>
+        </tr>
     </tbody>
 </table>
 
@@ -178,6 +184,12 @@
             <td bk-table-cell>False</td>
             <td bk-table-cell>Highlights the cell on hover. Defaults to 'false'</td>
         </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>interactive</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
+            <td bk-table-cell>Interactive state. Defaults to 'true'</td>
+        </tr>
     </tbody>
 </table>
 
@@ -216,6 +228,12 @@
             <td bk-table-cell>boolean</td>
             <td bk-table-cell>False</td>
             <td bk-table-cell>Highlights the cell on hover. Defaults to 'false'</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>interactive</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
+            <td bk-table-cell>Interactive state. Defaults to 'true'</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>navigated</td>
@@ -303,7 +321,7 @@
 <h2>Examples</h2>
 <code-block>
     <table bk-table>
-        <thead bk-table-header>
+        <thead bk-table-header interactive="false">
             <tr bk-table-row>
                 <th bk-table-header-cell>Name</th>
                 <th bk-table-header-cell>Value</th>
@@ -452,7 +470,7 @@
                 <th bk-table-header-cell>Header 1</th>
                 <th bk-table-header-cell>Header 2</th>
                 <th bk-table-header-cell>Header 3</th>
-                <th bk-table-header-cell></th>
+                <th bk-table-header-cell interactive="false"></th>
             </tr>
         </thead>
         <tbody bk-table-body>

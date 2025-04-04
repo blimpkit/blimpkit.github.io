@@ -14,6 +14,14 @@
             <td bk-table-cell>Generic text block with no paddings.</td>
         </tr>
         <tr bk-table-row>
+            <td bk-table-cell>bk-text--subtitle</td>
+            <td bk-table-cell>Changes the text color to indicate a subtitle/secondary text.</td>
+        </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>bk-text--ellipsis</td>
+            <td bk-table-cell>Display an ellipsis (…) in case of text overflow.</td>
+        </tr>
+        <tr bk-table-row>
             <td bk-table-cell>bk-preformatted</td>
             <td bk-table-cell>Does not apply any formatting to the text. Preserves the original formatting.</td>
         </tr>
@@ -31,6 +39,10 @@
             <td bk-table-cell>Sets the font size to small.</td>
         </tr>
         <tr bk-table-row>
+            <td bk-table-cell>bk-font--normal</td>
+            <td bk-table-cell>Sets the font size to normal.</td>
+        </tr>
+        <tr bk-table-row>
             <td bk-table-cell>bk-font--large</td>
             <td bk-table-cell>Sets the font size to large.</td>
         </tr>
@@ -43,4 +55,18 @@
 
 <code-block>
     <div class="bk-preformatted">{{blimpkitArt}}</div>
+</code-block>
+
+<h3>Title and subtitle</h3>
+
+<code-block>
+    <h5 bk-title wrap="true" header-size="5" aria-label="title">Title text</h5>
+    <p class="bk-text--subtitle bk-font--normal">Subtitle text</p>
+</code-block>
+
+<h3>Small and large</h3>
+
+<code-block>
+    <p class="bk-font--small">Small text</p>
+    <p class="bk-font--large">Large text</p>
 </code-block>

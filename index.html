@@ -385,6 +385,11 @@
                         <bk-list-navigation-item-indicator ng-if="selectedPage === 'css-box'">
                         </bk-list-navigation-item-indicator>
                     </bk-list-navigation-item>
+                    <bk-list-navigation-item ng-click="switchPage('css-color')" indicated="selectedPage === 'css-color'">
+                        <bk-list-navigation-item-text>Color</bk-list-navigation-item-text>
+                        <bk-list-navigation-item-indicator ng-if="selectedPage === 'css-color'">
+                        </bk-list-navigation-item-indicator>
+                    </bk-list-navigation-item>
                     <bk-list-navigation-item ng-click="switchPage('css-grid')" indicated="selectedPage === 'css-grid'">
                         <bk-list-navigation-item-text>Grid</bk-list-navigation-item-text>
                         <bk-list-navigation-item-indicator ng-if="selectedPage === 'css-grid'">
@@ -817,6 +822,9 @@
 
             <!-- CSS Box -->
             <div ng-if="selectedPage === 'css-box'" ng-include="'docs/css-box.html'"></div>
+
+            <!-- CSS Box -->
+            <div ng-if="selectedPage === 'css-color'" ng-include="'docs/css-color.html'"></div>
 
             <!-- CSS Size -->
             <div ng-if="selectedPage === 'css-size'" ng-include="'docs/css-size.html'"></div>

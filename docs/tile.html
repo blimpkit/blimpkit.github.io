@@ -75,6 +75,12 @@
             <td bk-table-cell>False</td>
             <td bk-table-cell>Action mode. Use only with 'bk-tile-container'.</td>
         </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>is-container</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
+            <td bk-table-cell>This removes the padding from the tile. Use when the content has to fill the tile. Not to be confused with 'bk-tile-container'.</td>
+        </tr>
     </tbody>
 </table>
 
@@ -182,6 +188,12 @@
         <bk-tile-header title="Title" subtitle="Subtitle"></bk-tile-header>
         <bk-tile-content>Content</bk-tile-content>
         <bk-tile-footer>Footer</bk-tile-footer>
+    </bk-tile>
+</code-block>
+<h3>Container tile</h3>
+<code-block>
+    <bk-tile is-container="true">
+        <img class="bk-fill-parent" src="./logo/blimpkit-square.svg"></div>
     </bk-tile>
 </code-block>
 <h3>Slide tile</h3>
