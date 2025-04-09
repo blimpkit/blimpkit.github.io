@@ -932,6 +932,13 @@ ng-transclude:empty {
   flex: 1;
 }
 
+div.fd-input-group.is-readonly,
+div.fd-input-group[aria-readonly="true"],
+div.fd-input-group[readonly] {
+  pointer-events: none;
+  --sapField_BorderStyle: dashed;
+}
+
 /* Tile additions */
 .fd-tile.bk-tile--container {
   padding: 0 !important;
@@ -1029,7 +1036,7 @@ ng-transclude:empty {
 
 /* fd-form-item fixes */
 .fd-container.fd-form-layout-grid-container>.fd-form-item>.fd-col:has(.fd-input-group) {
-  margin-block: var(--fdInput_Field_Margin_Block,.25rem);
+  margin-block: var(--fdInput_Field_Margin_Block, .25rem);
 }
 
 .fd-popover__control.is-expanded>*,
