@@ -19,7 +19,7 @@
         <tr bk-table-row>
             <td bk-table-cell>dropdown-items</td>
             <td bk-table-cell>array[{ text: string, secondarytext: string, value: any }]</td>
-            <td bk-table-cell>False</td>
+            <td bk-table-cell>True</td>
             <td bk-table-cell>Items to be filtered in the search input.</td>
         </tr>
         <tr bk-table-row>
@@ -75,13 +75,13 @@
         <tr bk-table-row>
             <td bk-table-cell>btn-aria-label</td>
             <td bk-table-cell>string</td>
-            <td bk-table-cell>False</td>
+            <td bk-table-cell>True</td>
             <td bk-table-cell>Aria-label for the combobox button</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>list-aria-label</td>
             <td bk-table-cell>string</td>
-            <td bk-table-cell>False</td>
+            <td bk-table-cell>True</td>
             <td bk-table-cell>Aria-label for the combobox popover list</td>
         </tr>
         <tr bk-table-row>
@@ -134,13 +134,19 @@
 
 <h3>Readonly</h3>
 <code-block>
-    <bk-combobox-input is-readonly="true" ng-model="combobox.modelReadonly"
+    <bk-combobox-input dropdown-items="comboboxItems" is-readonly="true" ng-model="combobox.modelReadonlyValue"
         btn-aria-label="show/hide fruit options" list-aria-label="fruit options">
     </bk-combobox-input>
     <code-block type="js">
         $scope.combobox = {
-            modelReadonly: 'Pineapple',
+            modelReadonlyValue: 1,
         };
+        $scope.comboboxItems = [
+        { value: 1, text: 'Apple' },
+        { value: 2, text: 'Pineapple' },
+        { value: 3, text: 'Banana' },
+        { value: 4, text: 'Kiwi' },
+        { value: 5, text: 'Strawberry' }];
     </code-block>
 </code-block>
 

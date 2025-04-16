@@ -135,7 +135,7 @@ widgetsView.controller('WidgetsViewController', function ($scope) {
         { value: 5, text: 'Strawberry' }
     ];
     $scope.combobox = {
-        modelReadonly: 'Pineapple',
+        modelReadonlyValue: 1,
         selectedModelValue: null,
         selectedModelValues: [],
         onCBChange: function () {
