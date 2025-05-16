@@ -30,7 +30,8 @@ blimpkit.directive('bkComboboxInput', function (uuid, classNames, $window, $time
             btnAriaLabel: '@',
             listAriaLabel: '@',
             multiSelect: '<?',
-            maxBodyHeight: '@?'
+            maxBodyHeight: '@?',
+            filter: '@'
         },
         link: function (scope, element, _attrs, ngModel) {
             scope.defaultHeight = 16;
@@ -130,9 +131,13 @@ blimpkit.directive('bkComboboxInput', function (uuid, classNames, $window, $time
                 }
             };
 
+            const filterStartsWith = (x) => x.text.toLowerCase().startsWith(scope.search.term.toLowerCase());
+            const filterContains = (x) => x.text.toLowerCase().includes(scope.search.term.toLowerCase());
+
             scope.filterValues = () => {
                 if (scope.search.term) {
-                    scope.filteredDropdownItems = scope.dropdownItems.filter(x => x.text.toLowerCase().startsWith(scope.search.term.toLowerCase()));
+                    if (!scope.filter || scope.filter === 'StartsWith') scope.filteredDropdownItems = scope.dropdownItems.filter(filterStartsWith);
+                    else scope.filteredDropdownItems = scope.dropdownItems.filter(filterContains);
                 } else {
                     scope.filteredDropdownItems = scope.dropdownItems;
                 }

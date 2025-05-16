@@ -97,6 +97,12 @@
             <td bk-table-cell>Maximum body height in pixels before it starts scrolling. Default is
                 the height of the window.</td>
         </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>filter</td>
+            <td bk-table-cell>string</td>
+            <td bk-table-cell>False</td>
+            <td bk-table-cell>Defines the filter type of the component. Two options available - "StartsWith" (default) and "Contains"</td>
+        </tr>
     </tbody>
 </table>
 
@@ -172,6 +178,21 @@
             console.log($scope.combobox.selectedModelValue);
             },
         };
+    </code-block>
+</code-block>
+
+<h3>Filter type</h3>
+<code-block>
+    <bk-combobox-input dropdown-items="comboboxItems" placeholder="Search..." filter="Contains"
+        btn-aria-label="show/hide product options" list-aria-label="product options">
+    </bk-combobox-input>
+    <code-block type="js">
+        $scope.comboboxItems = [
+        { value: 1, text: 'Apple' },
+        { value: 2, text: 'Pineapple' },
+        { value: 3, text: 'Banana' },
+        { value: 4, text: 'Kiwi' },
+        { value: 5, text: 'Strawberry' }];
     </code-block>
 </code-block>
 
