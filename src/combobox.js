@@ -136,8 +136,8 @@ blimpkit.directive('bkComboboxInput', function (uuid, classNames, $window, $time
 
             scope.filterValues = () => {
                 if (scope.search.term) {
-                    if (!scope.filter || scope.filter === 'StartsWith') scope.filteredDropdownItems = scope.dropdownItems.filter(filterStartsWith);
-                    else scope.filteredDropdownItems = scope.dropdownItems.filter(filterContains);
+                    if (scope.filter === 'Contains') scope.filteredDropdownItems = scope.dropdownItems.filter(filterContains);
+                    else scope.filteredDropdownItems = scope.dropdownItems.filter(filterStartsWith);
                 } else {
                     scope.filteredDropdownItems = scope.dropdownItems;
                 }
@@ -228,6 +228,7 @@ blimpkit.directive('bkComboboxInput', function (uuid, classNames, $window, $time
             };
 
             scope.shouldRenderHighlightedText = (value) => {
+                if (scope.filter && scope.filter !== 'StartsWith') return false;
                 return value.toLowerCase().startsWith(scope.search.term.toLowerCase()) && value.length > scope.search.term.length;
             };
 
@@ -312,8 +313,7 @@ blimpkit.directive('bkComboboxInput', function (uuid, classNames, $window, $time
                     <bk-list class="{{getListClasses()}}" dropdown-mode="true" compact="compact" has-message="!!message" aria-label="{{listAriaLabel}}">
                         <bk-list-item ng-repeat="item in filteredDropdownItems" role="option" tabindex="0" selected="isSelected(item)" ng-click="onItemClick(item)">
                             <bk-list-form-item ng-if="multiSelect">
-                                <bk-checkbox id="{{getCheckboxId(item.value)}}" compact="compact" ng-checked="isSelected(item)">
-                                </bk-checkbox>
+                                <bk-checkbox id="{{getCheckboxId(item.value)}}" compact="compact" ng-checked="isSelected(item)"></bk-checkbox>
                                 <bk-checkbox-label empty="true" compact="compact" for="{{getCheckboxId(item.value)}}" ng-click="$event.preventDefault()" tabindex="-1"></bk-checkbox-label>
                             </bk-list-form-item>
                             <bk-list-icon ng-if="item.glyph || item.svg" glyph="{{item.glyph}}" svg-path="{{item.svg}}"></bk-list-icon>
