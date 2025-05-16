@@ -136,8 +136,7 @@ blimpkit.directive('bkComboboxInput', function (uuid, classNames, $window, $time
 
             scope.filterValues = () => {
                 if (scope.search.term) {
-                    if (scope.filter === 'Contains') scope.filteredDropdownItems = scope.dropdownItems.filter(filterContains);
-                    else scope.filteredDropdownItems = scope.dropdownItems.filter(filterStartsWith);
+                    scope.filteredDropdownItems = scope.dropdownItems.filter(scope.filter === 'Contains' ? filterContains : filterStartsWith);
                 } else {
                     scope.filteredDropdownItems = scope.dropdownItems;
                 }
@@ -233,7 +232,7 @@ blimpkit.directive('bkComboboxInput', function (uuid, classNames, $window, $time
             };
 
             scope.getLabel = (value) => {
-                return scope.shouldRenderHighlightedText(value) ? value.substring(scope.search.term.length) : value;
+                return scope.search.term && scope.shouldRenderHighlightedText(value) ? value.substring(scope.search.term.length) : value;
             };
 
             scope.getListClasses = () => classNames({
@@ -318,7 +317,7 @@ blimpkit.directive('bkComboboxInput', function (uuid, classNames, $window, $time
                             </bk-list-form-item>
                             <bk-list-icon ng-if="item.glyph || item.svg" glyph="{{item.glyph}}" svg-path="{{item.svg}}"></bk-list-icon>
                             <bk-list-title>
-                                <span ng-if="shouldRenderHighlightedText(item.text)" class="fd-list__bold">{{ getHighlightedText(item.text) }}</span>{{ getLabel(item.text) }}
+                                <span ng-if="search.term && shouldRenderHighlightedText(item.text)" class="fd-list__bold">{{ getHighlightedText(item.text) }}</span>{{ getLabel(item.text) }}
                             </bk-list-title>
                             <bk-list-seconday ng-if="item.secondaryText">{{ item.secondaryText }}</bk-list-seconday>
                         </bk-list-item>
