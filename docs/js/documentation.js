@@ -120,6 +120,13 @@ widgetsView.controller('WidgetsViewController', function ($scope) {
         { value: 5, text: 'Strawberry' }
     ];
 
+    $scope.comboboxItemsEach = [
+        { value: 1, text: 'The first one' },
+        { value: 2, text: 'The second one' },
+        { value: 3, text: 'Each term' },
+        { value: 4, text: 'Term each' },
+    ];
+
     $scope.comboboxItemsIcons = [
         { value: 1, svg: './logo/blimpkit-symbolic.svg', text: 'Product 1', secondaryText: '1000 EUR' },
         { value: 2, glyph: 'sap-icon--picture', text: 'Product 2', secondaryText: '750 EUR' },

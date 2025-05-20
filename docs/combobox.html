@@ -101,7 +101,7 @@
             <td bk-table-cell>filter</td>
             <td bk-table-cell>string</td>
             <td bk-table-cell>False</td>
-            <td bk-table-cell>Defines the filter type of the component. Two options available - "StartsWith" (default) and "Contains"</td>
+            <td bk-table-cell>Defines the filter type of the component. Available options - "StartsWith" (default), "Contains" and "ContainsEach"</td>
         </tr>
     </tbody>
 </table>
@@ -181,7 +181,7 @@
     </code-block>
 </code-block>
 
-<h3>Filter type</h3>
+<h3>Filter type - Contains</h3>
 <code-block>
     <bk-combobox-input dropdown-items="comboboxItems" placeholder="Search..." filter="Contains"
         btn-aria-label="show/hide product options" list-aria-label="product options">
@@ -193,6 +193,20 @@
         { value: 3, text: 'Banana' },
         { value: 4, text: 'Kiwi' },
         { value: 5, text: 'Strawberry' }];
+    </code-block>
+</code-block>
+
+<h3>Filter type - ContainsEach</h3>
+<code-block>
+    <bk-combobox-input dropdown-items="comboboxItemsEach" placeholder="Search..." filter="ContainsEach"
+        btn-aria-label="show/hide options" list-aria-label="options">
+    </bk-combobox-input>
+    <code-block type="js">
+        $scope.comboboxItemsEach = [
+        { value: 1, text: 'The first one' },
+        { value: 2, text: 'The second one' },
+        { value: 3, text: 'Each term' },
+        { value: 4, text: 'Term each' }];
     </code-block>
 </code-block>
 
