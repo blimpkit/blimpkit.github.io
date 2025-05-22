@@ -35,9 +35,7 @@
             <td bk-table-cell>is-nav</td>
             <td bk-table-cell>boolean</td>
             <td bk-table-cell>False</td>
-            <td bk-table-cell>When the tabs are used as a main navigation, inside a Shell
-                Navigation.
-            </td>
+            <td bk-table-cell>When the tabs are used as a main navigation, inside a Shell Navigation.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>has-filter</td>
@@ -183,8 +181,7 @@
             <td bk-table-cell>boolean</td>
             <td bk-table-cell>False</td>
             <td bk-table-cell>Enables the close button next to the tab label, regardless if an
-                onClose
-                function has been provided.</td>
+                onClose function has been provided.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>is-hidden</td>
@@ -594,9 +591,25 @@
         </bk-icon-tab-bar-tablist>
     </bk-icon-tab-bar>
     <code-block type="js">
-        $scope.tabs = [...Array(10).keys()].map(i => ({ label: `Tab label ${i + 1}`, id: `tab_${i +
-        1}`
-        }));
+        $scope.tabs = [...Array(10).keys()].map(i => ({ label: `Tab label ${i + 1}`, id: `tab_${i + 1}`}));
+        $scope.isMoreTabsButtonVisible = (tabs) => tabs.some(x => x.isHidden);
+    </code-block>
+</code-block>
+
+<h3>Scrollable</h3>
+<code-block>
+    <bk-icon-tab-bar style="max-width: 600px">
+        <bk-icon-tab-bar-tablist>
+            <bk-tabs-scrollable>
+                <bk-icon-tab-bar-tab ng-repeat="tab in tabs" label="{{tab.label}}" tab-id="{{tab.id}}"></bk-icon-tab-bar-tab>
+            </bk-tabs-scrollable>
+            <bk-icon-tab-bar-buttons>
+                <bk-button compact="true" state="transparent" glyph="sap-icon--add" aria-label="add">
+            </bk-icon-tab-bar-buttons>
+        </bk-icon-tab-bar-tablist>
+    </bk-icon-tab-bar>
+    <code-block type="js">
+        $scope.tabs = [...Array(10).keys()].map(i => ({ label: `Tab label ${i + 1}`, id: `tab_${i + 1}`}));
         $scope.isMoreTabsButtonVisible = (tabs) => tabs.some(x => x.isHidden);
     </code-block>
 </code-block>

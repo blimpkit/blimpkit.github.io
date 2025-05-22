@@ -1,7 +1,8 @@
-const widgetsView = angular.module('widgets', ['blimpKit']);
+const documentation = angular.module('documentation', ['blimpKit']);
+documentation.config(($locationProvider) => { $locationProvider.html5Mode({ enabled: true, requireBase: false }) });
 
 // AngularJS filter used in the table pagination
-widgetsView.filter('startFrom', function () {
+documentation.filter('startFrom', function () {
     return function (input, start) {
         start = +start; // parse to int
         return input.slice(start);
@@ -9,7 +10,7 @@ widgetsView.filter('startFrom', function () {
 });
 
 // Directive that automatically creates example code
-widgetsView.directive('codeBlock', () => ({
+documentation.directive('codeBlock', () => ({
     restrict: 'E',
     transclude: false,
     compile: function (tElement, tAttrs) {
@@ -44,8 +45,9 @@ widgetsView.directive('codeBlock', () => ({
     },
 }));
 
+
 // Initialize controller
-widgetsView.controller('WidgetsViewController', function ($scope) {
+documentation.controller('DocumentationViewController', function ($scope, $location) {
     // Documentation specific stuff
     $scope.version = angular.module('blimpKit').info().version;
     $scope.theme = 'blimpkit-auto';
@@ -55,10 +57,252 @@ widgetsView.controller('WidgetsViewController', function ($scope) {
     $scope.setTheme = (theme) => {
         $scope.theme = theme;
     };
-    $scope.selectedPage = 'introduction'
-    $scope.switchPage = (id) => {
+
+    $scope.selectedPage = $location.search().component ?? 'introduction';
+    $scope.sidenavOpen = false;
+    $scope.sidenavToggle = () => {
+        $scope.sidenavOpen = !$scope.sidenavOpen;
+    };
+    $scope.navItems = [
+        {
+            id: 'introduction',
+            label: 'Introduction'
+        },
+        {
+            label: 'Common'
+        },
+        {
+            id: 'icons',
+            label: 'Icons'
+        },
+        {
+            id: 'code',
+            label: 'Code'
+        },
+        {
+            id: 'focus',
+            label: 'Focus'
+        },
+        {
+            id: 'input-rules',
+            label: 'Form Input Rules'
+        },
+        {
+            label: 'Components'
+        },
+        {
+            id: 'avatar',
+            label: 'Avatar'
+        },
+        {
+            id: 'bar',
+            label: 'Bar'
+        },
+        {
+            id: 'breadcrumb',
+            label: 'Breadcrumb'
+        },
+        {
+            id: 'busy-indicator',
+            label: 'Busy Indicator'
+        },
+        {
+            id: 'button',
+            label: 'Button'
+        },
+        {
+            id: 'badge',
+            label: 'Badge'
+        },
+        {
+            id: 'card',
+            label: 'Card'
+        },
+        {
+            id: 'dialog',
+            label: 'Dialog'
+        },
+        {
+            id: 'checkbox',
+            label: 'Checkbox'
+        },
+        {
+            id: 'combobox',
+            label: 'ComboBox'
+        },
+        {
+            id: 'fieldset',
+            label: 'Field Set'
+        },
+        {
+            id: 'input',
+            label: 'Inputs'
+        },
+        {
+            id: 'input-group',
+            label: 'Input Group'
+        },
+        {
+            id: 'radio',
+            label: 'Radio'
+        },
+        {
+            id: 'icon-tab-bar',
+            label: 'Icon Tab Bar'
+        },
+        {
+            id: 'link',
+            label: 'Link'
+        },
+        {
+            id: 'list',
+            label: 'List'
+        },
+        {
+            id: 'loader',
+            label: 'Loader'
+        },
+        {
+            id: 'menu',
+            label: 'Menu'
+        },
+        {
+            id: 'message-box',
+            label: 'Message Box'
+        },
+        {
+            id: 'message-page',
+            label: 'Message Page'
+        },
+        {
+            id: 'message-strip',
+            label: 'Message Strip'
+        },
+        {
+            id: 'notification',
+            label: 'Notification'
+        },
+        {
+            id: 'object-status',
+            label: 'Object Status'
+        },
+        {
+            id: 'pagination',
+            label: 'Pagination'
+        },
+        {
+            id: 'panel',
+            label: 'Panel'
+        },
+        {
+            id: 'popover',
+            label: 'Popover'
+        },
+        {
+            id: 'product-switch',
+            label: 'Product Switch'
+        },
+        {
+            id: 'progress-indicator',
+            label: 'Progress Indicator'
+        },
+        {
+            id: 'scrollbar',
+            label: 'Scrollbar'
+        },
+        {
+            id: 'shellbar',
+            label: 'Shellbar'
+        },
+        {
+            id: 'switch',
+            label: 'Switch'
+        },
+        {
+            id: 'select',
+            label: 'Select'
+        },
+        {
+            id: 'table',
+            label: 'Table'
+        },
+        {
+            id: 'tile',
+            label: 'Tile'
+        },
+        {
+            id: 'title',
+            label: 'Title'
+        },
+        {
+            id: 'token',
+            label: 'Token'
+        },
+        {
+            id: 'tool-header',
+            label: 'Tool Header'
+        },
+        {
+            id: 'toolbar',
+            label: 'Toolbar'
+        },
+        {
+            id: 'upload-collection',
+            label: 'Upload collection'
+        },
+        {
+            id: 'vertical-navigation',
+            label: 'Vertical Navigation'
+        },
+        {
+            id: 'wizard',
+            label: 'Wizard'
+        },
+        {
+            label: 'Common CSS'
+        },
+        {
+            id: 'css-box',
+            label: 'Box'
+        },
+        {
+            id: 'css-color',
+            label: 'Color'
+        },
+        {
+            id: 'css-grid',
+            label: 'Grid'
+        },
+        {
+            id: 'css-text',
+            label: 'Text'
+        },
+        {
+            id: 'css-borders',
+            label: 'Borders'
+        },
+        {
+            id: 'css-pad-mar',
+            label: 'Paddings & Margins'
+        },
+        {
+            id: 'css-size',
+            label: 'Width & Height'
+        },
+    ];
+
+    $scope.title = $scope.navItems.find((nav) => nav.id === $scope.selectedPage)?.label;
+
+    $scope.switchPage = (id, label) => {
+        $location.search('component', id);
+        $scope.title = label;
         $scope.selectedPage = id;
     };
+
+    if (!$scope.title) {
+        $scope.switchPage($scope.navItems[0].id, $scope.navItems[0].label);
+    }
+
     $scope.blimpkitArt = `
                      :=.
                ::.  :==-:::

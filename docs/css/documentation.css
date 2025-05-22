@@ -157,3 +157,20 @@ div.doc-icon-container span.sap-icon {
 .doc-css-layout-container:not(.bk-grid):not(.bk-hbox):not(.bk-vbox):not(.bk-center) {
     max-width: 320px;
 }
+
+.doc-sidenav-btn {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .doc-sidenav-btn {
+        display: block;
+    }
+    .doc-sidenav {
+        position: fixed;
+        z-index: 2;   
+    }
+    .doc-sidenav:not([visible=true]) {
+        display: none;
+    }
+}

@@ -897,6 +897,21 @@ ng-transclude:empty {
   padding-right: 2.188rem;
 }
 
+.bk-icon-tab-bar-scrollable::-webkit-scrollbar {
+  display: none;
+}
+
+.bk-icon-tab-bar-scrollable {
+  display: flex;
+  flex-direction: row;
+  --mask: linear-gradient(to right, rgb(0, 0, 0) 0, rgb(0, 0, 0) calc(100% - 1rem), rgba(0,0,0, 0) 100%, rgba(0,0,0, 0) 0 ) 0 0;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 /* input, step input and select additions */
 
 .fd-input[type="color"] {
