@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dirigiblelabs/BlimpKit.git"
+    "url": "git+https://github.com/blimpkit/blimpkit.github.io.git"
   },
   "keywords": [
     "blimpkit",
@@ -31,9 +31,9 @@
   ],
   "license": "EPL-2.0",
   "bugs": {
-    "url": "https://github.com/dirigiblelabs/BlimpKit/issues"
+    "url": "https://github.com/blimpkit/blimpkit.github.io/issues"
   },
-  "homepage": "https://github.com/dirigiblelabs/BlimpKit#readme",
+  "homepage": "https://github.com/blimpkit/blimpkit.github.io#readme",
   "files": [
     "/dist/*"
   ],
