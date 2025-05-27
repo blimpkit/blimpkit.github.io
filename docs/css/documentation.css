@@ -162,7 +162,14 @@ div.doc-icon-container span.sap-icon {
     display: none;
 }
 
+.doc-main-container > .bk-fill-parent {
+    padding: 2rem;
+}
+
 @media screen and (max-width: 1024px) {
+    .doc-main-container > .bk-fill-parent {
+        padding: 1rem;
+    }
     .doc-sidenav-btn {
         display: block;
     }

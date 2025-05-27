@@ -97,7 +97,7 @@
             <bk-shellbar-action>
                 <bk-popover>
                     <bk-popover-control>
-                        <bk-button bk-shellbar-button label="Theme" is-menu="true"></bk-button>
+                        <bk-button bk-shellbar-button glyph="sap-icon--palette" aria-label="select theme" is-menu="true"></bk-button>
                     </bk-popover-control>
                     <bk-popover-body align="bottom-right">
                         <bk-menu aria-label="theme popover items" has-icons="true">
@@ -135,9 +135,7 @@
                 </bk-list>
             </bk-vertical-nav-main-section>
         </bk-vertical-nav>
-        <div class="bk-vbox bk-fill-parent" bk-scrollbar style="padding: 2rem;">
-            <div ng-include="'docs/' + selectedPage + '.html'"></div>
-        </div>
+        <div class="bk-fill-parent" bk-scrollbar ng-include="'docs/' + selectedPage + '.html'"></div>
     </div>
 
     <!-- BlimpKit auto theme -->

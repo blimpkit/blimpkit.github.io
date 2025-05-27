@@ -1,6 +1,6 @@
 {
   "name": "blimpkit",
-  "version": "1.7.1",
+  "version": "1.7.2",
   "description": "BlimpKit is a UI component library",
   "main": "dist/js/blimpkit.js",
   "scripts": {
