@@ -578,13 +578,13 @@
         text="Resize the browser/window/view to see the overflow."></span>
 </div>
 <code-block>
-    <bk-icon-tab-bar>
+    <bk-icon-tab-bar selected-tab-id="'tab_2'">
         <bk-icon-tab-bar-tablist bk-tabs-overflowable>
             <bk-icon-tab-bar-tab ng-repeat="tab in tabs" label="{{tab.label}}" tab-id="{{tab.id}}"
                 is-hidden="tab.isHidden">
             </bk-icon-tab-bar-tab>
             <bk-icon-tab-bar-overflow label="More" ng-class="isMoreTabsButtonVisible(tabs) ? '' : 'bk-invisible'">
-                <bk-icon-tab-bar-overflow-item ng-if="tab.isHidden" ng-repeat="tab in tabs" label="{{tab.label}}"
+                <bk-icon-tab-bar-overflow-item ng-if="tab.isHidden" ng-repeat="tab in tabs track by tab.id" label="{{tab.label}}"
                     tab-id="{{tab.id}}-overflow">
                 </bk-icon-tab-bar-overflow-item>
             </bk-icon-tab-bar-overflow>
@@ -598,19 +598,18 @@
 
 <h3>Scrollable</h3>
 <code-block>
-    <bk-icon-tab-bar style="max-width: 640px" side-padding="sm">
+    <bk-icon-tab-bar style="max-width: 640px" side-padding="sm" selected-tab-id="'tab_1'">
         <bk-icon-tab-bar-tablist>
             <bk-tabs-scrollable>
-                <bk-icon-tab-bar-tab ng-repeat="tab in tabs" label="{{tab.label}}" tab-id="{{tab.id}}"></bk-icon-tab-bar-tab>
+                <bk-icon-tab-bar-tab ng-repeat="tab in tabs track by tab.id" label="{{tab.label}}" tab-id="{{tab.id}}"></bk-icon-tab-bar-tab>
             </bk-tabs-scrollable>
             <bk-icon-tab-bar-buttons>
-                <bk-button compact="true" state="transparent" glyph="sap-icon--add" aria-label="add">
+                <bk-button compact="true" state="transparent" glyph="sap-icon--add" aria-label="add"></bk-button>
             </bk-icon-tab-bar-buttons>
         </bk-icon-tab-bar-tablist>
     </bk-icon-tab-bar>
     <code-block type="js">
         $scope.tabs = [...Array(10).keys()].map(i => ({ label: `Tab label ${i + 1}`, id: `tab_${i + 1}`}));
-        $scope.isMoreTabsButtonVisible = (tabs) => tabs.some(x => x.isHidden);
     </code-block>
 </code-block>
 
