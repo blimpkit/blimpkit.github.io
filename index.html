@@ -113,6 +113,8 @@
                                 left-icon-class="{{isTheme('classic-light') ? 'sap-icon--accept' : ''}}"></bk-menu-item>
                             <bk-menu-item title="Classic (Dark)" ng-click="setTheme('classic-dark')"
                                 left-icon-class="{{isTheme('classic-dark') ? 'sap-icon--accept' : ''}}"></bk-menu-item>
+                            <bk-menu-item title="Mystic (Light)" ng-click="setTheme('mystic-light')"
+                                left-icon-class="{{isTheme('mystic-light') ? 'sap-icon--accept' : ''}}"></bk-menu-item>
                         </bk-menu>
                     </bk-popover-body>
                 </bk-popover>
@@ -168,6 +170,12 @@
     <link ng-if="isTheme('classic-dark')" href="./css/themes/classic-dark-variables.css" rel="stylesheet">
     <link ng-if="isTheme('classic-dark')" href="./css/themes/classic-dark.css" rel="stylesheet">
     <link ng-if="isTheme('classic-dark')" rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.10.0/styles/github-dark.min.css" />
+
+    <!-- Mystic light theme -->
+    <link ng-if="isTheme('mystic-light')" href="./css/themes/mystic-light-variables.css" rel="stylesheet">
+    <link ng-if="isTheme('mystic-light')" href="./css/themes/mystic-light.css" rel="stylesheet">
+    <link ng-if="isTheme('mystic-light')" rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.10.0/styles/github-dark.min.css" />
 </body>
 
