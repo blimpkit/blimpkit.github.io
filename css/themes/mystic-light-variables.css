@@ -83,7 +83,7 @@
   --sapContent_BusyColor: #3c50e0;
   --sapContent_FocusColor: #0032a5;
   --sapContent_FocusStyle: solid;
-  --sapContent_FocusWidth: 0.125rem;
+  --sapContent_FocusWidth: 0.063rem;
   --sapContent_ContrastFocusColor: #fff;
   --sapContent_ShadowColor: #223548;
   --sapContent_ContrastShadowColor: #fff;
@@ -96,10 +96,10 @@
   --sapContent_HeaderShadow: inset 0 -0.0625rem 0 0 #ced0d4;
   --sapContent_Interaction_Shadow: inset 0 0 0 0.0625rem rgba(85, 107, 129, 0.25);
   --sapContent_Selected_Shadow: inset 0 0 0 0.0625rem rgba(79, 160, 255, 0.5);
-  --sapContent_Negative_Shadow: inset 0 0 0 0.0625rem rgba(255, 142, 196, 0.45);
-  --sapContent_Critical_Shadow: inset 0 0 0 0.0625rem rgba(255, 213, 10, 0.4);
-  --sapContent_Positive_Shadow: inset 0 0 0 0.0625rem rgba(48, 145, 76, 0.18);
-  --sapContent_Informative_Shadow: inset 0 0 0 0.0625rem rgba(104, 174, 255, 0.5);
+  --sapContent_Negative_Shadow: inset 0 0 0 0.0625rem rgba(242, 48, 48, 1);
+  --sapContent_Critical_Shadow: inset 0 0 0 0.0625rem rgba(255, 166, 69, 1);
+  --sapContent_Positive_Shadow: inset 0 0 0 0.0625rem rgba(34, 173, 92, 1);
+  --sapContent_Informative_Shadow: inset 0 0 0 0.0625rem rgba(60, 80, 224, 1);
   --sapContent_Neutral_Shadow: inset 0 0 0 0.0625rem rgba(120, 143, 166, 0.3);
   --sapContent_SearchHighlightColor: #dafdf5;
   --sapContent_HelpColor: #188918;
@@ -545,9 +545,9 @@
   --sapList_TextColor: #1c274c;
   --sapList_Active_TextColor: #1c274c;
   --sapList_Active_Background: #ecedef;
-  --sapList_SelectionBackgroundColor: #f7f8f8;
+  --sapList_SelectionBackgroundColor: #ecedef;
   --sapList_SelectionBorderColor: #3c50e0;
-  --sapList_Hover_SelectionBackground: #f1f2f4;
+  --sapList_Hover_SelectionBackground: #f3f4f6;
   --sapList_Background: #fff;
   --sapList_Hover_Background: #f3f4f6;
   --sapList_AlternatingBackground: #f3f4f6;

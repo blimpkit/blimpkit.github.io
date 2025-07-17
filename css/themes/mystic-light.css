@@ -459,13 +459,13 @@
   --fdInput_Error_Box_Shadow_Hover: var(--sapField_InvalidShadow);
   --fdInput_Error_Outline_Color: var(--sapField_InvalidColor);
   --fdInput_Warning_Background_Color_Hover: var(--sapField_Hover_Background);
-  --fdInput_Warning_Box_Shadow_Hover: var(--sapContent_Critical_Shadow);
+  --fdInput_Warning_Box_Shadow_Hover: var(--sapField_WarningShadow);
   --fdInput_Warning_Outline_Color: var(--sapField_WarningColor);
   --fdInput_Success_Background_Color_Hover: var(--sapField_Hover_Background);
-  --fdInput_Success_Box_Shadow_Hover: var(--sapContent_Positive_Shadow);
+  --fdInput_Success_Box_Shadow_Hover: var(--sapField_SuccessShadow);
   --fdInput_Success_Outline_Color: var(--sapField_SuccessColor);
   --fdInput_Information_Background_Color_Hover: var(--sapField_Hover_Background);
-  --fdInput_Information_Box_Shadow_Hover: var(--sapContent_Informative_Shadow);
+  --fdInput_Information_Box_Shadow_Hover: var(--sapField_InformationShadow);
   --fdInput_Information_Outline_Color: var(--sapField_InformationColor);
   --fdInput_Non_Interactive_State_Placeholder_Color: var(--sapField_PlaceholderTextColor);
   --fdInput_Group_Button_Border_Raduis: var(--sapField_BorderCornerRadius);
@@ -512,7 +512,7 @@
   --fdWizard_Step_Indicator_Margin_Right: 0.5rem;
   --fdWizard_Step_Content_Container_Background_Color: var(--sapGroup_ContentBackground);
   --fdWizard_Step_Content_Container_Spacing: 1rem;
-  --fdPanel_Border_Radius: var(--sapElement_BorderCornerRadius);
+  --fdPanel_Border_Radius: 0;
   --fdPanel_Title_Font_Size: var(--sapGroup_Title_FontSize);
   --fdPanel_Content_Background_Color: transparent;
   --fdPanel_Margin_Bottom: 0.5rem;
@@ -677,14 +677,14 @@
   --fdLink_Icon_Spacing: 0.125rem;
   --fdVerticalNav_Border_Corner_Radius: var(--sapElement_BorderCornerRadius);
   --fdVerticalNav_Text_Shadow: none;
-  --fdVerticalNav_Icon_Color: var(--sapHighlightColor);
+  --fdVerticalNav_Icon_Color: var(--sapTextColor);
   --fdVerticalNav_Item_Expanded_Box_Shadow: none;
   --fdVerticalNav_Item_Expanded_Border_Radius: none;
   --fdVerticalNav_Item_Expanded_Margin: 0;
   --fdVerticalNav_Item_Expanded_Padding_Left: 0.75rem;
   --fdVerticalNavigation_Indicator_Spacing: 0;
   --fdVerticalNav_Item_Expandable_Margin_Block: 0;
-  --fdVerticalNav_Item_Border_Top_Bottom: var(--sapList_BorderWidth) solid var(--sapList_BorderColor);
+  --fdVerticalNav_Item_Border_Top_Bottom: 0;
   --fdVerticalNav_Expanded_Item_Margin_Left: -0.75rem;
   --fdVerticalNav_Item_Text_Spacing: 2.75rem;
   --fdVerticalNav_Item_Focus_Outline_Offset: -0.3125rem;
@@ -1381,7 +1381,7 @@
   --fdModal_BackgroundColor: rgba(0, 0, 0, 0.2);
 
   --fdInput_Field_Padding_Inline: 1rem;
-  --fdInput_Field_Compact_Padding: .75rem;
+  --fdInput_Field_Compact_Padding: 0.75rem;
   --bkPopoverBody_BackgroundColor: var(--sapGroup_ContentBackground);
 }
 
@@ -1401,11 +1401,8 @@ input {
   z-index: 300;
 }
 
-.fd-vertical-nav .fd-list__navigation-item.fd-list__navigation-item--indicated,
-.fd-vertical-nav .fd-list__navigation-item.fd-list__navigation-item--indicated .fd-list__navigation-item-arrow,
-.fd-vertical-nav .fd-list__navigation-item.fd-list__navigation-item--indicated .fd-list__navigation-item-icon,
-.fd-vertical-nav .fd-list__navigation-item.fd-list__navigation-item--indicated .fd-list__navigation-item-text {
-  color: var(--sapTextColor);
+.fd-vertical-nav .fd-list__navigation-item.fd-list__navigation-item--indicated:hover .fd-list__navigation-item-icon {
+  color: var(--sapSelectedColor);
 }
 
 .fd-vertical-nav .fd-list__navigation-item.fd-list__navigation-item--indicated {
@@ -1423,16 +1420,10 @@ input {
   background: #fff;
 }
 
+.fd-list__navigation-item--indicated:hover i.bk-icon--svg svg,
 .fd-list__navigation-item--indicated i.bk-icon--svg svg {
-  fill: var(--sapTextColor);
-  color: var(--sapTextColor);
-}
-
-.fd-vertical-nav .fd-list__navigation-item.is-expanded .fd-list__navigation-item.fd-list__navigation-item--indicated,
-.fd-vertical-nav .fd-list__navigation-item.is-expanded .fd-list__navigation-item.fd-list__navigation-item--indicated .fd-list__navigation-item-arrow,
-.fd-vertical-nav .fd-list__navigation-item.is-expanded .fd-list__navigation-item.fd-list__navigation-item--indicated .fd-list__navigation-item-icon,
-.fd-vertical-nav .fd-list__navigation-item.is-expanded .fd-list__navigation-item.fd-list__navigation-item--indicated .fd-list__navigation-item-text {
-  color: var(--sapTextColor);
+  fill: var(--sapSelectedColor);
+  color: var(--sapSelectedColor);
 }
 
 .fd-vertical-nav__utility-section::before {
@@ -1606,12 +1597,12 @@ input {
 }
 
 .bk-button--round,
-.fd-button:not([class*="-menu"]).fd-button:not([class*="-compact"]).fd-button:not([label=""]).fd-button:not([label]) {
+.fd-button:not([class*='-menu']).fd-button:not([class*='-compact']).fd-button:not([label='']).fd-button:not([label]) {
   --fdButton_Padding_X: 0;
 }
 
 .fd-button {
-  --fdButton_Padding_X: .875rem;
+  --fdButton_Padding_X: 0.875rem;
 }
 
 .fd-button-split > button:first-of-type {
@@ -1635,31 +1626,34 @@ input {
 }
 
 .fd-step-input.is-readonly .fd-step-input__input.fd-input {
-	--fdInput_Field_Padding_Inline: 1rem;
+  --fdInput_Field_Padding_Inline: 1rem;
 }
 
 .fd-checkbox__checkmark {
-	border-radius: var(--fdCheckbox_Border_Radius);
+  border-radius: var(--fdCheckbox_Border_Radius);
 }
 
 .fd-list__item .fd-checkbox__checkmark,
-.fd-checkbox[class*="-compact"] + .fd-checkbox__label > .fd-checkbox__checkmark {
-	border-radius: var(--fdCheckbox_Compact_Border_Radius);
+.fd-checkbox[class*='-compact'] + .fd-checkbox__label > .fd-checkbox__checkmark {
+  border-radius: var(--fdCheckbox_Compact_Border_Radius);
 }
-.fd-list__item.is-selected, .fd-list__item[aria-selected="true"],
-.fd-list__link.is-selected, .fd-list__link[aria-selected="true"] {
-	--fdList_Item_Text_Color: var(--sapBrandColor);
+.fd-list__item.is-selected,
+.fd-list__item[aria-selected='true'],
+.fd-list__link.is-selected,
+.fd-list__link[aria-selected='true'] {
+  --fdList_Item_Text_Color: var(--sapBrandColor);
   --fdList_Item_Border_Color: transparent;
 }
 
-.fd-list--selection .fd-list__item.is-selected, .fd-list--selection .fd-list__item[aria-selected="true"] {
-	--fdList_Item_Text_Color: var(--sapBrandColor);
+.fd-list--selection .fd-list__item.is-selected,
+.fd-list--selection .fd-list__item[aria-selected='true'] {
+  --fdList_Item_Text_Color: var(--sapBrandColor);
   --fdList_Item_Border_Color: var(--sapList_BorderColor);
 }
 
 .fd-input-group .fd-input-group__input:first-child,
 .fd-select__text-content {
-	padding-inline-start: .875rem;
+  padding-inline-start: 0.875rem;
 }
 
 .fd-textarea {
@@ -1667,18 +1661,18 @@ input {
 }
 
 .fd-token:not(.fd-token--readonly) {
-	--fdToken_Padding_Inline: 0.625rem 0;
+  --fdToken_Padding_Inline: 0.625rem 0;
 }
 
 .fd-tool-header {
-	border: none;
+  border: none;
 }
 
 .fd-vertical-nav {
-	-webkit-box-shadow: 0 0 0 0.0625rem var(--sapList_BorderColor), 0 0 0 0.0625rem var(--sapList_BorderColor);
+  -webkit-box-shadow: 0 0 0 0.0625rem var(--sapList_BorderColor), 0 0 0 0.0625rem var(--sapList_BorderColor);
   box-shadow: 0 0 0 0.0625rem var(--sapList_BorderColor), 0 0 0 0.0625rem var(--sapList_BorderColor);
 }
 
 .fd-vertical-nav .fd-list__navigation-item.fd-list__navigation-item--indicated {
-	--sapList_SelectionBackgroundColor: #fff;
+  --sapList_SelectionBackgroundColor: #fff;
 }
