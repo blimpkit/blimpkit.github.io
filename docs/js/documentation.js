@@ -48,6 +48,11 @@ documentation.directive('codeBlock', () => ({
 
 // Initialize controller
 documentation.controller('DocumentationViewController', function ($scope, $location) {
+    $scope.$on('$locationChangeSuccess', (_, newUrl, oldUrl) => {
+        if (newUrl !== oldUrl) {
+            $scope.selectedPage = $location.search().component ?? 'introduction';
+        }
+    });
     // Documentation specific stuff
     $scope.version = angular.module('blimpKit').info().version;
     $scope.theme = 'blimpkit-auto';
