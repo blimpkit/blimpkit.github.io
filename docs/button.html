@@ -172,33 +172,25 @@
             <td bk-table-cell>disabled-focusable</td>
             <td bk-table-cell>boolean</td>
             <td bk-table-cell>False</td>
-            <td bk-table-cell>Set the disabled but focusable state. This must always be used with
-                the
-                'instructions' attribute.</td>
+            <td bk-table-cell>Set the disabled but focusable state. This must always be used with the 'instructions' attribute.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>instructions</td>
             <td bk-table-cell>string</td>
             <td bk-table-cell>False</td>
-            <td bk-table-cell>Short description when the button is disabled. It should contain the
-                reason
-                and what needs to be done to enable it. This is for screen readers.</td>
+            <td bk-table-cell>Short description when the button is disabled. It should contain the reason and what needs to be done to enable it. This is for screen readers.</td>
         </tr>
         <tr bk-table-row>
-            <td bk-table-cell>type</td>
+            <td bk-table-cell>state</td>
             <td bk-table-cell>string</td>
             <td bk-table-cell>False</td>
-            <td bk-table-cell>'emphasized', 'transparent', 'ghost', 'positive', 'negative' and
-                'attention'.
-                If not specified, normal state is assumed.</td>
+            <td bk-table-cell>'emphasized', 'transparent', 'ghost', 'positive', 'negative' and 'attention'. If not specified, normal state is assumed.</td>
         </tr>
         <tr bk-table-row>
             <td bk-table-cell>callback</td>
             <td bk-table-cell>function</td>
             <td bk-table-cell>False</td>
-            <td bk-table-cell>The passed function will be called when the main action button is
-                clicked.
-            </td>
+            <td bk-table-cell>The passed function will be called when the main action button is clicked.</td>
         </tr>
     </tbody>
 </table>
@@ -219,8 +211,7 @@
 <code-block>
     <bk-button label="Normal"></bk-button>
     <bk-button label="Disabled" ng-disabled="true"></bk-button>
-    <bk-button label="Disabled focusable" disabled-focusable="true" instructions="disabled focusable button">
-    </bk-button>
+    <bk-button label="Disabled focusable" disabled-focusable="true" instructions="disabled focusable button"></bk-button>
 </code-block>
 <h3>Compact button</h3>
 <code-block>
