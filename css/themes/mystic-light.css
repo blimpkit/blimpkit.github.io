@@ -1643,7 +1643,7 @@ input {
     border-radius: var(--fdCheckbox_Border_Radius);
 }
 
-.fd-list__item .fd-checkbox__checkmark,
+[class*='-compact'] .fd-checkbox__checkmark,
 .fd-checkbox[class*='-compact']+.fd-checkbox__label>.fd-checkbox__checkmark {
     border-radius: var(--fdCheckbox_Compact_Border_Radius);
 }
