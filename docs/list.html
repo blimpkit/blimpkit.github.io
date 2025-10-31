@@ -273,6 +273,12 @@
             <td bk-table-cell>False</td>
             <td bk-table-cell>Path to the thumbnail image</td>
         </tr>
+        <tr bk-table-row>
+            <td bk-table-cell>loading</td>
+            <td bk-table-cell>boolean</td>
+            <td bk-table-cell>False</td>
+            <td bk-table-cell>Shows a loader instead of an icon</td>
+        </tr>
     </tbody>
 </table>
 
@@ -443,6 +449,10 @@
         <bk-list-item>
             <bk-list-thumbnail glyph="sap-icon--activate"></bk-list-thumbnail>
             <bk-list-content item-title="List Item Title">Byline (description)</bk-list-content>
+        </bk-list-item>
+        <bk-list-item>
+            <bk-list-thumbnail loading="true"></bk-list-thumbnail>
+            <bk-list-content item-title="Loading...">Spinning...</bk-list-content>
         </bk-list-item>
         <bk-list-item>
             <bk-list-thumbnail glyph="sap-icon--employee"></bk-list-thumbnail>
