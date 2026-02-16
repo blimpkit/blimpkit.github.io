@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2025 Eclipse Dirigible contributors
+ * Copyright (c) 2026 Eclipse Dirigible contributors
  *
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
@@ -10,22 +10,23 @@
  * SPDX-License-Identifier: EPL-2.0
  */
 blimpkit.directive('bkLink', (classNames) => ({
-    restrict: 'E',
-    transclude: true,
-    replace: true,
-    scope: {
-        isActive: '<?',
-        isFocus: '<?',
-        leftGlyph: '@?',
-        rightGlyph: '@?',
-        state: '@?',
-    },
-    link: (scope) => {
-        scope.getClasses = () => classNames('fd-link', {
-            'is-active': scope.isActive === true,
-            'is-focus': scope.isFocus === true,
-            [`fd-link--${scope.state}`]: scope.state,
-        });
-    },
-    template: '<a ng-class="getClasses()" tabindex="0"><span ng-if="leftGlyph" class="{{leftGlyph}}"></span><span class="fd-link__content" ng-transclude></span><span ng-if="rightGlyph" class="{{rightGlyph}}"></span></a>',
+  restrict: 'E',
+  transclude: true,
+  replace: true,
+  scope: {
+    isActive: '<?',
+    isFocus: '<?',
+    leftGlyph: '@?',
+    rightGlyph: '@?',
+    state: '@?',
+  },
+  link: (scope) => {
+    scope.getClasses = () =>
+      classNames('fd-link', {
+        'is-active': scope.isActive === true,
+        'is-focus': scope.isFocus === true,
+        [`fd-link--${scope.state}`]: scope.state,
+      });
+  },
+  template: '<a ng-class="getClasses()" tabindex="0"><span ng-if="leftGlyph" class="{{leftGlyph}}"></span><span class="fd-link__content" ng-transclude></span><span ng-if="rightGlyph" class="{{rightGlyph}}"></span></a>',
 }));

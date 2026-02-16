@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2025 Eclipse Dirigible contributors
+ * Copyright (c) 2026 Eclipse Dirigible contributors
  *
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
@@ -9,63 +9,72 @@
  * SPDX-FileCopyrightText: Eclipse Dirigible contributors
  * SPDX-License-Identifier: EPL-2.0
  */
-blimpkit.directive('bkToolHeader', (classNames) => ({
+blimpkit
+  .directive('bkToolHeader', (classNames) => ({
     restrict: 'E',
     transclude: true,
     replace: true,
     scope: {
-        hasMenu: '<?',
-        size: '@?',
-        responsive: '<?'
+      hasMenu: '<?',
+      size: '@?',
+      responsive: '<?',
     },
     link: (scope) => {
-        scope.getClasses = () => classNames('fd-tool-header', {
-            'fd-tool-header--menu': scope.hasMenu,
-            [`fd-tool-header--${scope.size}`]: scope.size,
+      scope.getClasses = () =>
+        classNames('fd-tool-header', {
+          'fd-tool-header--menu': scope.hasMenu,
+          [`fd-tool-header--${scope.size}`]: scope.size,
         });
     },
-    template: '<div ng-class="getClasses()" ng-transclude></div>'
-})).directive('bkToolHeaderGroup', () => ({
+    template: '<div ng-class="getClasses()" ng-transclude></div>',
+  }))
+  .directive('bkToolHeaderGroup', () => ({
     restrict: 'A',
     link: (_scope, element) => {
-        element.addClass('fd-tool-header__group');
+      element.addClass('fd-tool-header__group');
     },
-})).directive('bkToolHeaderGroup', (classNames) => ({
+  }))
+  .directive('bkToolHeaderGroup', (classNames) => ({
     restrict: 'E',
     transclude: true,
     replace: true,
     scope: {
-        hasMenu: '<?',
-        position: '@?',
-        isHidden: '<?',
+      hasMenu: '<?',
+      position: '@?',
+      isHidden: '<?',
     },
     link: (scope) => {
-        scope.getClasses = () => classNames({
-            'fd-tool-header__group--menu': scope.hasMenu,
-            'fd-tool-header__group--hidden': scope.isHidden,
-            'fd-tool-header__group--center': scope.position === 'center',
-            'fd-tool-header__group--actions': scope.position === 'right'
-        })
+      scope.getClasses = () =>
+        classNames({
+          'fd-tool-header__group--menu': scope.hasMenu,
+          'fd-tool-header__group--hidden': scope.isHidden,
+          'fd-tool-header__group--center': scope.position === 'center',
+          'fd-tool-header__group--actions': scope.position === 'right',
+        });
     },
-    template: '<div class="fd-tool-header__group" ng-class="getClasses()" ng-transclude></div>'
-})).directive('bkToolHeaderElement', () => ({
+    template: '<div class="fd-tool-header__group" ng-class="getClasses()" ng-transclude></div>',
+  }))
+  .directive('bkToolHeaderElement', () => ({
     restrict: 'A',
     link: (_scope, element) => {
-        element.addClass('fd-tool-header__element');
+      element.addClass('fd-tool-header__element');
     },
-})).directive('bkToolHeaderButton', () => ({
+  }))
+  .directive('bkToolHeaderButton', () => ({
     restrict: 'A',
     link: (_scope, element) => {
-        element.addClass('fd-button--tool-header');
+      element.addClass('fd-button--tool-header');
     },
-})).directive('bkToolHeaderTitle', () => ({
+  }))
+  .directive('bkToolHeaderTitle', () => ({
     restrict: 'A',
     link: (_scope, element) => {
-        element.addClass('fd-tool-header__product-name');
+      element.addClass('fd-tool-header__product-name');
     },
-})).directive('bkToolHeaderLogo', () => ({
+  }))
+  .directive('bkToolHeaderLogo', () => ({
     restrict: 'A',
     link: (_scope, element) => {
-        element.addClass('fd-tool-header__logo');
+      element.addClass('fd-tool-header__logo');
     },
-}));
+  }));

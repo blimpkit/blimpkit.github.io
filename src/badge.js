@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2025 Eclipse Dirigible contributors
+ * Copyright (c) 2026 Eclipse Dirigible contributors
  *
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
@@ -10,8 +10,8 @@
  * SPDX-License-Identifier: EPL-2.0
  */
 blimpkit.directive('bkBadge', () => ({
-    restrict: 'EA',
-    replace: true,
-    transclude: true,
-    template: '<div class="fd-badge" ng-transclude></div>'
+  restrict: 'EA',
+  replace: true,
+  transclude: true,
+  template: '<div class="fd-badge" ng-transclude></div>',
 }));

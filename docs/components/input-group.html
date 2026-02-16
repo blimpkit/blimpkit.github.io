@@ -1,0 +1,78 @@
+<h2>Input Group</h2>
+<p>The input group includes form inputs with add-ons that allow the user to better understand the information being entered.</p>
+
+<h2>Attributes</h2>
+<table bk-table>
+  <thead bk-table-header>
+    <tr bk-table-row>
+      <th bk-table-header-cell>Name</th>
+      <th bk-table-header-cell>Type</th>
+      <th bk-table-header-cell>Required</th>
+      <th bk-table-header-cell>Description</th>
+    </tr>
+  </thead>
+  <tbody bk-table-body>
+    <tr bk-table-row>
+      <td bk-table-cell>compact</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Input size.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>state</td>
+      <td bk-table-cell>string</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>You have four options - 'error', 'success', 'warning' and 'information'.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>focus</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>If the input group is in a focused state.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>is-disabled</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>If the input group is disabled.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>is-readonly</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>If the input group is readonly.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Examples</h2>
+<code-block>
+  <bk-fieldset>
+    <bk-form-group>
+      <bk-form-item>
+        <bk-form-label for="igid">Input group with a button and icon</bk-form-label>
+        <bk-input-group>
+          <bk-input-group-addon>
+            <bk-button label="Action"></bk-button>
+          </bk-input-group-addon>
+          <bk-input id="igid" type="text" placeholder="Text here"></bk-input>
+          <bk-input-group-addon>
+            <span class="sap-icon--hide" role="presentation"></span>
+          </bk-input-group-addon>
+        </bk-input-group>
+      </bk-form-item>
+      <bk-form-item>
+        <bk-form-label for="igid2">Input group with an icon and button</bk-form-label>
+        <bk-input-group>
+          <bk-input-group-addon>
+            <span class="sap-icon--cart" role="presentation"></span>
+          </bk-input-group-addon>
+          <bk-input id="igid2" type="text" placeholder="Text here"></bk-input>
+          <bk-input-group-addon>
+            <bk-button label="Action"></bk-button>
+          </bk-input-group-addon>
+        </bk-input-group>
+      </bk-form-item>
+    </bk-form-group>
+  </bk-fieldset>
+</code-block>

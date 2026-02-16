@@ -1,0 +1,211 @@
+<h2>Checkbox</h2>
+<p>A checkbox lets the user set a binary value such as “true/false”. When the user selects the checkbox, it toggles between:</p>
+
+<ul>
+  <li><strong>Checked</strong>: the state described by the checkbox text applies, or that the item has been chosen.</li>
+  <li><strong>Un-checked</strong>: the state described by the checkbox is not applied.</li>
+  <li>
+    <strong>Tri-state</strong>: a state that indicates it is neither checked nor unchecked. JavaScript must be used to set the input's 'indeterminate' property to true. The main purpose of the tri-state is to represent a mixed selection of
+    states of dependent input fields. If some (but not all) of the dependent fields are selected, the checkbox shows a partially selected state. This is only a visual state and can`t be achieved by a direct user interaction. In this example
+    the indeterminate state is set on page load.
+  </li>
+</ul>
+
+<h2>Attributes - Checkbox</h2>
+<table bk-table>
+  <thead bk-table-header>
+    <tr bk-table-row>
+      <th bk-table-header-cell>Name</th>
+      <th bk-table-header-cell>Type</th>
+      <th bk-table-header-cell>Required</th>
+      <th bk-table-header-cell>Description</th>
+    </tr>
+  </thead>
+  <tbody bk-table-body>
+    <tr bk-table-row>
+      <td bk-table-cell>compact</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Checkbox size.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>state</td>
+      <td bk-table-cell>string</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>You have five options - 'error', 'success', 'warning' and 'information'.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>indeterminate</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Indeterminate/tri-state.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>display-mode</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>In Display Mode, the checkbox is replaced by two icons to represent the checked and unchecked states.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Attributes - Checkbox Label</h2>
+<table bk-table>
+  <thead bk-table-header>
+    <tr bk-table-row>
+      <th bk-table-header-cell>Name</th>
+      <th bk-table-header-cell>Type</th>
+      <th bk-table-header-cell>Required</th>
+      <th bk-table-header-cell>Description</th>
+    </tr>
+  </thead>
+  <tbody bk-table-body>
+    <tr bk-table-row>
+      <td bk-table-cell>compact</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Checkbox label size.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>is-hover</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>If the checkbox is in hover state.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>empty</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>If the label has text.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>wrap</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>By default, the label text will be truncated. Set this to true if you want it to wrap instead.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>required</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>If the checkbox is required. You can alse use ng-required.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Examples</h2>
+
+<bk-fieldset>
+  <bk-form-group>
+    <bk-form-item>
+      <code-block>
+        <bk-checkbox id="cbid1" compact="false"></bk-checkbox>
+        <bk-checkbox-label for="cbid1">Default</bk-checkbox-label>
+      </code-block>
+    </bk-form-item>
+    <bk-form-item>
+      <code-block>
+        <bk-checkbox id="cbid2" compact="false" ng-model="checkboxes.model"></bk-checkbox>
+        <bk-checkbox-label for="cbid2">Checked</bk-checkbox-label>
+        <code-block type="js"> $scope.checkboxes = { model: true }; </code-block>
+      </code-block>
+    </bk-form-item>
+    <bk-form-item>
+      <code-block>
+        <bk-checkbox id="cbid3" compact="false" ng-required="true" ng-checked="true"></bk-checkbox>
+        <bk-checkbox-label for="cbid3" required="true">Required</bk-checkbox-label>
+      </code-block>
+    </bk-form-item>
+    <bk-form-item>
+      <code-block>
+        <bk-checkbox id="cbid4" compact="false" state="error"></bk-checkbox>
+        <bk-checkbox-label for="cbid4">Error</bk-checkbox-label>
+      </code-block>
+    </bk-form-item>
+    <bk-form-item>
+      <code-block>
+        <bk-checkbox id="cbid5" compact="false" state="success"></bk-checkbox>
+        <bk-checkbox-label for="cbid5">Success</bk-checkbox-label>
+      </code-block>
+    </bk-form-item>
+    <bk-form-item>
+      <code-block>
+        <bk-checkbox id="cbid6" compact="false" state="warning"></bk-checkbox>
+        <bk-checkbox-label for="cbid6">Warning</bk-checkbox-label>
+      </code-block>
+    </bk-form-item>
+    <bk-form-item>
+      <code-block>
+        <bk-checkbox id="cbid7" compact="false" state="information"></bk-checkbox>
+        <bk-checkbox-label for="cbid7">Information</bk-checkbox-label>
+      </code-block>
+    </bk-form-item>
+    <bk-form-item>
+      <code-block>
+        <bk-checkbox id="cbid8" compact="false"></bk-checkbox>
+        <bk-checkbox-label for="cbid8" is-hover="true">Hover</bk-checkbox-label>
+      </code-block>
+    </bk-form-item>
+    <bk-form-item>
+      <code-block>
+        <bk-checkbox id="cbid9" compact="false" ng-disabled="true"></bk-checkbox>
+        <bk-checkbox-label for="cbid9" is-hover="true">Disabled</bk-checkbox-label>
+      </code-block>
+    </bk-form-item>
+    <bk-form-item>
+      <code-block>
+        <bk-checkbox id="cbid10" compact="false" indeterminate="true"></bk-checkbox>
+        <bk-checkbox-label for="cbid10">Indeterminate</bk-checkbox-label>
+      </code-block>
+    </bk-form-item>
+    <bk-form-item>
+      <code-block>
+        <bk-checkbox id="cbid11" compact="false" readonly></bk-checkbox>
+        <bk-checkbox-label for="cbid11">Default (readonly)</bk-checkbox-label>
+      </code-block>
+    </bk-form-item>
+    <bk-form-item>
+      <code-block>
+        <bk-checkbox id="cbid12" compact="false" ng-checked="true" readonly></bk-checkbox>
+        <bk-checkbox-label for="cbid12">Checked (readonly)</bk-checkbox-label>
+      </code-block>
+    </bk-form-item>
+    <bk-form-item>
+      <code-block>
+        <bk-checkbox id="cbid13" compact="false" indeterminate="true" readonly></bk-checkbox>
+        <bk-checkbox-label for="cbid13">Indeterminate (readonly)</bk-checkbox-label>
+      </code-block>
+    </bk-form-item>
+  </bk-form-group>
+</bk-fieldset>
+<h3>Sizes</h3>
+<code-block>
+  <bk-checkbox id="cbid11" compact="true"></bk-checkbox>
+  <bk-checkbox-label for="cbid11">Compact</bk-checkbox-label>
+</code-block>
+<h3>No label</h3>
+<bk-form-item>
+  <code-block>
+    <bk-checkbox id="cbide" compact="false"></bk-checkbox>
+    <bk-checkbox-label empty="true" for="cbide"></bk-checkbox-label>
+  </code-block>
+</bk-form-item>
+<h3>Display-only mode</h3>
+<p>
+  In display-only Mode, the checkbox is replaced by an icon to represent the checked, unchecked and indeterminate states and it's not interactive, not editable, not focusable and not in the tab chain. This setting can be used for forms in
+  review mode.
+</p>
+<code-block>
+  <bk-form-item>
+    <bk-checkbox id="cbiddo1" display-mode="true"></bk-checkbox>
+    <bk-checkbox-label for="cbiddo1">Unchecked Icon</bk-checkbox-label>
+  </bk-form-item>
+  <bk-form-item>
+    <bk-checkbox id="cbiddo2" display-mode="true" ng-checked="true"></bk-checkbox>
+    <bk-checkbox-label for="cbiddo2">Checked Icon</bk-checkbox-label>
+  </bk-form-item>
+  <bk-form-item>
+    <bk-checkbox id="cbiddo3" display-mode="true" indeterminate="true"></bk-checkbox>
+    <bk-checkbox-label for="cbiddo3">Indeterminate</bk-checkbox-label>
+  </bk-form-item>
+</code-block>

@@ -10,5 +10,5 @@ BlimpKit is its own library and contains some extra components that are unique t
 
 Officially, there are two themes available.
 
-* BlimpKit - This is the default theme and it has light, dark and auto modes.
-* Classic - SAP Quartz-based theme. The differences are minimal.
+- BlimpKit - This is the default theme and it has light, dark and auto modes.
+- Classic - SAP Quartz-based theme. The differences are minimal.

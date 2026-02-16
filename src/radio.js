@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2025 Eclipse Dirigible contributors
+ * Copyright (c) 2026 Eclipse Dirigible contributors
  *
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
@@ -9,42 +9,46 @@
  * SPDX-FileCopyrightText: Eclipse Dirigible contributors
  * SPDX-License-Identifier: EPL-2.0
  */
-blimpkit.directive('bkRadio', (classNames) => ({
+blimpkit
+  .directive('bkRadio', (classNames) => ({
     restrict: 'E',
     transclude: false,
     replace: true,
     scope: {
-        compact: '<?',
-        state: '@?',
+      compact: '<?',
+      state: '@?',
     },
     link: (scope, _elem, attrs) => {
-        const states = {
-            'error': 'error',
-            'success': 'success',
-            'warning': 'warning',
-            'information': 'information'
-        };
-        scope.getClasses = () => classNames({
-            'fd-radio--compact': scope.compact === true,
-            'is-disabled': Object.prototype.hasOwnProperty.call(attrs, 'disabled') && attrs.disabled === true,
-            'is-readonly': Object.prototype.hasOwnProperty.call(attrs, 'readonly') && attrs.readonly === true,
-            [`is-${states[scope.state]}`]: scope.state && states[scope.state] && !Object.prototype.hasOwnProperty.call(attrs, 'readonly'),
+      const states = {
+        error: 'error',
+        success: 'success',
+        warning: 'warning',
+        information: 'information',
+      };
+      scope.getClasses = () =>
+        classNames({
+          'fd-radio--compact': scope.compact === true,
+          'is-disabled': Object.prototype.hasOwnProperty.call(attrs, 'disabled') && attrs.disabled === true,
+          'is-readonly': Object.prototype.hasOwnProperty.call(attrs, 'readonly') && attrs.readonly === true,
+          [`is-${states[scope.state]}`]: scope.state && states[scope.state] && !Object.prototype.hasOwnProperty.call(attrs, 'readonly'),
         });
     },
     template: '<input type="radio" class="fd-radio" ng-class="getClasses()">',
-})).directive('bkRadioLabel', (classNames) => ({
+  }))
+  .directive('bkRadioLabel', (classNames) => ({
     restrict: 'E',
     transclude: true,
     replace: true,
     scope: {
-        wrap: '<?',
-        topAlign: '<?',
+      wrap: '<?',
+      topAlign: '<?',
     },
     link: (scope) => {
-        scope.getClasses = () => classNames({
-            'fd-radio__label--wrap': scope.wrap === true,
-            'fd-radio__label--wrap-top-aligned': scope.topAlign === true,
+      scope.getClasses = () =>
+        classNames({
+          'fd-radio__label--wrap': scope.wrap === true,
+          'fd-radio__label--wrap-top-aligned': scope.topAlign === true,
         });
     },
     template: '<label class="fd-radio__label" ng-class="getClasses()"><span class="fd-radio__text" ng-transclude></span></label>',
-}));
+  }));

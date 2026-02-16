@@ -1,0 +1,79 @@
+<img src="./logo/blimpkit-full.svg" alt="BlimpKit" style="max-height: 15rem; max-width: 100%" />
+<h1>What is BlimpKit?</h1>
+<p>
+  BlimpKit is an AngularJS directive/component UI library based on the
+  <a href="https://sap.github.io/fundamental-styles/">fundamental-styles</a> CSS library.
+</p>
+<p>While it mostly follows the fundamental-styles style guides, it deviates in some places and some of the widgets are modified and/or removed, therefore it should not be viewed as an official implementation.</p>
+<p>BlimpKit is its own library and contains some extra components that are unique to it.</p>
+
+<h2>Getting Started</h2>
+<p>The library is modular, so you can use as little or as much as you need.</p>
+
+<h3>Dependencies</h3>
+<p>Besides BlimpKit, you will also need AngularJS, jQuery, fundamental-styles and SAP Theming:</p>
+<code-block type="text-html">
+  &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js&quot;&gt;&lt;/script&gt; &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js&quot;&gt;&lt;/script&gt; &lt;script
+  src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular-aria.js&quot;&gt;&lt;/script&gt;
+</code-block>
+
+<h3>Base styles and themes</h3>
+<p>
+  Themes are supported. Officially, there are three themes availabe -
+  <b>BlimpKit</b>, <b>Classic</b> and <b>Mystic</b>. The first two have a light, dark and auto modes. The Mystic theme is light-only. You can replace 'themeName' with the name of the theme that you want. The available options are:
+</p>
+<ul>
+  <li><b>blimpkit-auto</b></li>
+  <li><b>blimpkit-light</b></li>
+  <li><b>blimpkit-dark</b></li>
+  <li><b>classic-auto</b></li>
+  <li><b>classic-light</b></li>
+  <li><b>classic-dark</b></li>
+  <li><b>mystic-light</b></li>
+</ul>
+
+<p>For light or dark:</p>
+<code-block type="text-html">
+  &lt;link href=&quot;https://unpkg.com/fundamental-styles@0.38.0/dist/fundamental-styles.css&quot; rel=&quot;stylesheet&quot;&gt; &lt;link href=&quot;/path/to/node_modules/blimpkit/css/themes/{themeName}.css&quot;
+  rel=&quot;stylesheet&quot;&gt; &lt;link href=&quot;/path/to/node_modules/blimpkit/css/themes/{themeName}-variables.css&quot; rel=&quot;stylesheet&quot;&gt; &lt;link href=&quot;/path/to/node_modules/blimpkit/css/blimpkit.css&quot;
+  rel=&quot;stylesheet&quot;&gt;
+</code-block>
+
+<p>For auto:</p>
+<code-block type="text-html">
+  &lt;link href=&quot;https://unpkg.com/fundamental-styles@0.38.0/dist/fundamental-styles.css&quot; rel=&quot;stylesheet&quot;&gt; &lt;link href=&quot;/path/to/node_modules/blimpkit/css/themes/{themeName}-auto.css&quot;
+  rel=&quot;stylesheet&quot;&gt; &lt;link href=&quot;/path/to/node_modules/blimpkit/css/blimpkit.css&quot; rel=&quot;stylesheet&quot;&gt;
+</code-block>
+
+<h3>Fonts and icons</h3>
+
+<p>Fonts and icons are not included or configured by default. You must create you own CSS file and configure the fonts from the <b>@sap-theming</b> package.</p>
+
+<code-block type="css">
+  @font-face { font-family: &quot;72&quot;; src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Regular-full.woff&quot;) format(&quot;woff&quot;); font-weight: 400;
+  font-style: normal; font-display: swap; } @font-face { font-family: &quot;72&quot;; src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Light-full.woff&quot;)
+  format(&quot;woff&quot;); font-weight: 300; font-style: normal; font-display: swap; } @font-face { font-family: &quot;72-Light&quot;;
+  src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Light-full.woff&quot;) format(&quot;woff&quot;); font-weight: 300; font-style: normal; font-display: swap; } @font-face
+  { font-family: &quot;72&quot;; src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Bold-full.woff&quot;) format(&quot;woff&quot;); font-weight: 700; font-style: normal;
+  font-display: swap; } @font-face { font-family: &quot;72-Bold&quot;; src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Bold-full.woff&quot;) format(&quot;woff&quot;);
+  font-weight: 700; font-style: normal; font-display: swap; } @font-face { font-family: &quot;72Mono-Regular&quot;;
+  src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72Mono-Regular-full.woff&quot;) format(&quot;woff&quot;); font-style: normal; font-display: swap; } @font-face {
+  font-family: &quot;72Mono-Bold&quot;; src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72Mono-Bold-full.woff&quot;) format(&quot;woff&quot;); font-style: normal;
+  font-display: swap; } @font-face { font-family: &quot;SAP-icons&quot;; src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/fonts/SAP-icons.woff&quot;) format(&quot;woff&quot;);
+  font-weight: normal; font-style: normal; font-display: swap; } @font-face { font-family: &quot;BusinessSuiteInAppSymbols&quot;;
+  src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/fonts/BusinessSuiteInAppSymbols.woff&quot;) format(&quot;woff&quot;); font-weight: normal; font-style: normal; font-display:
+  swap; } @font-face { font-family: &quot;SAP-icons-TNT&quot;; src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/fonts/SAP-icons-TNT.woff&quot;) format(&quot;woff&quot;);
+  font-weight: normal; font-style: normal; font-display: swap; }
+</code-block>
+
+<h3>Initialization and use</h3>
+
+<p>Include BlimpKit and all components:</p>
+
+<code-block type="text-html"> &lt;script type=&quot;text/javascript&quot; src=&quot;/path/to/node_modules/blimpkit/blimpkit.min.js&quot;&gt;&lt;/script&gt; </code-block>
+
+<p>Add BlimpKit to your module as a dependency:</p>
+
+<code-block type="js"> angular.module('yourModuleName', ['blimpKit']); </code-block>
+
+<p>That's it! You can now use BlimpKit. For examples, look under the "Components" section in the sidebar.</p>

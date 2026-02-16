@@ -1,0 +1,119 @@
+<h2>Upload collection</h2>
+<p>The upload collection control allows users to upload single or multiple files.</p>
+
+<h2>Attributes - Upload Collection</h2>
+<table bk-table>
+  <thead bk-table-header>
+    <tr bk-table-row>
+      <th bk-table-header-cell>Name</th>
+      <th bk-table-header-cell>Type</th>
+      <th bk-table-header-cell>Required</th>
+      <th bk-table-header-cell>Description</th>
+    </tr>
+  </thead>
+  <tbody bk-table-body>
+    <tr bk-table-row>
+      <td bk-table-cell>small</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Whether or not this is the small upload collection.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>selection</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Whether or not this upload collection supports selection.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Attributes - Upload Collection Item</h2>
+<table bk-table>
+  <thead bk-table-header>
+    <tr bk-table-row>
+      <th bk-table-header-cell>Name</th>
+      <th bk-table-header-cell>Type</th>
+      <th bk-table-header-cell>Required</th>
+      <th bk-table-header-cell>Description</th>
+    </tr>
+  </thead>
+  <tbody bk-table-body>
+    <tr bk-table-row>
+      <td bk-table-cell>selected</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Whether or not this item is selected</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>file-name</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>True</td>
+      <td bk-table-cell>The name of the file, not including the type extension.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>extension</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>The file type extension.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>file-name-changed</td>
+      <td bk-table-cell>function</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Event emitted when the user changes a file name. Args: (fileName : String)</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>delete-clicked</td>
+      <td bk-table-cell>function</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Event emitted when presses the delete button.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>editable</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Whether or not this upload collection item supports filename editing.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Examples</h2>
+<code-block>
+  <bk-upload-collection selection="true">
+    <bk-upload-collection-item
+      ng-repeat="file in filesToUpload"
+      file-name="{{file.fileName}}"
+      editable="true"
+      extension="{{file.extension}}"
+      selected="file.selected"
+      ng-click="file.selected=!file.selected"
+      file-name-changed="file.fileName=fileName"
+      delete-clicked="removeFileToUpload(file)"
+    >
+      <bk-list-form-item>
+        <bk-checkbox id="cbid10{{$index}}" aria-labelledby="title{{$index}}" ng-model="file.selected"></bk-checkbox>
+        <bk-checkbox-label empty="true" for="cbid10{{$index}}" ng-click="$event.preventDefault()"></bk-checkbox-label>
+      </bk-list-form-item>
+      <bk-list-thumbnail glyph="sap-icon--activate"></bk-list-thumbnail>
+      <bk-upload-collection-item-content>
+        <bk-upload-collection-title id="title{{$index}}"></bk-upload-collection-title>
+        <bk-upload-collection-form-item></bk-upload-collection-form-item>
+        <bk-upload-collection-description>
+          This is the file description
+          <span bk-upload-collection-text-separator></span>
+          This is an additional description
+        </bk-upload-collection-description>
+        <bk-upload-collection-status-group>
+          <span bk-object-status bk-upload-collection-status-item status="negative" text="This is a negative status"></span>
+          <span bk-upload-collection-text-separator></span>
+          <span bk-object-status bk-upload-collection-status-item status="positive" text="This is a positive status"></span>
+        </bk-upload-collection-status-group>
+      </bk-upload-collection-item-content>
+      <bk-upload-collection-button-group></bk-upload-collection-button-group>
+    </bk-upload-collection-item>
+  </bk-upload-collection>
+  <code-block type="js">
+    $scope.filesToUpload = [ { fileName: 'file1', extension: 'txt', selected: false }, { fileName: 'file2', extension: 'txt', selected: false }, { fileName: 'file3', extension: 'txt', selected: false } ]; $scope.removeFileToUpload =
+    function (file) { let index = $scope.filesToUpload.indexOf(file); if (index >= 0) $scope.filesToUpload.splice(index, 1); };
+  </code-block>
+</code-block>

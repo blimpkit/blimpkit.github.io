@@ -1,0 +1,35 @@
+<h2>Title</h2>
+<p>Title component, used mostly for section/panel headings. The semantic level and visual appearance can be set separately.</p>
+
+<h2>Attributes</h2>
+<table bk-table>
+  <thead bk-table-header>
+    <tr bk-table-row>
+      <th bk-table-header-cell>Name</th>
+      <th bk-table-header-cell>Type</th>
+      <th bk-table-header-cell>Required</th>
+      <th bk-table-header-cell>Description</th>
+    </tr>
+  </thead>
+  <tbody bk-table-body>
+    <tr bk-table-row>
+      <td bk-table-cell>header-size</td>
+      <td bk-table-cell>number</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>If specified overrides the size of the heading element. Must be a number from 1 to 6.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>wrap</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Whether or not the title should wrap.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Examples</h2>
+
+<h3>Sizes</h3>
+<code-block>
+  <h2 bk-title wrap="true" header-size="2" aria-label="title">Section title</h2>
+</code-block>

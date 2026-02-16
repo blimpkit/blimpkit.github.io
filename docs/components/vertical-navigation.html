@@ -1,0 +1,403 @@
+<h2>Vertical Navigation</h2>
+<p>The vertical navigation is used as a top-level application navigation list.</p>
+
+<h2>Attributes - Vertical Nav</h2>
+<table bk-table>
+  <thead bk-table-header>
+    <tr bk-table-row>
+      <th bk-table-header-cell>Name</th>
+      <th bk-table-header-cell>Type</th>
+      <th bk-table-header-cell>Required</th>
+      <th bk-table-header-cell>Description</th>
+    </tr>
+  </thead>
+  <tbody bk-table-body>
+    <tr bk-table-row>
+      <td bk-table-cell>condensed</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Condensed navigation mode.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>can-scroll</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Enable/disable scroll navigation support. Default is false.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Attributes - Vertical Nav Item</h2>
+<table bk-table>
+  <thead bk-table-header>
+    <tr bk-table-row>
+      <th bk-table-header-cell>Name</th>
+      <th bk-table-header-cell>Type</th>
+      <th bk-table-header-cell>Required</th>
+      <th bk-table-header-cell>Description</th>
+    </tr>
+  </thead>
+  <tbody bk-table-body>
+    <tr bk-table-row>
+      <td bk-table-cell>indicated</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Navigation item is indicated.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>expandable</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>The item can expand.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>is-expanded</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>If the item is expanded or not.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Attributes - List Navigation Item Popover</h2>
+<table bk-table>
+  <thead bk-table-header>
+    <tr bk-table-row>
+      <th bk-table-header-cell>Name</th>
+      <th bk-table-header-cell>Type</th>
+      <th bk-table-header-cell>Required</th>
+      <th bk-table-header-cell>Description</th>
+    </tr>
+  </thead>
+  <tbody bk-table-body>
+    <tr bk-table-row>
+      <td bk-table-cell>level</td>
+      <td bk-table-cell>number</td>
+      <td bk-table-cell>True</td>
+      <td bk-table-cell>Navigation item level. There only two levels - 1 and 2</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Attributes - List Navigation Item Arrow</h2>
+<table bk-table>
+  <thead bk-table-header>
+    <tr bk-table-row>
+      <th bk-table-header-cell>Name</th>
+      <th bk-table-header-cell>Type</th>
+      <th bk-table-header-cell>Required</th>
+      <th bk-table-header-cell>Description</th>
+    </tr>
+  </thead>
+  <tbody bk-table-body>
+    <tr bk-table-row>
+      <td bk-table-cell>is-expanded</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>If the popover is expanded or not.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Attributes - List Navigation Item Icon</h2>
+<table bk-table>
+  <thead bk-table-header>
+    <tr bk-table-row>
+      <th bk-table-header-cell>Name</th>
+      <th bk-table-header-cell>Type</th>
+      <th bk-table-header-cell>Required</th>
+      <th bk-table-header-cell>Description</th>
+    </tr>
+  </thead>
+  <tbody bk-table-body>
+    <tr bk-table-row>
+      <td bk-table-cell>glyph</td>
+      <td bk-table-cell>string</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Icon class. For example 'sap-icon--home'.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>svg-path</td>
+      <td bk-table-cell>string</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>The src path to your svg image.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>icon-size</td>
+      <td bk-table-cell>string</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>The size of the item icon. Possible options are include 'lg' and none.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Examples</h2>
+<code-block>
+  <bk-vertical-nav>
+    <bk-vertical-nav-main-section aria-label="main navigation">
+      <bk-list>
+        <bk-list-navigation-item>
+          <bk-list-navigation-item-icon glyph="sap-icon--home"></bk-list-navigation-item-icon>
+          <bk-list-navigation-item-text>Home</bk-list-navigation-item-text>
+        </bk-list-navigation-item>
+        <bk-list-navigation-item>
+          <bk-list-navigation-item-icon svg-path="./logo/blimpkit-symbolic.svg"></bk-list-navigation-item-icon>
+          <bk-list-navigation-item-text>Sample</bk-list-navigation-item-text>
+        </bk-list-navigation-item>
+      </bk-list>
+    </bk-vertical-nav-main-section>
+  </bk-vertical-nav>
+</code-block>
+<h3>Condensed</h3>
+<code-block>
+  <bk-vertical-nav condensed="isNavCondensed">
+    <bk-vertical-nav-main-section aria-label="main navigation">
+      <bk-list>
+        <bk-list-navigation-item condensed="isNavCondensed">
+          <bk-list-navigation-item-icon glyph="sap-icon--home"></bk-list-navigation-item-icon>
+          <bk-list-navigation-item-text>Home</bk-list-navigation-item-text>
+        </bk-list-navigation-item>
+        <bk-list-navigation-item condensed="isNavCondensed">
+          <bk-list-navigation-item-icon svg-path="./logo/blimpkit-symbolic.svg"></bk-list-navigation-item-icon>
+          <bk-list-navigation-item-text>Sample</bk-list-navigation-item-text>
+        </bk-list-navigation-item>
+      </bk-list>
+    </bk-vertical-nav-main-section>
+  </bk-vertical-nav>
+  <code-block type="js"> $scope.isNavCondensed = true; </code-block>
+</code-block>
+<h3>Condensed large icon mode</h3>
+<code-block>
+  <bk-vertical-nav condensed="isNavCondensed">
+    <bk-vertical-nav-main-section aria-label="main navigation">
+      <bk-list>
+        <bk-list-navigation-item condensed="isNavCondensed">
+          <bk-list-navigation-item-icon glyph="sap-icon--home" icon-size="lg"></bk-list-navigation-item-icon>
+          <span bk-list-navigation-item-text>Home</span>
+        </bk-list-navigation-item>
+        <bk-list-navigation-item condensed="isNavCondensed">
+          <bk-list-navigation-item-icon svg-path="./logo/blimpkit-symbolic.svg" icon-size="lg"></bk-list-navigation-item-icon>
+          <span bk-list-navigation-item-text>Sample</span>
+        </bk-list-navigation-item>
+      </bk-list>
+    </bk-vertical-nav-main-section>
+  </bk-vertical-nav>
+  <code-block type="js"> $scope.isNavCondensed = true; </code-block>
+</code-block>
+<h3>Grouping</h3>
+<code-block>
+  <bk-vertical-nav>
+    <bk-vertical-nav-main-section aria-label="main navigation">
+      <bk-list>
+        <bk-list-navigation-item>
+          <bk-list-navigation-item-icon glyph="sap-icon--home"></bk-list-navigation-item-icon>
+          <span bk-list-navigation-item-text>Home</span>
+        </bk-list-navigation-item>
+        <bk-list-navigation-group-header>Group header</bk-list-navigation-group-header>
+        <bk-list-navigation-item>
+          <bk-list-navigation-item-icon svg-path="./logo/blimpkit-symbolic.svg"></bk-list-navigation-item-icon>
+          <span bk-list-navigation-item-text>Sample</span>
+        </bk-list-navigation-item>
+        <bk-list-navigation-item ng-init="expanded = false" expandable="true" ng-click="expanded = !expanded" is-expanded="expanded">
+          <bk-list-navigation-item-icon glyph="sap-icon--folder"></bk-list-navigation-item-icon>
+          <span bk-list-navigation-item-text>Folder</span>
+          <bk-list-navigation-item-arrow aria-label="expand submenu" is-expanded="expanded"></bk-list-navigation-item-arrow>
+          <bk-list>
+            <bk-list-navigation-item>
+              <span bk-list-navigation-item-text>Inner item 1</span>
+            </bk-list-navigation-item>
+            <bk-list-navigation-item indicated="true">
+              <span bk-list-navigation-item-text>Inner item 2</span>
+            </bk-list-navigation-item>
+          </bk-list>
+        </bk-list-navigation-item>
+      </bk-list>
+    </bk-vertical-nav-main-section>
+  </bk-vertical-nav>
+</code-block>
+<h3>Condensed expandable items</h3>
+<code-block>
+  <bk-vertical-nav condensed="isNavCondensed">
+    <bk-vertical-nav-main-section aria-label="main navigation">
+      <bk-list>
+        <bk-list-navigation-item condensed="isNavCondensed">
+          <bk-list-navigation-item-icon glyph="sap-icon--home"></bk-list-navigation-item-icon>
+          <span bk-list-navigation-item-text>Home</span>
+        </bk-list-navigation-item>
+        <bk-list-navigation-item condensed="isNavCondensed">
+          <bk-list-navigation-item-icon svg-path="./logo/blimpkit-symbolic.svg"></bk-list-navigation-item-icon>
+          <span bk-list-navigation-item-text>Sample</span>
+        </bk-list-navigation-item>
+        <bk-list-navigation-item condensed="isNavCondensed" ng-init="expanded = false" expandable="true" ng-click="expanded = !expanded" is-expanded="expanded">
+          <bk-list-navigation-item-icon glyph="sap-icon--folder"></bk-list-navigation-item-icon>
+          <bk-list-navigation-item-arrow aria-label="expand submenu" ng-show="expanded"></bk-list-navigation-item-arrow>
+          <bk-list-navigation-item-popover level="1" is-expanded="expanded">
+            <bk-list>
+              <bk-list-navigation-item condensed="isNavCondensed">
+                <bk-list-navigation-item-icon glyph="sap-icon--folder"></bk-list-navigation-item-icon>
+                <span bk-list-navigation-item-text>Folder</span>
+              </bk-list-navigation-item>
+            </bk-list>
+          </bk-list-navigation-item-popover>
+          <bk-list-navigation-item-popover level="2" is-expanded="expanded">
+            <bk-list>
+              <bk-list-navigation-item>
+                <span bk-list-navigation-item-text>Inner item 1</span>
+              </bk-list-navigation-item>
+              <bk-list-navigation-item>
+                <span bk-list-navigation-item-text>Inner item 2</span>
+              </bk-list-navigation-item>
+            </bk-list>
+          </bk-list-navigation-item-popover>
+        </bk-list-navigation-item>
+      </bk-list>
+    </bk-vertical-nav-main-section>
+  </bk-vertical-nav>
+  <code-block type="js"> $scope.isNavCondensed = true; </code-block>
+</code-block>
+<h3>Scroll/Overflow</h3>
+<code-block>
+  <div style="height: 200px">
+    <bk-vertical-nav can-scroll="true">
+      <bk-vertical-nav-main-section aria-label="main navigation">
+        <bk-list>
+          <bk-list-navigation-item>
+            <bk-list-navigation-item-icon glyph="sap-icon--home"></bk-list-navigation-item-icon>
+            <span bk-list-navigation-item-text>Home</span>
+          </bk-list-navigation-item>
+          <bk-list-navigation-item>
+            <bk-list-navigation-item-icon glyph="sap-icon--calendar"></bk-list-navigation-item-icon>
+            <span bk-list-navigation-item-text>Calendar</span>
+          </bk-list-navigation-item>
+          <bk-list-navigation-item>
+            <bk-list-navigation-item-icon glyph="sap-icon--course-book"></bk-list-navigation-item-icon>
+            <span bk-list-navigation-item-text>Deliveries</span>
+          </bk-list-navigation-item>
+          <bk-list-navigation-item>
+            <bk-list-navigation-item-icon glyph="sap-icon--employee"></bk-list-navigation-item-icon>
+            <span bk-list-navigation-item-text>Employees</span>
+          </bk-list-navigation-item>
+          <bk-list-navigation-item>
+            <bk-list-navigation-item-icon glyph="sap-icon--filter-analytics"></bk-list-navigation-item-icon>
+            <span bk-list-navigation-item-text>Analytics</span>
+          </bk-list-navigation-item>
+          <bk-list-navigation-item>
+            <bk-list-navigation-item-icon glyph="sap-icon--headset"></bk-list-navigation-item-icon>
+            <span bk-list-navigation-item-text>Support</span>
+          </bk-list-navigation-item>
+          <bk-list-navigation-item>
+            <bk-list-navigation-item-icon glyph="sap-icon--stethoscope"></bk-list-navigation-item-icon>
+            <span bk-list-navigation-item-text>Health</span>
+          </bk-list-navigation-item>
+          <bk-list-navigation-item>
+            <bk-list-navigation-item-icon svg-path="./logo/blimpkit-symbolic.svg"></bk-list-navigation-item-icon>
+            <span bk-list-navigation-item-text>Sample</span>
+          </bk-list-navigation-item>
+        </bk-list>
+      </bk-vertical-nav-main-section>
+    </bk-vertical-nav>
+  </div>
+</code-block>
+<h3>Navigation Indication</h3>
+<code-block>
+  <bk-vertical-nav>
+    <bk-vertical-nav-main-section aria-label="main navigation">
+      <bk-list>
+        <bk-list-navigation-item>
+          <bk-list-navigation-item-icon glyph="sap-icon--home"></bk-list-navigation-item-icon>
+          <span bk-list-navigation-item-text>Home</span>
+        </bk-list-navigation-item>
+        <bk-list-navigation-item indicated="isIndicated">
+          <bk-list-navigation-item-icon svg-path="./logo/blimpkit-symbolic.svg"></bk-list-navigation-item-icon>
+          <span bk-list-navigation-item-text>Sample</span>
+          <bk-list-navigation-item-indicator ng-if="isIndicated"></bk-list-navigation-item-indicator>
+        </bk-list-navigation-item>
+        <bk-list-navigation-group-header>Group</bk-list-navigation-group-header>
+        <bk-list-navigation-item ng-init="expanded = false" expandable="true" ng-click="expanded = !expanded" is-expanded="expanded">
+          <bk-list-navigation-item-icon glyph="sap-icon--folder"></bk-list-navigation-item-icon>
+          <span bk-list-navigation-item-text>Folder</span>
+          <bk-list-navigation-item-arrow aria-label="expand submenu" ng-show="expanded"></bk-list-navigation-item-arrow>
+          <bk-list>
+            <bk-list-navigation-item>
+              <span bk-list-navigation-item-text>Inner item 1</span>
+            </bk-list-navigation-item>
+            <bk-list-navigation-item indicated="isIndicated">
+              <span bk-list-navigation-item-text>Inner item 2</span>
+              <bk-list-navigation-item-indicator ng-if="isIndicated"></bk-list-navigation-item-indicator>
+            </bk-list-navigation-item>
+          </bk-list>
+          <bk-list-navigation-item-indicator></bk-list-navigation-item-indicator>
+        </bk-list-navigation-item>
+      </bk-list>
+    </bk-vertical-nav-main-section>
+  </bk-vertical-nav>
+</code-block>
+<code-block>
+  <bk-vertical-nav condensed="isNavCondensed">
+    <bk-vertical-nav-main-section aria-label="main navigation">
+      <bk-list>
+        <bk-list-navigation-item condensed="isNavCondensed">
+          <bk-list-navigation-item-icon glyph="sap-icon--home"></bk-list-navigation-item-icon>
+          <span bk-list-navigation-item-text>Home</span>
+        </bk-list-navigation-item>
+        <bk-list-navigation-item indicated="isIndicated" condensed="isNavCondensed">
+          <bk-list-navigation-item-icon svg-path="./logo/blimpkit-symbolic.svg"></bk-list-navigation-item-icon>
+          <span bk-list-navigation-item-text>Sample</span>
+          <bk-list-navigation-item-indicator ng-if="isIndicated"></bk-list-navigation-item-indicator>
+        </bk-list-navigation-item>
+        <bk-list-navigation-group-header></bk-list-navigation-group-header>
+        <bk-list-navigation-item condensed="isNavCondensed" ng-init="expanded = false" expandable="true" ng-click="expanded = !expanded" is-expanded="expanded">
+          <bk-list-navigation-item-icon glyph="sap-icon--folder"></bk-list-navigation-item-icon>
+          <bk-list-navigation-item-arrow aria-label="expand submenu" ng-show="expanded"></bk-list-navigation-item-arrow>
+          <bk-list-navigation-item-popover level="1" is-expanded="expanded">
+            <bk-list>
+              <bk-list-navigation-item condensed="isNavCondensed">
+                <bk-list-navigation-item-icon glyph="sap-icon--folder"></bk-list-navigation-item-icon>
+                <span bk-list-navigation-item-text>Folder</span>
+              </bk-list-navigation-item>
+            </bk-list>
+          </bk-list-navigation-item-popover>
+          <bk-list-navigation-item-popover level="2" is-expanded="expanded">
+            <bk-list>
+              <bk-list-navigation-item>
+                <span bk-list-navigation-item-text>Inner item 1</span>
+              </bk-list-navigation-item>
+              <bk-list-navigation-item indicated="isIndicated">
+                <span bk-list-navigation-item-text>Inner item 2</span>
+                <bk-list-navigation-item-indicator ng-if="isIndicated"></bk-list-navigation-item-indicator>
+              </bk-list-navigation-item>
+            </bk-list>
+          </bk-list-navigation-item-popover>
+          <bk-list-navigation-item-indicator></bk-list-navigation-item-indicator>
+        </bk-list-navigation-item>
+      </bk-list>
+    </bk-vertical-nav-main-section>
+  </bk-vertical-nav>
+  <code-block type="js"> $scope.isNavCondensed = true; $scope.isIndicated = true; </code-block>
+</code-block>
+<h3>Utility section</h3>
+<code-block>
+  <bk-vertical-nav>
+    <bk-vertical-nav-main-section aria-label="main navigation">
+      <bk-list>
+        <bk-list-navigation-item>
+          <bk-list-navigation-item-icon glyph="sap-icon--home"></bk-list-navigation-item-icon>
+          <bk-list-navigation-item-text>Home</bk-list-navigation-item-text>
+        </bk-list-navigation-item>
+        <bk-list-navigation-item>
+          <bk-list-navigation-item-icon svg-path="./logo/blimpkit-symbolic.svg"></bk-list-navigation-item-icon>
+          <bk-list-navigation-item-text>Sample</bk-list-navigation-item-text>
+        </bk-list-navigation-item>
+      </bk-list>
+    </bk-vertical-nav-main-section>
+    <bk-vertical-nav-utility-section aria-label="utility navigation">
+      <bk-list>
+        <bk-list-navigation-item>
+          <bk-list-navigation-item-icon glyph="sap-icon--settings"></bk-list-navigation-item-icon>
+          <bk-list-navigation-item-text>Settings</bk-list-navigation-item-text>
+          <bk-list-navigation-item-indicator></bk-list-navigation-item-indicator>
+        </bk-list-navigation-item>
+      </bk-list>
+    </bk-vertical-nav-utility-section>
+  </bk-vertical-nav>
+</code-block>

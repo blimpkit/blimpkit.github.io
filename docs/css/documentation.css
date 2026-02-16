@@ -1,183 +1,183 @@
 @font-face {
-    font-family: "72";
-    src: url("https://cdn.jsdelivr.net/npm/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Regular-full.woff") format("woff");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+  font-family: "72";
+  src: url("https://cdn.jsdelivr.net/npm/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Regular-full.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "72";
-    src: url("https://cdn.jsdelivr.net/npm/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Light-full.woff") format("woff");
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
+  font-family: "72";
+  src: url("https://cdn.jsdelivr.net/npm/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Light-full.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "72-Light";
-    src: url("https://cdn.jsdelivr.net/npm/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Light-full.woff") format("woff");
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
+  font-family: "72-Light";
+  src: url("https://cdn.jsdelivr.net/npm/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Light-full.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "72";
-    src: url("https://cdn.jsdelivr.net/npm/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Bold-full.woff") format("woff");
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
+  font-family: "72";
+  src: url("https://cdn.jsdelivr.net/npm/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Bold-full.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "72-Bold";
-    src: url("https://cdn.jsdelivr.net/npm/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Bold-full.woff") format("woff");
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
+  font-family: "72-Bold";
+  src: url("https://cdn.jsdelivr.net/npm/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Bold-full.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "72Mono-Regular";
-    src: url("https://cdn.jsdelivr.net/npm/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72Mono-Regular-full.woff") format("woff");
-    font-style: normal;
-    font-display: swap;
+  font-family: "72Mono-Regular";
+  src: url("https://cdn.jsdelivr.net/npm/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72Mono-Regular-full.woff") format("woff");
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "72Mono-Bold";
-    src: url("https://cdn.jsdelivr.net/npm/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72Mono-Bold-full.woff") format("woff");
-    font-style: normal;
-    font-display: swap;
+  font-family: "72Mono-Bold";
+  src: url("https://cdn.jsdelivr.net/npm/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72Mono-Bold-full.woff") format("woff");
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "SAP-icons";
-    src: url("https://cdn.jsdelivr.net/npm/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/fonts/SAP-icons.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "SAP-icons";
+  src: url("https://cdn.jsdelivr.net/npm/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/fonts/SAP-icons.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "BusinessSuiteInAppSymbols";
-    src: url("https://cdn.jsdelivr.net/npm/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/fonts/BusinessSuiteInAppSymbols.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "BusinessSuiteInAppSymbols";
+  src: url("https://cdn.jsdelivr.net/npm/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/fonts/BusinessSuiteInAppSymbols.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "SAP-icons-TNT";
-    src: url("https://cdn.jsdelivr.net/npm/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/fonts/SAP-icons-TNT.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "SAP-icons-TNT";
+  src: url("https://cdn.jsdelivr.net/npm/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/sap_horizon/fonts/SAP-icons-TNT.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 div.doc-main-container {
-    height: calc(100% - var(--fdShellbar_Height));
-    background-color: var(--sapGroup_ContentBackground, #fff);
+  height: calc(100% - var(--fdShellbar_Height));
+  background-color: var(--sapGroup_ContentBackground, #fff);
 }
 
 code.hljs {
-    margin-top: 1rem;
-    padding: 1rem !important;
-    display: block;
-    border-radius: var(--sapElement_BorderCornerRadius);
+  margin-top: 1rem;
+  padding: 1rem !important;
+  display: block;
+  border-radius: var(--sapElement_BorderCornerRadius);
 }
 
-code-block+code-block {
-    margin-top: 1rem;
+code-block + code-block {
+  margin-top: 1rem;
 }
 
-code-block>code-block {
-    margin-top: 1rem;
-    margin-bottom: 0;
-    padding: 0;
-    background-color: transparent;
+code-block > code-block {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  padding: 0;
+  background-color: transparent;
 }
 
-code-block>pre {
-    margin-bottom: 0;
-    margin-top: 1rem;
+code-block > pre {
+  margin-bottom: 0;
+  margin-top: 1rem;
 }
 
-code-block[type=text-html]>pre:only-child,
-code-block[type=css]>pre:only-child,
-code-block[type=js]>pre:only-child {
-    margin: 0;
+code-block[type="text-html"] > pre:only-child,
+code-block[type="css"] > pre:only-child,
+code-block[type="js"] > pre:only-child {
+  margin: 0;
 }
 
-code-block[type=text-html]>pre:only-child>code.hljs,
-code-block[type=css]>pre:only-child>code.hljs,
-code-block[type=js]>pre:only-child>code.hljs {
-    margin: 0;
+code-block[type="text-html"] > pre:only-child > code.hljs,
+code-block[type="css"] > pre:only-child > code.hljs,
+code-block[type="js"] > pre:only-child > code.hljs {
+  margin: 0;
 }
 
 code-block {
-    font-family: var(--sapContent_MonospaceFontFamily);
-    display: block;
-    border-radius: var(--sapElement_BorderCornerRadius);
-    background-color: var(--sapBackgroundColor, #f7f7f7);
-    border: solid var(--sapList_BorderWidth, 0.0625rem) var(--sapList_BorderColor, #e5e5e5);
-    padding: 1rem;
+  font-family: var(--sapContent_MonospaceFontFamily);
+  display: block;
+  border-radius: var(--sapElement_BorderCornerRadius);
+  background-color: var(--sapBackgroundColor, #f7f7f7);
+  border: solid var(--sapList_BorderWidth, 0.0625rem) var(--sapList_BorderColor, #e5e5e5);
+  padding: 1rem;
 }
 
-code-block>.fd-link {
-    display: block;
-    width: 100%;
+code-block > .fd-link {
+  display: block;
+  width: 100%;
 }
 
 div.doc-icon-container {
-    border-radius: var(--sapElement_BorderCornerRadius);
-    border: solid var(--sapList_BorderWidth, 0.0625rem) var(--sapList_BorderColor, #e5e5e5);
-    background-color: var(--sapBackgroundColor, #f7f7f7);
-    padding: 2rem;
+  border-radius: var(--sapElement_BorderCornerRadius);
+  border: solid var(--sapList_BorderWidth, 0.0625rem) var(--sapList_BorderColor, #e5e5e5);
+  background-color: var(--sapBackgroundColor, #f7f7f7);
+  padding: 2rem;
 }
 
 div.doc-icon-container span.sap-icon {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
 .doc-css-layout-contents {
-    background-color: white;
-    color: black;
-    text-align: center;
-    border: 1px solid salmon;
-    padding: 0.25rem;
+  background-color: white;
+  color: black;
+  text-align: center;
+  border: 1px solid salmon;
+  padding: 0.25rem;
 }
 
 .doc-css-layout-container {
-    background-color: CornflowerBlue;
-    box-sizing: border-box;
+  background-color: CornflowerBlue;
+  box-sizing: border-box;
 }
 
 .doc-css-layout-container:not(.bk-grid):not(.bk-hbox):not(.bk-vbox):not(.bk-center) {
-    max-width: 320px;
+  max-width: 320px;
 }
 
 .doc-sidenav-btn {
-    display: none;
+  display: none;
 }
 
 .doc-main-container > .bk-fill-parent {
-    padding: 2rem;
+  padding: 2rem;
 }
 
 @media screen and (max-width: 1024px) {
-    .doc-main-container > .bk-fill-parent {
-        padding: 1rem;
-    }
-    .doc-sidenav-btn {
-        display: block;
-    }
-    .doc-sidenav {
-        position: fixed;
-        z-index: 2;   
-    }
-    .doc-sidenav:not([visible=true]) {
-        display: none;
-    }
+  .doc-main-container > .bk-fill-parent {
+    padding: 1rem;
+  }
+  .doc-sidenav-btn {
+    display: block;
+  }
+  .doc-sidenav {
+    position: fixed;
+    z-index: 2;
+  }
+  .doc-sidenav:not([visible="true"]) {
+    display: none;
+  }
 }

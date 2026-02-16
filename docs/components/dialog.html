@@ -1,0 +1,139 @@
+<h2>Dialog</h2>
+<p>
+  The dialog component is a container that appears in response to an action made by the user. It interrupts the app's current process to prompt the user for either information or a confirmation, which requires them to make a decision before
+  the process can continue.
+</p>
+
+<h2>Attributes - Dialog</h2>
+<table bk-table>
+  <thead bk-table-header>
+    <tr bk-table-row>
+      <th bk-table-header-cell>Name</th>
+      <th bk-table-header-cell>Type</th>
+      <th bk-table-header-cell>Required</th>
+      <th bk-table-header-cell>Description</th>
+    </tr>
+  </thead>
+  <tbody bk-table-body>
+    <tr bk-table-row>
+      <td bk-table-cell>visible</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>True</td>
+      <td bk-table-cell>Show/hide dialog.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>window-width</td>
+      <td bk-table-cell>string</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>The width of the window. This maps to the CSS width property.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>window-height</td>
+      <td bk-table-cell>string</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>The height of the window. This maps to the CSS height property.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>window-max-width</td>
+      <td bk-table-cell>string</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>The max width of the window. This maps to the CSS max-width property.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>window-max-height</td>
+      <td bk-table-cell>string</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>The max height of the window. This maps to the CSS max-height property.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>window-min-width</td>
+      <td bk-table-cell>string</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>The min width of the window. This maps to the CSS min-width property.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>window-min-height</td>
+      <td bk-table-cell>string</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>The min height of the window. This maps to the CSS min-height property.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Attributes - Dialog Header</h2>
+<table bk-table>
+  <thead bk-table-header>
+    <tr bk-table-row>
+      <th bk-table-header-cell>Name</th>
+      <th bk-table-header-cell>Type</th>
+      <th bk-table-header-cell>Required</th>
+      <th bk-table-header-cell>Description</th>
+    </tr>
+  </thead>
+  <tbody bk-table-body>
+    <tr bk-table-row>
+      <td bk-table-cell>compact</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Applies compact style to the header and all elements inside the it.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>header</td>
+      <td bk-table-cell>string</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Header text.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>title</td>
+      <td bk-table-cell>string</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Dialog title text.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>subheader</td>
+      <td bk-table-cell>string</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Subheader text.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Attributes - Dialog Footer</h2>
+<table bk-table>
+  <thead bk-table-header>
+    <tr bk-table-row>
+      <th bk-table-header-cell>Name</th>
+      <th bk-table-header-cell>Type</th>
+      <th bk-table-header-cell>Required</th>
+      <th bk-table-header-cell>Description</th>
+    </tr>
+  </thead>
+  <tbody bk-table-body>
+    <tr bk-table-row>
+      <td bk-table-cell>compact</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Applies compact style to the footer and all elements inside the it.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Examples</h2>
+<code-block>
+  <bk-button label="Show dialog" ng-click="toggleDialog()"></bk-button>
+
+  <bk-dialog visible="dialogVisible" window-width="90%" window-height="90%" window-max-width="640px" window-max-height="640px">
+    <bk-dialog-header header="Header" title="Title" subheader="Subheader">
+      <bk-button glyph="sap-icon--decline" aria-label="Close dialog" compact="true" round="true" ng-click="toggleDialog()"></bk-button>
+    </bk-dialog-header>
+    <bk-dialog-body bk-scrollbar>
+      <div class="bk-preformatted fd-padding">{{dialogText}}</div>
+    </bk-dialog-body>
+    <bk-dialog-footer compact="true">
+      <bk-bar-element>
+        <bk-button label="Close" decisive="true" ng-click="toggleDialog()"></bk-button>
+      </bk-bar-element>
+    </bk-dialog-footer>
+  </bk-dialog>
+  <code-block type="js"> $scope.dialogVisible = false; $scope.toggleDialog = function () { $scope.dialogVisible = !$scope.dialogVisible; }; $scope.dialogText = `Lorem ipsum...`; </code-block>
+</code-block>

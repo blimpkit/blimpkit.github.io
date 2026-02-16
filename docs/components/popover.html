@@ -1,0 +1,324 @@
+<h2>Popover</h2>
+<p>
+  The popover displays additional information for an object in a compact way without leaving the page. The component contains two essential elements: the control (trigger) and body (content). It can also be paired with a Menu, whereas the
+  menu button would trigger a dropdown (body).
+</p>
+
+<h2>Attributes - Popover</h2>
+<table bk-table>
+  <thead bk-table-header>
+    <tr bk-table-row>
+      <th bk-table-header-cell>Name</th>
+      <th bk-table-header-cell>Type</th>
+      <th bk-table-header-cell>Required</th>
+      <th bk-table-header-cell>Description</th>
+    </tr>
+  </thead>
+  <tbody bk-table-body>
+    <tr bk-table-row>
+      <td bk-table-cell>close-innerclick</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>If the popover should close when there is a click event inside it(If the body contains an element that doesn't focus, you will have to add 'tabindex = "0"' to the first child in the body.). Default is true.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Attributes - Popover Body</h2>
+<table bk-table>
+  <thead bk-table-header>
+    <tr bk-table-row>
+      <th bk-table-header-cell>Name</th>
+      <th bk-table-header-cell>Type</th>
+      <th bk-table-header-cell>Required</th>
+      <th bk-table-header-cell>Description</th>
+    </tr>
+  </thead>
+  <tbody bk-table-body>
+    <tr bk-table-row>
+      <td bk-table-cell>align</td>
+      <td bk-table-cell>string</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>
+        Relative position of the popover. Possible values are:
+        <ul>
+          <li><strong>top-left</strong> - Alings the popover to the top left side of the control.</li>
+          <li><strong>top</strong> - Alings the popover to the top center side of the control.</li>
+          <li><strong>top-right</strong> - Alings the popover to the top right side of the control.</li>
+          <li><strong>bottom-left</strong> - Alings the popover to the bottom left side of the control. Default option.</li>
+          <li><strong>bottom</strong> - Alings the popover to the bottom center side of the control.</li>
+          <li><strong>bottom-right</strong> - Alings the popover to the bottom right side of the control.</li>
+          <li><strong>left-top</strong> - Alings the popover to the left top side of the control.</li>
+          <li><strong>left</strong> - Alings the popover to the left center side of the control.</li>
+          <li><strong>left-bottom</strong> - Alings the popover to the left bottom side of the control.</li>
+          <li><strong>right-top</strong> - Alings the popover to the right top side of the control.</li>
+          <li><strong>right</strong> - Alings the popover to the right center side of the control.</li>
+          <li><strong>right-bottom</strong> - Alings the popover to the right bottom side of the control.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>max-height</td>
+      <td bk-table-cell>number</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Maximum popover height in pixels before it starts scrolling. Default is the height of the window.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>no-arrow</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>If the popup should have an arrow.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>dropdown-fill</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>The dropdown body will be adjusted to match the text length.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>can-scroll</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Enable/disable scroll popover support. Default is true.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Examples</h2>
+<h3>Positions</h3>
+<code-block>
+  <bk-popover>
+    <bk-popover-control>
+      <bk-button label="Top left" is-menu="true" arrow-direction="up"></bk-button>
+    </bk-popover-control>
+    <bk-popover-body align="top-left">
+      <bk-menu aria-label="popover items">
+        <bk-menu-item title="Some option"></bk-menu-item>
+        <bk-menu-item title="Some option"></bk-menu-item>
+      </bk-menu>
+    </bk-popover-body>
+  </bk-popover>
+</code-block>
+
+<code-block>
+  <bk-popover>
+    <bk-popover-control>
+      <bk-button label="Top center" is-menu="true" arrow-direction="up"></bk-button>
+    </bk-popover-control>
+    <bk-popover-body align="top">
+      <bk-menu aria-label="popover items">
+        <bk-menu-item title="Some option"></bk-menu-item>
+        <bk-menu-item title="Some option"></bk-menu-item>
+      </bk-menu>
+    </bk-popover-body>
+  </bk-popover>
+</code-block>
+
+<code-block>
+  <bk-popover>
+    <bk-popover-control>
+      <bk-button label="Top right" is-menu="true" arrow-direction="up"></bk-button>
+    </bk-popover-control>
+    <bk-popover-body align="top-right">
+      <bk-menu aria-label="popover items">
+        <bk-menu-item title="Some option"></bk-menu-item>
+        <bk-menu-item title="Some option"></bk-menu-item>
+      </bk-menu>
+    </bk-popover-body>
+  </bk-popover>
+</code-block>
+
+<code-block>
+  <bk-popover style="margin-left: 6.25rem">
+    <bk-popover-control>
+      <bk-button label="Left top" is-menu="true" arrow-direction="left"></bk-button>
+    </bk-popover-control>
+    <bk-popover-body align="left-top">
+      <bk-menu aria-label="popover items">
+        <bk-menu-item title="Some option"></bk-menu-item>
+        <bk-menu-item title="Some option"></bk-menu-item>
+      </bk-menu>
+    </bk-popover-body>
+  </bk-popover>
+</code-block>
+
+<code-block>
+  <bk-popover>
+    <bk-popover-control>
+      <bk-button label="Right top" is-menu="true" arrow-direction="right"></bk-button>
+    </bk-popover-control>
+    <bk-popover-body align="right-top">
+      <bk-menu aria-label="popover items">
+        <bk-menu-item title="Some option"></bk-menu-item>
+        <bk-menu-item title="Some option"></bk-menu-item>
+      </bk-menu>
+    </bk-popover-body>
+  </bk-popover>
+</code-block>
+
+<code-block>
+  <bk-popover style="margin-left: 6.25rem">
+    <bk-popover-control>
+      <bk-button label="Left center" is-menu="true" arrow-direction="left"></bk-button>
+    </bk-popover-control>
+    <bk-popover-body align="left">
+      <bk-menu aria-label="popover items">
+        <bk-menu-item title="Some option"></bk-menu-item>
+        <bk-menu-item title="Some option"></bk-menu-item>
+      </bk-menu>
+    </bk-popover-body>
+  </bk-popover>
+</code-block>
+
+<code-block>
+  <bk-popover>
+    <bk-popover-control>
+      <bk-button label="Right center" is-menu="true" arrow-direction="right"></bk-button>
+    </bk-popover-control>
+    <bk-popover-body align="right">
+      <bk-menu aria-label="popover items">
+        <bk-menu-item title="Some option"></bk-menu-item>
+        <bk-menu-item title="Some option"></bk-menu-item>
+      </bk-menu>
+    </bk-popover-body>
+  </bk-popover>
+</code-block>
+
+<code-block>
+  <bk-popover style="margin-left: 6.25rem">
+    <bk-popover-control>
+      <bk-button label="Left bottom" is-menu="true" arrow-direction="left"></bk-button>
+    </bk-popover-control>
+    <bk-popover-body align="left-bottom">
+      <bk-menu aria-label="popover items">
+        <bk-menu-item title="Some option"></bk-menu-item>
+        <bk-menu-item title="Some option"></bk-menu-item>
+      </bk-menu>
+    </bk-popover-body>
+  </bk-popover>
+</code-block>
+<code-block>
+  <bk-popover>
+    <bk-popover-control>
+      <bk-button label="Right bottom" is-menu="true" arrow-direction="right"></bk-button>
+    </bk-popover-control>
+    <bk-popover-body align="right-bottom">
+      <bk-menu aria-label="popover items">
+        <bk-menu-item title="Some option"></bk-menu-item>
+        <bk-menu-item title="Some option"></bk-menu-item>
+      </bk-menu>
+    </bk-popover-body>
+  </bk-popover>
+</code-block>
+
+<code-block>
+  <bk-popover>
+    <bk-popover-control>
+      <bk-button label="Bottom left" is-menu="true"></bk-button>
+    </bk-popover-control>
+    <bk-popover-body>
+      <bk-menu aria-label="popover items">
+        <bk-menu-item title="Some option"></bk-menu-item>
+        <bk-menu-item title="Some option"></bk-menu-item>
+      </bk-menu>
+    </bk-popover-body>
+  </bk-popover>
+</code-block>
+
+<code-block>
+  <bk-popover>
+    <bk-popover-control>
+      <bk-button label="Bottom center" is-menu="true"></bk-button>
+    </bk-popover-control>
+    <bk-popover-body align="bottom">
+      <bk-menu aria-label="popover items">
+        <bk-menu-item title="Some option"></bk-menu-item>
+        <bk-menu-item title="Some option"></bk-menu-item>
+      </bk-menu>
+    </bk-popover-body>
+  </bk-popover>
+</code-block>
+
+<code-block>
+  <bk-popover>
+    <bk-popover-control>
+      <bk-button label="Bottom right" is-menu="true"></bk-button>
+    </bk-popover-control>
+    <bk-popover-body align="bottom-right">
+      <bk-menu aria-label="popover items">
+        <bk-menu-item title="Some option"></bk-menu-item>
+        <bk-menu-item title="Some option"></bk-menu-item>
+      </bk-menu>
+    </bk-popover-body>
+  </bk-popover>
+</code-block>
+
+<h3>Scroll</h3>
+<code-block>
+  <bk-popover>
+    <bk-popover-control>
+      <bk-button label="Scroll" is-menu="true"></bk-button>
+    </bk-popover-control>
+    <bk-popover-body can-scroll="true" max-height="200">
+      <bk-menu aria-label="popover items">
+        <bk-menu-item title="Specal item" has-separator="true"></bk-menu-item>
+        <bk-menu-item title="Some option"></bk-menu-item>
+        <bk-menu-item title="Some option"></bk-menu-item>
+        <bk-menu-item title="Some option"></bk-menu-item>
+        <bk-menu-item title="Some option"></bk-menu-item>
+        <bk-menu-item title="Some option"></bk-menu-item>
+        <bk-menu-item title="Some option"></bk-menu-item>
+      </bk-menu>
+    </bk-popover-body>
+  </bk-popover>
+</code-block>
+
+<h3>Sublist</h3>
+<code-block>
+  <bk-popover>
+    <bk-popover-control>
+      <bk-button label="Sublist" is-menu="true"></bk-button>
+    </bk-popover-control>
+    <bk-popover-body can-scroll="false">
+      <bk-menu aria-label="popover items">
+        <bk-menu-item title="Specal item"></bk-menu-item>
+        <bk-menu-sublist title="Sublist 1">
+          <bk-menu-item title="Some sublist item 1"></bk-menu-item>
+          <bk-menu-item title="Some sublist item 2"></bk-menu-item>
+        </bk-menu-sublist>
+      </bk-menu>
+    </bk-popover-body>
+  </bk-popover>
+</code-block>
+
+<h3>Do not close on item selection</h3>
+<code-block>
+  <bk-popover close-innerclick="false">
+    <bk-popover-control>
+      <bk-button label="Open" is-menu="true"></bk-button>
+    </bk-popover-control>
+    <bk-popover-body>
+      <bk-menu aria-label="popover items">
+        <bk-menu-item title="Option 1"></bk-menu-item>
+        <bk-menu-item title="Option 2"></bk-menu-item>
+        <bk-menu-item title="Option 3"></bk-menu-item>
+      </bk-menu>
+    </bk-popover-body>
+  </bk-popover>
+</code-block>
+
+<h3>No arrow</h3>
+<code-block>
+  <bk-popover>
+    <bk-popover-control>
+      <bk-button glyph="sap-icon--menu" aria-label="open menu"></bk-button>
+    </bk-popover-control>
+    <bk-popover-body no-arrow="true">
+      <bk-menu aria-label="menu items">
+        <bk-menu-item title="Option 1"></bk-menu-item>
+        <bk-menu-item title="Option 2"></bk-menu-item>
+        <bk-menu-item title="Option 3"></bk-menu-item>
+      </bk-menu>
+    </bk-popover-body>
+  </bk-popover>
+</code-block>
