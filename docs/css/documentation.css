@@ -104,6 +104,7 @@ code-block > pre {
   margin-top: 1rem;
 }
 
+code-block[type="plain-text"] > pre:only-child,
 code-block[type="text-html"] > pre:only-child,
 code-block[type="css"] > pre:only-child,
 code-block[type="js"] > pre:only-child {

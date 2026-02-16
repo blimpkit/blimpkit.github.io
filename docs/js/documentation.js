@@ -2,7 +2,6 @@ const documentation = angular.module('documentation', ['blimpKit']);
 documentation.config(($locationProvider) => {
   $locationProvider.html5Mode({ enabled: true, requireBase: false });
 });
-
 // AngularJS filter used in the table pagination
 documentation.filter('startFrom', function () {
   return function (input, start) {
@@ -10,7 +9,6 @@ documentation.filter('startFrom', function () {
     return input.slice(start);
   };
 });
-console.log(this);
 // Directive that automatically creates example code
 documentation.directive('codeBlock', () => ({
   restrict: 'E',
@@ -33,6 +31,9 @@ documentation.directive('codeBlock', () => ({
       // the content is HTML but in string/encoded form
       code.classList.add('language-html');
       code.textContent = beautifier.html(tElement.contents()[0].data);
+      tElement.contents()[0].textContent = '';
+    } else if (tAttrs.type === 'plain-text') {
+      code.textContent = tElement.contents()[0].data.trim();
       tElement.contents()[0].textContent = '';
     } else {
       // HTML but it allows the HTML to render.

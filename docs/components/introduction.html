@@ -1,27 +1,45 @@
 <img src="./logo/blimpkit-full.svg" alt="BlimpKit" style="max-height: 15rem; max-width: 100%" />
 <h1>What is BlimpKit?</h1>
+<p>BlimpKit is a UI component library for AngularJS built on top of the <a href="https://sap.github.io/fundamental-styles/">fundamental-styles</a> CSS framework.</p>
 <p>
-  BlimpKit is an AngularJS directive/component UI library based on the
-  <a href="https://sap.github.io/fundamental-styles/">fundamental-styles</a> CSS library.
+  Although it generally adheres to the fundamental-styles design guidelines, there are some intentional differences. Certain components have been modified or removed, so BlimpKit should not be considered an official implementation of
+  fundamental-styles.
 </p>
-<p>While it mostly follows the fundamental-styles style guides, it deviates in some places and some of the widgets are modified and/or removed, therefore it should not be viewed as an official implementation.</p>
-<p>BlimpKit is its own library and contains some extra components that are unique to it.</p>
+
+<p>BlimpKit is an independent library and also includes additional components that are unique to the project.</p>
 
 <h2>Getting Started</h2>
-<p>The library is modular, so you can use as little or as much as you need.</p>
+
+<h3>Install from NPM:</h3>
+
+<code-block type="plain-text">npm install @blimpkit/blimpKit</code-block>
+
+<h3>Install webjar using maven:</h3>
+
+<!-- prettier-ignore -->
+<code-block type="plain-text">
+&lt;dependency&gt;
+  &lt;groupId&gt;org.webjars.npm&lt;/groupId&gt;
+  &lt;artifactId&gt;blimpkit__blimpkit&lt;/artifactId&gt;
+  &lt;version&gt;{{version}}&lt;/version&gt;
+&lt;/dependency&gt;
+</code-block>
+
+<h3>Use CDN:</h3>
+
+<code-block type="text-html"> &lt;script type=&quot;text/javascript&quot; src=&quot;https://unpkg.com/@blimpkit/blimpkit@{{version}}/dist/blimpkit.min.js&quot;&gt;&lt;/script&gt; </code-block>
 
 <h3>Dependencies</h3>
-<p>Besides BlimpKit, you will also need AngularJS, jQuery, fundamental-styles and SAP Theming:</p>
+<p>You will also need AngularJS, jQuery, fundamental-styles and SAP Theming:</p>
 <code-block type="text-html">
   &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js&quot;&gt;&lt;/script&gt; &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js&quot;&gt;&lt;/script&gt; &lt;script
   src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular-aria.js&quot;&gt;&lt;/script&gt;
 </code-block>
 
 <h3>Base styles and themes</h3>
-<p>
-  Themes are supported. Officially, there are three themes availabe -
-  <b>BlimpKit</b>, <b>Classic</b> and <b>Mystic</b>. The first two have a light, dark and auto modes. The Mystic theme is light-only. You can replace 'themeName' with the name of the theme that you want. The available options are:
-</p>
+<p>Themes are supported. There are currently three official themes available: <b>BlimpKit</b>, <b>Classic</b> and <b>Mystic</b>.</p>
+<p>The BlimpKit and Classic themes provide light, dark, and auto modes. The Mystic theme supports light mode only.</p>
+<p>To apply a theme, replace "themeName" with the desired theme. The available options are:</p>
 <ul>
   <li><b>blimpkit-auto</b></li>
   <li><b>blimpkit-light</b></li>
@@ -34,15 +52,16 @@
 
 <p>For light or dark:</p>
 <code-block type="text-html">
-  &lt;link href=&quot;https://unpkg.com/fundamental-styles@0.38.0/dist/fundamental-styles.css&quot; rel=&quot;stylesheet&quot;&gt; &lt;link href=&quot;/path/to/node_modules/blimpkit/css/themes/{themeName}.css&quot;
-  rel=&quot;stylesheet&quot;&gt; &lt;link href=&quot;/path/to/node_modules/blimpkit/css/themes/{themeName}-variables.css&quot; rel=&quot;stylesheet&quot;&gt; &lt;link href=&quot;/path/to/node_modules/blimpkit/css/blimpkit.css&quot;
-  rel=&quot;stylesheet&quot;&gt;
+  &lt;link href=&quot;https://unpkg.com/fundamental-styles@0.38.0/dist/fundamental-styles.css&quot; rel=&quot;stylesheet&quot;&gt; &lt;link href=&quot;https://unpkg.com/@blimpkit/blimpkit@{{version}}/dist/css/themes/{themeName}.css&quot;
+  rel=&quot;stylesheet&quot;&gt; &lt;link href=&quot;https://unpkg.com/@blimpkit/blimpkit@{{version}}/dist/css/themes/{themeName}-variables.css&quot; rel=&quot;stylesheet&quot;&gt; &lt;link
+  href=&quot;https://unpkg.com/@blimpkit/blimpkit@{{version}}/dist/css/blimpkit.css&quot; rel=&quot;stylesheet&quot;&gt;
 </code-block>
 
 <p>For auto:</p>
 <code-block type="text-html">
-  &lt;link href=&quot;https://unpkg.com/fundamental-styles@0.38.0/dist/fundamental-styles.css&quot; rel=&quot;stylesheet&quot;&gt; &lt;link href=&quot;/path/to/node_modules/blimpkit/css/themes/{themeName}-auto.css&quot;
-  rel=&quot;stylesheet&quot;&gt; &lt;link href=&quot;/path/to/node_modules/blimpkit/css/blimpkit.css&quot; rel=&quot;stylesheet&quot;&gt;
+  &lt;link href=&quot;https://unpkg.com/fundamental-styles@0.38.0/dist/fundamental-styles.css&quot; rel=&quot;stylesheet&quot;&gt; &lt;link
+  href=&quot;https://unpkg.com/@blimpkit/blimpkit@{{version}}/dist/css/themes/{themeName}-auto.css&quot; rel=&quot;stylesheet&quot;&gt; &lt;link href=&quot;https://unpkg.com/@blimpkit/blimpkit@{{version}}/dist/css/blimpkit.css&quot;
+  rel=&quot;stylesheet&quot;&gt;
 </code-block>
 
 <h3>Fonts and icons</h3>
@@ -68,12 +87,8 @@
 
 <h3>Initialization and use</h3>
 
-<p>Include BlimpKit and all components:</p>
-
-<code-block type="text-html"> &lt;script type=&quot;text/javascript&quot; src=&quot;/path/to/node_modules/blimpkit/blimpkit.min.js&quot;&gt;&lt;/script&gt; </code-block>
-
 <p>Add BlimpKit to your module as a dependency:</p>
 
-<code-block type="js"> angular.module('yourModuleName', ['blimpKit']); </code-block>
+<code-block type="js">angular.module('yourModuleName', ['blimpKit']);</code-block>
 
 <p>That's it! You can now use BlimpKit. For examples, look under the "Components" section in the sidebar.</p>

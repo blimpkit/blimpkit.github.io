@@ -55,7 +55,6 @@ minify(bundle, options).then(
 
 const cssFiles = [...globSync('./css/*.css'), ...globSync('./css/themes/*.css')];
 cssFiles.map((file) => {
-  console.log(file);
   const result = cssMinify.minify(fs.readFileSync(file, 'utf8'));
   fs.writeFileSync(file.replace('css/', 'dist/css/'), licenseHeader + result.styles, 'utf8');
 });
