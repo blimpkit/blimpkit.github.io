@@ -1,11 +1,16 @@
 {
-  "name": "blimpkit",
-  "version": "1.8.3",
+  "name": "@blimpkit/blimpkit",
+  "version": "1.8.4",
   "description": "BlimpKit is a UI component library",
-  "main": "dist/js/blimpkit.js",
+  "main": "dist/blimpkit.min.js",
+  "unpkg": "dist/blimpkit.min.js",
   "scripts": {
-    "build": "node build.js",
-    "start": "npx http-server"
+    "build": "node ./scripts/build.js",
+    "docs:install": "cd docs ; npm i ; cd ..",
+    "docs:build": "node ./scripts/build-docs.js",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md,html,yaml}\" --config ./.prettierrc",
+    "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,css,scss,md,html,yaml}\" --config ./.prettierrc",
+    "start": "npx http-server ./docs"
   },
   "repository": {
     "type": "git",
@@ -35,23 +40,23 @@
   },
   "homepage": "https://github.com/blimpkit/blimpkit.github.io#readme",
   "files": [
-    "/dist/*"
+    "dist/"
   ],
   "devDependencies": {
     "@eslint/js": "^9.13.0",
-    "@highlightjs/cdn-assets": "^11.10.0",
     "clean-css": "^5.3.3",
     "eslint": "^9.13.0",
     "glob": "^11.0.0",
     "globals": "^15.11.0",
     "http-server": "^14.1.1",
-    "js-beautify": "^1.15.1",
-    "terser": "^5.34.1"
+    "terser": "^5.34.1",
+    "prettier": "^3.8.1",
+    "prettier-plugin-organize-imports": "^4.3.0"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@sap-theming/theming-base-content": "11.18.2",
-    "angular": "1.8.3",
-    "angular-aria": "1.8.3",
+    "angular": "^1.8.2",
+    "angular-aria": "^1.8.2",
     "fundamental-styles": "0.38.0",
     "jquery": "3.7.1"
   }

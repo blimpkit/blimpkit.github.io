@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2025 Eclipse Dirigible contributors
+ * Copyright (c) 2026 Eclipse Dirigible contributors
  *
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
@@ -9,89 +9,99 @@
  * SPDX-FileCopyrightText: Eclipse Dirigible contributors
  * SPDX-License-Identifier: EPL-2.0
  */
-blimpkit.directive('bkInput', (classNames) => ({
+blimpkit
+  .directive('bkInput', (classNames) => ({
     restrict: 'E',
     transclude: false,
     require: ['?^^bkInputGroup', '?^^bkTokenizer', '?^^bkFormInputMessage'],
     replace: true,
     scope: {
-        compact: '<?',
-        isHover: '<?',
-        state: '@?',
+      compact: '<?',
+      isHover: '<?',
+      state: '@?',
     },
     link: (scope, _element, attrs, ctrl) => {
-        const states = {
-            'error': 'error',
-            'success': 'success',
-            'warning': 'warning',
-            'information': 'information'
-        };
-        if (!Object.prototype.hasOwnProperty.call(attrs, 'type'))
-            console.error('bk-input error: Inputs must have the "type" HTML attribute');
-        else {
-            if (['checkbox', 'radio', 'file', 'image', 'range'].includes(attrs.type))
-                console.error('bk-input error: Invalid input type. Possible options are "color", "date", "datetime-local", "email", "hidden", "month", "password", "search", "tel", "text", "time", "url" and "week".');
+      const states = {
+        error: 'error',
+        success: 'success',
+        warning: 'warning',
+        information: 'information',
+      };
+      if (!Object.prototype.hasOwnProperty.call(attrs, 'type')) console.error('bk-input error: Inputs must have the "type" HTML attribute');
+      else {
+        if (['checkbox', 'radio', 'file', 'image', 'range'].includes(attrs.type))
+          console.error('bk-input error: Invalid input type. Possible options are "color", "date", "datetime-local", "email", "hidden", "month", "password", "search", "tel", "text", "time", "url" and "week".');
+      }
+      scope.getClasses = () => {
+        if (ctrl[0]) {
+          if (Object.prototype.hasOwnProperty.call(attrs, 'disabled') && attrs.disabled === true) ctrl[0].setDisabled(true);
+          else ctrl[0].setDisabled(false);
+        } else if (ctrl[2]) {
+          ctrl[2].setReadonly(Object.prototype.hasOwnProperty.call(attrs, 'readonly'));
         }
-        scope.getClasses = () => {
-            if (ctrl[0]) {
-                if (Object.prototype.hasOwnProperty.call(attrs, 'disabled') && attrs.disabled === true) ctrl[0].setDisabled(true);
-                else ctrl[0].setDisabled(false);
-            } else if (ctrl[2]) {
-                ctrl[2].setReadonly(Object.prototype.hasOwnProperty.call(attrs, 'readonly'));
-            }
-            return classNames({
-                'fd-input--compact': scope.compact === true,
-                'fd-input-group__input': ctrl[0],
-                'fd-tokenizer__input': ctrl[1],
-                'is-hover': scope.isHover === true,
-                [`is-${states[scope.state]}`]: scope.state && states[scope.state] && !Object.prototype.hasOwnProperty.call(attrs, 'readonly'),
-            });
-        };
+        return classNames({
+          'fd-input--compact': scope.compact === true,
+          'fd-input-group__input': ctrl[0],
+          'fd-tokenizer__input': ctrl[1],
+          'is-hover': scope.isHover === true,
+          [`is-${states[scope.state]}`]: scope.state && states[scope.state] && !Object.prototype.hasOwnProperty.call(attrs, 'readonly'),
+        });
+      };
     },
     template: '<input class="fd-input" ng-class="getClasses()" />',
-})).directive('bkInputGroup', (classNames) => ({
+  }))
+  .directive('bkInputGroup', (classNames) => ({
     restrict: 'E',
     transclude: true,
     replace: true,
     scope: {
-        compact: '<?',
-        focus: '<?',
-        isDisabled: '<?',
-        state: '@?',
-        isReadonly: '<?',
+      compact: '<?',
+      focus: '<?',
+      isDisabled: '<?',
+      state: '@?',
+      isReadonly: '<?',
     },
-    controller: ['$scope', '$attrs', function ($scope, $attrs) {
+    controller: [
+      '$scope',
+      '$attrs',
+      function ($scope, $attrs) {
         const states = {
-            'error': 'error',
-            'success': 'success',
-            'warning': 'warning',
-            'information': 'information'
+          error: 'error',
+          success: 'success',
+          warning: 'warning',
+          information: 'information',
         };
         $scope.disabled = false;
-        $scope.getClasses = () => classNames({
+        $scope.getClasses = () =>
+          classNames({
             'fd-input--compact': $scope.compact === true,
             'is-hover': $scope.isHover === true,
             'is-focus': $scope.focus === true,
             'is-readonly': $scope.isReadonly === true,
             'is-disabled': $scope.isDisabled || (Object.prototype.hasOwnProperty.call($attrs, 'disabled') && $attrs.disabled === true),
             [`is-${states[$scope.state]}`]: $scope.state && states[$scope.state] && !$scope.isReadonly,
-        });
+          });
 
         this.setDisabled = function (disabled) {
-            $scope.disabled = disabled;
+          $scope.disabled = disabled;
         };
-    }],
+      },
+    ],
     template: '<div class="fd-input-group" ng-class="getClasses()" tabindex="-1" ng-transclude></div>',
-})).directive('bkInputGroupAddon', () => ({
+  }))
+  .directive('bkInputGroupAddon', () => ({
     restrict: 'E',
     transclude: true,
     replace: true,
-    controller: ['$scope', function ($scope) {
+    controller: [
+      '$scope',
+      function ($scope) {
         $scope.hasButton = false;
-        $scope.getClasses = () => $scope.hasButton === true ? 'fd-input-group__addon--button' : undefined;
+        $scope.getClasses = () => ($scope.hasButton === true ? 'fd-input-group__addon--button' : undefined);
         this.setButtonAddon = function (hasButton) {
-            $scope.hasButton = hasButton;
+          $scope.hasButton = hasButton;
         };
-    }],
+      },
+    ],
     template: '<span class="fd-input-group__addon" ng-class="getClasses()" ng-transclude></span>',
-}));
+  }));

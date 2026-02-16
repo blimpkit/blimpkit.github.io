@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2025 Eclipse Dirigible contributors
+ * Copyright (c) 2026 Eclipse Dirigible contributors
  *
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
@@ -10,18 +10,19 @@
  * SPDX-License-Identifier: EPL-2.0
  */
 blimpkit.directive('bkLoader', (classNames) => ({
-    restrict: 'E',
-    transclude: false,
-    replace: true,
-    scope: {
-        size: '@?',
-        contrast: '<?'
-    },
-    link: (scope) => {
-        scope.getClasses = () => classNames('bk-loader', {
-            'bk-loader--l': scope.size === 'l',
-            'bk-loader--contrast': scope.contrast === true,
-        });
-    },
-    template: '<div ng-class="getClasses()"></div>'
+  restrict: 'E',
+  transclude: false,
+  replace: true,
+  scope: {
+    size: '@?',
+    contrast: '<?',
+  },
+  link: (scope) => {
+    scope.getClasses = () =>
+      classNames('bk-loader', {
+        'bk-loader--l': scope.size === 'l',
+        'bk-loader--contrast': scope.contrast === true,
+      });
+  },
+  template: '<div ng-class="getClasses()"></div>',
 }));

@@ -1,0 +1,345 @@
+<h2>Select</h2>
+<p>The select component is commonly used to enable users to select an item from a predefined list. It should be used when there are less than 12 items to choose from.</p>
+
+<h2>Attributes - Select</h2>
+<table bk-table>
+  <thead bk-table-header>
+    <tr bk-table-row>
+      <th bk-table-header-cell>Name</th>
+      <th bk-table-header-cell>Type</th>
+      <th bk-table-header-cell>Required</th>
+      <th bk-table-header-cell>Description</th>
+    </tr>
+  </thead>
+  <tbody bk-table-body>
+    <tr bk-table-row>
+      <td bk-table-cell>size</td>
+      <td bk-table-cell>string</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>The size of the select dropdown. The only option is 'large'.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>compact</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Select size.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>is-disabled</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Disable the select</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>ng-model</td>
+      <td bk-table-cell>any</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>The value of the currently selected item</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>state</td>
+      <td bk-table-cell>string</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Optional semantic state. Could be one of 'success', 'error', 'warning' or 'information'</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>message</td>
+      <td bk-table-cell>string</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Optional text displayed within the dropdown list.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>placeholder</td>
+      <td bk-table-cell>string</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Short hint displayed when no item is selected yet.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>dropdown-fill</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Adjusts the popover body that wraps the dropdown to match the text length</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>label-id</td>
+      <td bk-table-cell>string</td>
+      <td bk-table-cell>True</td>
+      <td bk-table-cell>The id of the label element if present (Necessary for aria-labelledby)</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>dropdown-fixed</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Dropdown css position will be fixed, allowing for use in dialogs. Works for the message popup as well.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>placement</td>
+      <td bk-table-cell>string</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>
+        Placement of the dropdown. Incompatible with dropdownFixed. Possible options:
+        <ul>
+          <li><strong>top-start</strong> - Alings the popover to the top left side of the control.</li>
+          <li><strong>top</strong> - Alings the popover to the top center side of the control.</li>
+          <li><strong>top-end</strong> - Alings the popover to the top right side of the control.</li>
+          <li><strong>bottom-start</strong> - Alings the popover to the bottom left side of the control. Default option.</li>
+          <li><strong>bottom</strong> - Alings the popover to the bottom center side of the control.</li>
+          <li><strong>bottom-end</strong> - Alings the popover to the bottom right side of the control.</li>
+          <li><strong>left-start</strong> - Alings the popover to the left top side of the control.</li>
+          <li><strong>left</strong> - Alings the popover to the left center side of the control.</li>
+          <li><strong>left-end</strong> - Alings the popover to the left bottom side of the control.</li>
+          <li><strong>right-start</strong> - Alings the popover to the right top side of the control.</li>
+          <li><strong>right</strong> - Alings the popover to the right center side of the control.</li>
+          <li><strong>right-end</strong> - Alings the popover to the right bottom side of the control.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>is-readonly</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>If the select must be readonly.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Attributes - Option</h2>
+<table bk-table>
+  <thead bk-table-header>
+    <tr bk-table-row>
+      <th bk-table-header-cell>Name</th>
+      <th bk-table-header-cell>Type</th>
+      <th bk-table-header-cell>Required</th>
+      <th bk-table-header-cell>Description</th>
+    </tr>
+  </thead>
+  <tbody bk-table-body>
+    <tr bk-table-row>
+      <td bk-table-cell>text</td>
+      <td bk-table-cell>string</td>
+      <td bk-table-cell>True</td>
+      <td bk-table-cell>Primary text of the select option</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>secondary-text</td>
+      <td bk-table-cell>string</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Right alligned secondary text</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>value</td>
+      <td bk-table-cell>any</td>
+      <td bk-table-cell>True</td>
+      <td bk-table-cell>Option value</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>glyph</td>
+      <td bk-table-cell>string</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Option icon class</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>icon</td>
+      <td bk-table-cell>string</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Path to an svg icon. Alternative to glyph.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>no-wrap</td>
+      <td bk-table-cell>string</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Prevents primary text wrapping</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Examples</h2>
+<h3>Select with grouping</h3>
+<code-block>
+  <bk-select placeholder="Select Ingredient" dropdown-fill="true">
+    <bk-list-group-header>
+      <bk-list-title>Fruits</bk-list-title>
+    </bk-list-group-header>
+    <bk-option text="Apple" value="'1_1'"></bk-option>
+    <bk-option text="Orange" value="'1_2'"></bk-option>
+    <bk-option text="Banana" value="'1_3'"></bk-option>
+    <bk-option text="Kiwi" value="'1_4'"></bk-option>
+    <bk-list-group-header>
+      <bk-list-title>Vegetables</bk-list-title>
+    </bk-list-group-header>
+    <bk-option text="Tomato" value="'2_1'"></bk-option>
+    <bk-option text="Onion" value="'2_2'"></bk-option>
+    <bk-option text="Spinach" value="'2_3'"></bk-option>
+    <bk-option text="Potato" value="'2_4'"></bk-option>
+  </bk-select>
+</code-block>
+<h3>Select with icons</h3>
+<code-block>
+  <bk-select ng-model="selectSelectedValue">
+    <bk-option text="Option 1" secondary-text="A1" glyph="sap-icon--marketing-campaign" value="1"></bk-option>
+    <bk-option text="Option 2" secondary-text="A2" glyph="sap-icon--shipping-status" value="2"></bk-option>
+    <bk-option text="Option 3" secondary-text="A3" glyph="sap-icon--headset" value="3"></bk-option>
+    <bk-option text="Option 4" secondary-text="A4" glyph="sap-icon--activate" value="4"></bk-option>
+  </bk-select>
+  <code-block type="js"> $scope.selectSelectedValue = 2; </code-block>
+</code-block>
+<h3>Disabled select</h3>
+<code-block>
+  <bk-select placeholder="Select an option" is-disabled="true">
+    <bk-option text="Option 1" value="1"></bk-option>
+    <bk-option text="Option 2" value="2"></bk-option>
+    <bk-option text="Option 3" value="3"></bk-option>
+    <bk-option text="Option 4" value="4"></bk-option>
+  </bk-select>
+</code-block>
+<h3>Readonly select</h3>
+<code-block>
+  <bk-select ng-model="selectReadonlyValue" is-readonly="true">
+    <bk-option text="Option 1" value="1"></bk-option>
+    <bk-option text="Option 2" value="2"></bk-option>
+    <bk-option text="Option 3" value="3"></bk-option>
+    <bk-option text="Option 4" value="4"></bk-option>
+  </bk-select>
+  <code-block type="js"> $scope.selectReadonlyValue = 2; </code-block>
+</code-block>
+<h3>Compact select with states and message</h3>
+<p>You can hover over the select input to see the message.</p>
+<code-block>
+  <bk-select placeholder="Select an option" compact="true" state="success" message="'Success message'">
+    <bk-option text="Option 1" value="1"></bk-option>
+    <bk-option text="Option 2" value="2"></bk-option>
+    <bk-option text="Option 3" value="3"></bk-option>
+    <bk-option text="Option 4" value="4"></bk-option>
+  </bk-select>
+</code-block>
+<code-block>
+  <bk-select placeholder="Select an option" compact="true" state="information" message="'Information message'">
+    <bk-option text="Option 1" value="1"></bk-option>
+    <bk-option text="Option 2" value="2"></bk-option>
+    <bk-option text="Option 3" value="3"></bk-option>
+    <bk-option text="Option 4" value="4"></bk-option>
+  </bk-select>
+</code-block>
+<code-block>
+  <bk-select placeholder="Select an option" compact="true" state="warning" message="'Warning message'">
+    <bk-option text="Option 1" value="1"></bk-option>
+    <bk-option text="Option 2" value="2"></bk-option>
+    <bk-option text="Option 3" value="3"></bk-option>
+    <bk-option text="Option 4" value="4"></bk-option>
+  </bk-select>
+</code-block>
+<code-block>
+  <bk-select placeholder="Select an option" compact="true" state="error" message="'Error message'">
+    <bk-option text="Option 1" value="1"></bk-option>
+    <bk-option text="Option 2" value="2"></bk-option>
+    <bk-option text="Option 3" value="3"></bk-option>
+    <bk-option text="Option 4" value="4"></bk-option>
+  </bk-select>
+</code-block>
+
+<h3>Dropdown position - left start</h3>
+<code-block>
+  <bk-select placement="left-start" ng-model="select.s1" ng-change="onSelectChange()" style="margin-left: 7.5rem">
+    <bk-option text="Option 1" secondary-text="A1" glyph="sap-icon--marketing-campaign" value="1"></bk-option>
+    <bk-option text="Option 2" secondary-text="A2" glyph="sap-icon--shipping-status" value="2"></bk-option>
+  </bk-select>
+  <code-block type="js"> $scope.select = { s1: 1 }; $scope.onSelectChange = () => { console.log($scope.select.s1); }; </code-block>
+</code-block>
+
+<h3>Dropdown position - left</h3>
+<code-block>
+  <bk-select placement="left" ng-model="select.s2" style="margin-left: 7.5rem">
+    <bk-option text="Option 1" secondary-text="A1" glyph="sap-icon--marketing-campaign" value="1"></bk-option>
+    <bk-option text="Option 2" secondary-text="A2" glyph="sap-icon--shipping-status" value="2"></bk-option>
+  </bk-select>
+  <code-block type="js"> $scope.select = { s2: 2 }; </code-block>
+</code-block>
+
+<h3>Dropdown position - left end</h3>
+<code-block>
+  <bk-select placement="left-end" ng-model="select.s3" style="margin-left: 7.5rem">
+    <bk-option text="Option 1" secondary-text="A1" glyph="sap-icon--marketing-campaign" value="1"></bk-option>
+    <bk-option text="Option 2" secondary-text="A2" glyph="sap-icon--shipping-status" value="2"></bk-option>
+  </bk-select>
+  <code-block type="js"> $scope.select = { s3: 1 }; </code-block>
+</code-block>
+
+<h3>Dropdown position - top start</h3>
+<code-block>
+  <bk-select placement="top-start" ng-model="select.s4">
+    <bk-option text="Option 1" secondary-text="A1" glyph="sap-icon--marketing-campaign" value="1"></bk-option>
+    <bk-option text="Option 2" secondary-text="A2" glyph="sap-icon--shipping-status" value="2"></bk-option>
+  </bk-select>
+  <code-block type="js"> $scope.select = { s4: 2 }; </code-block>
+</code-block>
+
+<h3>Dropdown position - top</h3>
+<code-block>
+  <bk-select placement="top" ng-model="select.s5">
+    <bk-option text="Option 1" secondary-text="A1" glyph="sap-icon--marketing-campaign" value="1"></bk-option>
+    <bk-option text="Option 2" secondary-text="A2" glyph="sap-icon--shipping-status" value="2"></bk-option>
+  </bk-select>
+  <code-block type="js"> $scope.select = { s5: 1 }; </code-block>
+</code-block>
+
+<h3>Dropdown position - top end</h3>
+<code-block>
+  <bk-select placement="top-end" ng-model="select.s6" style="margin-left: 1rem">
+    <bk-option text="Option 1" secondary-text="A1" glyph="sap-icon--marketing-campaign" value="1"></bk-option>
+    <bk-option text="Option 2" secondary-text="A2" glyph="sap-icon--shipping-status" value="2"></bk-option>
+  </bk-select>
+  <code-block type="js"> $scope.select = { s6: 2 }; </code-block>
+</code-block>
+
+<h3>Dropdown position - bottom start</h3>
+<code-block>
+  <bk-select placement="bottom-start" ng-model="select.s7">
+    <bk-option text="Option 1" secondary-text="A1" glyph="sap-icon--marketing-campaign" value="1"></bk-option>
+    <bk-option text="Option 2" secondary-text="A2" glyph="sap-icon--shipping-status" value="2"></bk-option>
+  </bk-select>
+  <code-block type="js"> $scope.select = { s7: 1 }; </code-block>
+</code-block>
+
+<h3>Dropdown position - bottom</h3>
+<code-block>
+  <bk-select placement="bottom" ng-model="select.s8">
+    <bk-option text="Option 1" secondary-text="A1" glyph="sap-icon--marketing-campaign" value="1"></bk-option>
+    <bk-option text="Option 2" secondary-text="A2" glyph="sap-icon--shipping-status" value="2"></bk-option>
+  </bk-select>
+  <code-block type="js"> $scope.select = { s8: 2 }; </code-block>
+</code-block>
+<h3>Dropdown position - bottom end</h3>
+<code-block>
+  <bk-select placement="bottom-end" ng-model="select.s9">
+    <bk-option text="Option 1" secondary-text="A1" glyph="sap-icon--marketing-campaign" value="1"></bk-option>
+    <bk-option text="Option 2" secondary-text="A2" glyph="sap-icon--shipping-status" value="2"></bk-option>
+  </bk-select>
+  <code-block type="js"> $scope.select = { s9: 1 }; </code-block>
+</code-block>
+
+<h3>Dropdown position - right start</h3>
+<code-block>
+  <bk-select placement="right-start" ng-model="select.s10" placeholder="Select an option..." required>
+    <bk-option text="Option 1" secondary-text="A1" glyph="sap-icon--marketing-campaign" value="1"></bk-option>
+    <bk-option text="Option 2" secondary-text="A2" glyph="sap-icon--shipping-status" value="2"></bk-option>
+  </bk-select>
+  <code-block type="js"> $scope.select = { s10: 2 }; </code-block>
+</code-block>
+
+<h3>Dropdown position - right</h3>
+<code-block>
+  <bk-select placement="right" ng-model="select.s11" placeholder="Select an option..." required>
+    <bk-option text="Option 1" secondary-text="A1" glyph="sap-icon--marketing-campaign" value="1"></bk-option>
+    <bk-option text="Option 2" secondary-text="A2" glyph="sap-icon--shipping-status" value="2"></bk-option>
+  </bk-select>
+  <code-block type="js"> $scope.select = { s11: 1 }; </code-block>
+</code-block>
+
+<h3>Dropdown position - right end</h3>
+<code-block>
+  <bk-select placement="right-end" ng-model="select.s12" placeholder="Select an option..." required>
+    <bk-option text="Option 1" secondary-text="A1" glyph="sap-icon--marketing-campaign" value="1"></bk-option>
+    <bk-option text="Option 2" secondary-text="A2" glyph="sap-icon--shipping-status" value="2"></bk-option>
+  </bk-select>
+  <code-block type="js"> $scope.select = { s12: 2 }; </code-block>
+</code-block>

@@ -1,0 +1,9 @@
+<h2>Focus</h2>
+<p>The focus directive helps you focus any HTML element on demand (on event/action).</p>
+<p>Put '<b>bk-focus="false"</b>' as an attribute on the element that you want and when you want it to receive focus, change its value to '<b>true</b>'.</p>
+
+<h2>Example</h2>
+<code-block>
+  <bk-button label="Focus input" ng-click="focusInput = true"></bk-button>
+  <bk-input type="text" bk-focus="{{focusInput}}"></bk-input>
+</code-block>

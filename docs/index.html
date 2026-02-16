@@ -1,0 +1,121 @@
+<!--
+
+    Copyright (c) 2026 Eclipse Dirigible contributors
+
+    All rights reserved. This program and the accompanying materials
+    are made available under the terms of the Eclipse Public License v2.0
+    which accompanies this distribution, and is available at
+    http://www.eclipse.org/legal/epl-v20.html
+
+    SPDX-FileCopyrightText: Eclipse Dirigible contributors
+    SPDX-License-Identifier: EPL-2.0
+
+-->
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="documentation" ng-controller="DocumentationViewController">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" sizes="any" href="./favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+    <title>{{ title }} | BlimpKit</title>
+
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/angular/angular.min.js"></script>
+    <script src="/node_modules/angular-aria/angular-aria.min.js"></script>
+
+    <script type="text/javascript" src="./dist/blimpkit.min.js"></script>
+
+    <link href="/node_modules/fundamental-styles/dist/fundamental-styles.css" rel="stylesheet" />
+    <link href="./dist/css/blimpkit.css" rel="stylesheet" />
+    <link href="./css/documentation.css" rel="stylesheet" />
+
+    <script src="/node_modules/@highlightjs/cdn-assets/highlight.min.js"></script>
+    <script src="/node_modules/js-beautify/js/lib/beautifier.min.js"></script>
+
+    <script type="text/javascript" src="./js/documentation.js"></script>
+  </head>
+
+  <body class="bk-vbox">
+    <bk-shellbar>
+      <bk-shellbar-group position="left">
+        <bk-shellbar-action>
+          <bk-button bk-shellbar-button class="doc-sidenav-btn" glyph="sap-icon--menu2" aria-label="show navigation" ng-click="sidenavToggle()"></bk-button>
+        </bk-shellbar-action>
+        <span bk-shellbar-logo><img src="./logo/blimpkit.svg" width="32" height="32" alt="BlimpKit" /></span>
+        <span bk-shellbar-title>BlimpKit</span>
+      </bk-shellbar-group>
+      <bk-shellbar-group position="right">
+        <bk-shellbar-action>
+          <bk-popover>
+            <bk-popover-control>
+              <bk-button bk-shellbar-button glyph="sap-icon--palette" aria-label="select theme" is-menu="true"></bk-button>
+            </bk-popover-control>
+            <bk-popover-body align="bottom-right">
+              <bk-menu aria-label="theme popover items" has-icons="true">
+                <bk-menu-item title="BlimpKit" ng-click="setTheme('blimpkit-auto')" left-icon-class="{{isTheme('blimpkit-auto') ? 'sap-icon--accept' : ''}}"></bk-menu-item>
+                <bk-menu-item title="BlimpKit (Light)" ng-click="setTheme('blimpkit-light')" left-icon-class="{{isTheme('blimpkit-light') ? 'sap-icon--accept' : ''}}"></bk-menu-item>
+                <bk-menu-item title="BlimpKit (Dark)" ng-click="setTheme('blimpkit-dark')" left-icon-class="{{isTheme('blimpkit-dark') ? 'sap-icon--accept' : ''}}"></bk-menu-item>
+                <bk-menu-item title="Classic" ng-click="setTheme('classic-auto')" left-icon-class="{{isTheme('classic-auto') ? 'sap-icon--accept' : ''}}"></bk-menu-item>
+                <bk-menu-item title="Classic (Light)" ng-click="setTheme('classic-light')" left-icon-class="{{isTheme('classic-light') ? 'sap-icon--accept' : ''}}"></bk-menu-item>
+                <bk-menu-item title="Classic (Dark)" ng-click="setTheme('classic-dark')" left-icon-class="{{isTheme('classic-dark') ? 'sap-icon--accept' : ''}}"></bk-menu-item>
+                <bk-menu-item title="Mystic (Light)" ng-click="setTheme('mystic-light')" left-icon-class="{{isTheme('mystic-light') ? 'sap-icon--accept' : ''}}"></bk-menu-item>
+              </bk-menu>
+            </bk-popover-body>
+          </bk-popover>
+        </bk-shellbar-action>
+        <bk-shellbar-action>
+          <a bk-button bk-shellbar-button href="https://github.com/blimpkit/blimpkit.github.io" label="{{version}}" icon-path="./icons/github-mark.svg"></a>
+        </bk-shellbar-action>
+      </bk-shellbar-group>
+    </bk-shellbar>
+    <div class="doc-main-container bk-hbox" ng-click="sidenavOpen = false">
+      <bk-vertical-nav class="doc-sidenav" visible="{{sidenavOpen}}" can-scroll="true">
+        <bk-vertical-nav-main-section aria-label="main navigation">
+          <bk-list>
+            <bk-list-navigation-item ng-repeat-start="navItem in navItems track by $index" ng-if="navItem.id" ng-click="switchPage(navItem.id, navItem.label)" indicated="selectedPage === navItem.id">
+              <bk-list-navigation-item-text>{{::navItem.label}}</bk-list-navigation-item-text>
+              <bk-list-navigation-item-indicator ng-if="selectedPage === navItem.id"></bk-list-navigation-item-indicator>
+            </bk-list-navigation-item>
+            <bk-list-navigation-group-header ng-if="!navItem.id" ng-repeat-end>{{::navItem.label}}</bk-list-navigation-group-header>
+          </bk-list>
+        </bk-vertical-nav-main-section>
+      </bk-vertical-nav>
+      <div class="bk-fill-parent" bk-scrollbar ng-include="'./components/' + selectedPage + '.html'"></div>
+    </div>
+
+    <!-- BlimpKit auto theme -->
+    <link ng-if="isTheme('blimpkit-auto')" href="./dist/css/themes/blimpkit-auto.css" rel="stylesheet" />
+    <link ng-if="isTheme('blimpkit-auto')" href="./css/highlightjs-auto.css" rel="stylesheet" />
+
+    <!-- BlimpKit light theme -->
+    <link ng-if="isTheme('blimpkit-light')" href="./dist/css/themes/blimpkit-light-variables.css" rel="stylesheet" />
+    <link ng-if="isTheme('blimpkit-light')" href="./dist/css/themes/blimpkit-light.css" rel="stylesheet" />
+    <link ng-if="isTheme('blimpkit-light')" rel="stylesheet" href="/node_modules/@highlightjs/cdn-assets/styles/github-dark.min.css" />
+
+    <!-- BlimpKit dark theme -->
+    <link ng-if="isTheme('blimpkit-dark')" href="./dist/css/themes/blimpkit-dark-variables.css" rel="stylesheet" />
+    <link ng-if="isTheme('blimpkit-dark')" href="./dist/css/themes/blimpkit-dark.css" rel="stylesheet" />
+    <link ng-if="isTheme('blimpkit-dark')" rel="stylesheet" href="/node_modules/@highlightjs/cdn-assets/styles/github-dark-dimmed.min.css" />
+
+    <!-- Classic auto theme -->
+    <link ng-if="isTheme('classic-auto')" href="./dist/css/themes/classic-auto.css" rel="stylesheet" />
+    <link ng-if="isTheme('classic-auto')" href="./css/highlightjs-auto.css" rel="stylesheet" />
+
+    <!-- Classic light theme -->
+    <link ng-if="isTheme('classic-light')" href="./dist/css/themes/classic-light-variables.css" rel="stylesheet" />
+    <link ng-if="isTheme('classic-light')" href="./dist/css/themes/classic-light.css" rel="stylesheet" />
+    <link ng-if="isTheme('classic-light')" rel="stylesheet" href="/node_modules/@highlightjs/cdn-assets/styles/github-dark.min.css" />
+
+    <!-- Classic light theme -->
+    <link ng-if="isTheme('classic-dark')" href="./dist/css/themes/classic-dark-variables.css" rel="stylesheet" />
+    <link ng-if="isTheme('classic-dark')" href="./dist/css/themes/classic-dark.css" rel="stylesheet" />
+    <link ng-if="isTheme('classic-dark')" rel="stylesheet" href="/node_modules/@highlightjs/cdn-assets/styles/github-dark.min.css" />
+
+    <!-- Mystic light theme -->
+    <link ng-if="isTheme('mystic-light')" href="./dist/css/themes/mystic-light-variables.css" rel="stylesheet" />
+    <link ng-if="isTheme('mystic-light')" href="./dist/css/themes/mystic-light.css" rel="stylesheet" />
+    <link ng-if="isTheme('mystic-light')" rel="stylesheet" href="/node_modules/@highlightjs/cdn-assets/styles/github-dark.min.css" />
+  </body>
+</html>

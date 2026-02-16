@@ -1,0 +1,157 @@
+<h2>Notification</h2>
+<p>Notifications are used to relay information to the user about a situation or task that requires their input.</p>
+
+<h2>Attributes - Notification</h2>
+<table bk-table>
+  <thead bk-table-header>
+    <tr bk-table-row>
+      <th bk-table-header-cell>Name</th>
+      <th bk-table-header-cell>Type</th>
+      <th bk-table-header-cell>Required</th>
+      <th bk-table-header-cell>Description</th>
+    </tr>
+  </thead>
+  <tbody bk-table-body>
+    <tr bk-table-row>
+      <td bk-table-cell>is-selected</td>
+      <td bk-table-cell>string</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>If the notification should be selected.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>is-banner</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Show the banner in the top right corner.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Attributes - Notification Title</h2>
+<table bk-table>
+  <thead bk-table-header>
+    <tr bk-table-row>
+      <th bk-table-header-cell>Name</th>
+      <th bk-table-header-cell>Type</th>
+      <th bk-table-header-cell>Required</th>
+      <th bk-table-header-cell>Description</th>
+    </tr>
+  </thead>
+  <tbody bk-table-body>
+    <tr bk-table-row>
+      <td bk-table-cell>is-unread</td>
+      <td bk-table-cell>string</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>When true, the tile will be displayed in bold.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Attributes - Notification Icon</h2>
+<table bk-table>
+  <thead bk-table-header>
+    <tr bk-table-row>
+      <th bk-table-header-cell>Name</th>
+      <th bk-table-header-cell>Type</th>
+      <th bk-table-header-cell>Required</th>
+      <th bk-table-header-cell>Description</th>
+    </tr>
+  </thead>
+  <tbody bk-table-body>
+    <tr bk-table-row>
+      <td bk-table-cell>bk-notification-icon</td>
+      <td bk-table-cell>string</td>
+      <td bk-table-cell>True</td>
+      <td bk-table-cell>Type of icon. Available options - 'information', 'warning', 'negative' and 'positive'.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Examples</h2>
+
+<h3>Notification</h3>
+
+<code-block>
+  <div class="bk-vbox bk-box--gap">
+    <bk-notification ng-click="setRead()">
+      <div bk-notification-content>
+        <div bk-notification-header>
+          <span bk-notification-icon="information"></span>
+          <h4 bk-notification-title is-unread="isUnread">Notification Title</h4>
+        </div>
+        <p bk-notification-paragraph>Description</p>
+        <div bk-notification-footer>
+          <span bk-notification-footer-content>First</span>
+          <span bk-notification-separator></span>
+          <span bk-notification-footer-content>Second</span>
+          <span bk-notification-separator></span>
+          <bk-link href="#more">More</bk-link>
+        </div>
+      </div>
+      <div bk-notification-actions>
+        <bk-popover>
+          <bk-popover-control>
+            <bk-button state="transparent" aria-label="Notification menu" glyph="sap-icon--overflow"></bk-button>
+          </bk-popover-control>
+          <bk-popover-body align="bottom-right">
+            <bk-menu aria-label="notification menu items">
+              <bk-menu-item title="Some option"></bk-menu-item>
+              <bk-menu-item title="Some option"></bk-menu-item>
+            </bk-menu>
+          </bk-popover-body>
+        </bk-popover>
+        <bk-button aria-label="Close" state="transparent" glyph="sap-icon--decline"></bk-button>
+      </div>
+    </bk-notification>
+
+    <bk-notification ng-click="notificationClick()" is-selected="warningSelected">
+      <div bk-notification-content>
+        <div bk-notification-header>
+          <span bk-notification-icon="warning"></span>
+          <h4 bk-notification-title>Warning</h4>
+        </div>
+        <p bk-notification-paragraph>Description</p>
+      </div>
+    </bk-notification>
+
+    <bk-notification>
+      <div bk-notification-content>
+        <div bk-notification-header>
+          <span bk-notification-icon="negative"></span>
+          <h4 bk-notification-title>Negative</h4>
+        </div>
+        <p bk-notification-paragraph>Description</p>
+      </div>
+    </bk-notification>
+
+    <bk-notification>
+      <div bk-notification-content>
+        <div bk-notification-header>
+          <span bk-notification-icon="positive"></span>
+          <h4 bk-notification-title>Positive</h4>
+        </div>
+        <p bk-notification-paragraph>Description</p>
+      </div>
+    </bk-notification>
+  </div>
+  <code-block type="js"> $scope.warningSelected = false; $scope.isUnread = true; $scope.setRead = () => {$scope.isUnread = false;}; $scope.notificationClick = () => {$scope.warningSelected = !$scope.warningSelected;}; </code-block>
+</code-block>
+
+<h3>Notification as banner</h3>
+
+<code-block>
+  <div style="position: relative; width: 100%; min-height: 300px; border: 1px solid var(--sapList_BorderColor)">
+    <bk-notification is-banner="true" style="min-width: 400px">
+      <bk-avatar glyph="sap-icon--message-information" aria-label="avatar" indication-color="5"></bk-avatar>
+      <div bk-notification-content>
+        <div bk-notification-header>
+          <h4 bk-notification-title>Notification Title</h4>
+        </div>
+        <p bk-notification-paragraph>Description</p>
+      </div>
+      <div bk-notification-actions>
+        <bk-button aria-label="Close" state="transparent" glyph="sap-icon--decline"></bk-button>
+      </div>
+    </bk-notification>
+  </div>
+</code-block>
