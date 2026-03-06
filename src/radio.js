@@ -28,9 +28,9 @@ blimpkit
       scope.getClasses = () =>
         classNames({
           'fd-radio--compact': scope.compact === true,
-          'is-disabled': Object.prototype.hasOwnProperty.call(attrs, 'disabled') && attrs.disabled === true,
-          'is-readonly': Object.prototype.hasOwnProperty.call(attrs, 'readonly') && attrs.readonly === true,
-          [`is-${states[scope.state]}`]: scope.state && states[scope.state] && !Object.prototype.hasOwnProperty.call(attrs, 'readonly'),
+          'is-disabled': attrs['disabled'] === true,
+          'is-readonly': attrs['readonly'] === true,
+          [`is-${states[scope.state]}`]: scope.state && states[scope.state] && attrs['readonly'] !== true,
         });
     },
     template: '<input type="radio" class="fd-radio" ng-class="getClasses()">',

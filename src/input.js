@@ -37,14 +37,14 @@ blimpkit
           if (Object.prototype.hasOwnProperty.call(attrs, 'disabled') && attrs.disabled === true) ctrl[0].setDisabled(true);
           else ctrl[0].setDisabled(false);
         } else if (ctrl[2]) {
-          ctrl[2].setReadonly(Object.prototype.hasOwnProperty.call(attrs, 'readonly'));
+          ctrl[2].setReadonly(attrs['readonly']);
         }
         return classNames({
           'fd-input--compact': scope.compact === true,
           'fd-input-group__input': ctrl[0],
           'fd-tokenizer__input': ctrl[1],
           'is-hover': scope.isHover === true,
-          [`is-${states[scope.state]}`]: scope.state && states[scope.state] && !Object.prototype.hasOwnProperty.call(attrs, 'readonly'),
+          [`is-${states[scope.state]}`]: scope.state && states[scope.state] && attrs['readonly'] !== true,
         });
       };
     },

@@ -133,7 +133,7 @@ blimpkit
             else if (!$scope.state && $scope.expanded) $scope.$apply(() => ($scope.expanded = false));
           }
         }
-        this.setReadonly = function (readonly) {
+        this.setReadonly = function (readonly = false) {
           isReadonly = readonly;
         };
         $element.on('focusout', focusoutEvent);

@@ -26,11 +26,11 @@ blimpkit.directive('bkTextarea', (classNames) => ({
       information: 'information',
     };
     scope.getClasses = () => {
-      if (ctrl) ctrl.setReadonly(Object.prototype.hasOwnProperty.call(attrs, 'readonly'));
+      if (ctrl) ctrl.setReadonly(attrs['readonly']);
       return classNames('fd-textarea', {
         'fd-textarea--compact': scope.compact === true,
-        'is-disabled': Object.prototype.hasOwnProperty.call(attrs, 'disabled') && attrs.disabled === true,
-        [`is-${states[scope.state]}`]: scope.state && states[scope.state] && !Object.prototype.hasOwnProperty.call(attrs, 'readonly'),
+        'is-disabled': attrs['disabled'] === true,
+        [`is-${states[scope.state]}`]: scope.state && states[scope.state] && attrs['readonly'] !== true,
       });
     };
   },
