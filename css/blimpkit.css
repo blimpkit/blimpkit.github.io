@@ -609,8 +609,12 @@ ng-transclude:empty {
   justify-content: space-evenly;
 }
 
-.bk-box--space-stretch {
-  justify-content: stretch;
+.bk-box--center {
+  justify-content: center;
+}
+
+.bk-box--end {
+  justify-content: end;
 }
 
 .bk-box--items-start {
@@ -626,7 +630,7 @@ ng-transclude:empty {
 }
 
 .bk-box--items-stretch > * {
-  width: 100%;
+  flex-grow: 1;
 }
 
 .bk-box--gap {

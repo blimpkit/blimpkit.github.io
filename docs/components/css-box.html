@@ -72,6 +72,14 @@
   </thead>
   <tbody bk-table-body>
     <tr bk-table-row>
+      <td bk-table-cell>bk-box--center</td>
+      <td bk-table-cell>Items will centered in the container.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>bk-box--end</td>
+      <td bk-table-cell>Items will be placed at the end of the container.</td>
+    </tr>
+    <tr bk-table-row>
       <td bk-table-cell>bk-box--space-around</td>
       <td bk-table-cell>Justify items along the container's main axis such that there is an equal amount of space on each side of each item.</td>
     </tr>
@@ -81,22 +89,67 @@
     </tr>
     <tr bk-table-row>
       <td bk-table-cell>bk-box--space-evenly</td>
-      <td bk-table-cell>
-        justify items along the container's main axis such that there is an equal amount of space around each item, but also accounting for the doubling of space you would normally see between each item when using
+      <td bk-table-cell>Justify items along the container's main axis such that there is an equal amount of space around each item, but also accounting for the doubling of space you would normally see between each item when using
         <b>bk-box--space-around</b>.
       </td>
-    </tr>
-    <tr bk-table-row>
-      <td bk-table-cell>bk-box--space-stretch</td>
-      <td bk-table-cell>Items will fill the available space along the container's main axis.</td>
     </tr>
   </tbody>
 </table>
 <code-block>
-  <div class="doc-css-layout-container bk-hbox bk-box--space-evenly">
-    <div class="doc-css-layout-contents">1</div>
-    <div class="doc-css-layout-contents">2</div>
-    <div class="doc-css-layout-contents">3</div>
+  <div class="bk-vbox bk-box--gap">
+    <div class="doc-css-layout-container bk-hbox">
+      <div class="doc-css-layout-contents">1</div>
+      <div class="doc-css-layout-contents">2</div>
+      <div class="doc-css-layout-contents">3</div>
+    </div>
+
+    <div class="doc-css-layout-container bk-hbox bk-box--center">
+      <div class="doc-css-layout-contents">1</div>
+      <div class="doc-css-layout-contents">2</div>
+      <div class="doc-css-layout-contents">3</div>
+    </div>
+
+    <div class="doc-css-layout-container bk-hbox bk-box--end">
+      <div class="doc-css-layout-contents">1</div>
+      <div class="doc-css-layout-contents">2</div>
+      <div class="doc-css-layout-contents">3</div>
+    </div>
+
+    <div class="doc-css-layout-container bk-hbox bk-box--space-around">
+      <div class="doc-css-layout-contents">1</div>
+      <div class="doc-css-layout-contents">2</div>
+      <div class="doc-css-layout-contents">3</div>
+    </div>
+
+    <div class="doc-css-layout-container bk-hbox bk-box--space-between">
+      <div class="doc-css-layout-contents">1</div>
+      <div class="doc-css-layout-contents">2</div>
+      <div class="doc-css-layout-contents">3</div>
+    </div>
+
+    <div class="doc-css-layout-container bk-hbox bk-box--space-evenly">
+      <div class="doc-css-layout-contents">1</div>
+      <div class="doc-css-layout-contents">2</div>
+      <div class="doc-css-layout-contents">3</div>
+    </div>
+  </div>
+</code-block>
+
+<h3>Stretch items</h3>
+
+<code-block>
+  <div class="bk-vbox bk-box--gap">
+    <div class="doc-css-layout-container bk-hbox bk-box--items-stretch">
+      <div class="doc-css-layout-contents">1</div>
+      <div class="doc-css-layout-contents">2</div>
+      <div class="doc-css-layout-contents">3</div>
+    </div>
+
+    <div class="doc-css-layout-container bk-vbox bk-box--items-stretch">
+      <div class="doc-css-layout-contents">1</div>
+      <div class="doc-css-layout-contents">2</div>
+      <div class="doc-css-layout-contents">3</div>
+    </div>
   </div>
 </code-block>
 
