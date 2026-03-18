@@ -1106,6 +1106,11 @@ a.fd-button[aria-disabled="true"] {
   margin: 0;
 }
 
+/* Form group fixes */
+.fd-form-group__header {
+  --sapGroup_TitleBackground: transparent;
+}
+
 /* Combobox and Select (when in toolbar) margin fixes */
 .fd-toolbar .fd-popover .fd-input-group {
   margin: 0;
