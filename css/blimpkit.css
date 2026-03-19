@@ -1106,6 +1106,10 @@ a.fd-button[aria-disabled="true"] {
   margin: 0;
 }
 
+.fd-form-item .fd-form-item {
+  margin-block-start: 0 !important;
+}
+
 /* Form group fixes */
 .fd-form-group__header {
   --sapGroup_TitleBackground: transparent;
