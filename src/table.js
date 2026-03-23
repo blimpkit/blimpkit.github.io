@@ -183,6 +183,7 @@ blimpkit
       nestingLevel: '<?',
     },
     link: (scope, element, _attrs, tableGroupCtrl) => {
+      if (scope.noData) element[0].setAttribute('colspan', '100%');
       scope.getClasses = () =>
         classNames('fd-table__cell', {
           'fd-table__cell--no-data': scope.noData,
@@ -208,7 +209,7 @@ blimpkit
         }
       }
     },
-    template: `<td ng-class="getClasses()" ng-attr-colspan="{{ noData ? '100%' : undefined }}"  ng-transclude></td>`,
+    template: `<td ng-class="getClasses()" ng-transclude></td>`,
   }))
   .directive('bkTableGroup', function () {
     return {
