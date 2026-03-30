@@ -255,6 +255,33 @@ ng-transclude:empty {
   }
 }
 
+/* Step Indicator */
+.bk-steps-indicator {
+  overflow: hidden;
+}
+
+.bk-steps-indicator.bk-border {
+  border-radius: var(--sapElement_BorderCornerRadius);
+}
+
+.bk-steps-indicator .fd-wizard__progress-bar {
+  box-shadow: none;
+}
+
+.bk-steps-indicator .fd-wizard__step-container {
+  cursor: initial;
+}
+
+.fd-wizard__step--current .fd-wizard__step-indicator svg {
+  fill: var(--fdWizard_Current_Step_Icon_Color);
+}
+
+.bk-steps-indicator .fd-wizard__step--no-label:last-child {
+  min-width: auto;
+  width: 0.25rem;
+  padding-inline-end: 2.375rem;
+}
+
 /* General helper classes */
 .bk-pointer {
   cursor: pointer;
@@ -1157,6 +1184,11 @@ a.fd-button[aria-disabled="true"] {
 .bk-table--no-outer-vertical-borders .fd-table__header .fd-table__cell:last-child,
 .bk-table--no-outer-vertical-borders .fd-table__body .fd-table__cell:last-child {
   border-right: hidden;
+}
+
+.bk-table--no-outer-vertical-borders .fd-table__cell--group,
+.fd-table--no-outer-border .fd-table__cell--group {
+  border-left-style: none !important;
 }
 
 .bk-table__header-sticky th.fd-table__cell {

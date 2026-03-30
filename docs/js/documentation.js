@@ -227,6 +227,10 @@ documentation.controller('DocumentationViewController', function ($scope, $locat
             label: 'Progress Indicator',
         },
         {
+            id: 'step-indicator',
+            label: 'Step Indicator',
+        },
+        {
             id: 'scrollbar',
             label: 'Scrollbar',
         },
@@ -622,6 +626,24 @@ documentation.controller('DocumentationViewController', function ($scope, $locat
     $scope.allStepsCompleted = function () {
         return $scope.wizard.completedSteps >= $scope.wizard.stepsCount;
     };
+
+    // Step Indicator
+    $scope.steps = [{
+        label: 'Step 1',
+        glyph: 'sap-icon--product'
+    },{
+        label: 'Step 2',
+        glyph: 'sap-icon--cart'
+    }, {
+        label: 'Step 3',
+        secondaryLabel: 'Current step',
+        svg: './logo/blimpkit-symbolic.svg',
+    }, {
+        label: 'Step 4',
+        glyph: 'sap-icon--wallet'
+    }];
+
+    $scope.currentStep = 3;
 
     // Dialog
     $scope.dialogVisible = false;

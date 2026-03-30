@@ -248,27 +248,16 @@
 </code-block>
 <h3>Split menu button</h3>
 
-<bk-split-button label="{{ splitButtonLabel }}" align="right" aria-label="button-split" callback="splitButtonClick">
-  <bk-menu aria-label="split button items">
-    <bk-menu-item title="Item" ng-click="splitItemClick('Item')"></bk-menu-item>
-    <bk-menu-item title="Item 2" ng-click="splitItemClick('Item 2')"></bk-menu-item>
-    <bk-menu-item title="Item 3" ng-click="splitItemClick('Item 3')"></bk-menu-item>
-  </bk-menu>
-</bk-split-button>
-
-<h4>HTML</h4>
-<code-block type="text-html" ng-non-bindable>
-  <pre><code tabindex="0" class="language-html hljs language-xml" data-highlighted="yes"><span class="hljs-tag">&lt;<span class="hljs-name">bk-split-button</span><span class="hljs-attr">label</span>=<span class="hljs-string">"{{ splitButtonLabel }}"</span><span class="hljs-attr">align</span>=<span class="hljs-string">"right"</span><span class="hljs-attr">aria-label</span>=<span class="hljs-string">"button-split"</span><span class="hljs-attr">callback</span>=<span class="hljs-string">"splitButtonClick"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">bk-menu</span><span class="hljs-attr">aria-label</span>=<span class="hljs-string">"split button items"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">bk-menu-item</span><span class="hljs-attr">title</span>=<span class="hljs-string">"Item"</span><span class="hljs-attr">ng-click</span>=<span class="hljs-string">"splitItemClick('Item')"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">bk-menu-item</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">bk-menu-item</span><span class="hljs-attr">title</span>=<span class="hljs-string">"Item 2"</span><span class="hljs-attr">ng-click</span>=<span class="hljs-string">"splitItemClick('Item 2')"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">bk-menu-item</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">bk-menu-item</span><span class="hljs-attr">title</span>=<span class="hljs-string">"Item 3"</span><span class="hljs-attr">ng-click</span>=<span class="hljs-string">"splitItemClick('Item 3')"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">bk-menu-item</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">bk-menu</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">bk-split-button</span>&gt;</span></code></pre>
+<code-block>
+  <bk-split-button label="{{ splitButtonLabel }}" align="right" aria-label="button-split" callback="splitButtonClick">
+    <bk-menu aria-label="split button items">
+      <bk-menu-item title="Item" ng-click="splitItemClick('Item')"></bk-menu-item>
+      <bk-menu-item title="Item 2" ng-click="splitItemClick('Item 2')"></bk-menu-item>
+      <bk-menu-item title="Item 3" ng-click="splitItemClick('Item 3')"></bk-menu-item>
+    </bk-menu>
+  </bk-split-button>
+  <code-block type="js"> $scope.splitButtonLabel = "Action"; $scope.splitButtonClick = function () { console.log('split action'); }; $scope.splitItemClick = function (selected) { $scope.splitButtonAction = selected; }; </code-block>
 </code-block>
-
-<h4>JavaScript</h4>
-<code-block type="js"> $scope.splitButtonLabel = "Action"; $scope.splitButtonClick = function () { console.log('split action'); }; $scope.splitItemClick = function (selected) { $scope.splitButtonAction = selected; }; </code-block>
 
 <h3>Split menu button disabled</h3>
 <code-block>

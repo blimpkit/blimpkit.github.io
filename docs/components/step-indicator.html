@@ -1,0 +1,70 @@
+<h2>Step Indicator</h2>
+<p>The step indicator provides orientation and progress feedback during flows like onboarding, checkout, form completion or setup wizards.</p>
+<p>This is NOT a navigational component. Its purpose is to be a non-interactive visual indicator.</p>
+
+<h2>Attributes</h2>
+<table bk-table>
+  <thead bk-table-header>
+    <tr bk-table-row>
+      <th bk-table-header-cell>Name</th>
+      <th bk-table-header-cell>Type</th>
+      <th bk-table-header-cell>Required</th>
+      <th bk-table-header-cell>Description</th>
+    </tr>
+  </thead>
+  <tbody bk-table-body>
+    <tr bk-table-row>
+      <td bk-table-cell>steps</td>
+      <td bk-table-cell>array</td>
+      <td bk-table-cell>True</td>
+      <td bk-table-cell>An array of step objects</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>current-step</td>
+      <td bk-table-cell>number</td>
+      <td bk-table-cell>True</td>
+      <td bk-table-cell>Current step starting from 1</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>icon-only</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Hide step labels</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>type</td>
+      <td bk-table-cell>string</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>The type of the indicator. Possible options are 'bar' or none.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Examples</h2>
+<code-block>
+  <bk-step-indicator steps="steps" current-step="currentStep"></bk-step-indicator>
+  <code-block type="js"
+    >$scope.steps = [{ label: 'Step 1', glyph: 'sap-icon--product' },{ label: 'Step 2', glyph: 'sap-icon--cart' }, { label: 'Step 3', secondaryLabel: 'Current step', svg: './logo/blimpkit-symbolic.svg', }, { label: 'Step 4', glyph:
+    'sap-icon--wallet' }]; $scope.currentStep = 3;</code-block
+  >
+</code-block>
+
+<h3>As a bar</h3>
+
+<code-block>
+  <bk-step-indicator steps="steps" current-step="currentStep" type="bar"></bk-step-indicator>
+  <code-block type="js"
+    >$scope.steps = [{ label: 'Step 1', glyph: 'sap-icon--product' },{ label: 'Step 2', glyph: 'sap-icon--cart' }, { label: 'Step 3', secondaryLabel: 'Current step', svg: './logo/blimpkit-symbolic.svg', }, { label: 'Step 4', glyph:
+    'sap-icon--wallet' }]; $scope.currentStep = 3;</code-block
+  >
+</code-block>
+
+<h3>Icon only</h3>
+
+<code-block>
+  <bk-step-indicator steps="steps" current-step="currentStep" icon-only="true"></bk-step-indicator>
+  <code-block type="js"
+    >$scope.steps = [{ label: 'Step 1', glyph: 'sap-icon--product' },{ label: 'Step 2', glyph: 'sap-icon--cart' }, { label: 'Step 3', secondaryLabel: 'Current step', svg: './logo/blimpkit-symbolic.svg', }, { label: 'Step 4', glyph:
+    'sap-icon--wallet' }]; $scope.currentStep = 3;</code-block
+  >
+</code-block>

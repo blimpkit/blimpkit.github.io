@@ -976,8 +976,8 @@
   --fdAvatarBorderRadius: var(--sapElement_BorderCornerRadius);
   --fdAvatarBoxShadow: none;
   --fdAvatarHoverBorderColor: var(--sapAvatar_Default_TextColor);
-  --fdAvatarHoverBackgroundColor: var(--sapShell_Category_3_Background);
-  --fdAvatarHoverBorder: 0.0625rem solid var(--sapShell_Category_3_BorderColor);
+  --fdAvatarHoverBackgroundColor: var(--sapAvatar_Default_HoverColor);
+  --fdAvatarHoverBorder: 0.0625rem solid var(--sapAvatar_Default_HoverColor);
   --fdAvatarZoomIconFontSize: 0.75rem;
   --fdAvatarZoomIconDimensions: 1.125rem;
   --fdAvatar_BackgroundColor: var(--sapAvatar_Default_Background);

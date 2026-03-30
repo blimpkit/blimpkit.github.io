@@ -121,6 +121,56 @@
   </tbody>
 </table>
 
+<h2>Attributes - File Input</h2>
+<table bk-table>
+  <thead bk-table-header>
+    <tr bk-table-row>
+      <th bk-table-header-cell>Name</th>
+      <th bk-table-header-cell>Type</th>
+      <th bk-table-header-cell>Required</th>
+      <th bk-table-header-cell>Description</th>
+    </tr>
+  </thead>
+  <tbody bk-table-body>
+    <tr bk-table-row>
+      <td bk-table-cell>label</td>
+      <td bk-table-cell>string</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Browse button label. Defaults to "Browse".</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>btnAriaLabel</td>
+      <td bk-table-cell>string</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Aria label for the browse button. Defaults to "Select a file".</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>compact</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Input size.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>state</td>
+      <td bk-table-cell>string</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>You have five options - 'error', 'success', 'warning' and 'information'.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>is-readonly</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Sets the input to readonly mode.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>placeholder</td>
+      <td bk-table-cell>string</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Input placeholder text. Defaults to "Select a file".</td>
+    </tr>
+  </tbody>
+</table>
+
 <h2>Examples</h2>
 <h3>Input</h3>
 <bk-fieldset>
@@ -246,7 +296,9 @@
     </bk-form-item>
   </bk-form-group>
 </bk-fieldset>
+
 <h3>Step Input</h3>
+
 <bk-fieldset>
   <bk-form-group>
     <bk-form-item>
@@ -300,3 +352,12 @@
     </bk-form-item>
   </bk-form-group>
 </bk-fieldset>
+
+<h3>File Input</h3>
+
+<code-block>
+  <bk-form-label for="iisss">File upload</bk-form-label>
+  <bk-file-input placeholder="Select a file">
+    <input id="fi" name="fi" type="file" multiple hidden />
+  </bk-file-input>
+</code-block>

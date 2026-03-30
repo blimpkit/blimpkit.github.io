@@ -90,7 +90,6 @@ blimpkit
   }))
   .directive('bkWizardNavigation', (classNames) => ({
     restrict: 'EA',
-    transclude: true,
     replace: true,
     require: '^^bkWizard',
     link: function (scope, _element, _attrs, wizCtrl) {
