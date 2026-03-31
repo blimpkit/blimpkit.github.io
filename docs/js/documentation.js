@@ -643,6 +643,14 @@ documentation.controller('DocumentationViewController', function ($scope, $locat
         glyph: 'sap-icon--wallet'
     }];
 
+    $scope.stepsWithoutIcons = [{
+        label: 'Step 1'
+    },{
+        label: 'Step 2'
+    }, {
+        label: 'Step 3'
+    }];
+
     $scope.currentStep = 3;
 
     // Dialog

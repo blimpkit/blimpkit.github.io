@@ -276,6 +276,10 @@ ng-transclude:empty {
   fill: var(--fdWizard_Current_Step_Icon_Color);
 }
 
+.fd-wizard__step--upcoming .fd-wizard__step-indicator svg {
+  fill: var(--fdWizard_Upcoming_Step_Icon_Color);
+}
+
 .bk-steps-indicator .fd-wizard__step--no-label:last-child {
   min-width: auto;
   width: 0.25rem;
