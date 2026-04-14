@@ -46,7 +46,7 @@ blimpkit
         elem[0].removeEventListener('keyup', preventChange);
       });
     },
-    template: '<input type="checkbox" class="fd-checkbox" ng-class="getClasses()" ng-attr-tabindex="{{ displayMode === true ? -1 : undefined}}">',
+    template: '<input type="checkbox" class="fd-checkbox" ng-class="getClasses()" ng-attr-tabindex="{{ displayMode === true ? -1 : undefined}}" />',
   }))
   .directive('bkCheckboxLabel', (classNames) => ({
     restrict: 'E',

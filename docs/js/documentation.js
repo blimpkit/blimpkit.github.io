@@ -62,7 +62,7 @@ documentation.directive('codeBlock', () => ({
 }));
 
 // Initialize controller
-documentation.controller('DocumentationViewController', function ($scope, $location) {
+documentation.controller('DocumentationViewController', function ($scope, $location, $timeout) {
     $scope.$on('$locationChangeSuccess', (_, newUrl, oldUrl) => {
         if (newUrl !== oldUrl) {
             $scope.selectedPage = $location.search().component ?? 'introduction';
@@ -87,6 +87,10 @@ documentation.controller('DocumentationViewController', function ($scope, $locat
         {
             id: 'introduction',
             label: 'Introduction',
+        },
+        {
+            id: 'theming',
+            label: 'Theming',
         },
         {
             label: 'Common',
@@ -263,10 +267,6 @@ documentation.controller('DocumentationViewController', function ($scope, $locat
             label: 'Token',
         },
         {
-            id: 'tool-header',
-            label: 'Tool Header',
-        },
-        {
             id: 'toolbar',
             label: 'Toolbar',
         },
@@ -294,6 +294,14 @@ documentation.controller('DocumentationViewController', function ($scope, $locat
             label: 'Color',
         },
         {
+            id: 'css-fade',
+            label: 'Fade',
+        },
+        {
+            id: 'css-shadow',
+            label: 'Shadow',
+        },
+        {
             id: 'css-grid',
             label: 'Grid',
         },
@@ -304,6 +312,10 @@ documentation.controller('DocumentationViewController', function ($scope, $locat
         {
             id: 'css-borders',
             label: 'Borders',
+        },
+        {
+            id: 'css-overflow',
+            label: 'Overflow',
         },
         {
             id: 'css-pad-mar',
@@ -352,7 +364,7 @@ documentation.controller('DocumentationViewController', function ($scope, $locat
     };
     $scope.inputRulesConfig = {
         excluded: ['forbidden', 'words'],
-        patterns: ['^[^/]*$'],
+        patterns: ['^[^/]*$'], // Does not allow '/'
     };
 
     // Button
@@ -407,6 +419,7 @@ documentation.controller('DocumentationViewController', function ($scope, $locat
             glyph: 'sap-icon--picture',
             text: 'Product 2',
             secondaryText: '750 EUR',
+            disabled: true,
         },
         {
             value: 3,
@@ -430,15 +443,35 @@ documentation.controller('DocumentationViewController', function ($scope, $locat
         { value: 5, text: 'Strawberry' },
     ];
     $scope.combobox = {
+        loading: false,
+        hasMore: true,
         modelReadonlyValue: 1,
         selectedModelValue: null,
         selectedModelValues: [],
-        onCBChange: function () {
+        onCBChange: () => {
             console.log($scope.combobox.selectedModelValue);
         },
-        onMCBChange: function () {
+        onMCBChange: () => {
             console.log($scope.combobox.selectedModelValues);
         },
+        loadMoreItems: () => {
+            $scope.combobox.loading = true;
+            $timeout(() => {
+                $scope.comboboxItemsIcons.push({
+                    value: 5,
+                    glyph: 'sap-icon--map',
+                    text: 'Product 5',
+                    secondaryText: '13 EUR',
+                }, {
+                    value: 6,
+                    glyph: 'sap-icon--camera',
+                    text: 'Product 6',
+                    secondaryText: '900 EUR',
+                });
+                $scope.combobox.loading = false;
+                $scope.combobox.hasMore = false;
+            }, 2000);
+        }
     };
     $scope.dynamicItems = [
         { value: 0, text: 'Default value 0' },

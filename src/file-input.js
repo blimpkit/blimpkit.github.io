@@ -59,7 +59,7 @@ blimpkit.directive('bkFileInput', () => ({
   template: `<div class="fd-file-uploader">
     <div class="fd-file-uploader__container">
         <bk-input title="{{label || 'Select a file'}}" type="text" class="fd-file-uploader__input" compact="compact" state="{{state}}" ng-click="browse()" ng-readonly="isReadonly" autocomplete="off" placeholder="{{placeholder || 'Select a file'}}" ng-value="files"></bk-input>
-        <bk-button type="button" label="{{label || 'Browse'}}" aria-label="{{btnAriaLabel || 'Select a file'}}" compact="compact" ng-disabled="isReadonly"></bk-button>
+        <bk-button type="button" label="{{label || 'Browse'}}" aria-label="{{btnAriaLabel || 'Select a file'}}" compact="compact" ng-disabled="isReadonly" ng-click="browse()"></bk-button>
     </div>
     <div class="fd-file-uploader__hidden" aria-live="polite" aria-atomic="true"></div>
     <ng-transclude></ng-transclude>

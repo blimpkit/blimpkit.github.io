@@ -18,7 +18,6 @@ blimpkit.directive('bkObjectStatus', (classNames) => ({
     text: '@?',
     clickable: '<?',
     inverted: '<?',
-    indication: '<?',
     large: '<?',
     truncate: '<?',
   },
@@ -92,26 +91,12 @@ blimpkit.directive('bkObjectStatus', (classNames) => ({
         }
       });
 
-      const indicationWatch = scope.$watch('indication', function (indication, oldIndication) {
-        if (oldIndication) {
-          element.removeClass(`fd-object-status--indication-${oldIndication}`);
-        }
-
-        if (indication && (indication < 1 || indication > 8)) {
-          console.error(`bk-object-status error: 'indication' must be a number between 1 and 8 (inclusive)`);
-          return;
-        }
-
-        element.addClass(`fd-object-status--indication-${indication}`);
-      });
-
-      scope.$on('$destroy', function () {
+      scope.$on('$destroy', () => {
         statusWatch();
         clickableWatch();
         invertedWatch();
         largeWatch();
         truncateWatch();
-        indicationWatch();
       });
     },
   ],

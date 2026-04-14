@@ -1,4 +1,4 @@
-<h2>Tile</h2>
+<h1>Tile</h1>
 <p>Tiles can provide shortcuts to pages and modules. They can also be used as previews or to group related information in a container.</p>
 
 <h2>Attributes - Tile Container</h2>
@@ -156,32 +156,67 @@
 </table>
 
 <h2>Examples</h2>
+
 <h3>Sizes</h3>
+
+<code-block>
+  <bk-tile size="xl">
+    <bk-tile-header></bk-tile-header>
+    <bk-tile-content>Extra Large</bk-tile-content>
+  </bk-tile>
+</code-block>
+
+<code-block>
+  <bk-tile size="lg">
+    <bk-tile-header></bk-tile-header>
+    <bk-tile-content>Large</bk-tile-content>
+  </bk-tile>
+</code-block>
+
 <code-block>
   <bk-tile>
     <bk-tile-header></bk-tile-header>
-    <bk-tile-content>11 x 11rem</bk-tile-content>
+    <bk-tile-content>Medium</bk-tile-content>
   </bk-tile>
 </code-block>
+
 <code-block>
-  <bk-tile is-small="true">
+  <bk-tile size="sm">
     <bk-tile-header></bk-tile-header>
-    <bk-tile-content>9.25 x 9.25rem</bk-tile-content>
+    <bk-tile-content>Small</bk-tile-content>
   </bk-tile>
 </code-block>
+
+<code-block>
+  <bk-tile size="xl" is-long="true">
+    <bk-tile-header></bk-tile-header>
+    <bk-tile-content>Extra Large Double</bk-tile-content>
+  </bk-tile>
+</code-block>
+
+<code-block>
+  <bk-tile size="lg" is-long="true">
+    <bk-tile-header></bk-tile-header>
+    <bk-tile-content>Large Double</bk-tile-content>
+  </bk-tile>
+</code-block>
+
 <code-block>
   <bk-tile is-long="true">
     <bk-tile-header></bk-tile-header>
-    <bk-tile-content>22.5rem x 11rem</bk-tile-content>
+    <bk-tile-content>Medium Double</bk-tile-content>
   </bk-tile>
 </code-block>
+
 <code-block>
-  <bk-tile is-small="true" is-long="true">
+  <bk-tile size="sm" is-long="true">
     <bk-tile-header></bk-tile-header>
-    <bk-tile-content>19 x 9.25rem</bk-tile-content>
+    <bk-tile-content>Small Double</bk-tile-content>
   </bk-tile>
 </code-block>
+
 <h3>Layout</h3>
+
 <code-block>
   <bk-tile>
     <bk-tile-header title="Title" subtitle="Subtitle"></bk-tile-header>
@@ -189,13 +224,17 @@
     <bk-tile-footer>Footer</bk-tile-footer>
   </bk-tile>
 </code-block>
+
 <h3>Container tile</h3>
+
 <code-block>
   <bk-tile is-container="true">
     <img class="bk-fill-parent" src="./logo/blimpkit-square.svg" />
   </bk-tile>
 </code-block>
+
 <h3>Slide tile</h3>
+
 <code-block>
   <bk-tile is-slide="true">
     <bk-tile-background link="./logo/blimpkit-square.svg"></bk-tile-background>
@@ -206,7 +245,9 @@
     </bk-tile-slide>
   </bk-tile>
 </code-block>
+
 <h3>Link tile</h3>
+
 <code-block>
   <bk-tile-container>
     <bk-tile is-line="true">
@@ -225,7 +266,9 @@
     </bk-tile>
   </bk-tile-container>
 </code-block>
+
 <h3>Link tile list</h3>
+
 <code-block>
   <bk-tile-container is-list="true">
     <bk-tile is-line="true">

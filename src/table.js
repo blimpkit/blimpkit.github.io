@@ -37,8 +37,8 @@ blimpkit
             'fd-table--condensed': $scope.displayMode === 'condensed',
             'bk-table--no-outer-horizontal-borders': $scope.outerBorders === 'vertical',
             'bk-table--no-outer-vertical-borders': $scope.outerBorders === 'horizontal',
-            'fd-table--no-outer-border bk-list-border--top': $scope.outerBorders === 'top',
-            'fd-table--no-outer-border bk-list-border--bottom': $scope.outerBorders === 'bottom',
+            'fd-table--no-outer-border bk-border--top': $scope.outerBorders === 'top',
+            'fd-table--no-outer-border bk-border--bottom': $scope.outerBorders === 'bottom',
             'fd-table--no-outer-border': $scope.outerBorders === 'none',
             'bk-table--fixed': $scope.fixed,
           });

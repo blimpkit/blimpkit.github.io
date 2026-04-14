@@ -82,6 +82,12 @@ blimpkit
       element.addClass('fd-shellbar__title');
     },
   }))
+  .directive('bkShellbarSubtitle', () => ({
+    restrict: 'A',
+    link: (_scope, element) => {
+      element.addClass('fd-shellbar__subtitle');
+    },
+  }))
   .directive('bkShellbarLogo', () => ({
     restrict: 'A',
     link: (_scope, element) => {

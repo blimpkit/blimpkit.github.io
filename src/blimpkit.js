@@ -11,7 +11,7 @@
  */
 const blimpkit = angular
   .module('blimpKit', ['ngAria'])
-  .info({ version: '1.9.1' })
+  .info({ version: '2.0.0' })
   .constant('ScreenEdgeMargin', {
     FULL: 16,
     DOUBLE: 32,

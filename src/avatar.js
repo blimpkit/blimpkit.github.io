@@ -15,14 +15,9 @@ blimpkit.directive('bkAvatar', (classNames) => ({
   replace: true,
   require: '^^?bkCard',
   scope: {
-    accentColor: '@?',
-    indicationColor: '@?',
-    tile: '<?',
-    shell: '<?',
     isPlaceholder: '<?',
     isTransparent: '<?',
     interactive: '<?',
-    state: '@?',
     size: '@?',
     glyph: '@?',
     border: '<?',
@@ -40,13 +35,9 @@ blimpkit.directive('bkAvatar', (classNames) => ({
     }
     scope.getClasses = () =>
       classNames({
-        [`fd-avatar--accent-color-${scope.accentColor}`]: scope.tile !== true && scope.accentColor,
-        [`fd-avatar--indication-color-${scope.indicationColor}`]: scope.tile !== true && scope.indicationColor,
         'fd-avatar--transparent': scope.isTransparent === true,
         'fd-avatar--placeholder': scope.isPlaceholder === true,
         'fd-avatar--thumbnail': scope.image,
-        'fd-avatar--shell': scope.shell === true,
-        'fd-avatar--tile': scope.tile === true,
         'fd-avatar--xs': scope.size === 'xs' || !scope.size,
         'fd-avatar--s': scope.size === 's',
         'fd-avatar--m': scope.size === 'm',
@@ -54,15 +45,19 @@ blimpkit.directive('bkAvatar', (classNames) => ({
         'fd-avatar--xl': scope.size === 'xl',
         'fd-avatar--border': scope.border === true,
         'fd-avatar--circle': scope.circle === true,
-        'is-hover': scope.state === 'hover',
-        'is-active': scope.state === 'active',
-        'is-toggled is-hover': scope.state === 'toggled',
-        'is-disabled': scope.state === 'disabled',
-        'is-focus': scope.state === 'focus',
         'fd-card__avatar': cardCtrl !== null,
       });
+    function setDisabled(disabled = false) {
+      if (disabled) element[0].classList.add('is-disabled');
+      else element[0].classList.remove('is-disabled');
+    }
+    const observer = new MutationObserver(() => {
+      setDisabled(attrs.disabled);
+    });
+
+    observer.observe(element[0], { attributes: true, attributeFilter: ['disabled'] });
   },
-  template: `<span class="fd-avatar" ng-class="getClasses()" aria-role="{{interactive ? 'button' : 'img'}}" ng-attr-tabindex="{{interactive && '0' || undefined}}">
+  template: `<span class="fd-avatar" ng-class="getClasses()" role="{{interactive ? 'button' : 'img'}}" ng-attr-tabindex="{{interactive && '0' || undefined}}">
         <ng-transclude><i ng-if="glyph" class="fd-avatar__icon {{glyph}}" role="presentation"></i></ng-transclude>
         <i ng-if="zoomIcon" class="fd-avatar__zoom-icon" ng-class="zoomIcon" aria-label="{{ zoomLabel }}"></i>
     </span>`,

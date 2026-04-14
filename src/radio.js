@@ -33,7 +33,7 @@ blimpkit
           [`is-${states[scope.state]}`]: scope.state && states[scope.state] && attrs['readonly'] !== true,
         });
     },
-    template: '<input type="radio" class="fd-radio" ng-class="getClasses()">',
+    template: '<input type="radio" class="fd-radio" ng-class="getClasses()" />',
   }))
   .directive('bkRadioLabel', (classNames) => ({
     restrict: 'E',

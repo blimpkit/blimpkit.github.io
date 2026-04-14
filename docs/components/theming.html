@@ -1,0 +1,535 @@
+<h1>Theming</h1>
+<p>You can create a custom Blimpkit theme using CSS variables.</p>
+
+<h2>Varables</h2>
+<table bk-table>
+  <thead bk-table-header>
+    <tr bk-table-row>
+      <th bk-table-header-cell>Name</th>
+      <th bk-table-header-cell>Type</th>
+      <th bk-table-header-cell>Description</th>
+    </tr>
+  </thead>
+  <tbody bk-table-body>
+    <tr bk-table-row>
+      <td bk-table-cell>--background</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Background color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--foreground</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Text color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--card</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Card background color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--card-hover</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Card background hover color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--card-active</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Card background active/selected color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--card-border</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Card border color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--accent</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Accent/brand color. Used for things like tab indicators, switch button track color, list/table row selection and highlight indicators, default avatar background and badges.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--accent-foreground</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Accent text color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--accent-hover</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Accent background hover color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--accent-active</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Accent background active color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--secondary</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Secondary color. Used for things like default buttons and neutral elements.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--secondary-foreground</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Secondary text color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--secondary-border</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Secondary border color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--secondary-hover</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Secondary background hover color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--secondary-active</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Secondary background active color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--secondary-active-border</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Secondary background active border color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--muted</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Muted background color. used for placeholder backgrounds.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--muted-foreground</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Muted text color. Used for subtitles, placeholders.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--contrast</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Contrast color. Used for the alternative states of busy/loading indicators and selected tabs/steps.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--highlight</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Text highlight color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--border</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Border color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--outilne</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Focus outline color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--outilne-style</td>
+      <td bk-table-cell>none|solid|dotted|dashed|groove|inset</td>
+      <td bk-table-cell>Outline style.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--outilne-offset</td>
+      <td bk-table-cell>number unit</td>
+      <td bk-table-cell>Outline offset.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--outilne-width</td>
+      <td bk-table-cell>number unit</td>
+      <td bk-table-cell>Outline width.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--input-border</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Input border color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--input-border-hover</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Input border color on hover.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--input-background</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Input background color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--input-background-hover</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Input background hover color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--input-background-active</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Input background active color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--button-border</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Button border color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--button-shadow</td>
+      <td bk-table-cell>box-shadow</td>
+      <td bk-table-cell>Button shadow.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--track-background</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Switch button track background color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--track-background-hover</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Switch button track background hover color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--track-handle-background</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Switch button handle background color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--track-handle-foreground</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Switch button handle text color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--disabled-opacity</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Opacity level of disabled elements.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--inactive-background</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Inactive element background.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--inactive-border</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Inactive element border.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--negative</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Negative color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--negative-foreground</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Negative text color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--negative-hover</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Negative hover color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--negative-active</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Negative active color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--positive</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Positive color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--positive-foreground</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Positive text color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--positive-hover</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Positive hover color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--positive-active</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Positive active color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--warning</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Warning color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--warning-foreground</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Warning text color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--warning-hover</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Warning hover color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--warning-active</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Warning active color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--information</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Information color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--information-foreground</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Information text color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--information-hover</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Information hover color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--information-active</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Information active color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--shellbar-background</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Shallbar background color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--shellbar-foreground</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Shallbar foreground color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--shellbar-shadow</td>
+      <td bk-table-cell>box-shadow</td>
+      <td bk-table-cell>Shallbar shadow.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--shellbar-interactive-background</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Shellbar interactive element background color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--shellbar-interactive-foreground</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Shellbar interactive element text color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--shellbar-interactive-placeholder</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Shellbar interactive element placeholder color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--shellbar-interactive-hover</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Shellbar interactive element background hover color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--shellbar-interactive-active</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Shellbar interactive element background active color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--shellbar-interactive-border</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Shellbar interactive element border color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--sidebar</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Vertical navigation background color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--sidebar-foreground</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Vertical navigation text color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--sidebar-active</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Vertical navigation item background active color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--sidebar-active-hover</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Vertical navigation item background active hover color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--sidebar-active-foreground</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Vertical navigation item text active color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--sidebar-hover</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Vertical navigation item background color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--sidebar-border</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Vertical navigation item separator color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--sidebar-shadow</td>
+      <td bk-table-cell>box-shadow</td>
+      <td bk-table-cell>Vertical navigation shadow.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--object-header</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Object header background color. Used for toolbars, list and table group headers.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--object-header-foreground</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Object header text color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--object-header-border</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Object header border color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--object-header-shadow</td>
+      <td bk-table-cell>box-shadow</td>
+      <td bk-table-cell>Object header shadow.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--object-background</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Object background color. used for list and table backgrounds.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--object-foreground</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Object text color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--object-background-alt</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Object alternative background color. Used for list alternating colors.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--object-background-hover</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Object background hover color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--object-background-active</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Object background active color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--table-header</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Table header background color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--table-header-foreground</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Table header text color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--content-background</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Content background color. Used for wizard and step bar backgrounds.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--scrollbar</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Scrollbar background color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--scrollbar-thumb</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Scrollbar thumb color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--scrollbar-thumb-hover</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Scrollbar thumb hover color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--link</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Link color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--link-hover</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Link hover color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--link-visited</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Link visited color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--link-subtle</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Link subtle color.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--link-inverted</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Link inverted color. Used when the link is inside a shellbar.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--font-sans</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Sans font list.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--font-sans-bold</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Sans font bold list.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--font-sans-semibold</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Sans font semibold list.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--font-mono</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Monospace font list.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--font-mono-bold</td>
+      <td bk-table-cell>color</td>
+      <td bk-table-cell>Monospace bold font list.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--font-size</td>
+      <td bk-table-cell>number unit</td>
+      <td bk-table-cell>Base font size.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--shadow-xs</td>
+      <td bk-table-cell>box-shadow</td>
+      <td bk-table-cell>Extra small shadow.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--shadow-sm</td>
+      <td bk-table-cell>box-shadow</td>
+      <td bk-table-cell>Small shadow.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--shadow-md</td>
+      <td bk-table-cell>box-shadow</td>
+      <td bk-table-cell>Medium shadow.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--shadow-lg</td>
+      <td bk-table-cell>box-shadow</td>
+      <td bk-table-cell>Large shadow.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--radius-control</td>
+      <td bk-table-cell>number unit</td>
+      <td bk-table-cell>Border radius for inputs and buttons.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>--radius</td>
+      <td bk-table-cell>number unit</td>
+      <td bk-table-cell>Border radius for cards and popovers.</td>
+    </tr>
+  </tbody>
+</table>

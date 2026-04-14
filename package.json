@@ -1,6 +1,6 @@
 {
   "name": "@blimpkit/blimpkit",
-  "version": "1.9.1",
+  "version": "2.0.0",
   "description": "BlimpKit is a UI component library",
   "main": "dist/blimpkit.min.js",
   "unpkg": "dist/blimpkit.min.js",

@@ -1,4 +1,4 @@
-<h2>Shellbar</h2>
+<h1>Shellbar</h1>
 <p>
   The shellbar includes support for branding, product navigation, search, notifications, and user settings. This is a composite component comprised of mandatory and optional elements. The Shellbar should always be placed inside the shell
   layout container and there must always be only one shellbar for the entire application.
@@ -90,6 +90,8 @@
 
 <h2>Examples</h2>
 
+<h3>With search field and menu</h3>
+
 <code-block>
   <bk-shellbar>
     <bk-shellbar-group position="left">
@@ -128,4 +130,30 @@
     </bk-shellbar-group>
   </bk-shellbar>
   <code-block type="js"> $scope.isSearchFocused = false; $scope.focusSearch = () => { $scope.isSearchFocused = true; }; $scope.blurSearch = () => { $scope.isSearchFocused = false; }; </code-block>
+</code-block>
+
+<h3>Title and subtitle</h3>
+
+<code-block>
+  <bk-shellbar>
+    <bk-shellbar-group position="left">
+      <span bk-shellbar-logo><img src="./logo/blimpkit.svg" width="32" height="32" alt="BlimpKit" /></span>
+      <span bk-shellbar-title>BlimpKit</span>
+      <span bk-shellbar-subtitle>by codbex</span>
+    </bk-shellbar-group>
+  </bk-shellbar>
+</code-block>
+
+<h3>Stacked title and subtitle</h3>
+
+<code-block>
+  <bk-shellbar>
+    <bk-shellbar-group position="left">
+      <span bk-shellbar-logo><img src="./logo/blimpkit.svg" width="32" height="32" alt="BlimpKit" /></span>
+      <span class="bk-vbox">
+        <span bk-shellbar-title>BlimpKit</span>
+        <span bk-shellbar-subtitle>by codbex</span>
+      </span>
+    </bk-shellbar-group>
+  </bk-shellbar>
 </code-block>

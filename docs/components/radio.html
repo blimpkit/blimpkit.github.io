@@ -1,4 +1,4 @@
-<h2>Radio</h2>
+<h1>Radio</h1>
 <p>
   Radio buttons provide users with a set of mutually exclusive options. They allow a user to select only one option from two or more choices. Each option is represented by a radio button. Consequently, radio buttons only work in groups.
 </p>
@@ -56,50 +56,80 @@
 </table>
 
 <h2>Examples</h2>
+
+<div class="bk-vbox bk-box--gap">
+  <bk-message-strip glyph="sap-icon--message-information" state="information">The radio input must be placed BEFORE the label. Otherwise, it will not be able to bind to the model.</bk-message-strip>
+  <bk-message-strip glyph="sap-icon--message-information" state="information">The radio must be placed inside a form item. Otherwise, the page might jump when the input receives focus.</bk-message-strip>
+</div>
+
 <h3>Default</h3>
+
 <code-block>
-  <bk-radio id="ridc" ng-checked="true"></bk-radio>
-  <bk-radio-label for="ridc">Checked</bk-radio-label>
+  <bk-form-item>
+    <bk-radio id="ridc" ng-checked="true"></bk-radio>
+    <bk-radio-label for="ridc">Checked</bk-radio-label>
+  </bk-form-item>
 
-  <bk-radio id="riduc"></bk-radio>
-  <bk-radio-label for="riduc">Unchecked</bk-radio-label>
+  <bk-form-item>
+    <bk-radio id="riduc"></bk-radio>
+    <bk-radio-label for="riduc">Unchecked</bk-radio-label>
+  </bk-form-item>
 
-  <bk-radio id="ridd" ng-disabled="true"></bk-radio>
-  <bk-radio-label for="ridd">Disabled</bk-radio-label>
+  <bk-form-item>
+    <bk-radio id="ridd" ng-disabled="true"></bk-radio>
+    <bk-radio-label for="ridd">Disabled</bk-radio-label>
+  </bk-form-item>
 
-  <bk-radio id="ridd" ng-readonly="true" ng-checked="true" onclick="return false;"></bk-radio>
-  <bk-radio-label for="ridro">Read only</bk-radio-label>
+  <bk-form-item>
+    <bk-radio id="ridro" ng-readonly="true" ng-checked="true" onclick="return false;"></bk-radio>
+    <bk-radio-label for="ridro">Read only</bk-radio-label>
+  </bk-form-item>
 </code-block>
+
 <h3>Compact</h3>
 <code-block>
-  <bk-radio id="ridcomp" compact="true" ng-checked="true"></bk-radio>
-  <bk-radio-label for="ridcomp">Compact</bk-radio-label>
+  <bk-form-item>
+    <bk-radio id="ridcomp" compact="true" ng-checked="true"></bk-radio>
+    <bk-radio-label for="ridcomp">Compact</bk-radio-label>
+  </bk-form-item>
 </code-block>
 <h3>States</h3>
 <code-block>
-  <bk-radio id="ride" state="error" ng-checked="true"></bk-radio>
-  <bk-radio-label for="ridc">Error</bk-radio-label>
+  <bk-form-item>
+    <bk-radio id="ride" state="error" ng-checked="true"></bk-radio>
+    <bk-radio-label for="ride">Error</bk-radio-label>
+  </bk-form-item>
 
-  <bk-radio id="rids" state="success" ng-checked="true"></bk-radio>
-  <bk-radio-label for="ridc">Success</bk-radio-label>
+  <bk-form-item>
+    <bk-radio id="rids" state="success" ng-checked="true"></bk-radio>
+    <bk-radio-label for="rids">Success</bk-radio-label>
+  </bk-form-item>
 
-  <bk-radio id="ridw" state="warning" ng-checked="true"></bk-radio>
-  <bk-radio-label for="ridc">Warning</bk-radio-label>
+  <bk-form-item>
+    <bk-radio id="ridw" state="warning" ng-checked="true"></bk-radio>
+    <bk-radio-label for="ridw">Warning</bk-radio-label>
+  </bk-form-item>
 
-  <bk-radio id="ridi" state="information" ng-checked="true"></bk-radio>
-  <bk-radio-label for="ridc">Information</bk-radio-label>
+  <bk-form-item>
+    <bk-radio id="ridi" state="information" ng-checked="true"></bk-radio>
+    <bk-radio-label for="ridi">Information</bk-radio-label>
+  </bk-form-item>
 </code-block>
 <h3>Text wrap</h3>
 <code-block>
-  <bk-radio id="ridwt" ng-checked="true"></bk-radio>
-  <bk-radio-label for="ridwt" wrap="true" style="max-width: 400px"
-    >Field label ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat.</bk-radio-label
-  >
+  <bk-form-item>
+    <bk-radio id="ridwt" ng-checked="true"></bk-radio>
+    <bk-radio-label for="ridwt" wrap="true" style="max-width: 400px"
+      >Field label ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat.</bk-radio-label
+    >
+  </bk-form-item>
 
-  <bk-radio id="ridwtat" ng-checked="true"></bk-radio>
-  <bk-radio-label for="ridwtat" wrap="true" top-align="true" style="max-width: 400px"
-    >Field label ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat.</bk-radio-label
-  >
+  <bk-form-item>
+    <bk-radio id="ridwtat" ng-checked="true"></bk-radio>
+    <bk-radio-label for="ridwtat" wrap="true" top-align="true" style="max-width: 400px"
+      >Field label ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat.</bk-radio-label
+    >
+  </bk-form-item>
 </code-block>

@@ -56,6 +56,8 @@ blimpkit
             return popoverId;
           };
 
+          this.getControlHeight = undefined;
+
           let toggleBody;
 
           this.toggleBody = function (toggle) {
@@ -101,6 +103,9 @@ blimpkit
     require: '?^^bkPopover',
     replace: true,
     link: (scope, element, _attrs, popoverCtrl) => {
+      popoverCtrl.getControlHeight = () => {
+        return element[0].clientHeight;
+      };
       function clickEvent() {
         popoverCtrl.togglePopover();
       }
@@ -132,14 +137,15 @@ blimpkit
     },
     link: (scope, element, _attrs, popoverCtrls) => {
       const ctrlIndex = popoverCtrls[0] ? 0 : 1;
+      scope.autoAlignEnabled = scope.align ? false : true;
       scope.defaultHeight = 44;
       scope.hidden = true;
       if (!angular.isDefined(scope.canScroll)) scope.canScroll = true;
-      function autoAlign() {
-        const rect = element[0].getBoundingClientRect();
+      function autoAlign(boundingRect) {
+        const rect = boundingRect ?? element[0].getBoundingClientRect();
         let bottom = 0;
         if (rect.top > $window.innerHeight / 2) {
-          bottom = $window.innerHeight - ScreenEdgeMargin.FULL - (scope.maxHeight ? rect.top + parseInt(scope.maxHeight) : rect.bottom);
+          bottom = $window.innerHeight - ScreenEdgeMargin.FULL - popoverCtrls[ctrlIndex].getControlHeight() - (scope.maxHeight ? rect.top + parseInt(scope.maxHeight) : rect.bottom);
         }
         const right = $window.innerWidth - rect.right;
         if (ctrlIndex === 1) {
@@ -160,6 +166,9 @@ blimpkit
       function toggleBody(show) {
         if (show) {
           const rect = element[0].getBoundingClientRect();
+          if (scope.autoAlignEnabled) {
+            autoAlign(rect);
+          }
           if (scope.align && scope.align.startsWith('top')) scope.defaultHeight = rect.bottom - ScreenEdgeMargin.FULL;
           else scope.defaultHeight = $window.innerHeight - ScreenEdgeMargin.FULL - rect.top;
           if (scope.maxHeight && scope.defaultHeight > scope.maxHeight) scope.defaultHeight = scope.maxHeight;
@@ -168,6 +177,11 @@ blimpkit
         else
           scope.$evalAsync(() => {
             scope.hidden = !show;
+            if (!show && scope.autoAlignEnabled) {
+              $timeout(() => {
+                scope.align = undefined;
+              }, 100);
+            }
           });
       }
 
@@ -201,12 +215,6 @@ blimpkit
           'fd-popover__body--after fd-popover__body--bottom': scope.align === 'right-bottom',
           'fd-popover__body--arrow-left fd-popover__body--arrow-y-bottom': scope.align === 'right-bottom' && !scope.noArrow,
         });
-      const contentLoaded = scope.$watch('$viewContentLoaded', function () {
-        $timeout(() => {
-          if (!scope.align) autoAlign();
-          contentLoaded();
-        }, 0);
-      });
     },
     template: `<div id="{{ popoverId }}" ng-class="getClasses()" aria-hidden="{{hidden}}">
         <div ng-if="canScroll" class="fd-popover__wrapper" bk-scrollbar style="max-height:{{ defaultHeight }}px;" ng-transclude></div>

@@ -1,0 +1,86 @@
+<h1>Overflow</h1>
+
+<table bk-table>
+  <thead bk-table-header>
+    <tr bk-table-row>
+      <th bk-table-header-cell>Class</th>
+      <th bk-table-header-cell>Description</th>
+    </tr>
+  </thead>
+  <tbody bk-table-body>
+    <tr bk-table-row>
+      <td bk-table-cell>bk-scroll</td>
+      <td bk-table-cell>Scrolls overflow.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>bk-scroll-x</td>
+      <td bk-table-cell>Scrolls horizontal overflow.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>bk-scroll-y</td>
+      <td bk-table-cell>Scrolls vertical overflow.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>bk-scroll-visible</td>
+      <td bk-table-cell>Shows overflow.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>bk-scroll-x-visible</td>
+      <td bk-table-cell>Shows horizontal overflow.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>bk-scroll-y-visible</td>
+      <td bk-table-cell>Shows vertical overflow.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>bk-scroll-hidden</td>
+      <td bk-table-cell>Hides overflow.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>bk-scroll-x-hidden</td>
+      <td bk-table-cell>Hides horizontal overflow.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>bk-scroll-y-hidden</td>
+      <td bk-table-cell>Hides vertical overflow.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>bk-scrollbar--none</td>
+      <td bk-table-cell>Hides scrollbars.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Examples</h2>
+
+<h3>Horizontal-only scroll</h3>
+
+<code-block>
+  <bk-scrollbar class="bk-scroll-x bk-scroll-y-hidden" style="height: 256px; width: 256px">
+    <img src="./logo/blimpkit-square.svg" alt="BlimpKit logo" width="512" height="512" />
+  </bk-scrollbar>
+</code-block>
+
+<h3>Vertical-only scroll</h3>
+
+<code-block>
+  <bk-scrollbar class="bk-scroll-y bk-scroll-x-hidden" style="height: 256px; width: 256px">
+    <img src="./logo/blimpkit-square.svg" alt="BlimpKit logo" width="512" height="512" />
+  </bk-scrollbar>
+</code-block>
+
+<h3>No scroll</h3>
+
+<code-block>
+  <bk-scrollbar class="bk-scroll-hidden" style="height: 256px; width: 256px">
+    <img src="./logo/blimpkit-square.svg" alt="BlimpKit logo" width="512" height="512" />
+  </bk-scrollbar>
+</code-block>
+
+<h3>Scroll but hide scrollbars</h3>
+
+<code-block>
+  <bk-scrollbar class="bk-scrollbar--none" style="height: 256px; width: 256px">
+    <img src="./logo/blimpkit-square.svg" alt="BlimpKit logo" width="512" height="512" />
+  </bk-scrollbar>
+</code-block>

@@ -44,6 +44,7 @@ blimpkit
             nested: '<?',
             decisive: '<?',
             round: '<?',
+            loading: '<?',
           },
           link: {
             pre: function (scope) {
@@ -95,11 +96,12 @@ blimpkit
                 });
             },
           },
-          innerTemplate: `<i ng-if="glyph || iconPath" ng-class="getIconClasses()" role="presentation" rotate="{{glyphRotate}}"><ng-include ng-if="iconPath" src="iconPath"></ng-include></i>
-                <span ng-if="label" ng-class="getTextClasses()">{{ label }}</span>
-                <span ng-if="badge" class="fd-button__badge">{{ badge }}</span>
-                <i ng-if="isMenu" ng-class="getArrowClass()"></i>
-                <p ng-if="instructions" aria-live="assertive" class="fd-button__instructions" id="{{ uuid }}">{{ instructions }}</p>`,
+          innerTemplate: `<bk-loader ng-if="loading"></bk-loader>
+<i ng-if="glyph || iconPath" ng-class="getIconClasses()" role="presentation" rotate="{{glyphRotate}}"><ng-include ng-if="iconPath" src="iconPath"></ng-include></i>
+<span ng-if="label" ng-class="getTextClasses()">{{ label }}</span>
+<span ng-if="badge" class="fd-button__badge">{{ badge }}</span>
+<i ng-if="isMenu" ng-class="getArrowClass()"></i>
+<p ng-if="instructions" aria-live="assertive" class="fd-button__instructions" id="{{ uuid }}">{{ instructions }}</p>`,
         };
       },
     };
@@ -108,7 +110,7 @@ blimpkit
     let buttonConfig = bkButtonConfig.getConfig();
     buttonConfig['restrict'] = 'A';
     buttonConfig['template'] =
-      `<a ng-class="getClasses()"" ng-attr-aria-disabled="{{ disabledFocusable === true ? true : undefined }}" aria-pressed="{{ toggled === true }}" ng-attr-aria-describedby="{{ instructions ? buttonId : undefined }}">${buttonConfig.innerTemplate}</a>`;
+      `<a ng-class="getClasses()" ng-attr-aria-disabled="{{ disabledFocusable === true ? true : undefined }}" aria-pressed="{{ toggled === true }}" ng-attr-aria-describedby="{{ instructions ? buttonId : undefined }}">${buttonConfig.innerTemplate}</a>`;
     return buttonConfig;
   })
   .directive('bkButton', function (bkButtonConfig) {
@@ -158,6 +160,10 @@ blimpkit
             return $scope.popoverId;
           };
 
+          this.getControlHeight = () => {
+            return $element[0].clientHeight;
+          };
+
           let toggleBody;
 
           this.toggleBody = function (toggle) {
@@ -173,6 +179,7 @@ blimpkit
               'fd-button--negative': $scope.state === ButtonStates.Negative,
               'fd-button--attention': $scope.state === ButtonStates.Attention,
               'bk-button-split--compact': $scope.compact === true,
+              'is-disabled': $scope.isDisabled === true || $scope.disabledFocusable === true,
             });
 
           let isHidden = true;

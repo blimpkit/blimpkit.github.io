@@ -51,7 +51,7 @@ blimpkit
         }
       };
     },
-    template: `<ul ng-class="getClasses()" ng-style="getStyles()" role="{{listType === 'selection' ? 'listbox' : 'list'}}" tabindex="-1" ng-transclude>`,
+    template: `<ul ng-class="getClasses()" ng-style="getStyles()" role="{{listType === 'selection' ? 'listbox' : 'list'}}" tabindex="{{dropdownMode ? 0 : -1}}" ng-transclude>`,
   }))
   .directive('bkListItem', (classNames) => ({
     restrict: 'EA',
@@ -90,6 +90,7 @@ blimpkit
             'fd-list__item--interractive': $scope.interactive === true,
             'fd-list__item--inactive': $scope.inactive === true,
             'is-selected': $scope.selected === true,
+            'is-disabled': Object.prototype.hasOwnProperty.call($attrs, 'disabled') && $attrs.disabled === true,
           });
         };
       },
@@ -196,7 +197,7 @@ blimpkit
     restrict: 'EA',
     transclude: true,
     replace: true,
-    template: `<li role="listitem" class="fd-list__item fd-list__item--action"><button class="fd-list__title" ng-transclude></button></li>`,
+    template: `<li role="listitem" class="fd-list__item fd-list__item--action"><button class="fd-list__title" type="button" ng-transclude></button></li>`,
   }))
   .directive('bkListFormItem', () => ({
     restrict: 'EA',

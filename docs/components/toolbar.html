@@ -1,4 +1,4 @@
-<h2>Toolbar</h2>
+<h1>Toolbar</h1>
 <p>
   The toolbar enables the user to change the UI or trigger an action. For example, the user can change views, manipulate data or objects, navigate to another page, perform generic actions, and so on. This component is usually paired with
   buttons, which are always right-aligned.
@@ -92,7 +92,7 @@
 </code-block>
 <h3>Compact toolbar</h3>
 <div class="fd-margin-bottom--tiny">
-  <span bk-object-status status="informative" glyph="sap-icon--message-information" inverted="true" text="Compact toolbars cannot have a title but you can use a simple 'span' element as a replacement."></span>
+  <bk-message-strip glyph="sap-icon--message-information" state="information">Compact toolbars cannot have a title but you can use a simple 'span' element as a replacement.</bk-message-strip>
 </div>
 <code-block>
   <bk-toolbar compact="true" has-title="false">
@@ -152,5 +152,5 @@
 </code-block>
 <h3>Info (Active state)</h3>
 <code-block>
-  <bk-toolbar type="info" active="true"> 3 item selected </bk-toolbar>
+  <bk-toolbar type="info" active="true">3 items selected</bk-toolbar>
 </code-block>

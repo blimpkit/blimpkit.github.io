@@ -34,7 +34,7 @@ blimpkit
     replace: true,
     transclude: true,
     scope: {
-      isSmall: '<?',
+      size: '@?',
       isLong: '<?',
       isSlide: '<?',
       isLine: '<?',
@@ -44,7 +44,9 @@ blimpkit
     link: (scope) => {
       scope.getClasses = () =>
         classNames('fd-tile', {
-          'fd-tile--s': scope.isSmall === true,
+          'fd-tile--s': scope.size === 'sm',
+          'fd-tile--lg': scope.size === 'lg',
+          'fd-tile--xl': scope.size === 'xl',
           'fd-tile--double': scope.isLong === true,
           'fd-tile--slide': scope.isSlide === true,
           'fd-tile--line': scope.isLine === true,

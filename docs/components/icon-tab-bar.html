@@ -1,4 +1,4 @@
-<h2>Icon Tab Bar</h2>
+<h1>Icon Tab Bar</h1>
 <p>The Icon Tab Bar can be used for navigation within an object, or as a filter. Each tab of the component links to a different content area or view.</p>
 
 <h2>Attributes - Icon Tab Bar</h2>
@@ -64,13 +64,7 @@
       <td bk-table-cell>transparent</td>
       <td bk-table-cell>boolean</td>
       <td bk-table-cell>False</td>
-      <td bk-table-cell>Transparent background.</td>
-    </tr>
-    <tr bk-table-row>
-      <td bk-table-cell>translucent</td>
-      <td bk-table-cell>boolean</td>
-      <td bk-table-cell>False</td>
-      <td bk-table-cell>In translucent mode the header gets "--sapObjectHeader_Background" background color and the panel "--sapGroup_ContentBackground" background color.</td>
+      <td bk-table-cell>Transparent tab bar and background.</td>
     </tr>
     <tr bk-table-row>
       <td bk-table-cell>unfocused</td>
@@ -532,7 +526,7 @@
       </bk-icon-tab-bar-overflow>
     </bk-icon-tab-bar-tablist>
   </bk-icon-tab-bar>
-  <code-block type="js"> $scope.tabs = [...Array(10).keys()].map(i => ({ label: `Tab label ${i + 1}`, id: `tab_${i + 1}`})); $scope.isMoreTabsButtonVisible = (tabs) => tabs.some(x => x.isHidden); </code-block>
+  <code-block type="js">$scope.tabs = [...Array(10).keys()].map(i =>({ label: `Tab label ${i + 1}`, id: `tab_${i + 1}`})); $scope.isMoreTabsButtonVisible = (tabs) =>tabs.some(x =>x.isHidden);</code-block>
 </code-block>
 
 <h3>Scrollable</h3>
@@ -547,7 +541,7 @@
       </bk-icon-tab-bar-buttons>
     </bk-icon-tab-bar-tablist>
   </bk-icon-tab-bar>
-  <code-block type="js"> $scope.tabs = [...Array(10).keys()].map(i => ({ label: `Tab label ${i + 1}`, id: `tab_${i + 1}`})); </code-block>
+  <code-block type="js">$scope.tabs = [...Array(10).keys()].map(i =>({ label: `Tab label ${i + 1}`, id: `tab_${i + 1}`}));</code-block>
 </code-block>
 
 <h3>Extra button group</h3>
@@ -647,7 +641,7 @@
       <bk-icon-tab-bar-tab aria-label="Closable" description="Closable" title="Closable" icon="sap-icon--account" tab-id="ti1iclose" on-close="onTabClose(tabId)"></bk-icon-tab-bar-tab>
     </bk-icon-tab-bar-tablist>
   </bk-icon-tab-bar>
-  <code-block type="js"> $scope.onTabClose = function (tabId) { console.log(tabId); }; </code-block>
+  <code-block type="js">$scope.onTabClose = function (tabId) { console.log(tabId); };</code-block>
 </code-block>
 
 <h3>Tab panels</h3>
@@ -658,19 +652,19 @@
       <bk-icon-tab-bar-tab label="Tab 2" tab-id="ti2pan" ng-click="switchTab('ti2pan')"></bk-icon-tab-bar-tab>
       <bk-icon-tab-bar-tab label="Tab 3" tab-id="ti3pan" ng-click="switchTab('ti3pan')"></bk-icon-tab-bar-tab>
     </bk-icon-tab-bar-tablist>
-    <bk-icon-tab-bar-panel tab-id="ti1pan" ng-show="selectedTab === 'ti1pan'"> Panel content for the first tab </bk-icon-tab-bar-panel>
-    <bk-icon-tab-bar-panel tab-id="ti2pan" ng-show="selectedTab === 'ti2pan'"> Panel content for the second tab </bk-icon-tab-bar-panel>
-    <bk-icon-tab-bar-panel tab-id="ti3pan" ng-show="selectedTab === 'ti3pan'"> Panel content for the last tab </bk-icon-tab-bar-panel>
+    <bk-icon-tab-bar-panel tab-id="ti1pan" ng-show="selectedTab === 'ti1pan'">Panel content for the first tab</bk-icon-tab-bar-panel>
+    <bk-icon-tab-bar-panel tab-id="ti2pan" ng-show="selectedTab === 'ti2pan'">Panel content for the second tab</bk-icon-tab-bar-panel>
+    <bk-icon-tab-bar-panel tab-id="ti3pan" ng-show="selectedTab === 'ti3pan'">Panel content for the last tab</bk-icon-tab-bar-panel>
   </bk-icon-tab-bar>
-  <code-block type="js"> $scope.selectedTab = 'ti1pan'; $scope.switchTab = function (tabId) { $scope.selectedTab = tabId; }; </code-block>
+  <code-block type="js">$scope.selectedTab = 'ti1pan'; $scope.switchTab = function (tabId) { $scope.selectedTab = tabId; };</code-block>
 </code-block>
 
-<h3>Translucent mode</h3>
+<h3>Transparent mode</h3>
 <code-block>
-  <bk-icon-tab-bar translucent="true">
+  <bk-icon-tab-bar transparent="true">
     <bk-icon-tab-bar-tablist>
-      <bk-icon-tab-bar-tab label="Tab" tab-id="ti1translucent"></bk-icon-tab-bar-tab>
+      <bk-icon-tab-bar-tab label="Tab" tab-id="ti1transparent"></bk-icon-tab-bar-tab>
     </bk-icon-tab-bar-tablist>
-    <bk-icon-tab-bar-panel tab-id="ti1translucent"> Panel content </bk-icon-tab-bar-panel>
+    <bk-icon-tab-bar-panel tab-id="ti1transparent">Panel content</bk-icon-tab-bar-panel>
   </bk-icon-tab-bar>
 </code-block>

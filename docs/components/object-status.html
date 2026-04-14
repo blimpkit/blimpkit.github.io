@@ -1,4 +1,4 @@
-<h2>Object Status</h2>
+<h1>Object Status</h1>
 <p>
   Object Status is a short text that represents the semantic status of an object. It has a semantic color and an optional icon. Typically, the object status is used in the dynamic page header and as a status attribute of a line item in a
   table.
@@ -46,12 +46,6 @@
       <td bk-table-cell>Inverts the background color</td>
     </tr>
     <tr bk-table-row>
-      <td bk-table-cell>indication</td>
-      <td bk-table-cell>boolean</td>
-      <td bk-table-cell>False</td>
-      <td bk-table-cell>Applies generic indication color. Must be a number between 1 and 8 inclusive</td>
-    </tr>
-    <tr bk-table-row>
       <td bk-table-cell>large</td>
       <td bk-table-cell>boolean</td>
       <td bk-table-cell>False</td>
@@ -61,7 +55,7 @@
       <td bk-table-cell>truncate</td>
       <td bk-table-cell>boolean</td>
       <td bk-table-cell>False</td>
-      <td bk-table-cell>By default, Object Status text goes on multiple lines. For a single line text with ellipsis, set this to true.</td>
+      <td bk-table-cell>Object status text wraps by default. For a single line text with ellipsis, set this to true.</td>
     </tr>
   </tbody>
 </table>
@@ -69,7 +63,7 @@
 <h2>Examples</h2>
 <h3>Text and Icon</h3>
 <code-block>
-  <div class="bk-hbox bk-box--space-around">
+  <div class="bk-hbox bk-box--space-around bk-box--gap bk-flex--wrap">
     <span bk-object-status status="negative" glyph="sap-icon--message-error" text="Negative"></span>
     <span bk-object-status status="critical" glyph="sap-icon--message-warning" text="Critical"></span>
     <span bk-object-status status="positive" glyph="sap-icon--message-success" text="Positive"></span>
@@ -79,7 +73,7 @@
 
 <h3>Text Only</h3>
 <code-block>
-  <div class="bk-hbox bk-box--space-around">
+  <div class="bk-hbox bk-box--space-around bk-box--gap bk-flex--wrap">
     <span bk-object-status status="negative" text="Negative"></span>
     <span bk-object-status status="critical" text="Critical"></span>
     <span bk-object-status status="positive" text="Positive"></span>
@@ -89,7 +83,7 @@
 
 <h3>Icon Only</h3>
 <code-block>
-  <div class="bk-hbox bk-box--space-around">
+  <div class="bk-hbox bk-box--space-around bk-box--gap bk-flex--wrap">
     <span bk-object-status status="negative" glyph="sap-icon--message-error"></span>
     <span bk-object-status status="critical" glyph="sap-icon--message-warning"></span>
     <span bk-object-status status="positive" glyph="sap-icon--message-success"></span>
@@ -99,26 +93,18 @@
 
 <h3>Clickable</h3>
 <code-block>
-  <div class="bk-hbox bk-box--space-around">
+  <div class="bk-hbox bk-box--space-around bk-box--gap bk-flex--wrap">
     <a href="#" bk-object-status status="negative" glyph="sap-icon--message-error" text="Negative"></a>
     <a href="#" bk-object-status status="critical" glyph="sap-icon--message-warning" text="Critical"></a>
     <a href="#" bk-object-status status="positive" glyph="sap-icon--message-success" text="Positive"></a>
     <a href="#" bk-object-status status="informative" glyph="sap-icon--message-information" text="Info"></a>
     <a href="#" bk-object-status text="Neutral"></a>
-    <a href="#" bk-object-status indication="1" text="Dark Red"></a>
-    <a href="#" bk-object-status indication="2" text="Red"></a>
-    <a href="#" bk-object-status indication="3" text="Orange"></a>
-    <a href="#" bk-object-status indication="4" text="Green"></a>
-    <a href="#" bk-object-status indication="5" text="Blue"></a>
-    <span bk-object-status clickable="true" indication="6" text="Teal"></span>
-    <span bk-object-status clickable="true" indication="7" text="Purple"></span>
-    <span bk-object-status clickable="true" indication="objectStatusIndicator" text="Pink" ng-click="objectStatusIndicator = (objectStatusIndicator % 8) + 1"></span>
   </div>
 </code-block>
 
 <h3>Large</h3>
 <code-block>
-  <div class="bk-hbox bk-box--space-around">
+  <div class="bk-hbox bk-box--space-around bk-box--gap bk-flex--wrap">
     <span bk-object-status status="negative" glyph="sap-icon--message-error" text="Negative" large="true"></span>
     <span bk-object-status status="critical" glyph="sap-icon--message-warning" text="Critical" large="true"></span>
     <span bk-object-status status="positive" glyph="sap-icon--message-success" text="Positive" large="true"></span>
@@ -129,23 +115,19 @@
 
 <h3>Inverted</h3>
 <code-block>
-  <div class="bk-hbox bk-box--space-around">
-    <span bk-object-status status="negative" text="Inverted Negative" inverted="true"></span>
-    <span bk-object-status status="critical" text="Inverted Critical" inverted="true"></span>
-    <span bk-object-status status="positive" text="Inverted Positive" inverted="true"></span>
-    <span bk-object-status status="informative" text="Inverted Info" inverted="true"></span>
-    <span bk-object-status text="Neutral" inverted="true"></span>
+  <div class="bk-hbox bk-box--space-around bk-box--gap bk-flex--wrap">
     <span bk-object-status status="negative" glyph="sap-icon--message-error" inverted="true"></span>
     <span bk-object-status status="negative" glyph="sap-icon--message-error" text="Negative" inverted="true"></span>
     <span bk-object-status status="critical" glyph="sap-icon--message-warning" text="Critical" inverted="true"></span>
     <span bk-object-status status="positive" glyph="sap-icon--message-success" text="Positive" inverted="true"></span>
     <span bk-object-status status="informative" glyph="sap-icon--message-information" text="Info" inverted="true"></span>
+    <span bk-object-status glyph="sap-icon--message-information" text="Neutral" inverted="true"></span>
   </div>
 </code-block>
 
 <h3>Inverted Clickable</h3>
 <code-block>
-  <div class="bk-hbox bk-box--space-around">
+  <div class="bk-hbox bk-box--space-around bk-box--gap bk-flex--wrap">
     <span bk-object-status status="negative" glyph="sap-icon--message-error" inverted="true" clickable="true"></span>
     <span bk-object-status status="negative" glyph="sap-icon--message-error" text="Negative" inverted="true" clickable="true"></span>
     <span bk-object-status status="critical" glyph="sap-icon--message-warning" text="Critical" inverted="true" clickable="true"></span>
@@ -157,10 +139,10 @@
 
 <h3>Single line text with ellipsis</h3>
 <code-block>
-  <div class="bk-hbox bk-box--space-around">
-    <span bk-object-status truncate="true" status="negative" glyph="sap-icon--message-error" text="Object Status with text truncation with ellipsis" style="max-width: 15rem"></span>
-    <span bk-object-status truncate="true" status="critical" glyph="sap-icon--message-warning" text="Object Status with text truncation with ellipsis" style="max-width: 15rem"></span>
-    <span bk-object-status truncate="true" status="positive" glyph="sap-icon--message-success" text="Object Status with text truncation with ellipsis" style="max-width: 15rem"></span>
-    <span bk-object-status truncate="true" status="informative" glyph="sap-icon--message-information" text="Object Status with text truncation with ellipsis" style="max-width: 15rem"></span>
+  <div class="bk-hbox bk-box--space-around bk-box--gap bk-flex--wrap">
+    <span bk-object-status truncate="true" status="negative" glyph="sap-icon--message-error" text="Truncation with ellipsis" style="max-width: 8rem"></span>
+    <span bk-object-status truncate="true" status="critical" glyph="sap-icon--message-warning" text="Truncation with ellipsis" style="max-width: 8rem"></span>
+    <span bk-object-status truncate="true" status="positive" glyph="sap-icon--message-success" text="Truncation with ellipsis" style="max-width: 8rem"></span>
+    <span bk-object-status truncate="true" status="informative" glyph="sap-icon--message-information" text="Truncation with ellipsis" style="max-width: 8rem"></span>
   </div>
 </code-block>

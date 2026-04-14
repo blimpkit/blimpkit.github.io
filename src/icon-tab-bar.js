@@ -29,7 +29,6 @@ blimpkit
         flatNav: '<?',
         sidePadding: '@?',
         transparent: '<?',
-        translucent: '<?',
         unfocused: '<?',
         selectedTabId: '=?',
         compact: '<?',
@@ -70,7 +69,6 @@ blimpkit
               'fd-icon-tab-bar--xxl': $scope.sidePadding === 'xxl',
               'fd-icon-tab-bar--responsive-paddings': $scope.sidePadding === 'responsive',
               'fd-icon-tab-bar--transparent': $scope.transparent,
-              'fd-icon-tab-bar--translucent': $scope.translucent,
               'bk-icon-tab-bar--unfocused': $scope.unfocused,
               'is-compact': $scope.compact && !$scope.iconOnly && !$scope.hasIcons,
             });
@@ -371,7 +369,7 @@ blimpkit
       tabId: '@',
       isSelected: '<?',
     },
-    template: `<li role="presentation" class="fd-icon-tab-bar__item"">
+    template: `<li role="presentation" class="fd-icon-tab-bar__item">
         <a role="tab" class="fd-icon-tab-bar__tab" ng-attr-href="{{link || undefined}}" aria-selected="{{isSelected || false}}" id="{{tabId}}">
             <div class="fd-icon-tab-bar__container fd-icon-tab-bar__container--filter">
                 <span class="fd-icon-tab-bar__filter-counter">{{counter}}</span>

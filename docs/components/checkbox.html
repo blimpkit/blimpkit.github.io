@@ -1,4 +1,4 @@
-<h2>Checkbox</h2>
+<h1>Checkbox</h1>
 <p>A checkbox lets the user set a binary value such as “true/false”. When the user selects the checkbox, it toggles between:</p>
 
 <ul>
@@ -95,101 +95,108 @@
 
 <h2>Examples</h2>
 
-<bk-fieldset>
+<div class="bk-vbox bk-box--gap">
+  <bk-message-strip glyph="sap-icon--message-information" state="information">The checkbox input must be placed BEFORE the label. Otherwise, it will not be able to bind to the model.</bk-message-strip>
+  <bk-message-strip glyph="sap-icon--message-information" state="information">The checkbox must be placed inside a form item. Otherwise, the page might jump when the input receives focus.</bk-message-strip>
+</div>
+
+<bk-fieldset class="bk-padding-top--sm">
   <bk-form-group>
-    <bk-form-item>
-      <code-block>
+    <code-block>
+      <bk-form-item>
         <bk-checkbox id="cbid1" compact="false"></bk-checkbox>
         <bk-checkbox-label for="cbid1">Default</bk-checkbox-label>
-      </code-block>
-    </bk-form-item>
-    <bk-form-item>
-      <code-block>
+      </bk-form-item>
+    </code-block>
+    <code-block>
+      <bk-form-item>
         <bk-checkbox id="cbid2" compact="false" ng-model="checkboxes.model"></bk-checkbox>
         <bk-checkbox-label for="cbid2">Checked</bk-checkbox-label>
-        <code-block type="js"> $scope.checkboxes = { model: true }; </code-block>
-      </code-block>
-    </bk-form-item>
-    <bk-form-item>
-      <code-block>
+      </bk-form-item>
+      <code-block type="js">$scope.checkboxes = { model: true };</code-block>
+    </code-block>
+    <code-block>
+      <bk-form-item>
         <bk-checkbox id="cbid3" compact="false" ng-required="true" ng-checked="true"></bk-checkbox>
         <bk-checkbox-label for="cbid3" required="true">Required</bk-checkbox-label>
-      </code-block>
-    </bk-form-item>
-    <bk-form-item>
-      <code-block>
+      </bk-form-item>
+    </code-block>
+    <code-block>
+      <bk-form-item>
         <bk-checkbox id="cbid4" compact="false" state="error"></bk-checkbox>
         <bk-checkbox-label for="cbid4">Error</bk-checkbox-label>
-      </code-block>
-    </bk-form-item>
-    <bk-form-item>
-      <code-block>
+      </bk-form-item>
+    </code-block>
+    <code-block>
+      <bk-form-item>
         <bk-checkbox id="cbid5" compact="false" state="success"></bk-checkbox>
         <bk-checkbox-label for="cbid5">Success</bk-checkbox-label>
-      </code-block>
-    </bk-form-item>
-    <bk-form-item>
-      <code-block>
+      </bk-form-item>
+    </code-block>
+    <code-block>
+      <bk-form-item>
         <bk-checkbox id="cbid6" compact="false" state="warning"></bk-checkbox>
         <bk-checkbox-label for="cbid6">Warning</bk-checkbox-label>
-      </code-block>
-    </bk-form-item>
-    <bk-form-item>
-      <code-block>
+      </bk-form-item>
+    </code-block>
+    <code-block>
+      <bk-form-item>
         <bk-checkbox id="cbid7" compact="false" state="information"></bk-checkbox>
         <bk-checkbox-label for="cbid7">Information</bk-checkbox-label>
-      </code-block>
-    </bk-form-item>
-    <bk-form-item>
-      <code-block>
+      </bk-form-item>
+    </code-block>
+    <code-block>
+      <bk-form-item>
         <bk-checkbox id="cbid8" compact="false"></bk-checkbox>
         <bk-checkbox-label for="cbid8" is-hover="true">Hover</bk-checkbox-label>
-      </code-block>
-    </bk-form-item>
-    <bk-form-item>
-      <code-block>
+      </bk-form-item>
+    </code-block>
+    <code-block>
+      <bk-form-item>
         <bk-checkbox id="cbid9" compact="false" ng-disabled="true"></bk-checkbox>
         <bk-checkbox-label for="cbid9" is-hover="true">Disabled</bk-checkbox-label>
-      </code-block>
-    </bk-form-item>
-    <bk-form-item>
-      <code-block>
+      </bk-form-item>
+    </code-block>
+    <code-block>
+      <bk-form-item>
         <bk-checkbox id="cbid10" compact="false" indeterminate="true"></bk-checkbox>
         <bk-checkbox-label for="cbid10">Indeterminate</bk-checkbox-label>
-      </code-block>
-    </bk-form-item>
-    <bk-form-item>
-      <code-block>
+      </bk-form-item>
+    </code-block>
+    <code-block>
+      <bk-form-item>
         <bk-checkbox id="cbid11" compact="false" readonly></bk-checkbox>
         <bk-checkbox-label for="cbid11">Default (readonly)</bk-checkbox-label>
-      </code-block>
-    </bk-form-item>
-    <bk-form-item>
-      <code-block>
+      </bk-form-item>
+    </code-block>
+    <code-block>
+      <bk-form-item>
         <bk-checkbox id="cbid12" compact="false" ng-checked="true" readonly></bk-checkbox>
         <bk-checkbox-label for="cbid12">Checked (readonly)</bk-checkbox-label>
-      </code-block>
-    </bk-form-item>
-    <bk-form-item>
-      <code-block>
+      </bk-form-item>
+    </code-block>
+    <code-block>
+      <bk-form-item>
         <bk-checkbox id="cbid13" compact="false" indeterminate="true" readonly></bk-checkbox>
         <bk-checkbox-label for="cbid13">Indeterminate (readonly)</bk-checkbox-label>
-      </code-block>
-    </bk-form-item>
+      </bk-form-item>
+    </code-block>
   </bk-form-group>
 </bk-fieldset>
 <h3>Sizes</h3>
 <code-block>
-  <bk-checkbox id="cbid11" compact="true"></bk-checkbox>
-  <bk-checkbox-label for="cbid11">Compact</bk-checkbox-label>
+  <bk-form-item>
+    <bk-checkbox id="cbcompat" compact="true"></bk-checkbox>
+    <bk-checkbox-label for="cbcompat">Compact</bk-checkbox-label>
+  </bk-form-item>
 </code-block>
 <h3>No label</h3>
-<bk-form-item>
-  <code-block>
+<code-block>
+  <bk-form-item>
     <bk-checkbox id="cbide" compact="false"></bk-checkbox>
     <bk-checkbox-label empty="true" for="cbide"></bk-checkbox-label>
-  </code-block>
-</bk-form-item>
+  </bk-form-item>
+</code-block>
 <h3>Display-only mode</h3>
 <p>
   In display-only Mode, the checkbox is replaced by an icon to represent the checked, unchecked and indeterminate states and it's not interactive, not editable, not focusable and not in the tab chain. This setting can be used for forms in

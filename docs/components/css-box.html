@@ -1,68 +1,87 @@
-<h2>Box</h2>
-<p>BlimpKit provides a horizontal, vertical and centered content box.</p>
+<h1>Box</h1>
+<p>BlimpKit provides a horizontal, vertical and centered content box as well as some utility classes for managing flex containers.</p>
 
-<h2>Examples</h2>
+<h2>Boxes</h2>
 
-<h3>Vertical Box</h3>
-<code-block>
-  <div class="doc-css-layout-container bk-vbox">
-    <div class="doc-css-layout-contents">1</div>
-    <div class="doc-css-layout-contents">2</div>
-    <div class="doc-css-layout-contents">3</div>
-    <div class="doc-css-layout-contents">4</div>
-  </div>
-</code-block>
+<table bk-table fixed="true">
+  <thead bk-table-header>
+    <tr bk-table-row>
+      <th bk-table-header-cell>Class</th>
+      <th bk-table-header-cell>Description</th>
+    </tr>
+  </thead>
+  <tbody bk-table-body>
+    <tr bk-table-row>
+      <td bk-table-cell>bk-vbox</td>
+      <td bk-table-cell>Vertical flex layout.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>bk-hbox</td>
+      <td bk-table-cell>Horizontal flex layout.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>bk-center</td>
+      <td bk-table-cell>Flex layout with centered content.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>bk-center--horizontal</td>
+      <td bk-table-cell>Flex layout with horizontally centered content.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>bk-center--vertical</td>
+      <td bk-table-cell>Flex layout with vertically centered content.</td>
+    </tr>
+  </tbody>
+</table>
 
-<h3>Horizintal Box</h3>
-<p>By default, box items will wrap whan ther isn't enough screen space. To prevent that, you can add the "<b>bk-flex--nowrap</b>" class.</p>
-<code-block>
-  <div class="doc-css-layout-container bk-hbox bk-flex--nowrap">
-    <div class="doc-css-layout-contents">1</div>
-    <div class="doc-css-layout-contents">2</div>
-    <div class="doc-css-layout-contents">3</div>
-    <div class="doc-css-layout-contents">4</div>
-  </div>
-</code-block>
+<h2>Wrap</h2>
 
-<h3>Horizintal Box with stretched items</h3>
-<code-block>
-  <div class="doc-css-layout-container bk-hbox">
-    <div class="doc-css-layout-contents bk-stretch">1</div>
-    <div class="doc-css-layout-contents bk-stretch">2</div>
-    <div class="doc-css-layout-contents bk-stretch">3</div>
-    <div class="doc-css-layout-contents bk-stretch">4</div>
-  </div>
-</code-block>
+<table bk-table fixed="true">
+  <thead bk-table-header>
+    <tr bk-table-row>
+      <th bk-table-header-cell>Class</th>
+      <th bk-table-header-cell>Description</th>
+    </tr>
+  </thead>
+  <tbody bk-table-body>
+    <tr bk-table-row>
+      <td bk-table-cell>bk-flex--wrap</td>
+      <td bk-table-cell>Box items will wrap on overflow.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>bk-flex--nowrap</td>
+      <td bk-table-cell>Box items will never wrap.</td>
+    </tr>
+  </tbody>
+</table>
 
-<h3>Center Content Box</h3>
-<code-block>
-  <div class="doc-css-layout-container bk-center" style="height: 300px">
-    <div class="doc-css-layout-contents">1</div>
-    <div class="doc-css-layout-contents">2</div>
-    <div class="doc-css-layout-contents">3</div>
-    <div class="doc-css-layout-contents">4</div>
-  </div>
-</code-block>
-<h4>Center Horizontal</h4>
-<code-block>
-  <div class="doc-css-layout-container bk-center--horizontal" style="height: 300px">
-    <div class="doc-css-layout-contents">1</div>
-    <div class="doc-css-layout-contents">2</div>
-    <div class="doc-css-layout-contents">3</div>
-    <div class="doc-css-layout-contents">4</div>
-  </div>
-</code-block>
-<h4>Center Vertical</h4>
-<code-block>
-  <div class="doc-css-layout-container bk-center--vertical" style="height: 300px">
-    <div class="doc-css-layout-contents bk-stretch">1</div>
-    <div class="doc-css-layout-contents bk-stretch">2</div>
-    <div class="doc-css-layout-contents bk-stretch">3</div>
-    <div class="doc-css-layout-contents bk-stretch">4</div>
-  </div>
-</code-block>
+<h2>Grow or shrink</h2>
 
-<h3>Justify items horizontally</h3>
+<table bk-table fixed="true">
+  <thead bk-table-header>
+    <tr bk-table-row>
+      <th bk-table-header-cell>Class</th>
+      <th bk-table-header-cell>Description</th>
+    </tr>
+  </thead>
+  <tbody bk-table-body>
+    <tr bk-table-row>
+      <td bk-table-cell>bk-box--items-stretch</td>
+      <td bk-table-cell>Grow items inside a container.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>bk-stretch</td>
+      <td bk-table-cell>Grow item.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>bk-shrink</td>
+      <td bk-table-cell>Shrink item.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Item Placement</h2>
+
 <table bk-table>
   <thead bk-table-header>
     <tr bk-table-row>
@@ -79,6 +98,19 @@
       <td bk-table-cell>bk-box--end</td>
       <td bk-table-cell>Items will be placed at the end of the container.</td>
     </tr>
+  </tbody>
+</table>
+
+<h2>Justify Content</h2>
+
+<table bk-table>
+  <thead bk-table-header>
+    <tr bk-table-row>
+      <th bk-table-header-cell>Class</th>
+      <th bk-table-header-cell>Description</th>
+    </tr>
+  </thead>
+  <tbody bk-table-body>
     <tr bk-table-row>
       <td bk-table-cell>bk-box--space-around</td>
       <td bk-table-cell>Justify items along the container's main axis such that there is an equal amount of space on each side of each item.</td>
@@ -89,12 +121,146 @@
     </tr>
     <tr bk-table-row>
       <td bk-table-cell>bk-box--space-evenly</td>
-      <td bk-table-cell>Justify items along the container's main axis such that there is an equal amount of space around each item, but also accounting for the doubling of space you would normally see between each item when using
+      <td bk-table-cell>
+        Justify items along the container's main axis such that there is an equal amount of space around each item, but also accounting for the doubling of space you would normally see between each item when using
         <b>bk-box--space-around</b>.
       </td>
     </tr>
   </tbody>
 </table>
+
+<h2>Align Items</h2>
+
+<table bk-table>
+  <thead bk-table-header>
+    <tr bk-table-row>
+      <th bk-table-header-cell>Class</th>
+      <th bk-table-header-cell>Description</th>
+    </tr>
+  </thead>
+  <tbody bk-table-body>
+    <tr bk-table-row>
+      <td bk-table-cell>bk-box--items-start</td>
+      <td bk-table-cell>Align items to the start of the container's cross axis.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>bk-box--items-center</td>
+      <td bk-table-cell>Align items along the center of the container's cross axis.</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>bk-box--items-end</td>
+      <td bk-table-cell>Align items to the end of the container's cross axis.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Gap</h2>
+
+<p>You can set a gap between items in boxes and grids.</p>
+<table bk-table>
+  <thead bk-table-header>
+    <tr bk-table-row>
+      <th bk-table-header-cell>Class</th>
+      <th bk-table-header-cell>Description</th>
+    </tr>
+  </thead>
+  <tbody bk-table-body>
+    <tr bk-table-row>
+      <td bk-table-cell>bk-box--gap-none</td>
+      <td bk-table-cell>No gap</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>bk-box--gap</td>
+      <td bk-table-cell>Gap of 0.5rem</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>bk-box--gap-m</td>
+      <td bk-table-cell>Gap of 1rem</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>bk-box--gap-l</td>
+      <td bk-table-cell>Gap of 1.5rem</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>bk-box--gap-xl</td>
+      <td bk-table-cell>Gap of 2rem</td>
+    </tr>
+    <tr bk-table-row>
+      <td bk-table-cell>bk-box--gap-xxl</td>
+      <td bk-table-cell>Gap of 3rem</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Examples</h2>
+
+<h3>Vertical Box</h3>
+<code-block>
+  <div class="doc-css-layout-container bk-vbox">
+    <div class="doc-css-layout-contents">1</div>
+    <div class="doc-css-layout-contents">2</div>
+    <div class="doc-css-layout-contents">3</div>
+    <div class="doc-css-layout-contents">4</div>
+  </div>
+</code-block>
+
+<h3>Horizintal Box</h3>
+
+<code-block>
+  <div class="doc-css-layout-container bk-hbox">
+    <div class="doc-css-layout-contents">1</div>
+    <div class="doc-css-layout-contents">2</div>
+    <div class="doc-css-layout-contents">3</div>
+    <div class="doc-css-layout-contents">4</div>
+  </div>
+</code-block>
+
+<h3>Horizintal Box with stretched items</h3>
+
+<code-block>
+  <div class="doc-css-layout-container bk-hbox">
+    <div class="doc-css-layout-contents bk-stretch">1</div>
+    <div class="doc-css-layout-contents bk-stretch">2</div>
+    <div class="doc-css-layout-contents bk-stretch">3</div>
+    <div class="doc-css-layout-contents bk-stretch">4</div>
+  </div>
+</code-block>
+
+<h3>Center Content Box</h3>
+
+<code-block>
+  <div class="doc-css-layout-container bk-center" style="height: 300px">
+    <div class="doc-css-layout-contents">1</div>
+    <div class="doc-css-layout-contents">2</div>
+    <div class="doc-css-layout-contents">3</div>
+    <div class="doc-css-layout-contents">4</div>
+  </div>
+</code-block>
+
+<h4>Center Horizontal</h4>
+
+<code-block>
+  <div class="doc-css-layout-container bk-center--horizontal" style="height: 300px">
+    <div class="doc-css-layout-contents">1</div>
+    <div class="doc-css-layout-contents">2</div>
+    <div class="doc-css-layout-contents">3</div>
+    <div class="doc-css-layout-contents">4</div>
+  </div>
+</code-block>
+
+<h4>Center Vertical</h4>
+
+<code-block>
+  <div class="doc-css-layout-container bk-center--vertical" style="height: 300px">
+    <div class="doc-css-layout-contents bk-stretch">1</div>
+    <div class="doc-css-layout-contents bk-stretch">2</div>
+    <div class="doc-css-layout-contents bk-stretch">3</div>
+    <div class="doc-css-layout-contents bk-stretch">4</div>
+  </div>
+</code-block>
+
+<h3>Justify items horizontally</h3>
+
 <code-block>
   <div class="bk-vbox bk-box--gap">
     <div class="doc-css-layout-container bk-hbox">
@@ -154,28 +320,7 @@
 </code-block>
 
 <h3>Justify items vertically</h3>
-<table bk-table>
-  <thead bk-table-header>
-    <tr bk-table-row>
-      <th bk-table-header-cell>Class</th>
-      <th bk-table-header-cell>Description</th>
-    </tr>
-  </thead>
-  <tbody bk-table-body>
-    <tr bk-table-row>
-      <td bk-table-cell>bk-box--items-start</td>
-      <td bk-table-cell>Align items to the start of the container's cross axis.</td>
-    </tr>
-    <tr bk-table-row>
-      <td bk-table-cell>bk-box--items-center</td>
-      <td bk-table-cell>Align items along the center of the container's cross axis.</td>
-    </tr>
-    <tr bk-table-row>
-      <td bk-table-cell>bk-box--items-end</td>
-      <td bk-table-cell>Align items to the end of the container's cross axis.</td>
-    </tr>
-  </tbody>
-</table>
+
 <code-block style="margin-top: 1rem">
   <div class="doc-css-layout-container bk-hbox bk-box--items-end" style="height: 300px">
     <div class="doc-css-layout-contents">1</div>
@@ -185,37 +330,7 @@
 </code-block>
 
 <h3>Gap</h3>
-<p>You can set a gap between items in the vertical, horizontal, center content box and grid.</p>
-<table bk-table>
-  <thead bk-table-header>
-    <tr bk-table-row>
-      <th bk-table-header-cell>Class</th>
-      <th bk-table-header-cell>Description</th>
-    </tr>
-  </thead>
-  <tbody bk-table-body>
-    <tr bk-table-row>
-      <td bk-table-cell>bk-box--gap</td>
-      <td bk-table-cell>Gap of 0.5rem</td>
-    </tr>
-    <tr bk-table-row>
-      <td bk-table-cell>bk-box--gap-m</td>
-      <td bk-table-cell>Gap of 1rem</td>
-    </tr>
-    <tr bk-table-row>
-      <td bk-table-cell>bk-box--gap-l</td>
-      <td bk-table-cell>Gap of 1.5rem</td>
-    </tr>
-    <tr bk-table-row>
-      <td bk-table-cell>bk-box--gap-xl</td>
-      <td bk-table-cell>Gap of 2rem</td>
-    </tr>
-    <tr bk-table-row>
-      <td bk-table-cell>bk-box--gap-xxl</td>
-      <td bk-table-cell>Gap of 3rem</td>
-    </tr>
-  </tbody>
-</table>
+
 <code-block style="margin-top: 1rem">
   <div class="doc-css-layout-container bk-vbox bk-box--gap">
     <div class="doc-css-layout-contents">1</div>

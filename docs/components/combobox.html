@@ -1,4 +1,4 @@
-<h2>ComboBox</h2>
+<h1>ComboBox</h1>
 <p>
   ComboBox allows users to select an item from a predefined list. It provides an editable input field for filtering the list, and a dropdown menu with a list of the available options. If the entries are not validated by the application,
   users can also enter custom values.
@@ -17,7 +17,16 @@
   <tbody bk-table-body>
     <tr bk-table-row>
       <td bk-table-cell>dropdown-items</td>
-      <td bk-table-cell>array[{ text: string, secondarytext: string, value: any }]</td>
+      <td bk-table-cell>
+        <pre>
+array[{
+  text: string,
+  secondarytext: string,
+  value: any,
+  disabled: boolean
+}]</pre
+        >
+      </td>
       <td bk-table-cell>True</td>
       <td bk-table-cell>Items to be filtered in the search input.</td>
     </tr>
@@ -124,14 +133,20 @@
   </code-block>
 </code-block>
 
-<h3>Model Bind</h3>
+<h3>Model bind and a custom action</h3>
 <code-block>
   <bk-combobox-input dropdown-items="comboboxItemsIcons" ng-model="combobox.selectedModelValue" ng-change="combobox.onCBChange()" placeholder="Search product..." btn-aria-label="show/hide product options" list-aria-label="product options">
+    <bk-list-action-item ng-if="combobox.hasMore" ng-click="combobox.loadMoreItems()">
+      <bk-busy-indicator ng-if="combobox.loading" size="m"></bk-busy-indicator>
+      <span ng-if="!combobox.loading" class="sap-icon sap-icon--navigation-down-arrow" role="presentation"></span>
+      <span ng-if="!combobox.loading">More Options</span>
+    </bk-list-action-item>
   </bk-combobox-input>
   <code-block type="js">
     $scope.comboboxItemsIcons = [ { value: 1, svg: './logo/blimpkit-symbolic.svg', text: 'Product 1', secondaryText: '1000 EUR' }, { value: 2, glyph: 'sap-icon--picture', text: 'Product 2', secondaryText: '750 EUR' }, { value: 3, glyph:
-    'sap-icon--laptop', text: 'Product 3', secondaryText: '780 EUR' }, { value: 4, glyph: 'sap-icon--fridge', text: 'Product 4', secondaryText: '40 EUR' } ]; $scope.combobox = { selectedModelValue: null, onCBChange: function () {
-    console.log($scope.combobox.selectedModelValue); }, };
+    'sap-icon--laptop', text: 'Product 3', secondaryText: '780 EUR' }, { value: 4, glyph: 'sap-icon--fridge', text: 'Product 4', secondaryText: '40 EUR' } ]; $scope.combobox = { loading: false, hasMore: true, selectedModelValue: null,
+    onCBChange: () => { console.log($scope.combobox.selectedModelValue); }, loadMoreItems: () => { $scope.combobox.loading = true; $timeout(() => { $scope.comboboxItemsIcons.push({ value: 5, glyph: 'sap-icon--map', text: 'Product 5',
+    secondaryText: '13 EUR', }, { value: 6, glyph: 'sap-icon--camera', text: 'Product 6', secondaryText: '900 EUR', }); $scope.combobox.loading = false; $scope.combobox.hasMore = false; }, 2000); } };
   </code-block>
 </code-block>
 
@@ -159,14 +174,46 @@
 <h3>Dynamic Input</h3>
 <code-block>
   <bk-combobox-input input-id="dynamic" dropdown-items="dynamicItems" ng-keyup="onComboInputChange($event)" placeholder="Start typing" btn-aria-label="show/hide product options" list-aria-label="product options"></bk-combobox-input>
+  <!-- prettier-ignore -->
   <code-block type="js">
-    let lastInputValue = &quot;&quot;; function isText(keycode) { if (keycode &gt;= 48 &amp;&amp; keycode &lt;= 90 || keycode&gt;= 96 &amp;&amp; keycode &lt;= 111 || keycode&gt;= 186 &amp;&amp; keycode &lt;= 222 || [8, 46,
-    173].includes(keycode)) return true; return false; } $scope.onComboInputChange=function (event) { if (isText(event.which)) { if (event.originalEvent.target.value===&quot;&quot; ) { $scope.dynamicItems=[ { value: 0, text: &#39;Default
-    value 0&#39; }, { value: 1, text: &#39;Default value 1&#39; }, { value: 2, text: &#39;Default value 2&#39; }, { value: 3, text: &#39;Default value 3&#39; }, { value: 4, text: &#39;Default value 4&#39; }, { value: 5, text: &#39;Default
-    value 5&#39; }, ]; } else if (lastInputValue !==event.originalEvent.target.value) { // Back-end stuff $scope.dynamicItems.length=0; for (let i=0; i &lt; event.originalEvent.target.value.length; i++) { $scope.dynamicItems.push({ value:
-    i, text: `Dynamic value ${event.originalEvent.target.value} ${i + 1}` }); } } lastInputValue=event.originalEvent.target.value; } }; $scope.dynamicItems=[ { value: 0, text: &#39;Default value 0&#39; }, { value: 1, text: &#39;Default
-    value 1&#39; }, { value: 2, text: &#39;Default value 2&#39; }, { value: 3, text: &#39;Default value 3&#39; }, { value: 4, text: &#39;Default value 4&#39; }, { value: 5, text: &#39;Default value 5&#39; } ];
-  </code-block>
+    let lastInputValue = '';
+function isText(keycode) {
+    if ((keycode >= 48 && keycode <= 90) || (keycode >= 96 && keycode <= 111) || (keycode >= 186 && keycode <= 222) || [8, 46, 173].includes(keycode)) return true;
+    return false;
+}
+$scope.dynamicItems = [
+    { value: 0, text: 'Default value 0' },
+    { value: 1, text: 'Default value 1' },
+    { value: 2, text: 'Default value 2' },
+    { value: 3, text: 'Default value 3' },
+    { value: 4, text: 'Default value 4' },
+    { value: 5, text: 'Default value 5' },
+];
+$scope.onComboInputChange = function (event) {
+    if (isText(event.which)) {
+        if (event.originalEvent.target.value === '') {
+            $scope.dynamicItems = [
+                { value: 0, text: 'Default value 0' },
+                { value: 1, text: 'Default value 1' },
+                { value: 2, text: 'Default value 2' },
+                { value: 3, text: 'Default value 3' },
+                { value: 4, text: 'Default value 4' },
+                { value: 5, text: 'Default value 5' },
+            ];
+        } else if (lastInputValue !== event.originalEvent.target.value) {
+            // Back-end stuff
+            $scope.dynamicItems.length = 0;
+            for (let i = 0; i < event.originalEvent.target.value.length; i++) {
+                $scope.dynamicItems.push({
+                    value: i,
+                    text: `Dynamic value ${event.originalEvent.target.value} ${i + 1}`,
+                });
+            }
+        }
+        lastInputValue = event.originalEvent.target.value;
+    }
+};
+    </code-block>
 </code-block>
 
 <h3>Multi Combobox</h3>

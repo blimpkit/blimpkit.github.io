@@ -1,4 +1,4 @@
-<h2>Vertical Navigation</h2>
+<h1>Vertical Navigation</h1>
 <p>The vertical navigation is used as a top-level application navigation list.</p>
 
 <h2>Attributes - Vertical Nav</h2>
@@ -132,6 +132,7 @@
 </table>
 
 <h2>Examples</h2>
+
 <code-block>
   <bk-vertical-nav>
     <bk-vertical-nav-main-section aria-label="main navigation">
@@ -148,6 +149,26 @@
     </bk-vertical-nav-main-section>
   </bk-vertical-nav>
 </code-block>
+
+<h3>Border instead of shadow</h3>
+
+<code-block>
+  <bk-vertical-nav class="bk-border bk-shadow--none">
+    <bk-vertical-nav-main-section aria-label="main navigation">
+      <bk-list>
+        <bk-list-navigation-item>
+          <bk-list-navigation-item-icon glyph="sap-icon--home"></bk-list-navigation-item-icon>
+          <bk-list-navigation-item-text>Home</bk-list-navigation-item-text>
+        </bk-list-navigation-item>
+        <bk-list-navigation-item>
+          <bk-list-navigation-item-icon svg-path="./logo/blimpkit-symbolic.svg"></bk-list-navigation-item-icon>
+          <bk-list-navigation-item-text>Sample</bk-list-navigation-item-text>
+        </bk-list-navigation-item>
+      </bk-list>
+    </bk-vertical-nav-main-section>
+  </bk-vertical-nav>
+</code-block>
+
 <h3>Condensed</h3>
 <code-block>
   <bk-vertical-nav condensed="isNavCondensed">
@@ -392,7 +413,7 @@
     </bk-vertical-nav-main-section>
     <bk-vertical-nav-utility-section aria-label="utility navigation">
       <bk-list>
-        <bk-list-navigation-item>
+        <bk-list-navigation-item indicated="true">
           <bk-list-navigation-item-icon glyph="sap-icon--settings"></bk-list-navigation-item-icon>
           <bk-list-navigation-item-text>Settings</bk-list-navigation-item-text>
           <bk-list-navigation-item-indicator></bk-list-navigation-item-indicator>

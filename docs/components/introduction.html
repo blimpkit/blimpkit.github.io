@@ -6,7 +6,7 @@
   fundamental-styles.
 </p>
 
-<p>BlimpKit is an independent library and also includes additional components that are unique to the project.</p>
+<p>BlimpKit is an independent library and it includes additional components that are unique to the project.</p>
 
 <h2>Getting Started</h2>
 
@@ -30,11 +30,17 @@
 <code-block type="text-html"> &lt;script type=&quot;text/javascript&quot; src=&quot;https://unpkg.com/@blimpkit/blimpkit@{{version}}/dist/blimpkit.min.js&quot;&gt;&lt;/script&gt; </code-block>
 
 <h3>Dependencies</h3>
-<p>You will also need AngularJS, jQuery, fundamental-styles and SAP Theming:</p>
+<p>You will also need AngularJS, jQuery, fundamental-styles and font 72:</p>
+<!-- prettier-ignore -->
 <code-block type="text-html">
-  &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js&quot;&gt;&lt;/script&gt; &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js&quot;&gt;&lt;/script&gt; &lt;script
-  src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular-aria.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular-aria.js&quot;&gt;&lt;/script&gt;
+
+  &lt;link href=&quot;https://unpkg.com/fundamental-styles@0.38.0/dist/fundamental-styles.css&quot; rel=&quot;stylesheet&quot;&gt;
 </code-block>
+<br />
+<bk-message-strip glyph="sap-icon--message-information" state="information">The easiest way to get font 72 is from the SAP theming npm package.</bk-message-strip>
 
 <h3>Base styles and themes</h3>
 <p>Themes are supported. There are currently three official themes available: <b>BlimpKit</b>, <b>Classic</b> and <b>Mystic</b>.</p>
@@ -50,23 +56,16 @@
   <li><b>mystic-light</b></li>
 </ul>
 
-<p>For light or dark:</p>
+<!-- prettier-ignore -->
 <code-block type="text-html">
-  &lt;link href=&quot;https://unpkg.com/fundamental-styles@0.38.0/dist/fundamental-styles.css&quot; rel=&quot;stylesheet&quot;&gt; &lt;link href=&quot;https://unpkg.com/@blimpkit/blimpkit@{{version}}/dist/css/themes/{themeName}.css&quot;
-  rel=&quot;stylesheet&quot;&gt; &lt;link href=&quot;https://unpkg.com/@blimpkit/blimpkit@{{version}}/dist/css/themes/{themeName}-variables.css&quot; rel=&quot;stylesheet&quot;&gt; &lt;link
-  href=&quot;https://unpkg.com/@blimpkit/blimpkit@{{version}}/dist/css/blimpkit.css&quot; rel=&quot;stylesheet&quot;&gt;
-</code-block>
-
-<p>For auto:</p>
-<code-block type="text-html">
-  &lt;link href=&quot;https://unpkg.com/fundamental-styles@0.38.0/dist/fundamental-styles.css&quot; rel=&quot;stylesheet&quot;&gt; &lt;link
-  href=&quot;https://unpkg.com/@blimpkit/blimpkit@{{version}}/dist/css/themes/{themeName}-auto.css&quot; rel=&quot;stylesheet&quot;&gt; &lt;link href=&quot;https://unpkg.com/@blimpkit/blimpkit@{{version}}/dist/css/blimpkit.css&quot;
-  rel=&quot;stylesheet&quot;&gt;
+  &lt;link href=&quot;https://unpkg.com/@blimpkit/blimpkit@2.0.0/dist/css/blimpkit.css&quot; rel=&quot;stylesheet&quot;&gt;
+  &lt;link href=&quot;https://unpkg.com/@blimpkit/blimpkit@2.0.0/dist/css/themes/{themeName}.css&quot; rel=&quot;stylesheet&quot;&gt;
 </code-block>
 
 <h3>Fonts and icons</h3>
 
 <p>Fonts and icons are not included or configured by default. You must create you own CSS file and configure the fonts from the <b>@sap-theming</b> package.</p>
+<p>The text font can be changed using css variables but you will always need the "SAP-icons" font.</p>
 
 <code-block type="css">
   @font-face { font-family: &quot;72&quot;; src:url(&quot;https://www.unpkg.com/@sap-theming/theming-base-content@11.18.2/content/Base/baseLib/baseTheme/fonts/72-Regular-full.woff&quot;) format(&quot;woff&quot;); font-weight: 400;
