@@ -47,7 +47,7 @@ blimpkit
     },
     template: `<span ng-show="isVisible()" ng-class="getClasses()" role="button" tabindex="0">
         <span class="fd-token__text">{{label}}</span>
-        <button ng-if="!isReadonly" class="fd-token__close" aria-label="{{closeAriaLabel}}" ng-click="closeClicked()"></button>
+        <button type="button" ng-if="!isReadonly" class="fd-token__close" aria-label="{{closeAriaLabel}}" ng-click="closeClicked()"></button>
     </span>`,
   }))
   .directive('bkTokenIndicator', () => ({

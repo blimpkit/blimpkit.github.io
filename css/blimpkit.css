@@ -1692,6 +1692,14 @@
   --sapTextColor: var(--sidebar-foreground);
 }
 
+.fd-vertical-nav--condensed .fd-vertical-nav__group-header {
+  height: calc(var(--sapElement_LineHeight) / 3);
+}
+
+.fd-vertical-nav--condensed .fd-vertical-nav__group-header > .fd-list__title {
+  display: none;
+}
+
 .fd-vertical-nav .fd-list__navigation-item--indicated {
   background-color: var(--sidebar-active);
   --sapSelectedColor: var(--sidebar-active-foreground);
@@ -1731,8 +1739,8 @@
 
 .fd-popover__body:has(> .fd-popover__wrapper > .fd-product-switch__body)::before,
 .fd-popover__body:has(> .fd-popover__wrapper > .fd-menu)::before,
-.fd-popover__body:has(> .fd-product-switch__body)::before,
-.fd-popover__body:has(> .fd-menu)::before {
+.fd-popover__body:has(> ng-transclude > .fd-product-switch__body)::before,
+.fd-popover__body:has(> ng-transclude > .fd-menu)::before {
   background-color: var(--sapList_Background);
 }
 

@@ -263,7 +263,7 @@ blimpkit
     template: `<div class="fd-popover">
         <div class="fd-popover__control" aria-disabled="{{ !!isDisabled }}" ng-mouseover="setMessageVisibility(true)" ng-mouseleave="setMessageVisibility(false)">
             <div ng-class="getClasses()">
-                <button id="{{ buttonId }}" ng-class="getControlClasses()" ng-click="!isReadonly && onControlClick($event)" aria-labelledby="{{ [labelId, textId].join(' ') }}" aria-expanded="{{ bodyExpanded }}" aria-haspopup="{{isReadonly ? 'false' : 'listbox'}}" aria-disabled="{{ !!isDisabled }}" tabindex="0">
+                <button type="button" id="{{ buttonId }}" ng-class="getControlClasses()" ng-click="!isReadonly && onControlClick($event)" aria-labelledby="{{ [labelId, textId].join(' ') }}" aria-expanded="{{ bodyExpanded }}" aria-haspopup="{{isReadonly ? 'false' : 'listbox'}}" aria-disabled="{{ !!isDisabled }}" tabindex="0">
                     <span id="{{ textId }}" class="fd-select__text-content">{{ getSelectedItemText() }}</span>
                     <span class="fd-button fd-button--transparent fd-select__button"><i class="{{iconClass}}"></i></span>
                 </button>

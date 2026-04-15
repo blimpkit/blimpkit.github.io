@@ -390,7 +390,7 @@ blimpkit
     template: `<li role="presentation" class="fd-icon-tab-bar__item fd-icon-tab-bar__item--overflow">
         <bk-popover>
             <bk-popover-control>
-                <button class="fd-icon-tab-bar__overflow" ng-class="getClasses()" ng-class="{'hover': 'is-hover','active': 'is-active','focus': 'is-focus'}[state]">
+                <button type="button" class="fd-icon-tab-bar__overflow" ng-class="getClasses()" ng-class="{'hover': 'is-hover','active': 'is-active','focus': 'is-focus'}[state]">
                     <span class="fd-icon-tab-bar__overflow-text">{{label}}</span>
                     <i class="sap-icon--slim-arrow-down" role="presentation"></i>
                 </button>
