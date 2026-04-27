@@ -106,7 +106,6 @@ div.doc-icon-container span.sap-icon {
   }
   .doc-sidenav {
     position: fixed;
-    z-index: 2;
   }
   .doc-sidenav:not([visible="true"]) {
     display: none;

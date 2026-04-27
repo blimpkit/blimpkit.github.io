@@ -35,6 +35,7 @@ blimpkit
           classNames('fd-card', {
             'fd-card--object': $scope.cardType === 'object',
             'fd-card--table': $scope.cardType === 'table',
+            'bk-card--list': $scope.cardType === 'list',
             'fd-card--compact': $scope.compact === true,
           });
       },
