@@ -1731,9 +1731,9 @@
   border-top-color: var(--sapList_Background);
 }
 
-.fd-popover__body--arrow-bottom:has(> .fd-popover__wrapper > .fd-toolbar:first-child)::before,
-.fd-popover__body--arrow-bottom:has(> ng-transclude > .fd-toolbar:first-child)::before {
-  border-top-color: var(--fdToolbar_Background);
+.fd-popover__body--arrow-bottom:has(> .fd-popover__wrapper > .fd-toolbar:not(.fd-toolbar--transparent):first-child)::before,
+.fd-popover__body--arrow-bottom:has(> ng-transclude > .fd-toolbar:not(.fd-toolbar--transparent):first-child)::before {
+  border-top-color: var(--sapToolbar_Background);
 }
 
 .fd-popover__body--arrow-right::before {
@@ -1749,9 +1749,9 @@
   border-bottom-color: transparent !important;
 }
 
-.fd-popover__body--arrow-right:has(> .fd-popover__wrapper > .fd-toolbar:first-child)::before,
-.fd-popover__body--arrow-right:has(> ng-transclude > .fd-toolbar:first-child)::before {
-  border-left-color: var(--fdToolbar_Background);
+.fd-popover__body--arrow-right:has(> .fd-popover__wrapper > .fd-toolbar:not(.fd-toolbar--transparent):first-child)::before,
+.fd-popover__body--arrow-right:has(> ng-transclude > .fd-toolbar:not(.fd-toolbar--transparent):first-child)::before {
+  border-left-color: var(--sapToolbar_Background);
   border-bottom-color: transparent !important;
 }
 
@@ -1768,9 +1768,9 @@
   border-bottom-color: transparent !important;
 }
 
-.fd-popover__body--arrow-left:has(> .fd-popover__wrapper > .fd-toolbar:first-child)::before,
-.fd-popover__body--arrow-left:has(> ng-transclude > .fd-toolbar:first-child)::before {
-  border-right-color: var(--fdToolbar_Background);
+.fd-popover__body--arrow-left:has(> .fd-popover__wrapper > .fd-toolbar:not(.fd-toolbar--transparent):first-child)::before,
+.fd-popover__body--arrow-left:has(> ng-transclude > .fd-toolbar:not(.fd-toolbar--transparent):first-child)::before {
+  border-right-color: var(--sapToolbar_Background);
   border-bottom-color: transparent !important;
 }
 
@@ -1785,9 +1785,9 @@
   border-bottom-color: var(--sapList_Background);
 }
 
-.fd-popover__body:has(> .fd-popover__wrapper > .fd-toolbar:first-child)::before,
-.fd-popover__body:has(> ng-transclude > .fd-toolbar:first-child)::before {
-  border-bottom-color: var(--fdToolbar_Background);
+.fd-popover__body:has(> .fd-popover__wrapper > .fd-toolbar:not(.fd-toolbar--transparent):first-child)::before,
+.fd-popover__body:has(> ng-transclude > .fd-toolbar:not(.fd-toolbar--transparent):first-child)::before {
+  border-bottom-color: var(--sapToolbar_Background);
 }
 
 .fd-popover__body--arrow-x-end::before,
@@ -2428,6 +2428,10 @@ a.fd-button[aria-disabled="true"] {
   --fdToolbar_Background: var(--sapToolbar_Background);
 }
 
+.fd-toolbar--title.fd-toolbar--transparent {
+  --fdToolbar_Background: var(--fdToolbar_Transparent_Background);
+}
+
 /* Menu fixes and additions */
 .bk-submenu--left {
   margin: 0.25rem 0 0 0.25rem;
@@ -2623,6 +2627,11 @@ a.fd-button[aria-disabled="true"] {
 .fd-table__header .fd-table__cell.fd-table__cell--non-interactive:hover {
   background-color: var(--sapList_HeaderBackground);
   color: var(--sapList_HeaderTextColor);
+}
+
+.fd-table--compact .fd-checkbox__label .fd-checkbox__checkmark,
+.fd-table--condensed .fd-checkbox__label .fd-checkbox__checkmark {
+  --sapField_BorderCornerRadius: min(var(--fdCheckbox_Compact_Border_Radius), var(--radius-control));
 }
 
 /* Message page fixes */

@@ -19,7 +19,7 @@
       <td bk-table-cell>type</td>
       <td bk-table-cell>string</td>
       <td bk-table-cell>False</td>
-      <td bk-table-cell>The type of the toolbar. One of 'transparent', 'auto', 'info' or 'solid' (default value)</td>
+      <td bk-table-cell>The type of the toolbar. One of 'transparent', 'info' or 'solid' (default value)</td>
     </tr>
     <tr bk-table-row>
       <td bk-table-cell>compact</td>
@@ -69,7 +69,9 @@
 </table>
 
 <h2>Examples</h2>
+
 <h3>Toolbar with title</h3>
+
 <code-block>
   <bk-toolbar has-title="true">
     <bk-toolbar-title>Producs (35)</bk-toolbar-title>
@@ -90,10 +92,13 @@
     </bk-toolbar-overflow>
   </bk-toolbar>
 </code-block>
+
 <h3>Compact toolbar</h3>
+
 <div class="fd-margin-bottom--tiny">
   <bk-message-strip glyph="sap-icon--message-information" state="information">Compact toolbars cannot have a title but you can use a simple 'span' element as a replacement.</bk-message-strip>
 </div>
+
 <code-block>
   <bk-toolbar compact="true" has-title="false">
     <span>Producs (35)</span>
@@ -106,7 +111,9 @@
     </bk-toolbar-overflow>
   </bk-toolbar>
 </code-block>
+
 <h3>Toolbar with no border</h3>
+
 <code-block>
   <bk-toolbar no-bottom-border="true">
     <bk-toolbar-spacer></bk-toolbar-spacer>
@@ -115,7 +122,9 @@
     <bk-button state="transparent" label="Delete"></bk-button>
   </bk-toolbar>
 </code-block>
+
 <h3>Toolbar types</h3>
+
 <code-block>
   <bk-toolbar type="transparent">
     <span>Clear/Transparent</span>
@@ -125,7 +134,7 @@
     <bk-button state="transparent" label="Delete"></bk-button>
   </bk-toolbar>
 </code-block>
-<h3>Solid</h3>
+
 <code-block>
   <bk-toolbar type="solid">
     <span>Solid</span>
@@ -135,22 +144,15 @@
     <bk-button state="transparent" label="Delete"></bk-button>
   </bk-toolbar>
 </code-block>
-<code-block>
-  <bk-toolbar type="auto">
-    <span>Auto</span>
-    <bk-toolbar-spacer></bk-toolbar-spacer>
-    <bk-button state="transparent" label="Save"></bk-button>
-    <bk-toolbar-separator></bk-toolbar-separator>
-    <bk-button state="transparent" label="Delete"></bk-button>
-  </bk-toolbar>
-</code-block>
-<h3>Info</h3>
+
 <code-block>
   <bk-toolbar type="info">
     <span>Info</span>
   </bk-toolbar>
 </code-block>
+
 <h3>Info (Active state)</h3>
+
 <code-block>
   <bk-toolbar type="info" active="true">3 items selected</bk-toolbar>
 </code-block>
