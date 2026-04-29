@@ -82,8 +82,6 @@ blimpkit
       expandable: '<?',
       isExpanded: '=?',
     },
-    controllerAs: '$ctrl',
-    bindToController: true,
     controller: [
       '$scope',
       function ($scope) {
@@ -122,20 +120,21 @@ blimpkit
 
         $scope.$watch('indicated', () => {
           if (this.onIndicated) this.onIndicated($scope.indicated);
-          if (this.navItemCtrl) {
-            this.navItemCtrl.setIndicated();
+          if ($scope.controllers.navItemCtrl) {
+            $scope.controllers.navItemCtrl.setIndicated();
           }
         });
 
         $scope.$watch('isExpanded', () => {
           if (this.onExpanded) this.onExpanded($scope.isExpanded);
-          this.navCtrl.onGroupExpand($scope.isExpanded);
+          $scope.controllers.navCtrl.onGroupExpand($scope.isExpanded);
         });
       },
     ],
     link: (scope, element, attrs, controllers) => {
       let isControl = false;
       scope.focusable = true;
+      scope.controllers = controllers;
       if (controllers.navItemCtrl) {
         controllers.navItemCtrl.subitems.push(() => scope.indicated);
       }

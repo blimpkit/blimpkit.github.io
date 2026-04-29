@@ -615,7 +615,10 @@ documentation.controller('DocumentationViewController', function ($scope, $locat
 
     // Vertical Navigation
     $scope.isNavCondensed = true;
-    $scope.isIndicated = true;
+    $scope.activeItemId = 'home';
+    $scope.navItemSelected = (id) => {
+        $scope.activeItemId = id;
+    };
 
     // Wizard
     $scope.wizard = {

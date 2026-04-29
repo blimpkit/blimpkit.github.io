@@ -1697,6 +1697,12 @@
   --sapTextColor: var(--sidebar-foreground);
 }
 
+.fd-vertical-nav--condensed .fd-list__navigation-item:last-of-type.is-focus,
+.fd-vertical-nav--condensed .fd-list__navigation-item:last-of-type:focus {
+  border-bottom-left-radius: var(--fdPopover_Border_Radius);
+  border-bottom-right-radius: var(--fdPopover_Border_Radius);
+}
+
 .fd-vertical-nav--condensed .fd-vertical-nav__group-header {
   height: calc(var(--sapElement_LineHeight) / 3);
 }

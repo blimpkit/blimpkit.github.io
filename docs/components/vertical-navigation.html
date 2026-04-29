@@ -232,7 +232,7 @@
             <bk-list-navigation-item>
               <span bk-list-navigation-item-text>Inner item 1</span>
             </bk-list-navigation-item>
-            <bk-list-navigation-item indicated="true">
+            <bk-list-navigation-item>
               <span bk-list-navigation-item-text>Inner item 2</span>
             </bk-list-navigation-item>
           </bk-list>
@@ -425,11 +425,12 @@
   <bk-vertical-nav>
     <bk-vertical-nav-main-section aria-label="main navigation">
       <bk-list>
-        <bk-list-navigation-item>
+        <bk-list-navigation-item indicated="activeItemId === 'home'" ng-click="navItemSelected('home')">
           <bk-list-navigation-item-icon glyph="sap-icon--home"></bk-list-navigation-item-icon>
           <span bk-list-navigation-item-text>Home</span>
+          <bk-list-navigation-item-indicator></bk-list-navigation-item-indicator>
         </bk-list-navigation-item>
-        <bk-list-navigation-item indicated="isIndicated">
+        <bk-list-navigation-item indicated="activeItemId === 'sample'" ng-click="navItemSelected('sample')">
           <bk-list-navigation-item-icon svg-path="./logo/blimpkit-symbolic.svg"></bk-list-navigation-item-icon>
           <span bk-list-navigation-item-text>Sample</span>
           <bk-list-navigation-item-indicator></bk-list-navigation-item-indicator>
@@ -440,10 +441,11 @@
           <span bk-list-navigation-item-text>Folder</span>
           <bk-list-navigation-item-arrow aria-label="expand group"></bk-list-navigation-item-arrow>
           <bk-list>
-            <bk-list-navigation-item>
+            <bk-list-navigation-item indicated="activeItemId === 'ii1'" ng-click="navItemSelected('ii1')">
               <span bk-list-navigation-item-text>Inner item 1</span>
+              <bk-list-navigation-item-indicator></bk-list-navigation-item-indicator>
             </bk-list-navigation-item>
-            <bk-list-navigation-item indicated="isIndicated">
+            <bk-list-navigation-item indicated="activeItemId === 'ii2'" ng-click="navItemSelected('ii2')">
               <span bk-list-navigation-item-text>Inner item 2</span>
               <bk-list-navigation-item-indicator></bk-list-navigation-item-indicator>
             </bk-list-navigation-item>
@@ -453,16 +455,19 @@
       </bk-list>
     </bk-vertical-nav-main-section>
   </bk-vertical-nav>
+  <code-block type="js">$scope.isNavCondensed = true; $scope.activeItemId = 'ii2'; $scope.navItemSelected = (id) => { $scope.activeItemId = id; };</code-block>
 </code-block>
+
 <code-block>
   <bk-vertical-nav condensed="isNavCondensed">
     <bk-vertical-nav-main-section aria-label="main navigation">
       <bk-list>
-        <bk-list-navigation-item>
+        <bk-list-navigation-item indicated="activeItemId === 'home'" ng-click="navItemSelected('home')">
           <bk-list-navigation-item-icon glyph="sap-icon--home"></bk-list-navigation-item-icon>
           <span bk-list-navigation-item-text>Home</span>
+          <bk-list-navigation-item-indicator></bk-list-navigation-item-indicator>
         </bk-list-navigation-item>
-        <bk-list-navigation-item indicated="isIndicated" condensed="isNavCondensed">
+        <bk-list-navigation-item indicated="activeItemId === 'sample'" ng-click="navItemSelected('sample')">
           <bk-list-navigation-item-icon svg-path="./logo/blimpkit-symbolic.svg"></bk-list-navigation-item-icon>
           <span bk-list-navigation-item-text>Sample</span>
           <bk-list-navigation-item-indicator></bk-list-navigation-item-indicator>
@@ -481,10 +486,11 @@
           </bk-list-navigation-item-popover>
           <bk-list-navigation-item-popover level="2">
             <bk-list>
-              <bk-list-navigation-item>
+              <bk-list-navigation-item indicated="activeItemId === 'ii1'" ng-click="navItemSelected('ii1')">
                 <span bk-list-navigation-item-text>Inner item 1</span>
+                <bk-list-navigation-item-indicator></bk-list-navigation-item-indicator>
               </bk-list-navigation-item>
-              <bk-list-navigation-item indicated="isIndicated">
+              <bk-list-navigation-item indicated="activeItemId === 'ii2'" ng-click="navItemSelected('ii2')">
                 <span bk-list-navigation-item-text>Inner item 2</span>
                 <bk-list-navigation-item-indicator></bk-list-navigation-item-indicator>
               </bk-list-navigation-item>
@@ -495,7 +501,7 @@
       </bk-list>
     </bk-vertical-nav-main-section>
   </bk-vertical-nav>
-  <code-block type="js"> $scope.isNavCondensed = true; $scope.isIndicated = true; </code-block>
+  <code-block type="js">$scope.isNavCondensed = true; $scope.activeItemId = 'ii2'; $scope.navItemSelected = (id) => { $scope.activeItemId = id; };</code-block>
 </code-block>
 
 <h3>Utility section</h3>
