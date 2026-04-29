@@ -170,6 +170,7 @@
 </code-block>
 
 <h3>Condensed</h3>
+
 <code-block>
   <bk-vertical-nav condensed="isNavCondensed">
     <bk-vertical-nav-main-section aria-label="main navigation">
@@ -187,7 +188,9 @@
   </bk-vertical-nav>
   <code-block type="js"> $scope.isNavCondensed = true; </code-block>
 </code-block>
+
 <h3>Condensed large icon mode</h3>
+
 <code-block>
   <bk-vertical-nav condensed="isNavCondensed">
     <bk-vertical-nav-main-section aria-label="main navigation">
@@ -205,7 +208,9 @@
   </bk-vertical-nav>
   <code-block type="js"> $scope.isNavCondensed = true; </code-block>
 </code-block>
+
 <h3>Grouping</h3>
+
 <code-block>
   <bk-vertical-nav>
     <bk-vertical-nav-main-section aria-label="main navigation">
@@ -236,7 +241,9 @@
     </bk-vertical-nav-main-section>
   </bk-vertical-nav>
 </code-block>
+
 <h3>Condensed expandable items</h3>
+
 <code-block>
   <bk-vertical-nav condensed="isNavCondensed">
     <bk-vertical-nav-main-section aria-label="main navigation">
@@ -276,7 +283,9 @@
   </bk-vertical-nav>
   <code-block type="js"> $scope.isNavCondensed = true; </code-block>
 </code-block>
+
 <h3>Scroll/Overflow</h3>
+
 <code-block>
   <div style="height: 200px">
     <bk-vertical-nav can-scroll="true">
@@ -319,7 +328,99 @@
     </bk-vertical-nav>
   </div>
 </code-block>
+
+<h3>Condensed expandable scroll/overflow</h3>
+
+<div class="fd-margin-bottom--sm">
+  <bk-message-strip glyph="sap-icon--message-information" state="information"
+    >When condensed and scroll are enabled, the navigation must be placed inside a container. The navigation will dynamically modify the style of the parent contaner. When a group is expanded, scrolling will be disabled.</bk-message-strip
+  >
+</div>
+
+<code-block>
+  <div class="bk-hbox bk-border" style="height: 400px">
+    <bk-vertical-nav condensed="true" can-scroll="true" class="bk-shadow--none">
+      <bk-vertical-nav-main-section aria-label="main navigation">
+        <bk-list>
+          <bk-list-navigation-item>
+            <bk-list-navigation-item-icon glyph="sap-icon--home"></bk-list-navigation-item-icon>
+            <span bk-list-navigation-item-text>Home</span>
+          </bk-list-navigation-item>
+          <bk-list-navigation-item>
+            <bk-list-navigation-item-icon glyph="sap-icon--calendar"></bk-list-navigation-item-icon>
+            <span bk-list-navigation-item-text>Calendar</span>
+          </bk-list-navigation-item>
+          <bk-list-navigation-item>
+            <bk-list-navigation-item-icon glyph="sap-icon--course-book"></bk-list-navigation-item-icon>
+            <span bk-list-navigation-item-text>Deliveries</span>
+          </bk-list-navigation-item>
+          <bk-list-navigation-item>
+            <bk-list-navigation-item-icon glyph="sap-icon--employee"></bk-list-navigation-item-icon>
+            <span bk-list-navigation-item-text>Employees</span>
+          </bk-list-navigation-item>
+          <bk-list-navigation-item>
+            <bk-list-navigation-item-icon glyph="sap-icon--filter-analytics"></bk-list-navigation-item-icon>
+            <span bk-list-navigation-item-text>Analytics</span>
+          </bk-list-navigation-item>
+          <bk-list-navigation-item>
+            <bk-list-navigation-item-icon glyph="sap-icon--headset"></bk-list-navigation-item-icon>
+            <span bk-list-navigation-item-text>Support</span>
+          </bk-list-navigation-item>
+          <bk-list-navigation-item>
+            <bk-list-navigation-item-icon glyph="sap-icon--stethoscope"></bk-list-navigation-item-icon>
+            <span bk-list-navigation-item-text>Health</span>
+          </bk-list-navigation-item>
+          <bk-list-navigation-item expandable="true" is-expanded="false">
+            <bk-list-navigation-item-icon glyph="sap-icon--folder"></bk-list-navigation-item-icon>
+            <bk-list-navigation-item-arrow aria-label="expand group"></bk-list-navigation-item-arrow>
+            <bk-list-navigation-item-popover level="1">
+              <bk-list>
+                <bk-list-navigation-item>
+                  <bk-list-navigation-item-icon glyph="sap-icon--folder"></bk-list-navigation-item-icon>
+                  <span bk-list-navigation-item-text>Folder</span>
+                </bk-list-navigation-item>
+              </bk-list>
+            </bk-list-navigation-item-popover>
+            <bk-list-navigation-item-popover level="2">
+              <bk-list>
+                <bk-list-navigation-item>
+                  <span bk-list-navigation-item-text>Inner item 1</span>
+                </bk-list-navigation-item>
+                <bk-list-navigation-item>
+                  <span bk-list-navigation-item-text>Inner item 2</span>
+                </bk-list-navigation-item>
+              </bk-list>
+            </bk-list-navigation-item-popover>
+          </bk-list-navigation-item>
+          <bk-list-navigation-item>
+            <bk-list-navigation-item-icon svg-path="./logo/blimpkit-symbolic.svg"></bk-list-navigation-item-icon>
+            <span bk-list-navigation-item-text>Sample</span>
+          </bk-list-navigation-item>
+          <bk-list-navigation-item>
+            <bk-list-navigation-item-icon svg-path="./logo/blimpkit-symbolic.svg"></bk-list-navigation-item-icon>
+            <span bk-list-navigation-item-text>Sample</span>
+          </bk-list-navigation-item>
+          <bk-list-navigation-item>
+            <bk-list-navigation-item-icon svg-path="./logo/blimpkit-symbolic.svg"></bk-list-navigation-item-icon>
+            <span bk-list-navigation-item-text>Sample</span>
+          </bk-list-navigation-item>
+          <bk-list-navigation-item>
+            <bk-list-navigation-item-icon svg-path="./logo/blimpkit-symbolic.svg"></bk-list-navigation-item-icon>
+            <span bk-list-navigation-item-text>Sample</span>
+          </bk-list-navigation-item>
+          <bk-list-navigation-item>
+            <bk-list-navigation-item-icon svg-path="./logo/blimpkit-symbolic.svg"></bk-list-navigation-item-icon>
+            <span bk-list-navigation-item-text>Sample</span>
+          </bk-list-navigation-item>
+        </bk-list>
+      </bk-vertical-nav-main-section>
+    </bk-vertical-nav>
+    <div class="bk-padding bk-border--left">This is the main content section!</div>
+  </div>
+</code-block>
+
 <h3>Navigation Indication</h3>
+
 <code-block>
   <bk-vertical-nav>
     <bk-vertical-nav-main-section aria-label="main navigation">
@@ -396,7 +497,9 @@
   </bk-vertical-nav>
   <code-block type="js"> $scope.isNavCondensed = true; $scope.isIndicated = true; </code-block>
 </code-block>
+
 <h3>Utility section</h3>
+
 <code-block>
   <bk-vertical-nav>
     <bk-vertical-nav-main-section aria-label="main navigation">

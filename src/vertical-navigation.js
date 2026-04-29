@@ -20,8 +20,26 @@ blimpkit
     },
     controller: [
       '$scope',
-      function ($scope) {
+      '$element',
+      function ($scope, $element) {
+        let savedScrollTop = 0;
         this.isCondensed = () => $scope.condensed;
+        this.onGroupExpand = (expanded) => {
+          if ($scope.condensed && $scope.canScroll) {
+            if (expanded) {
+              savedScrollTop = $element[0].scrollTop;
+              $element[0].style.overflow = 'visible';
+              $element[0].style.scrollBehavior = 'auto';
+              $element[0].firstElementChild.style.transform = `translateY(${-savedScrollTop}px)`;
+              $element[0].parentElement.style.overflow = 'visible hidden';
+            } else {
+              $element[0].style.removeProperty('overflow');
+              $element[0].style.removeProperty('scrollBehavior');
+              $element[0].firstElementChild.style.removeProperty('transform');
+              $element[0].parentElement.style.removeProperty('overflow');
+            }
+          }
+        };
         $scope.getClasses = () =>
           classNames('fd-vertical-nav', {
             'fd-vertical-nav--condensed': $scope.condensed === true,
@@ -54,12 +72,18 @@ blimpkit
     restrict: 'E',
     transclude: true,
     replace: true,
-    require: ['^^bkVerticalNav', '?^^bkListNavigationItem', '?^^bkListNavigationItemPopover'],
+    require: {
+      navCtrl: '^^bkVerticalNav',
+      navItemCtrl: '?^^bkListNavigationItem',
+      popoverCtrl: '?^^bkListNavigationItemPopover',
+    },
     scope: {
       indicated: '<?',
       expandable: '<?',
       isExpanded: '=?',
     },
+    controllerAs: '$ctrl',
+    bindToController: true,
     controller: [
       '$scope',
       function ($scope) {
@@ -98,27 +122,27 @@ blimpkit
 
         $scope.$watch('indicated', () => {
           if (this.onIndicated) this.onIndicated($scope.indicated);
-          if ($scope.parentItem) {
-            $scope.parentItem.setIndicated();
+          if (this.navItemCtrl) {
+            this.navItemCtrl.setIndicated();
           }
         });
 
         $scope.$watch('isExpanded', () => {
           if (this.onExpanded) this.onExpanded($scope.isExpanded);
+          this.navCtrl.onGroupExpand($scope.isExpanded);
         });
       },
     ],
     link: (scope, element, attrs, controllers) => {
       let isControl = false;
       scope.focusable = true;
-      if (controllers[1]) {
-        scope.parentItem = controllers[1];
-        scope.parentItem.subitems.push(() => scope.indicated);
+      if (controllers.navItemCtrl) {
+        controllers.navItemCtrl.subitems.push(() => scope.indicated);
       }
-      if (controllers[2]) {
-        isControl = controllers[2].isControl();
+      if (controllers.popoverCtrl) {
+        isControl = controllers.popoverCtrl.isControl();
         if (isControl) {
-          scope.parentItem.setFocusable(false);
+          controllers.navItemCtrl.setFocusable(false);
         }
       }
 
@@ -134,7 +158,7 @@ blimpkit
       const onClick = (event) => {
         if (element[0] === event.target || isDirectChild(event.target)) {
           if (isControl) {
-            scope.parentItem.toggleExpand();
+            controllers.navItemCtrl.toggleExpand();
           } else scope.toggleExpand();
         }
       };
@@ -143,7 +167,7 @@ blimpkit
 
       scope.getClasses = () =>
         classNames('fd-list__navigation-item', {
-          'fd-list__navigation-item--condensed': controllers[0].isCondensed() === true,
+          'fd-list__navigation-item--condensed': controllers.navCtrl.isCondensed() === true,
           'fd-list__navigation-item--indicated': scope.indicated === true,
           'fd-list__navigation-item--expandable': scope.expandable === true,
           'is-expanded': scope.isExpanded === true,
