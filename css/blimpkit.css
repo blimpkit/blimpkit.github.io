@@ -1996,6 +1996,11 @@ ng-transclude:empty {
   z-index: 210;
 }
 
+.bk-backdrop--active .fd-shellbar {
+  /* Just below the dialogs, just above the backdrop */
+  z-index: 210;
+}
+
 .fd-button-split::after {
   z-index: auto;
 }

@@ -61,6 +61,10 @@ code-block > .fd-link {
   width: 100%;
 }
 
+body > .fd-shellbar {
+  z-index: 12;
+}
+
 div.doc-icon-container {
   border-radius: var(--sapElement_BorderCornerRadius);
   border: solid var(--sapList_BorderWidth, 0.0625rem) var(--sapList_BorderColor, #e5e5e5);

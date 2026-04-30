@@ -62,7 +62,7 @@
 
   --shellbar-background: oklch(0.4007 0.0443 248.98);
   --shellbar-foreground: oklch(1 0 0);
-  --shellbar-shadow: inset 0 -0.0625rem 0 0 var(--shellbar-background);
+  --shellbar-shadow: 0 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.08), inset 0 -0.0625rem 0 0 rgba(0, 0, 0, 0.18);
   --shellbar-interactive-background: oklch(0.3339 0.0354 248.93);
   --shellbar-interactive-foreground: oklch(0.9212 0.0398 248.26);
   --shellbar-interactive-placeholder: oklch(0.6888 0.0149 248.04);
@@ -77,7 +77,7 @@
   --sidebar-active-foreground: oklch(0.4494 0.1401 254.46);
   --sidebar-hover: oklch(0.9249 0 0);
   --sidebar-border: transparent;
-  --sidebar-shadow: 0 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.08), inset 0 -0.0625rem 0 0 rgba(0, 0, 0, 0.18);
+  --sidebar-shadow: var(--shadow-sm);
 
   --object-header: oklch(1 0 0);
   --object-header-foreground: oklch(0.3306 0.009 248.1);
