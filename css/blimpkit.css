@@ -1697,8 +1697,8 @@
   --sapTextColor: var(--sidebar-foreground);
 }
 
-.fd-vertical-nav--condensed .fd-list__navigation-item:last-of-type.is-focus,
-.fd-vertical-nav--condensed .fd-list__navigation-item:last-of-type:focus {
+.fd-vertical-nav--condensed .fd-list__navigation-item--expandable .fd-list__navigation-item:last-of-type.is-focus,
+.fd-vertical-nav--condensed .fd-list__navigation-item--expandable .fd-list__navigation-item:last-of-type:focus {
   border-bottom-left-radius: var(--fdPopover_Border_Radius);
   border-bottom-right-radius: var(--fdPopover_Border_Radius);
 }
@@ -1728,6 +1728,10 @@
 
 .fd-vertical-nav__utility-section::before {
   background-color: var(--sapBrandColor);
+}
+
+.fd-popover__body::after {
+  --fdPopover_Border_Color: var(--popover-arrow-border);
 }
 
 .fd-popover__body--arrow-bottom::before {

@@ -37,6 +37,7 @@
   --track-background-hover: oklch(0.8266 0 0);
   --track-handle-background: oklch(1 0 0);
   --track-handle-foreground: oklch(0.284 0.0695 269.17);
+  --popover-arrow-border: oklch(0.8638 0 0);
 
   --disabled-opacity: 0.5;
   --inactive-background: oklch(0.9933 0.0011 197.14);

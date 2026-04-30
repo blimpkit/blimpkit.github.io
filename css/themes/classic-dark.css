@@ -37,6 +37,7 @@
   --track-background-hover: oklch(0.3779 0.0252 250.75);
   --track-handle-background: oklch(1 0 0);
   --track-handle-foreground: oklch(0.3306 0.009 248.1);
+  --popover-arrow-border: rgb(154, 156, 160);
 
   --disabled-opacity: 0.5;
   --inactive-background: rgba(58, 69, 82, 0.5);
@@ -76,7 +77,7 @@
   --sidebar-active-foreground: oklch(0.8114 0.0868 244.39);
   --sidebar-hover: oklch(0.3036 0.0161 259.8);
   --sidebar-border: transparent;
-  --sidebar-shadow: var(--shadow-sm);
+  --sidebar-shadow: 0 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.8), inset 0 -0.0625rem 0 0 rgba(255, 255, 255, 0.2);
 
   --object-header: oklch(0.3094 0.0197 251.51);
   --object-header-foreground: oklch(0.9851 0 0);
