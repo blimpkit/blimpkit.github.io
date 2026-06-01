@@ -22,6 +22,7 @@
   --highlight: oklch(0.6137 0.1643 255.34);
 
   --border: oklch(0.9 0 0);
+  --border-width: 0.0625rem;
   --outilne: oklch(0.6249 0.1595 255.02);
   --outilne-style: solid;
   --outilne-offset: -0.063rem;
@@ -62,7 +63,7 @@
 
   --shellbar-background: oklch(1 0 0);
   --shellbar-foreground: oklch(0.3092 0 0);
-  --shellbar-shadow: inset 0 -0.0625rem 0 0 oklch(0.8853 0 0);
+  --shellbar-shadow: inset 0 calc(var(--border-width) * -1) 0 0 oklch(0.8853 0 0);
   --shellbar-interactive-background: oklch(0.96 0 0);
   --shellbar-interactive-foreground: oklch(0.3092 0 0);
   --shellbar-interactive-placeholder: var(--muted-foreground);
@@ -82,7 +83,7 @@
   --object-header: oklch(1 0 0);
   --object-header-foreground: oklch(0.3211 0 0);
   --object-header-border: oklch(0.7858 0 0);
-  --object-header-shadow: 0 0.0625rem 0.0625rem 0 rgba(0, 0, 0, 0.05), inset 0 -0.0625rem 0 0 var(--border);
+  --object-header-shadow: 0 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.2), inset 0 calc(var(--border-width) * -1) 0 0 var(--border);
   --object-foreground: var(--foreground);
   --object-background: oklch(1 0 0);
   --object-background-alt: oklch(0.9727 0.0017 247.84);

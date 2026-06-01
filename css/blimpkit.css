@@ -56,7 +56,7 @@
 
   --sapElement_LineHeight: 2.75rem;
   --sapElement_Height: 2.25rem;
-  --sapElement_BorderWidth: 0.0625rem;
+  --sapElement_BorderWidth: var(--border-width);
   --sapElement_BorderCornerRadius: var(--radius);
   --sapElement_Compact_LineHeight: 2rem;
   --sapElement_Compact_Height: 1.625rem;
@@ -149,7 +149,7 @@
 
   --sapButton_Background: var(--secondary);
   --sapButton_BorderColor: var(--button-border);
-  --sapButton_BorderWidth: 0.0625rem;
+  --sapButton_BorderWidth: var(--border-width);
   --sapButton_BorderCornerRadius: var(--radius-control);
   --sapButton_TextColor: var(--secondary-foreground);
   --sapButton_Hover_Background: var(--secondary-hover);
@@ -316,7 +316,7 @@
   --sapField_TextColor: var(--foreground);
   --sapField_PlaceholderTextColor: var(--muted-foreground);
   --sapField_BorderColor: var(--input-border);
-  --sapField_BorderWidth: 0.0625rem;
+  --sapField_BorderWidth: var(--border-width);
   --sapField_BorderStyle: solid;
   --sapField_BorderCornerRadius: var(--radius-control);
   --sapField_Shadow: none;
@@ -339,25 +339,25 @@
   --sapField_InvalidColor: var(--negative);
   --sapField_InvalidBackground: color-mix(in oklch, var(--negative), transparent 90%);
   --sapField_InvalidBackgroundStyle: none;
-  --sapField_InvalidBorderWidth: 0.0625rem;
+  --sapField_InvalidBorderWidth: var(--border-width);
   --sapField_InvalidBorderStyle: solid;
   --sapField_InvalidShadow: none;
   --sapField_WarningColor: var(--warning);
   --sapField_WarningBackground: color-mix(in oklch, var(--warning), transparent 90%);
   --sapField_WarningBackgroundStyle: none;
-  --sapField_WarningBorderWidth: 0.0625rem;
+  --sapField_WarningBorderWidth: var(--border-width);
   --sapField_WarningBorderStyle: solid;
   --sapField_WarningShadow: none;
   --sapField_SuccessColor: var(--positive);
   --sapField_SuccessBackground: color-mix(in oklch, var(--positive), transparent 90%);
   --sapField_SuccessBackgroundStyle: none;
-  --sapField_SuccessBorderWidth: 0.0625rem;
+  --sapField_SuccessBorderWidth: var(--border-width);
   --sapField_SuccessBorderStyle: solid;
   --sapField_SuccessShadow: none;
   --sapField_InformationColor: var(--information);
   --sapField_InformationBackground: color-mix(in oklch, var(--information), transparent 90%);
   --sapField_InformationBackgroundStyle: none;
-  --sapField_InformationBorderWidth: 0.0625rem;
+  --sapField_InformationBorderWidth: var(--border-width);
   --sapField_InformationBorderStyle: solid;
   --sapField_InformationShadow: none;
 
@@ -367,7 +367,7 @@
   --sapGroup_Title_FontSize: 1rem;
   --sapGroup_ContentBackground: var(--content-background);
   --sapGroup_ContentBorderColor: var(--border);
-  --sapGroup_BorderWidth: 0.0625rem;
+  --sapGroup_BorderWidth: var(--border-width);
   --sapGroup_BorderCornerRadius: var(--radius);
   --sapGroup_FooterBackground: transparent;
 
@@ -378,7 +378,7 @@
   --sapList_HeaderBorderColor: var(--border);
   --sapList_HeaderTextColor: var(--table-header-foreground);
   --sapList_BorderColor: var(--border);
-  --sapList_BorderWidth: 0.0625rem;
+  --sapList_BorderWidth: var(--border-width);
   --sapList_TextColor: var(--object-foreground);
   --sapList_Active_TextColor: var(--object-foreground);
   --sapList_Active_Background: var(--object-background-active);
@@ -712,7 +712,7 @@
   --fdIcon_Tab_Bar_Text_Focus_Radius: 0.375rem;
   --fdIcon_Tab_Bar_Icon_Focus_Radius: 50%;
   --fdIcon_Tab_Bar_Focus_Offset: -0.25rem;
-  --fdIcon_Tab_Bar_Icon_Border_Weight: 0.0625rem;
+  --fdIcon_Tab_Bar_Icon_Border_Weight: var(--border-width);
   --fdIcon_Tab_Bar_Icon_Focus_Offset: -0.3125rem;
   --fdIcon_Tab_Bar_Separator_Color: var(--sapContent_Selected_ForegroundColor);
   --fdIcon_Tab_Bar_Single_Click_Icon_Container_Width: 1.5rem;
@@ -728,7 +728,7 @@
   --fdTable_Header_Horizontal_Border: var(--sapList_BorderWidth) solid var(--sapList_HeaderBorderColor);
   --fdTable_Group_Header_Background: var(--table-header);
   --fdTable_Border_Radius: 0;
-  --fdTable_Condensed_Focus_Outline_Offset: -0.0625rem;
+  --fdTable_Condensed_Focus_Outline_Offset: calc(var(--border-width) * -1);
   --fdTable_Hover_Down_Color: inherit;
 
   --fdScrollbar_Track_Color: var(--scrollbar);
@@ -742,9 +742,9 @@
   --fdCard_Box_Shadow_Regular: var(--sapContent_Shadow0);
   --fdCard_Box_Shadow_Hover: var(--sapContent_Shadow2);
   --fdCard_Border_Corner_Radius: var(--sapTile_BorderCornerRadius);
-  --fdCard_Header_Border_Bottom: 0.0625rem solid transparent;
-  --fdCard_Footer_Border_Top: 0.0625rem solid transparent;
-  --fdCard_Border: 0.0625rem solid var(--sapTile_BorderColor);
+  --fdCard_Header_Border_Bottom: var(--border-width) solid transparent;
+  --fdCard_Footer_Border_Top: var(--border-width) solid transparent;
+  --fdCard_Border: var(--border-width) solid var(--sapTile_BorderColor);
   --fdCard_Counter_Margin: 0.125rem;
   --fdCard_Footer_Padding: 0.75rem;
   --fdCard_Footer_Actions_Item_Spacing: 0.5rem;
@@ -765,7 +765,7 @@
   --fdSlider_Handle_Border_Radius: 0.5rem;
   --fdSlider_Handle_Width: 1.5rem;
   --fdSlider_Handle_Height: 1.25rem;
-  --fdSlider_Handle_Border: 0.0625rem solid var(--border);
+  --fdSlider_Handle_Border: var(--border-width) solid var(--border);
   --fdSlider_Handle_Border_Hover_Color: var(--sapSlider_Hover_HandleBorderColor);
   --fdSlider_Handle_Active_Width: 2.25rem;
   --fdSlider_Handle_Active_Height: 2rem;
@@ -774,14 +774,14 @@
   --fdSlider_Mobile_Handle_Height: 1.5rem;
   --fdSlider_Mobile_Handle_Active_Size: 2.75rem;
   --fdSlider_Hover_Handle_Background: var(--sapSlider_Hover_HandleBackground);
-  --fdSlider_Hover_Handle_Border: 0.0625rem solid var(--sapSlider_Hover_HandleBorderColor);
-  --fdSlider_Active_Handle_Border: 0.0625rem solid var(--sapSlider_Active_HandleBorderColor);
+  --fdSlider_Hover_Handle_Border: var(--border-width) solid var(--sapSlider_Hover_HandleBorderColor);
+  --fdSlider_Active_Handle_Border: var(--border-width) solid var(--sapSlider_Active_HandleBorderColor);
   --fdSlider_Active_Handle_Background: var(--secondary-active);
   --fdSlider_Focus_Handle_Background: var(--sapSlider_Active_RangeHandleBackground);
   --fdSlider_Focus_Handle_Border: var(--sapContent_FocusWidth) solid var(--sapContent_FocusColor);
   --fdSlider_Focus_Handle_Display: none;
   --fdSlider_Range_Handle_Background: var(--input-background);
-  --fdSlider_Range_Handle_Border: 0.0625rem solid var(--border);
+  --fdSlider_Range_Handle_Border: var(--border-width) solid var(--border);
   --fdSlider_Range_Hover_Handle_Background: var(--sapSlider_Hover_HandleBackground);
   --fdSlider_Range_Hover_Handle_Border_Color: var(--sapSlider_Hover_HandleBorderColor);
   --fdSlider_Range_Active_Handle_Background: var(--sapSlider_Active_RangeHandleBackground;);
@@ -794,9 +794,9 @@
   --fdSlider_Active_Tick_Background: var(--sapSlider_Selected_BorderColor);
   --fdSlider_Endpoint_Size: 0.5rem;
   --fdSlider_Endpoint_Background: var(--muted-foreground);
-  --fdSlider_Endpoint_Border: 0.0625rem solid var(--muted-foreground);
+  --fdSlider_Endpoint_Border: var(--border-width) solid var(--muted-foreground);
   --fdSlider_Endpoint_Active_Background: var(--sapSlider_Selected_Background);
-  --fdSlider_Endpoint_Active_Border: 0.0625rem solid var(--sapContent_Selected_MeasureIndicatorColor);
+  --fdSlider_Endpoint_Active_Border: var(--border-width) solid var(--sapContent_Selected_MeasureIndicatorColor);
   --fdSlider_Focus_Range_Outline: var(--sapContent_FocusWidth) var(--sapContent_FocusStyle) var(--sapContent_FocusColor);
 
   --fdSplitter_Resizer_Border: none;
@@ -853,7 +853,7 @@
   --fdWizard_Label_Font_Weight: bold;
   --fdWizard_Completed_Step_Color: var(--sapContent_Selected_ForegroundColor);
   --fdWizard_Completed_Step_Label_Color: var(--sapTextColor);
-  --fdWizard_Completed_Step_Border: 0.0625rem solid var(--sapContent_Selected_ForegroundColor);
+  --fdWizard_Completed_Step_Border: var(--border-width) solid var(--sapContent_Selected_ForegroundColor);
   --fdWizard_Completed_Step_Icon_Color: var(--sapContent_Selected_ForegroundColor);
   --fdWizard_Current_Step_Color: var(--accent-foreground);
   --fdWizard_Current_Step_Label_Color: var(--sapContent_Selected_ForegroundColor);
@@ -881,7 +881,7 @@
   --fdPanel_Margin_Bottom: 0.5rem;
   --fdPanel_Content_Border_Bottom_Color: transparent;
 
-  --fdCarousel_Pagination_Border: 0.0625rem solid var(--sapList_BorderColor);
+  --fdCarousel_Pagination_Border: var(--border-width) solid var(--sapList_BorderColor);
   --fdCarousel_Dot_Size: 0.25rem;
   --fdCarousel_Dot_Margin: 0.375rem;
   --fdCarousel_Dot_Background: var(--accent);
@@ -1074,7 +1074,7 @@
   --fdSelect_Text_Shadow: none;
   --fdSelect_Button_Interractive_SideBorder: none;
 
-  --fdTile_Border: 0.0625rem solid var(--sapTile_BorderColor);
+  --fdTile_Border: var(--border-width) solid var(--sapTile_BorderColor);
   --fdTile_Hover_Box_Shadow: var(--sapContent_Shadow1);
   --fdTile_Hover_Border: var(--fdTile_Border);
   --fdTile_Title_Font_Size: var(--sapFontHeader6Size);
@@ -1127,18 +1127,18 @@
   --fdProgress_Indicator_Container_Margin_Block: 1.25rem 0.375rem;
   --fdProgress_Indicator_Container_Margin_Inline: 0;
   --fdProgress_Indicator_Container_Overflow: visible;
-  --fdProgress_Indicator_Progress_Bar_Border: 0.0625rem solid;
+  --fdProgress_Indicator_Progress_Bar_Border: var(--border-width) solid;
   --fdProgress_Indicator_Progress_Bar_Border_Color_Neutral: var(--sapProgress_Value_BorderColor);
   --fdProgress_Indicator_Progress_Bar_Border_Color_Informative: var(--sapProgress_Value_InformationBorderColor);
   --fdProgress_Indicator_Progress_Bar_Border_Color_Positive: var(--sapProgress_Value_PositiveBorderColor);
   --fdProgress_Indicator_Progress_Bar_Border_Color_Negative: var(--sapProgress_Value_NegativeBorderColor);
   --fdProgress_Indicator_Progress_Bar_Border_Color_Critical: var(--sapProgress_Value_CriticalBorderColor);
   --fdProgress_Indicator_Progress_Bar_Height: 0.625rem;
-  --fdProgress_Indicator_Progress_Bar_Margin_Block: -0.0625rem 0;
+  --fdProgress_Indicator_Progress_Bar_Margin_Block: calc(var(--border-width) * -1) 0;
   --fdProgress_Indicator_Progress_Bar_Border_Radius: 0.5rem;
   --fdProgress_Indicator_Progress_Bar_Position: absolute;
-  --fdProgress_Indicator_Progress_Bar_Position_Left: -0.0625rem;
-  --fdProgress_Indicator_Progress_Bar_Position_Bottom: -0.1875rem;
+  --fdProgress_Indicator_Progress_Bar_Position_Left: calc(var(--border-width) * -1);
+  --fdProgress_Indicator_Progress_Bar_Position_Bottom: calc(var(--border-width) * -3);
   --fdProgress_Indicator_Progress_Bar_Boundary_Display: none;
   --fdProgress_Indicator_Progress_Bar_Popover_Control_Border: var(--fdProgress_Indicator_Progress_Bar_Border);
   --fdProgress_Indicator_Label_Color: var(--sapField_TextColor);
@@ -1167,7 +1167,7 @@
   --fdShellbar_Button_Hover_Border_Color: var(--shellbar-interactive-border);
   --fdShellbar_Button_Active_Border_Color: var(--shellbar-interactive-border);
   --fdShellbar_Button_Outline_Color: var(--sapContent_FocusColor);
-  --fdShellbar_Search_Border: 0.0625rem solid var(--shellbar-interactive-border);
+  --fdShellbar_Search_Border: var(--border-width) solid var(--shellbar-interactive-border);
   --fdShellbar_Search_Category_Border: none;
   --fdShellbar_Search_Category_Border_width: 0;
   --fdShellbar_Search_Category_Offset_Left: 0.25rem;
@@ -1199,7 +1199,7 @@
   --fdShellbar_Input_Focus_Color: var(--sapShell_InteractiveTextColor);
   --fdShellbar_Input_Focus_Background: transparent;
   --fdShellbar_Input_Placeholder_Style: italic;
-  --fdShellbar_Button_Left_Border: 0.0625rem solid var(--fdShellbar_Button_Hover_Border_Color);
+  --fdShellbar_Button_Left_Border: var(--border-width) solid var(--fdShellbar_Button_Hover_Border_Color);
   --fdShellbar_Input_Group_Background: 0 100%/100% 0.0625rem no-repeat linear-gradient(0deg, var(--sapField_BorderColor), var(--sapField_BorderColor)) border-box;
   --fdShellbar_Input_Group_Hover_Background: 0 100%/100% 0.0625rem no-repeat linear-gradient(0deg, var(--sapField_Hover_BorderColor), var(--sapField_Hover_BorderColor)) border-box;
   --fdShellbar_Helper_Bottom_Shadow: none;
@@ -1232,7 +1232,7 @@
   --fdGenericTag_Name_Color_Hover: var(--sapList_TextColor);
 
   --fdFlexibleColumnLayout_Toggle_Image_Color: var(--sapHighlightColor);
-  --fdFlexibleColumnLayout_Border: solid 0.0625rem var(--sapGroup_ContentBorderColor);
+  --fdFlexibleColumnLayout_Border: solid var(--border-width) var(--sapGroup_ContentBorderColor);
   --fdFlexibleColumnLayout_Background_Solid: var(--sapContent_ForegroundColor);
   --fdFlexibleColumnLayout_Background_Translucent: var(--sapGroup_ContentBackground);
   --fdFlexibleColumnLayout_Background_Transparent: transparent;
@@ -1255,7 +1255,7 @@
   --fdAvatarBoxShadow: none;
   --fdAvatarHoverBorderColor: var(--sapAvatar_Default_TextColor);
   --fdAvatarHoverBackgroundColor: var(--sapAvatar_Default_HoverColor);
-  --fdAvatarHoverBorder: 0.0625rem solid var(--fdAvatarHoverBorderColor);
+  --fdAvatarHoverBorder: var(--border-width) solid var(--fdAvatarHoverBorderColor);
   --fdAvatarZoomIconFontSize: 0.75rem;
   --fdAvatarZoomIconDimensions: 1.125rem;
   --fdAvatar_BackgroundColor: var(--sapAvatar_Default_Background);
@@ -1274,7 +1274,7 @@
   --fdAvatar_Overflow_BorderColor: var(--sapButton_BorderColor);
   --fdAvatar_Overflow_BackgroundColor: var(--sapButton_Background);
   --fdAvatar_Overflow_TextColor: var(--sapButton_TextColor);
-  --fdAvatar_Overflow_Border_Width: 0.0625rem;
+  --fdAvatar_Overflow_Border_Width: var(--border-width);
   --fdAvatar_Thumbnail_BorderColor: transparent;
   --fdAvatar_Focus_Outline_Offset: -0.3125rem;
   --fdAvatar_Focus_Outline_Radius: var(--radius-control);
@@ -1311,14 +1311,14 @@
   --fdToken_Text_Color: var(--sapTextColor);
   --fdToken_Background_Color_Hover: var(--sapButton_Lite_Hover_Background);
   --fdToken_Border_Color_Hover: var(--sapButton_TokenBorderColor);
-  --fdToken_Outline_Offset: 0.0625rem;
+  --fdToken_Outline_Offset: var(--border-width);
   --fdToken_Outline_Offset_Compact: 0;
   --fdToken_Background_Color_Read_Only: var(--sapButton_TokenBackground);
   --fdToken_Border_Color_Read_Only: var(--sapField_ReadOnly_BorderColor);
   --fdToken_Border_Color_Selected_Focus: var(var(--sapContent_FocusColor));
   --fdToken_Selected_Border: var(--sapButton_BorderWidth) solid var(--button-border);
   --fdToken_Selected_Font_Family: var(--sapFontSemiboldDuplexFamily);
-  --fdToken_Selected_Border_BottomStyle: var(--sapButton_TokenBackground) 0 100%/100% 0.188rem no-repeat linear-gradient(0deg, var(--accent), var(--accent)) border-box;
+  --fdToken_Selected_Border_BottomStyle: var(--sapButton_TokenBackground) 0 100%/100% max(calc(var(--border-width) * 2), 0.188rem) no-repeat linear-gradient(0deg, var(--accent), var(--accent)) border-box;
   --fdToken_ReadOnly_Padding_Inline: 0.3125rem;
   --fdToken_Focus_Border_Radius: var(--radius-control);
 
@@ -1347,7 +1347,7 @@
   --fdObjectStatus_Informative_IconColor_Focus: var(--sapInformativeTextColor);
   --fdObjectStatus_Neutral_Color_Focus: var(--sapNeutralTextColor);
   --fdObjectStatus_Neutral_IconColor_Focus: var(--sapNeutralTextColor);
-  --fdObjectStatus_Inverted_Border_Width: 0.0625rem;
+  --fdObjectStatus_Inverted_Border_Width: var(--border-width);
   --fdObjectStatus_Inverted_Underline_Width: 0.125rem;
   --fdObjectStatus_Inverted_Min_Width: 1.375rem;
   --fdObjectStatus_Inverted_Padding_Block: 0.1875rem;
@@ -1433,7 +1433,7 @@
   --fdTime_Text_Shadow: none;
 
   --fdPopover_Border_Radius: var(--sapPopover_BorderCornerRadius);
-  --fdPopover_Border_Width: 0.0625rem;
+  --fdPopover_Border_Width: var(--border-width);
   --fdPopover_Border_Color: var(--button-border);
 
   --fdProductSwitch_Text_Shadow: none;
@@ -1457,7 +1457,7 @@
 
   --fdDialog_Background_Opacity: 0.6;
 
-  --fdMessageStrip_Border_Width: 0.0625rem;
+  --fdMessageStrip_Border_Width: var(--border-width);
   --fdMessageStrip_Border_Radius: var(--sapPopover_BorderCornerRadius);
   --fdMessageStrip_Border_Color_Success: var(--sapMessage_SuccessBorderColor);
   --fdMessageStrip_Border_Color_Error: var(--sapMessage_ErrorBorderColor);
@@ -1609,6 +1609,10 @@
   box-shadow: 0 0 0.0625rem rgba(0 0 0 / 40%);
 }
 
+.fd-avatar {
+  border-width: var(--border-width);
+}
+
 .fd-avatar[aria-disabled="true"],
 .fd-avatar.is-disabled,
 .fd-avatar:disabled {
@@ -1626,6 +1630,10 @@
 
 .fd-icon-tab-bar .fd-icon-tab-bar__button {
   border-radius: var(--radius-control);
+}
+
+.fd-icon-tab-bar .fd-icon-tab-bar__overflow {
+  border-width: var(--border-width);
 }
 
 .fd-icon-tab-bar__tab.is-selected,
@@ -1658,6 +1666,13 @@
 .fd-icon-tab-bar__tab[aria-selected="true"] {
   --fdIconTabBar_Icon_Background: var(--accent);
   --fdIconTabBar_Icon_Color: var(--accent-foreground);
+}
+.fd-icon-tab-bar__container--filter::after {
+  width: var(--border-width);
+}
+
+.fd-bar--footer {
+  border-top-width: var(--border-width);
 }
 
 .fd-button-split.is-disabled {
@@ -1998,7 +2013,7 @@ ng-transclude:empty {
 
 .bk-backdrop--active .fd-shellbar {
   /* Just below the dialogs, just above the backdrop */
-  z-index: 210;
+  z-index: 210 !important;
 }
 
 .fd-button-split::after {
@@ -2186,13 +2201,21 @@ ng-transclude:empty {
   padding-inline-end: 2.375rem;
 }
 
+.fd-wizard__connector {
+  border-bottom-width: var(--border-width);
+}
+
+.fd-wizard__step--upcoming .fd-wizard__step-indicator {
+  border-width: var(--border-width);
+}
+
 /* fd-tile-container additions */
 .fd-tile-container {
   gap: 0.5rem;
 }
 
 .fd-tile-container .fd-tile {
-  --fdTile_Border: 0.0625rem solid var(--border);
+  --fdTile_Border: var(--border-width) solid var(--border);
   --fdTile_Hover_Border: var(--fdTile_Border);
 }
 
@@ -2443,6 +2466,12 @@ a.fd-button[aria-disabled="true"] {
 }
 
 /* Toolbar fixes */
+
+.fd-toolbar {
+  border-bottom-width: var(--border-width);
+  --fdToolbar_Separator_Width: var(--border-width);
+}
+
 .fd-toolbar--title {
   --fdToolbar_Background: var(--sapToolbar_Background);
 }
@@ -2464,7 +2493,7 @@ a.fd-button[aria-disabled="true"] {
 }
 
 .bk-menu__sublist--overflow .fd-menu__separator {
-  padding-top: 0.0625rem;
+  padding-top: var(--border-width);
 }
 
 /* Form label fix for 0.30.2 */
@@ -2561,10 +2590,14 @@ a.fd-button[aria-disabled="true"] {
   border-radius: var(--fdCheckbox_Border_Radius);
 }
 
-/* List additions */
+/* List fixes and additions */
 
 .fd-list .fd-list__item.is-disabled > * {
   opacity: var(--sapContent_DisabledOpacity);
+}
+
+.fd-list .fd-list__link {
+  border-bottom-width: 0px;
 }
 
 /* Table fixes and additions*/
@@ -2637,7 +2670,7 @@ a.fd-button[aria-disabled="true"] {
   border-bottom-color: var(--sapList_HeaderBorderColor);
   border-left-color: var(--sapList_HeaderBorderColor);
   border-right-color: var(--sapList_HeaderBorderColor);
-  border-top: 0.0625rem solid var(--sapList_TableFooterBorder);
+  border-top: var(--border-width) solid var(--sapList_TableFooterBorder);
   background-color: var(--sapList_FooterBackground);
 }
 
@@ -2683,31 +2716,44 @@ a.fd-button[aria-disabled="true"] {
   padding-inline-start: 0.3125rem;
 }
 
+/* Panel fixes */
+
+.fd-panel__content,
+.fd-panel__header {
+  border-bottom-width: var(--border-width);
+}
+
+/* Progress fixes */
+
+.fd-progress-indicator .fd-progress-indicator__container {
+  border-width: var(--border-width);
+}
+
 /* Helper classes */
 
 .bk-list-border,
 .bk-border {
-  border: solid 0.0625rem var(--border);
+  border: solid var(--border-width) var(--border);
 }
 
 .bk-list-border--top,
 .bk-border--top {
-  border-top: solid 0.0625rem var(--border);
+  border-top: solid var(--border-width) var(--border);
 }
 
 .bk-list-border--bottom,
 .bk-border--bottom {
-  border-bottom: solid 0.0625rem var(--border);
+  border-bottom: solid var(--border-width) var(--border);
 }
 
 .bk-list-border--left,
 .bk-border--left {
-  border-left: solid 0.0625rem var(--border);
+  border-left: solid var(--border-width) var(--border);
 }
 
 .bk-list-border--right,
 .bk-border--right {
-  border-right: solid 0.0625rem var(--border);
+  border-right: solid var(--border-width) var(--border);
 }
 
 .bk-no-border {

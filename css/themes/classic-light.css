@@ -22,6 +22,7 @@
   --highlight: oklch(0.4494 0.1401 254.46);
 
   --border: oklch(0.8853 0 0);
+  --border-width: 0.0625rem;
   --outilne: oklch(0 0 0);
   --outilne-style: dotted;
   --outilne-offset: -0.125rem;
@@ -62,7 +63,7 @@
 
   --shellbar-background: oklch(0.4007 0.0443 248.98);
   --shellbar-foreground: oklch(1 0 0);
-  --shellbar-shadow: 0 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.08), inset 0 -0.0625rem 0 0 rgba(0, 0, 0, 0.18);
+  --shellbar-shadow: 0 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.08), inset 0 calc(var(--border-width) * -1) 0 0 rgba(0, 0, 0, 0.18);
   --shellbar-interactive-background: oklch(0.3339 0.0354 248.93);
   --shellbar-interactive-foreground: oklch(0.9212 0.0398 248.26);
   --shellbar-interactive-placeholder: oklch(0.6888 0.0149 248.04);
@@ -82,7 +83,7 @@
   --object-header: oklch(1 0 0);
   --object-header-foreground: oklch(0.3306 0.009 248.1);
   --object-header-border: oklch(0.8853 0 0);
-  --object-header-shadow: 0 0.0625rem 0.0625rem 0 rgba(0, 0, 0, 0.05), inset 0 -0.0625rem 0 0 var(--border);
+  --object-header-shadow: 0 0.0625rem 0.0625rem 0 rgba(0, 0, 0, 0.05), inset 0 calc(var(--border-width) * -1) 0 0 var(--border);
   --object-foreground: var(--foreground);
   --object-background: oklch(1 0 0);
   --object-background-alt: oklch(0.9612 0 0);
@@ -111,10 +112,10 @@
   --font-mono-bold: "72Mono-Bold", "72Mono-Boldfull", lucida console, monospace;
   --font-size: 0.875rem;
 
-  --shadow-xs: 0 0 0 0.0625rem rgba(0, 0, 0, 0.1), 0 0.125rem 0.5rem 0 rgba(0, 0, 0, 0.1);
-  --shadow-sm: 0 0 0 0.0625rem rgba(0, 0, 0, 0.42), 0 0.125rem 0.5rem 0 rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 0 0 0.0625rem rgba(0, 0, 0, 0.42), 0 0.625rem 1.875rem 0 rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 0 0 0.0625rem rgba(0, 0, 0, 0.42), 0 1.25rem 5rem 0 rgba(0, 0, 0, 0.3);
+  --shadow-xs: 0 0 0 var(--border-width) rgba(0, 0, 0, 0.1), 0 0.125rem 0.5rem 0 rgba(0, 0, 0, 0.1);
+  --shadow-sm: 0 0 0 var(--border-width) rgba(0, 0, 0, 0.42), 0 0.125rem 0.5rem 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 0 0 var(--border-width) rgba(0, 0, 0, 0.42), 0 0.625rem 1.875rem 0 rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 0 0 var(--border-width) rgba(0, 0, 0, 0.42), 0 1.25rem 5rem 0 rgba(0, 0, 0, 0.3);
 
   --radius-control: 0.25rem;
   --radius: 0.25rem;
