@@ -455,7 +455,7 @@
   --sapInfobar_Background: var(--information);
   --sapInfobar_Hover_Background: var(--information-hover);
   --sapInfobar_Active_Background: var(--information-active);
-  --sapInfobar_NonInteractive_Background: var(--sapToolbar_Background);
+  --sapInfobar_NonInteractive_Background: var(--object-header);
   --sapInfobar_TextColor: var(--information-foreground);
 
   --sapObjectHeader_Background: var(--object-header);
@@ -558,7 +558,7 @@
   --fdSwitch_Icon_Size: var(--sapFontLargeSize);
   --fdSwitch_Icon_Error_Margin: 0 0;
   --fdSwitch_Icon_Success_Margin: 0 0;
-  --fdSwitch_Compact_Icon_Size: var(--sapFontSize);
+  --fdSwitch_Compact_Icon_Size: var(--font-size);
   --fdSwitch_Compact_Semantic_Width: var(--fdSwitch_Compact_Width);
   --fdSwitch_Compact_Semantic_Height: var(--fdSwitch_Compact_Height);
   --fdSwitch_Compact_Semantic_Handle_Width: var(--fdSwitch_Compact_Handle_Width);
@@ -643,10 +643,10 @@
   --fdButton_Split_Background_Color: transparent;
 
   --fdGrid_List_Item_Hover_Border_Color: var(--sapTile_Interactive_BorderColor);
-  --fdGrid_List_Item_Border_Radius: var(--sapTile_BorderCornerRadius);
+  --fdGrid_List_Item_Border_Radius: var(--radius);
   --fdGrid_List_Item_Toolbar_Shadow: none;
   --fdGrid_List_Item_Focus_Box_Shadow: inset 0 0 0 var(--sapContent_FocusWidth) var(--sapContent_FocusColor);
-  --fdGrid_List_Item_Focus_Border: 0.1775rem solid var(--sapList_Background);
+  --fdGrid_List_Item_Focus_Border: 0.1775rem solid var(--object-background);
   --fdGrid_List_Item_Focus_Outline_Offset: 0;
 
   --fdIconTabBar_Overflow_Button_Background: var(--sapButton_Background);
@@ -684,14 +684,14 @@
   --fdIcon_Tab_Bar_Selection_Bar_Color: var(--accent);
   --fdIcon_Tab_Bar_Icon_Border_Color: var(--sapContent_Selected_ForegroundColor);
   --fdIcon_Tab_Bar_Semantic_Icon_Display: none;
-  --fdIcon_Tab_Bar_Semantic_Color_Positive: var(--sapPositiveColor);
-  --fdIcon_Tab_Bar_Semantic_Color_Negative: var(--sapNegativeColor);
-  --fdIcon_Tab_Bar_Semantic_Color_Critical: var(--sapCriticalColor);
-  --fdIcon_Tab_Bar_Semantic_Color_Informative: var(--sapInformativeColor);
-  --fdIcon_Tab_Bar_Semantic_Background_Color_Positive: var(--sapPositiveColor);
-  --fdIcon_Tab_Bar_Semantic_Background_Color_Negative: var(--sapNegativeColor);
-  --fdIcon_Tab_Bar_Semantic_Background_Color_Critical: var(--sapCriticalColor);
-  --fdIcon_Tab_Bar_Semantic_Background_Color_Informative: var(--sapInformativeColor);
+  --fdIcon_Tab_Bar_Semantic_Color_Positive: var(--positive);
+  --fdIcon_Tab_Bar_Semantic_Color_Negative: var(--negative);
+  --fdIcon_Tab_Bar_Semantic_Color_Critical: var(--warning);
+  --fdIcon_Tab_Bar_Semantic_Color_Informative: var(--information);
+  --fdIcon_Tab_Bar_Semantic_Background_Color_Positive: var(--positive);
+  --fdIcon_Tab_Bar_Semantic_Background_Color_Negative: var(--negative);
+  --fdIcon_Tab_Bar_Semantic_Background_Color_Critical: var(--warning);
+  --fdIcon_Tab_Bar_Semantic_Background_Color_Informative: var(--information);
   --fdIcon_Tab_Bar_Badge_Color: var(--sapContent_BadgeBackground);
   --fdIcon_Tab_Bar_Semantic_Badge_Color_Positive: var(--positive-foreground);
   --fdIcon_Tab_Bar_Semantic_Badge_Color_Negative: var(--negative-foreground);
@@ -708,7 +708,7 @@
   --fdIcon_Tab_Bar_Inactive_Tab_Icon_Color: var(--sapContent_Selected_ForegroundColor);
   --fdIcon_Tab_Bar_Label_Color: var(--sapObjectHeader_Subtitle_TextColor);
   --fdIcon_Tab_Bar_Label_Hover_Color: var(--sapContent_Selected_ForegroundColor);
-  --fdIcon_Tab_Bar_Label_Font_Family: var(--sapFontFamily);
+  --fdIcon_Tab_Bar_Label_Font_Family: var(--font-sans);
   --fdIcon_Tab_Bar_Text_Focus_Radius: 0.375rem;
   --fdIcon_Tab_Bar_Icon_Focus_Radius: 50%;
   --fdIcon_Tab_Bar_Focus_Offset: -0.25rem;
@@ -739,9 +739,9 @@
   --fdScrollbar_Thumb_Offset: 0.125rem;
   --fdScrollbar_Border_Radius: var(--sapPopover_BorderCornerRadius);
 
-  --fdCard_Box_Shadow_Regular: var(--sapContent_Shadow0);
-  --fdCard_Box_Shadow_Hover: var(--sapContent_Shadow2);
-  --fdCard_Border_Corner_Radius: var(--sapTile_BorderCornerRadius);
+  --fdCard_Box_Shadow_Regular: var(--shadow-xs);
+  --fdCard_Box_Shadow_Hover: var(--shadow-md);
+  --fdCard_Border_Corner_Radius: var(--radius);
   --fdCard_Header_Border_Bottom: var(--border-width) solid transparent;
   --fdCard_Footer_Border_Top: var(--border-width) solid transparent;
   --fdCard_Border: var(--border-width) solid var(--sapTile_BorderColor);
@@ -818,7 +818,7 @@
   --fdInput_Information_Background_Color_Hover: var(--sapField_Hover_Background);
   --fdInput_Information_Box_Shadow_Hover: var(--input-shadow-hover);
   --fdInput_Information_Outline_Color: var(--sapField_InformationColor);
-  --fdInput_Non_Interactive_State_Placeholder_Color: var(--sapField_PlaceholderTextColor);
+  --fdInput_Non_Interactive_State_Placeholder_Color: var(--muted-foreground);
   --fdInput_Group_Button_Border_Raduis: 0;
   --fdInput_Group_Button_Background: transparent;
   --fdInput_Group_Button_Text_Color: var(--sapField_TextColor);
@@ -867,12 +867,12 @@
   --fdWizard_Active_Step_Border_Color: var(--sapActiveColor);
   --fdWizard_Connector_Active_Border_Color: var(--sapContent_Selected_ForegroundColor);
   --fdWizard_Content_Solid_Background: var(--sapShell_Background);
-  --fdWizard_Content_List_Background: var(--sapGroup_ContentBackground);
+  --fdWizard_Content_List_Background: var(--content-background);
   --fdWizard_Content_Transparent_Background: transparent;
   --fdWizard_Selection_Bar_Height: 0.188rem;
   --fdWizard_Selection_Bar_Background: var(--accent);
   --fdWizard_Step_Indicator_Margin_Right: 0.5rem;
-  --fdWizard_Step_Content_Container_Background_Color: var(--sapGroup_ContentBackground);
+  --fdWizard_Step_Content_Container_Background_Color: var(--content-background);
   --fdWizard_Step_Content_Container_Spacing: 1rem;
 
   --fdPanel_Border_Radius: 0;
@@ -889,13 +889,13 @@
   --fdCarousel_Dot_Border: 0.0625rem solid var(--accent);
   --fdCarousel_Dot_Selected_Border: 0.0625rem solid var(--accent-active);
 
-  --fdFeed_List_Item_Background: var(--sapList_Background);
+  --fdFeed_List_Item_Background: var(--object-background);
   --fdFeed_List_Item_Padding: 1rem 1rem 0.5rem;
   --fdFeed_List_Item_Border_Top: var(--sapList_BorderWidth) solid var(--sapList_BorderColor);
   --fdFeed_List_Item_Border_Bottom: var(--sapList_BorderWidth) solid var(--sapList_BorderColor);
 
   --fdMessage_Box_Box_Shadow: inset 0 -0.0625rem;
-  --fdMessage_Box_Shadow: var(--sapContent_Shadow1);
+  --fdMessage_Box_Shadow: var(--shadow-sm);
   --fdMessage_Box_Error_Box_Shadow: var(--fdMessage_Box_Box_Shadow) var(--sapErrorBorderColor), var(--sapContent_HeaderShadow);
   --fdMessage_Box_Success_Box_Shadow: var(--fdMessage_Box_Box_Shadow) var(--sapSuccessBorderColor), var(--sapContent_HeaderShadow);
   --fdMessage_Box_Warning_Box_Shadow: var(--fdMessage_Box_Box_Shadow) var(--sapWarningBorderColor), var(--sapContent_HeaderShadow);
@@ -942,10 +942,10 @@
   --fdCheckbox_Inner_Border_Style_Default_Hover: solid;
   --fdCheckbox_Inner_Border_Color_Default_Hover: var(--sapField_Hover_BorderColor);
   --fdCheckbox_Check_Mark_Color_Default_Hover: var(--sapContent_Selected_ForegroundColor);
-  --fdCheckbox_Background_Color_ReadOnly: var(--sapField_ReadOnly_Background);
+  --fdCheckbox_Background_Color_ReadOnly: var(--inactive-background);
   --fdCheckbox_Inner_Border_Width_ReadOnly: var(--sapElement_BorderWidth);
   --fdCheckbox_Inner_Border_Style_ReadOnly: dashed;
-  --fdCheckbox_Inner_Border_Color_ReadOnly: var(--sapField_ReadOnly_BorderColor);
+  --fdCheckbox_Inner_Border_Color_ReadOnly: var(--inactive-border);
   --fdCheckbox_Check_Mark_Color_ReadOnly: var(--sapField_TextColor);
   --fdCheckbox_Background_Color_Error: var(--sapField_InvalidBackground);
   --fdCheckbox_Inner_Border_Width_Error: var(--sapField_InvalidBorderWidth);
@@ -999,10 +999,10 @@
   --fdRadio_Inner_Border_Style_Default_Hover: solid;
   --fdRadio_Inner_Border_Color_Default_Hover: var(--sapField_Hover_BorderColor);
   --fdRadio_Active_Dot_Color_Default_Hover: var(--sapContent_Selected_ForegroundColor);
-  --fdRadio_Background_Color_ReadOnly: var(--sapField_ReadOnly_Background);
+  --fdRadio_Background_Color_ReadOnly: var(--inactive-background);
   --fdRadio_Inner_Border_Width_ReadOnly: var(--sapElement_BorderWidth);
   --fdRadio_Inner_Border_Style_ReadOnly: dashed;
-  --fdRadio_Inner_Border_Color_ReadOnly: var(--sapField_ReadOnly_BorderColor);
+  --fdRadio_Inner_Border_Color_ReadOnly: var(--inactive-border);
   --fdRadio_Active_Dot_Color_ReadOnly: var(--sapField_TextColor);
   --fdRadio_Background_Color_Error: var(--sapField_InvalidBackground);
   --fdRadio_Inner_Border_Width_Error: var(--sapField_InvalidBorderWidth);
@@ -1075,7 +1075,7 @@
   --fdSelect_Button_Interractive_SideBorder: none;
 
   --fdTile_Border: var(--border-width) solid var(--sapTile_BorderColor);
-  --fdTile_Hover_Box_Shadow: var(--sapContent_Shadow1);
+  --fdTile_Hover_Box_Shadow: var(--shadow-sm);
   --fdTile_Hover_Border: var(--fdTile_Border);
   --fdTile_Title_Font_Size: var(--sapFontHeader6Size);
   --fdTile_Title_Font_Weight: bold;
@@ -1234,7 +1234,7 @@
   --fdFlexibleColumnLayout_Toggle_Image_Color: var(--sapHighlightColor);
   --fdFlexibleColumnLayout_Border: solid var(--border-width) var(--sapGroup_ContentBorderColor);
   --fdFlexibleColumnLayout_Background_Solid: var(--sapContent_ForegroundColor);
-  --fdFlexibleColumnLayout_Background_Translucent: var(--sapGroup_ContentBackground);
+  --fdFlexibleColumnLayout_Background_Translucent: var(--content-background);
   --fdFlexibleColumnLayout_Background_Transparent: transparent;
 
   --sapAvatar_Default_Background: var(--accent);
@@ -1314,7 +1314,7 @@
   --fdToken_Outline_Offset: var(--border-width);
   --fdToken_Outline_Offset_Compact: 0;
   --fdToken_Background_Color_Read_Only: var(--sapButton_TokenBackground);
-  --fdToken_Border_Color_Read_Only: var(--sapField_ReadOnly_BorderColor);
+  --fdToken_Border_Color_Read_Only: var(--inactive-border);
   --fdToken_Border_Color_Selected_Focus: var(var(--sapContent_FocusColor));
   --fdToken_Selected_Border: var(--sapButton_BorderWidth) solid var(--button-border);
   --fdToken_Selected_Font_Family: var(--sapFontSemiboldDuplexFamily);
@@ -1322,7 +1322,7 @@
   --fdToken_ReadOnly_Padding_Inline: 0.3125rem;
   --fdToken_Focus_Border_Radius: var(--radius-control);
 
-  --fdTokenizer_Indicator_Color: var(--sapLinkColor);
+  --fdTokenizer_Indicator_Color: var(--link);
 
   --fdStepInput_Button_Width_Cozy: 2.25rem;
   --fdStepInput_Button_Width_Compact: 2rem;
@@ -1341,8 +1341,8 @@
   --fdObjectStatus_Positive_IconColor_Focus: var(--sapPositiveTextColor);
   --fdObjectStatus_Critical_Color_Focus: var(--sapCriticalTextColor);
   --fdObjectStatus_Critical_IconColor_Focus: var(--sapCriticalTextColor);
-  --fdObjectStatus_Negative_Color_Focus: var(--sapNegativeColor);
-  --fdObjectStatus_Negative_IconColor_Focus: var(--sapNegativeColor);
+  --fdObjectStatus_Negative_Color_Focus: var(--negative);
+  --fdObjectStatus_Negative_IconColor_Focus: var(--negative);
   --fdObjectStatus_Informative_Color_Focus: var(--sapInformativeTextColor);
   --fdObjectStatus_Informative_IconColor_Focus: var(--sapInformativeTextColor);
   --fdObjectStatus_Neutral_Color_Focus: var(--sapNeutralTextColor);
@@ -1366,7 +1366,7 @@
   --fdObjectStatus_Inverted_Icon_Color_Selected_Informative: var(--information-foreground);
   --fdObjectStatus_Text_Shadow_Indication_Color: var(--sapContent_TextShadow);
 
-  --fdNotification_Border_Radius: var(--sapTile_BorderCornerRadius);
+  --fdNotification_Border_Radius: var(--radius);
   --fdNotification_Border_Left_Right_Color: var(--sapList_BorderColor);
   --fdNotification_Border_Top_Color: var(--sapList_BorderColor);
   --fdNotification_Border_Left_Right_Color_Selected: var(--sapList_SelectionBorderColor);
@@ -1394,8 +1394,8 @@
   --fdNotification_Growing_Item_Margin_Inline: 0.5rem;
   --fdNotification_Growing_Item_Margin_Block_End: 0.5rem;
   --fdNotification_Growing_Item_Title_Color: var(--sapButton_TextColor);
-  --fdNotification_Growing_Item_Title_Font_Family: var(--sapFontFamily);
-  --fdNotification_Growing_Item_Title_Font_Size: var(--sapFontSize);
+  --fdNotification_Growing_Item_Title_Font_Family: var(--font-sans);
+  --fdNotification_Growing_Item_Title_Font_Size: var(--font-size);
   --fdNotification_Growing_Item_Title_Font_Weight: bold;
 
   --fdPagination_Placeholder_Dots_Width: 1.5rem;
@@ -1406,7 +1406,7 @@
   --sapToolHeader_Product_Name_Color: var(--shellbar-foreground);
   --sapToolHeader_Product_Name_Font_Size: 1.125rem;
   --sapToolHeader_Second_Title_Color: var(--sapContent_LabelColor);
-  --sapToolHeader_Second_Title_Font_Size: var(--sapFontSize);
+  --sapToolHeader_Second_Title_Font_Size: var(--font-size);
   --sapToolHeader_Second_Title_Offset: 0.125rem;
   --sapToolHeader_Min_Height_Compact: 2.5rem;
   --sapToolHeader_Min_Height_Cozy: 3rem;
@@ -1416,12 +1416,12 @@
 
   --fdTextarea_Line_Height: 1.5;
 
-  --sapMenu_Shadow1: var(--sapContent_Shadow1);
-  --sapMenu_Shadow2: var(--sapContent_Shadow2);
+  --sapMenu_Shadow1: var(--shadow-sm);
+  --sapMenu_Shadow2: var(--shadow-md);
 
   --sapSearchHover_Shadow: var(--button-shadow);
 
-  --sapMenu_Background: var(--sapList_Background);
+  --sapMenu_Background: var(--object-background);
   --sapMenu_Hover_Background: var(--sapList_Hover_Background);
   --sapMenu_Active_Background: var(--sapList_Active_Background);
   --sapMenu_Selected_Background: var(--sapList_Hover_SelectionBackground);
@@ -1470,13 +1470,13 @@
   --fdMessageStrip_Icon_Color_Neutral: var(--sapTextColor);
   --fdMessageStrip_Icon_Color_Information: var(--information);
 
-  --fdPage_List_Background: var(--sapGroup_ContentBackground);
+  --fdPage_List_Background: var(--content-background);
   --fdPage_Transparent_Background: transparent;
 
   --fdFeed_Input_Placeholder_Font_Style: italic;
 
-  --fdToolbar_Auto_Background: var(--sapToolbar_Background);
-  --fdToolbar_Solid_Background: var(--sapToolbar_Background);
+  --fdToolbar_Auto_Background: var(--object-header);
+  --fdToolbar_Solid_Background: var(--object-header);
   --fdToolbar_Transparent_Background: transparent;
   --fdToolbar_Info_Outline_Color: var(--sapContent_FocusColor);
 
@@ -1569,23 +1569,23 @@
 }
 
 .fd-input.is-error::placeholder {
-  color: var(--sapField_PlaceholderTextColor);
+  color: var(--muted-foreground);
 }
 
 .fd-input-group.is-success {
-  --fdInput_Outline_Color: var(--sapPositiveColor);
+  --fdInput_Outline_Color: var(--positive);
 }
 
 .fd-input-group.is-error {
-  --fdInput_Outline_Color: var(--sapNegativeColor);
+  --fdInput_Outline_Color: var(--negative);
 }
 
 .fd-input-group.is-warning {
-  --fdInput_Outline_Color: var(--sapWarningColor);
+  --fdInput_Outline_Color: var(--warning);
 }
 
 .fd-input-group.is-information {
-  --fdInput_Outline_Color: var(--sapInformativeColor);
+  --fdInput_Outline_Color: var(--information);
 }
 
 .fd-input-group:has(input:focus) {
@@ -1598,9 +1598,9 @@
 }
 
 .fd-token--disabled {
-  border-color: var(--sapField_ReadOnly_BorderColor);
+  border-color: var(--inactive-border);
   border-style: dashed;
-  background-color: var(--sapField_ReadOnly_Background);
+  background-color: var(--inactive-background);
 }
 
 .fd-switch__handle {
@@ -1616,7 +1616,7 @@
 .fd-avatar[aria-disabled="true"],
 .fd-avatar.is-disabled,
 .fd-avatar:disabled {
-  opacity: var(--sapContent_DisabledOpacity);
+  opacity: var(--disabled-opacity);
 }
 
 .fd-avatar:not(.fd-avatar--border):not(.fd-avatar--shell):not(.is-active):not(.is-toggled) {
@@ -1676,7 +1676,7 @@
 }
 
 .fd-button-split.is-disabled {
-  opacity: var(--sapContent_DisabledOpacity);
+  opacity: var(--disabled-opacity);
 }
 
 .fd-badge {
@@ -1742,7 +1742,7 @@
 }
 
 .fd-vertical-nav__utility-section::before {
-  background-color: var(--sapBrandColor);
+  background-color: var(--accent);
 }
 
 .fd-popover__body::after {
@@ -1750,23 +1750,23 @@
 }
 
 .fd-popover__body--arrow-bottom::before {
-  border-top-color: var(--sapGroup_ContentBackground);
+  border-top-color: var(--content-background);
 }
 
 .fd-popover__body--arrow-bottom:has(> .fd-popover__wrapper > .fd-product-switch__body:first-child)::before,
 .fd-popover__body--arrow-bottom:has(> .fd-popover__wrapper > .fd-menu:first-child)::before,
 .fd-popover__body--arrow-bottom:has(> ng-transclude > .fd-product-switch__body:first-child)::before,
 .fd-popover__body--arrow-bottom:has(> ng-transclude > .fd-menu:first-child)::before {
-  border-top-color: var(--sapList_Background);
+  border-top-color: var(--object-background);
 }
 
 .fd-popover__body--arrow-bottom:has(> .fd-popover__wrapper > .fd-toolbar:not(.fd-toolbar--transparent):first-child)::before,
 .fd-popover__body--arrow-bottom:has(> ng-transclude > .fd-toolbar:not(.fd-toolbar--transparent):first-child)::before {
-  border-top-color: var(--sapToolbar_Background);
+  border-top-color: var(--object-header);
 }
 
 .fd-popover__body--arrow-right::before {
-  border-left-color: var(--sapGroup_ContentBackground);
+  border-left-color: var(--content-background);
   border-bottom-color: transparent !important;
 }
 
@@ -1774,18 +1774,18 @@
 .fd-popover__body--arrow-right:has(> .fd-popover__wrapper > .fd-menu:first-child)::before,
 .fd-popover__body--arrow-right:has(> ng-transclude > .fd-product-switch__body:first-child)::before,
 .fd-popover__body--arrow-right:has(> ng-transclude > .fd-menu:first-child)::before {
-  border-left-color: var(--sapList_Background);
+  border-left-color: var(--object-background);
   border-bottom-color: transparent !important;
 }
 
 .fd-popover__body--arrow-right:has(> .fd-popover__wrapper > .fd-toolbar:not(.fd-toolbar--transparent):first-child)::before,
 .fd-popover__body--arrow-right:has(> ng-transclude > .fd-toolbar:not(.fd-toolbar--transparent):first-child)::before {
-  border-left-color: var(--sapToolbar_Background);
+  border-left-color: var(--object-header);
   border-bottom-color: transparent !important;
 }
 
 .fd-popover__body--arrow-left::before {
-  border-right-color: var(--sapGroup_ContentBackground);
+  border-right-color: var(--content-background);
   border-bottom-color: transparent !important;
 }
 
@@ -1793,30 +1793,30 @@
 .fd-popover__body--arrow-left:has(> .fd-popover__wrapper > .fd-menu:first-child)::before,
 .fd-popover__body--arrow-left:has(> ng-transclude > .fd-product-switch__body:first-child)::before,
 .fd-popover__body--arrow-left:has(> ng-transclude > .fd-menu:first-child)::before {
-  border-right-color: var(--sapList_Background);
+  border-right-color: var(--object-background);
   border-bottom-color: transparent !important;
 }
 
 .fd-popover__body--arrow-left:has(> .fd-popover__wrapper > .fd-toolbar:not(.fd-toolbar--transparent):first-child)::before,
 .fd-popover__body--arrow-left:has(> ng-transclude > .fd-toolbar:not(.fd-toolbar--transparent):first-child)::before {
-  border-right-color: var(--sapToolbar_Background);
+  border-right-color: var(--object-header);
   border-bottom-color: transparent !important;
 }
 
 .fd-popover__body::before {
-  border-bottom-color: var(--sapGroup_ContentBackground);
+  border-bottom-color: var(--content-background);
 }
 
 .fd-popover__body:has(> .fd-popover__wrapper > .fd-product-switch__body:first-child)::before,
 .fd-popover__body:has(> .fd-popover__wrapper > .fd-menu:first-child)::before,
 .fd-popover__body:has(> ng-transclude > .fd-product-switch__body:first-child)::before,
 .fd-popover__body:has(> ng-transclude > .fd-menu:first-child)::before {
-  border-bottom-color: var(--sapList_Background);
+  border-bottom-color: var(--object-background);
 }
 
 .fd-popover__body:has(> .fd-popover__wrapper > .fd-toolbar:not(.fd-toolbar--transparent):first-child)::before,
 .fd-popover__body:has(> ng-transclude > .fd-toolbar:not(.fd-toolbar--transparent):first-child)::before {
-  border-bottom-color: var(--sapToolbar_Background);
+  border-bottom-color: var(--object-header);
 }
 
 .fd-popover__body--arrow-x-end::before,
@@ -1863,15 +1863,15 @@
 
 .bk-card--list > .fd-card__content > .fd-list:first-child .fd-list__item:first-of-type,
 .bk-card--list > .fd-card__content > .fd-list:first-child .fd-list__item:first-of-type::before {
-  border-top-left-radius: var(--sapTile_BorderCornerRadius) !important;
-  border-top-right-radius: var(--sapTile_BorderCornerRadius) !important;
+  border-top-left-radius: var(--radius) !important;
+  border-top-right-radius: var(--radius) !important;
 }
 
 .fd-card--table > .fd-card__content > .fd-table:last-child .fd-table__body:last-child .fd-table__row:last-of-type::after,
 .bk-card--list > .fd-card__content > .fd-list:last-child .fd-list__item:last-of-type,
 .bk-card--list > .fd-card__content > .fd-list:last-child .fd-list__item:last-of-type::before {
-  border-bottom-left-radius: var(--sapTile_BorderCornerRadius) !important;
-  border-bottom-right-radius: var(--sapTile_BorderCornerRadius) !important;
+  border-bottom-left-radius: var(--radius) !important;
+  border-bottom-right-radius: var(--radius) !important;
 }
 
 .fd-menu__item:first-child .fd-menu__link.is-focus:after,
@@ -1926,35 +1926,35 @@ html {
 }
 
 body {
-  background-color: var(--sapBackgroundColor, #f7f7f7);
-  font-size: var(--sapFontSize, 0.875rem);
+  background-color: var(--background, oklch(0.9761 0 0));
+  font-size: var(--font-size, 0.875rem);
   line-height: var(--sapContent_LineHeight, 1.4);
-  color: var(--sapTextColor, #303030);
-  font-family: var(--sapFontFamily, "72", "72full", Arial, Helvetica, sans-serif);
+  color: var(--foreground, oklch(0.3092 0 0));
+  font-family: var(--font-sans, "72", "72full", Arial, Helvetica, sans-serif);
   overflow: auto;
 }
 
 @media (prefers-color-scheme: dark) {
   body {
-    background: var(--sapBackgroundColor, #1d1d1d);
-    color: var(--sapTextColor, #fff);
+    background: var(--background, oklch(0.2308 0 0));
+    color: var(--foreground, oklch(1 0 0));
   }
 }
 
 a:link:not([class]) {
-  color: var(--sapLinkColor, #996f09);
+  color: var(--link);
 }
 
 a:visited:not([class]) {
-  color: var(--sapLink_Visited_Color, #996f09);
+  color: var(--link-visited);
 }
 
 a:hover:not([class]) {
-  color: var(--sapLink_Hover_Color, #996f09);
+  color: var(--link-hover);
 }
 
 a:active:not([class]) {
-  color: var(--sapLink_Active_Color, #996f09);
+  color: var(--link);
 }
 
 .bk-hidden {
@@ -2034,11 +2034,11 @@ ng-transclude:empty {
 }
 
 .fd-code {
-  font-family: var(--sapContent_MonospaceFontFamily);
+  font-family: var(--font-mono);
 }
 
 .fd-code b {
-  font-family: var(--sapContent_MonospaceBoldFontFamily);
+  font-family: var(--font-mono-bold);
 }
 
 /* Icon fixes */
@@ -2068,8 +2068,8 @@ ng-transclude:empty {
 
 .bk-icon--svg svg {
   box-sizing: border-box;
-  color: var(--sapTextColor, #303030);
-  fill: var(--sapTextColor, #303030);
+  color: var(--foreground);
+  fill: var(--foreground);
   width: 1rem;
   height: 1rem;
   overflow: visible;
@@ -2092,24 +2092,16 @@ ng-transclude:empty {
 /* Menu and List svg icon */
 .fd-menu i.bk-icon--svg svg,
 .fd-list i.bk-icon--svg svg {
-  color: var(--sapContent_NonInteractiveIconColor, #656565);
-  fill: var(--sapContent_NonInteractiveIconColor, #656565);
+  color: var(--muted-foreground);
+  fill: var(--muted-foreground);
 }
 
 /* Vertical navigation svg icon */
+.fd-list__navigation-item--indicated i.bk-icon--svg svg,
+.fd-list__navigation-item:hover i.bk-icon--svg svg,
 .fd-list__navigation-item i.bk-icon--svg svg {
-  color: var(--fdVerticalNav_Icon_Color, #303030);
-  fill: var(--fdVerticalNav_Icon_Color, #303030);
-}
-
-.fd-list__navigation-item:hover i.bk-icon--svg svg {
-  color: var(--sapList_TextColor, #303030);
-  fill: var(--sapList_TextColor, #303030);
-}
-
-.fd-list__navigation-item--indicated i.bk-icon--svg svg {
-  fill: var(--sapSelectedColor, #fecc04);
-  color: var(--sapSelectedColor, #fecc04);
+  color: var(--sidebar-foreground);
+  fill: var(--sidebar-foreground);
 }
 
 /* Loader */
@@ -2131,7 +2123,7 @@ ng-transclude:empty {
 }
 
 .fd-button > .bk-loader {
-  --bkLoader_Color: var(--fdButtonColor, var(--sapTextColor));
+  --bkLoader_Color: var(--fdButtonColor, var(--foreground));
 }
 
 .bk-loader--l {
@@ -2176,7 +2168,7 @@ ng-transclude:empty {
 }
 
 .bk-steps-indicator.bk-border {
-  border-radius: var(--sapElement_BorderCornerRadius);
+  border-radius: var(--radius);
 }
 
 .bk-steps-indicator .fd-wizard__progress-bar {
@@ -2389,14 +2381,14 @@ div.fd-popover__body--dropdown[aria-hidden="true"] {
 
 .fd-tile.bk-tile--container > *:first-child {
   padding: 0 !important;
-  border-top-left-radius: var(--sapElement_BorderCornerRadius);
-  border-top-right-radius: var(--sapElement_BorderCornerRadius);
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
 }
 
 .fd-tile.bk-tile--container > *:last-child {
   padding: 0 !important;
-  border-bottom-left-radius: var(--sapElement_BorderCornerRadius);
-  border-bottom-right-radius: var(--sapElement_BorderCornerRadius);
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
 }
 
 .fd-tile--lg {
@@ -2461,7 +2453,7 @@ a.fd-button[disabled],
 a.fd-button[aria-disabled="true"] {
   -webkit-box-shadow: none;
   box-shadow: none;
-  opacity: var(--sapContent_DisabledOpacity);
+  opacity: var(--disabled-opacity);
   pointer-events: none;
 }
 
@@ -2473,7 +2465,7 @@ a.fd-button[aria-disabled="true"] {
 }
 
 .fd-toolbar--title {
-  --fdToolbar_Background: var(--sapToolbar_Background);
+  --fdToolbar_Background: var(--object-header);
 }
 
 .fd-toolbar--title.fd-toolbar--transparent {
@@ -2489,7 +2481,7 @@ a.fd-button[aria-disabled="true"] {
   overflow-y: auto;
   max-height: 264px;
   flex-wrap: nowrap;
-  background-color: var(--sapList_Background, #fff);
+  background-color: var(--object-background);
 }
 
 .bk-menu__sublist--overflow .fd-menu__separator {
@@ -2593,7 +2585,7 @@ a.fd-button[aria-disabled="true"] {
 /* List fixes and additions */
 
 .fd-list .fd-list__item.is-disabled > * {
-  opacity: var(--sapContent_DisabledOpacity);
+  opacity: var(--disabled-opacity);
 }
 
 .fd-list .fd-list__link {
@@ -2646,8 +2638,8 @@ a.fd-button[aria-disabled="true"] {
   position: sticky;
   top: 0;
   box-shadow:
-    inset 0 1px 0 var(--sapList_BorderColor),
-    inset 0 -1px 0 var(--sapList_BorderColor);
+    inset 0 1px 0 var(--border),
+    inset 0 -1px 0 var(--border);
   border-bottom: hidden;
   border-top: hidden;
   z-index: 1;
@@ -2656,8 +2648,8 @@ a.fd-button[aria-disabled="true"] {
 .bk-table--no-outer-horizontal-borders .bk-table__header-sticky th.fd-table__cell,
 .fd-table--no-outer-border .bk-table__header-sticky th.fd-table__cell {
   box-shadow:
-    inset 0 1px 0 var(--sapList_HeaderBackground),
-    inset 0 -1px 0 var(--sapList_BorderColor);
+    inset 0 1px 0 var(--table-header),
+    inset 0 -1px 0 var(--border);
 }
 
 .bk-table__footer-sticky {
@@ -2667,18 +2659,18 @@ a.fd-button[aria-disabled="true"] {
 }
 
 .fd-table__footer .fd-table__cell {
-  border-bottom-color: var(--sapList_HeaderBorderColor);
-  border-left-color: var(--sapList_HeaderBorderColor);
-  border-right-color: var(--sapList_HeaderBorderColor);
-  border-top: var(--border-width) solid var(--sapList_TableFooterBorder);
-  background-color: var(--sapList_FooterBackground);
+  border-bottom-color: var(--border);
+  border-left-color: var(--border);
+  border-right-color: var(--border);
+  border-top: var(--border-width) solid var(--border);
+  background-color: var(--table-header);
 }
 
 /* Keep only until the base library is upgraded to 0.39.0 */
 .fd-table__header .fd-table__cell.fd-table__cell--non-interactive:active,
 .fd-table__header .fd-table__cell.fd-table__cell--non-interactive:hover {
-  background-color: var(--sapList_HeaderBackground);
-  color: var(--sapList_HeaderTextColor);
+  background-color: var(--table-header);
+  color: var(--table-header-foreground);
 }
 
 .fd-table--compact .fd-checkbox__label .fd-checkbox__checkmark,
@@ -2698,12 +2690,12 @@ a.fd-button[aria-disabled="true"] {
 }
 
 .fd-link > [class*="sap-icon"] {
-  font-size: var(--sapFontSize);
+  font-size: var(--font-size);
 }
 
 .fd-link.is-focus,
 .fd-link:focus {
-  --sapLinkColor: var(--fdLink_Text_Focus_Color);
+  --sapLinkColor: var(--accent-foreground);
 }
 
 /* Tokenizer fixes */
@@ -2778,22 +2770,22 @@ a.fd-button[aria-disabled="true"] {
 
 .bk-color-fill--negative,
 .bk-color-fill--negative svg {
-  fill: var(--sapNegativeColor) !important;
+  fill: var(--negative) !important;
 }
 
 .bk-color-fill--critical,
 .bk-color-fill--critical svg {
-  fill: var(--sapCriticalColor) !important;
+  fill: var(--warning) !important;
 }
 
 .bk-color-fill--positive,
 .bk-color-fill--positive svg {
-  fill: var(--sapPositiveColor) !important;
+  fill: var(--positive) !important;
 }
 
 .bk-color-fill--informative,
 .bk-color-fill--informative svg {
-  fill: var(--sapInformativeColor) !important;
+  fill: var(--information) !important;
 }
 
 .bk-color-fg-fill--negative,
@@ -2817,31 +2809,31 @@ a.fd-button[aria-disabled="true"] {
 }
 
 .bk-color-bg {
-  background-color: var(--sapBackgroundColor) !important;
+  background-color: var(--background) !important;
 }
 
 .bk-color-bg--content {
-  background-color: var(--sapGroup_ContentBackground) !important;
+  background-color: var(--content-background) !important;
 }
 
 .bk-color-bg--tile {
-  background-color: var(--sapTile_Background) !important;
+  background-color: var(--card) !important;
 }
 
 .bk-color-bg--negative {
-  background-color: var(--sapNegativeColor) !important;
+  background-color: var(--negative) !important;
 }
 
 .bk-color-bg--critical {
-  background-color: var(--sapCriticalColor) !important;
+  background-color: var(--warning) !important;
 }
 
 .bk-color-bg--positive {
-  background-color: var(--sapPositiveColor) !important;
+  background-color: var(--positive) !important;
 }
 
 .bk-color-bg--informative {
-  background-color: var(--sapInformativeColor) !important;
+  background-color: var(--information) !important;
 }
 
 .bk-color-fg--negative .sap-icon,
@@ -2865,19 +2857,19 @@ a.fd-button[aria-disabled="true"] {
 }
 
 .bk-color--negative {
-  color: var(--sapNegativeColor) !important;
+  color: var(--negative) !important;
 }
 
 .bk-color--critical {
-  color: var(--sapCriticalColor) !important;
+  color: var(--warning) !important;
 }
 
 .bk-color--positive {
-  color: var(--sapPositiveColor) !important;
+  color: var(--positive) !important;
 }
 
 .bk-color--informative {
-  color: var(--sapInformativeColor) !important;
+  color: var(--information) !important;
 }
 
 .bk-shadow--none {
@@ -2886,23 +2878,23 @@ a.fd-button[aria-disabled="true"] {
 }
 
 .bk-shadow--xs {
-  -webkit-box-shadow: var(--sapContent_Shadow0);
-  box-shadow: var(--sapContent_Shadow0);
+  -webkit-box-shadow: var(--shadow-xs);
+  box-shadow: var(--shadow-xs);
 }
 
 .bk-shadow--sm {
-  -webkit-box-shadow: var(--sapContent_Shadow1);
-  box-shadow: var(--sapContent_Shadow1);
+  -webkit-box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-sm);
 }
 
 .bk-shadow--md {
-  -webkit-box-shadow: var(--sapContent_Shadow2);
-  box-shadow: var(--sapContent_Shadow2);
+  -webkit-box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-md);
 }
 
 .bk-shadow--lg {
-  -webkit-box-shadow: var(--sapContent_Shadow3);
-  box-shadow: var(--sapContent_Shadow3);
+  -webkit-box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-lg);
 }
 
 .bk-box--gap-none {
@@ -3011,7 +3003,7 @@ a.fd-button[aria-disabled="true"] {
 }
 
 .bk-text--subtitle {
-  color: var(--sapTile_TextColor);
+  color: var(--muted-foreground);
 }
 
 .bk-text--ellipsis {
@@ -3351,7 +3343,7 @@ a.fd-button[aria-disabled="true"] {
 }
 
 .bk-page-header-bg {
-  background: var(--sapPageHeader_Background, #fff);
+  background: var(--object-header);
 }
 
 .bk-padding-top--none {
@@ -3393,7 +3385,7 @@ a.fd-button[aria-disabled="true"] {
 }
 
 .bk-font--normal {
-  font-size: var(--sapFontSize);
+  font-size: var(--font-size);
 }
 
 .bk-font--large {
@@ -3427,5 +3419,5 @@ a.fd-button[aria-disabled="true"] {
 }
 
 .bk-disabled {
-  opacity: var(--sapContent_DisabledOpacity);
+  opacity: var(--disabled-opacity);
 }
