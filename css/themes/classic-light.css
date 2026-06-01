@@ -23,10 +23,10 @@
 
   --border: oklch(0.8853 0 0);
   --border-width: 0.0625rem;
-  --outilne: oklch(0 0 0);
-  --outilne-style: dotted;
-  --outilne-offset: -0.125rem;
-  --outilne-width: 0.063rem;
+  --outline: oklch(0 0 0);
+  --outline-style: dotted;
+  --outline-offset: -0.125rem;
+  --outline-width: 0.063rem;
   --input-border: oklch(0.653 0.0163 251.23);
   --input-border-hover: oklch(0.4494 0.1401 254.46);
   --input-background: oklch(1 0 0);

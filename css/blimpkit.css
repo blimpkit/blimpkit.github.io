@@ -73,9 +73,9 @@
   --sapContent_ImagePlaceholderBackground: var(--muted);
   --sapContent_ImagePlaceholderForegroundColor: var(--muted-foreground);
   --sapContent_BusyColor: var(--accent);
-  --sapContent_FocusColor: var(--outilne);
-  --sapContent_FocusStyle: var(--outilne-style);
-  --sapContent_FocusWidth: var(--outilne-width);
+  --sapContent_FocusColor: var(--outline);
+  --sapContent_FocusStyle: var(--outline-style);
+  --sapContent_FocusWidth: var(--outline-width);
   --sapContent_ContrastFocusColor: var(--information-foreground);
   --sapContent_ShadowColor: var(--foreground);
   --sapContent_ContrastShadowColor: var(--information-foreground);
@@ -328,7 +328,7 @@
   --sapField_Hover_WarningShadow: none;
   --sapField_Hover_SuccessShadow: none;
   --sapField_Hover_InformationShadow: none;
-  --sapField_Active_BorderColor: var(--outilne);
+  --sapField_Active_BorderColor: var(--outline);
   --sapField_Focus_Background: var(--input-background-active);
   --sapField_Focus_BorderColor: var(--information);
   --sapField_ReadOnly_Background: var(--inactive-background);
@@ -835,14 +835,14 @@
   --fdInput_Group_Button_Warning_Active_Box_Shadow: var(--sapContent_Critical_Shadow);
   --fdInput_Group_Button_Information_Active_Text_Color: var(--secondary-foreground);
   --fdInput_Group_Button_Information_Active_Box_Shadow: var(--sapContent_Informative_Shadow);
-  --fdInput_Outline_Offset_Focus_Within: var(--outilne-offset);
+  --fdInput_Outline_Offset_Focus_Within: var(--outline-offset);
   --fdInput_Outline_Border_Radius: var(--radius-control);
   --fdInput_Text_Shadow: none;
   --fdInput_State_Text_Style: normal;
   --fdInput_State_Font_Weight: normal;
   --fdInput_State_Border_Type: solid;
-  --fdInput_Outline_Offset: var(--outilne-offset);
-  --fdInput_Outline_Offset_States: var(--outilne-offset);
+  --fdInput_Outline_Offset: var(--outline-offset);
+  --fdInput_Outline_Offset_States: var(--outline-offset);
 
   --fdInputGroup_Text_Shadow: none;
   --fdInputGroup_ControlButton_SideBorder: var(--sapButton_BorderWidth) solid transparent;
