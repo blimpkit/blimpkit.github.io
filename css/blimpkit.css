@@ -1149,7 +1149,7 @@
   --fdProgress_Indicator_Label_Font_Size: var(--sapProgress_FontSize);
   --fdProgress_Indicator_Icon_Position: absolute;
   --fdProgress_Indicator_Icon_Font_Size: var(--sapFontLargeSize);
-  --fdProgress_Indicator_Container_Width: calc(100% - 1.25rem);
+  --fdProgress_Indicator_Container_Width: 100%;
 
   --fdMessage_Border: none;
   --fdMessage_Border_Radius: var(--sapPopover_BorderCornerRadius);
@@ -2721,6 +2721,12 @@ a.fd-button[aria-disabled="true"] {
   border-width: var(--border-width);
 }
 
+.fd-progress-indicator:not(:has(> .fd-progress-indicator__container > .fd-progress-indicator__remaining)) {
+  --rootMarginBlock: 0;
+  --fdProgress_Indicator_Height: auto;
+  --fdProgress_Indicator_Container_Margin_Block: 0;
+}
+
 /* Helper classes */
 
 .bk-list-border,
@@ -3136,6 +3142,14 @@ a.fd-button[aria-disabled="true"] {
   flex-shrink: 0;
 }
 
+.bk-flex-0 {
+  flex: 0;
+}
+
+.bk-flex-1 {
+  flex: 1;
+}
+
 .bk-flex-end {
   justify-content: flex-end;
 }
@@ -3380,6 +3394,18 @@ a.fd-button[aria-disabled="true"] {
   font-style: italic;
 }
 
+.bk-font--mono {
+  font-family: var(--font-mono);
+}
+
+.bk-font--semibold {
+  font-weight: 600;
+}
+
+.bk-font--bold {
+  font-weight: bold;
+}
+
 .bk-font--small {
   font-size: var(--sapFontSmallSize);
 }
@@ -3390,6 +3416,30 @@ a.fd-button[aria-disabled="true"] {
 
 .bk-font--large {
   font-size: var(--sapFontLargeSize);
+}
+
+.bk-font--h1 {
+  font-size: var(--sapFontHeader1Size);
+}
+
+.bk-font--h2 {
+  font-size: var(--sapFontHeader2Size);
+}
+
+.bk-font--h3 {
+  font-size: var(--sapFontHeader3Size);
+}
+
+.bk-font--h4 {
+  font-size: var(--sapFontHeader4Size);
+}
+
+.bk-font--h5 {
+  font-size: var(--sapFontHeader5Size);
+}
+
+.bk-font--h6 {
+  font-size: var(--sapFontHeader6Size);
 }
 
 .bk-restrict-width--sm {

@@ -37,6 +37,12 @@
       <td bk-table-cell>The label above the indicator. If not provided, the current value will be used.</td>
     </tr>
     <tr bk-table-row>
+      <td bk-table-cell>no-label</td>
+      <td bk-table-cell>boolean</td>
+      <td bk-table-cell>False</td>
+      <td bk-table-cell>Removes the label.</td>
+    </tr>
+    <tr bk-table-row>
       <td bk-table-cell>state</td>
       <td bk-table-cell>string</td>
       <td bk-table-cell>False</td>
@@ -48,6 +54,7 @@
 <h2>Examples</h2>
 
 <code-block>
+  <bk-progress-indicator current-value="50" no-label="true" aria-label="example progress"></bk-progress-indicator>
   <bk-progress-indicator current-value="50" aria-label="example progress"></bk-progress-indicator>
   <bk-progress-indicator current-value="50" state="informative" aria-label="example progress"></bk-progress-indicator>
   <bk-progress-indicator current-value="50" state="positive" label="Something positive is happening" aria-label="example progress"></bk-progress-indicator>

@@ -18,6 +18,7 @@ blimpkit.directive('bkProgressIndicator', (classNames) => ({
     maxValue: '<?',
     currentValue: '<',
     label: '@?',
+    noLabel: '<?',
     state: '@?',
   },
   link: (scope, _element, attrs) => {
@@ -33,7 +34,7 @@ blimpkit.directive('bkProgressIndicator', (classNames) => ({
   template: `<div ng-class="getClasses()" tabindex="-1" role="progressbar" aria-valuemin="{{minValue || 0}}" aria-valuenow="{{currentValue}}" aria-valuemax="{{minValue || 100}}" aria-valuetext="{{currentValue}}%">
         <div class="fd-progress-indicator__container">
             <div class="fd-progress-indicator__progress-bar" style="min-width: {{currentValue}}%; width: {{currentValue}}%;"></div>
-            <div class="fd-progress-indicator__remaining"><span class="fd-progress-indicator__label">{{label || currentValue + '%'}}</span></div>
+            <div ng-if="!noLabel" class="fd-progress-indicator__remaining"><span class="fd-progress-indicator__label">{{label || currentValue + '%'}}</span></div>
         </div>
     </div>`,
 }));
