@@ -83,7 +83,7 @@
   --object-header: oklch(1 0 0);
   --object-header-foreground: oklch(0.3211 0 0);
   --object-header-border: oklch(0.7858 0 0);
-  --object-header-shadow: 0 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.2), inset 0 calc(var(--border-width) * -1) 0 0 var(--border);
+  --object-header-shadow: 0 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.05), inset 0 calc(var(--border-width) * -1) 0 0 var(--border);
   --object-foreground: var(--foreground);
   --object-background: oklch(1 0 0);
   --object-background-alt: oklch(0.9727 0.0017 247.84);
